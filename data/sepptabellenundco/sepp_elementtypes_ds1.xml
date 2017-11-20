@@ -1,0 +1,1174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gridcms>
+  <elementtypes>
+
+    <elementtype class="at.grid.sepp.core.project.CmsProject" code="project" table="tdtaeleproject">
+      <attribute  code="title"                 type="text"             attributegroup="Project" label="Projekttitel" field="title" size="250"/>
+      <attribute  code="country"               type="text"             attributegroup="Project" label="Land" field="country" size="50"/>
+      <attribute  code="state"                 type="text"             attributegroup="Project" label="Bundesland" field="state" size="50"/>
+      <attribute  code="town"                  type="text"             attributegroup="Project" label="Gemeinde" field="town" size="50"/>
+      <attribute  code="description"           type="text"             attributegroup="Project" label="Kurzbeschreibung" field="description" size="500"/>
+      <attribute  code="precip_year"           type="float"            attributegroup="Project" label="Jahresniederschlag [mm]" field="precip_year"/>
+      <attribute  code="precip_crit"           type="float"            attributegroup="Project" label="Bemessungsniederschlag [mm/h]" field="precip_crit"/>
+      <attribute  code="temp_veg"              type="float"            attributegroup="Project" label="Mittlere Temperatur der Vegetationsperiode" field="temp_veg"/>
+      <attribute  code="temperature"           type="float"            attributegroup="Project" label="Mittlere Jahrestemperatur [°C]" field="temperature"/>
+      <attribute  code="evaporation"           type="float"            attributegroup="Project" label="Jahresverdunstung [mm]" field="evaporation"/>
+      <attribute  code="srid"                  type="key"              attributegroup="Project" label="Projektion" table="srid" field="srid"/>
+      <attribute  code="level"                 type="key"              attributegroup="Project" label="Detailstufe" table="level" field="idlevel"/>
+    </elementtype>
+
+    <!--################## DSI #########################-->
+
+    <elementtype class="at.grid.sepp.core.elements.ds1.CmsProfil" code="profil" table="tdtaeleprofil" hierarchy="horizonte">
+      <!-- ALLGEMEINE STANDORTSMERKMALE -->
+      <attribute  code="profilnummer"          type="text"             attributegroup="Allgemeine Standortsmerkmale" label="Profilnummer"  multilingual="false"  size="250"  field="profilnummer" _boriscode="S105"/>
+      <attribute  code="projekt"               type="text"             attributegroup="Allgemeine Standortsmerkmale" label="Projekt" multilingual="false"  size="250"  field="projekt" _boriscode="S229"/>
+      <attribute  code="datum"                 type="date"             attributegroup="Allgemeine Standortsmerkmale" label="Datum" field="datum" format="yyyy-MM-dd" _boriscode="S101"/>
+      <attribute  code="kartierer"             type="text"             attributegroup="Allgemeine Standortsmerkmale" label="Kartierer" multilingual="false"  size="250"  field="kartierer" _boriscode="S102"/>
+      <!-- Georeferenzierung -->
+      <attribute  code="rechtswert"            type="float"            attributegroup="Allgemeine Standortsmerkmale" label="Rechtswert"  field="rechtswert" _boriscode="S116"/>
+      <attribute  code="hochwert"              type="float"            attributegroup="Allgemeine Standortsmerkmale" label="Hochwert"  field="hochwert" _boriscode="S117"/>
+      <attribute  code="projektion"            type="key"              attributegroup="Allgemeine Standortsmerkmale" label="Projektion"  table="projektion" field="idprojektion" _boriscode="S118" />
+      <attribute  code="seehoehe"              type="integer"          attributegroup="Allgemeine Standortsmerkmale" label="Seehöhe"  field="seehoehe" _boriscode="S127"/>
+      <attribute  code="exposition_wert"       type="integer"          attributegroup="Allgemeine Standortsmerkmale" label="Exposition (Wert)" field="exposition" _boriscode="XX"/>
+      <attribute  code="exposition_klasse"     type="key"              attributegroup="Allgemeine Standortsmerkmale" label="Exposition (Klasse)" table="exposition" field="idexposition" hidden="true" _boriscode="S134"/>
+      <attribute  code="neigungmakro"          type="integer"          attributegroup="Allgemeine Standortsmerkmale" label="Hangneigung (makro)" field="neigungmakro" _boriscode="S950"/>
+      <attribute  code="neigungmikro"          type="integer"          attributegroup="Allgemeine Standortsmerkmale" label="Hangneigung (mikro)" field="neigungmikro" _boriscode="XX"/>
+      <attribute  code="hangneigung"           type="key"              attributegroup="Allgemeine Standortsmerkmale" label="Hangneigung (Klasse)" table="hangneigung" field="idhangneigung" hidden="true" _boriscode="S135"/>
+      <attribute  code="gruendigkeit_wert"     type="integer"          attributegroup="Allgemeine Standortsmerkmale" label="Gründigkeit (cm)" field="gruendigkeit" _boriscode="XX"/>
+      <attribute  code="gruendigkeit_klasse"   type="key"              attributegroup="Allgemeine Standortsmerkmale" label="Gründigkeit (Klasse)" table="gruendigkeit" field="idgruendigkeit" hidden="true" _boriscode="S177"/>
+      <attribute  code="entwicklungstiefe"     type="integer"          attributegroup="Allgemeine Standortsmerkmale" label="Entwicklungstiefe (cm)"  field="entwicklungstiefe" _boriscode="S332"/>
+      <attribute  code="profillaenge"          type="integer"          attributegroup="Allgemeine Standortsmerkmale" label="Profillänge (m)" field="profillaenge" _boriscode="S330"/>
+      <attribute  code="profilbreite"          type="integer"          attributegroup="Allgemeine Standortsmerkmale" label="Profilbreite (m)" field="profilbreite" _boriscode="S331"/>
+      <attribute  code="hoehenstufe"           type="key"              attributegroup="Allgemeine Standortsmerkmale" label="Klimatische Höhenstufe" table="hoehenstufe" field="idhoehenstufe" _boriscode="S181"/>
+      <attribute  code="witterung"             type="key"              attributegroup="Allgemeine Standortsmerkmale" label="Witterung der Vorperiode" table="witterung" field="idwitterung" _boriscode="S183"/>
+
+      <!-- GEOLOGIE UND RELIEF -->
+      <attribute  code="makrorelief"           type="key"              attributegroup="Relief und Geologie" label="Makrorelief" table="makrorelief" field="idmakrorelief" _boriscode="S136"/>
+      <attribute  code="mesorelief"            type="multikey"         attributegroup="Relief und Geologie" label="Mesorelief" table="mesorelief"  _boriscode="S139"/>
+      <attribute  code="woelbung"              type="key"              attributegroup="Relief und Geologie" label="Wölbung" table="woelbung" field="idwoelbung" _boriscode="S140" />
+      <attribute  code="woelbungsstaerke"      type="key"              attributegroup="Relief und Geologie" label="Wölbungsstärke" table="woelbungsstaerke" field="idwoelbungsstaerke" _boriscode="XX"/>
+      <attribute  code="mikrorelief"           type="multikey"         attributegroup="Relief und Geologie" label="Mikrorelief" table="mikrorelief" _boriscode="XX"/>
+      <attribute  code="mikrorelief_b"         type="key"              attributegroup="Relief und Geologie" label="Mikrorelief (BORIS)" table="mikrorelief_b" field="idmikrorelief_b" _boriscode="S143"/>
+      <attribute  code="geologietext"          type="text"             attributegroup="Relief und Geologie" label="Erläuterung Relief und Geologie"  multilingual="false"  size="3000"  field="geologietext" _boriscode="S163"/>
+      <attribute  code="ausgangsmaterial"      type="key"              attributegroup="Relief und Geologie" label="Ausgangsmaterial"  table="ausgangsmaterial" field="idausgang" _boriscode="S162"/>
+
+      <!-- BODENHYDROLOGISCHE SITUATION -->
+      <attribute  code="abzufluss"             type="key"              attributegroup="Bodenhydrologie" label="Oberflächenwasser" table="abzufluss" field="idabzufluss" _boriscode="XX"/>
+      <attribute  code="flurabstand"           type="float"            attributegroup="Bodenhydrologie" label="Grundwasser - Flurabstand (m)" field="flurabstand" _boriscode="S153"/>
+      <attribute  code="grundwasser"           type="boolean"          attributegroup="Bodenhydrologie" label="Grundwassereinfluss" field="grundwasser" _boriscode="XX"/>
+      <attribute  code="hangwasser"            type="boolean"          attributegroup="Bodenhydrologie" label="Hangwassereinfluss" field="hangwasser" _boriscode="XX"/>
+      <attribute  code="hangwasser_b"          type="key"              attributegroup="Bodenhydrologie" label="Hangwasser" table="hangwasser" field="idhangwasser" _boriscode="S160"/>
+      <attribute  code="stauwasser"            type="key"              attributegroup="Bodenhydrologie" label="Stauwasser" table="stauwasser" field="idstauwasser" _boriscode="XX"/>
+      <attribute  code="grundstauwasser"       type="key"              attributegroup="Bodenhydrologie" label="Grund- und Stauwasser" table="grundstauwasser" field="idgrundstauwasser" _boriscode="S159"/>
+      <attribute  code="oekofeuchte"           type="key"              attributegroup="Bodenhydrologie" label="Ökologische Feuchte" table="oekofeuchte" field="idoekofeuchte" _boriscode="S161"/>
+      <attribute  code="lateralfliess"         type="text"             attributegroup="Bodenhydrologie" label="Laterale Fließwege" field="lateralfliess" multilingual="false"  size="300" _boriscode="S357"/>
+
+      <!-- ORGANISCHE AUFLAGE -->
+      <attribute  code="ol_maecht"             type="float"            attributegroup="Organik" label="Ol - Mächtigkeit"  field="ol_maecht" _boriscode="XX"/>
+      <attribute  code="ol_lagerung"           type="key"              attributegroup="Organik" label="Ol - Lagerung"  table="ol_lagerung" field="idol_lagerung" _boriscode="XX"/>
+      <attribute  code="of_maecht"             type="float"            attributegroup="Organik" label="Of - Mächtigkeit"  field="of_maecht" _boriscode="XX"/>
+      <attribute  code="of_lagerung"           type="key"              attributegroup="Organik" label="Of - Lagerung"  table="of_lagerung" field="idof_lagerung" _boriscode="XX"/>
+      <attribute  code="oh_maecht"             type="float"            attributegroup="Organik" label="Oh - Mächtigkeit"  field="oh_maecht" _boriscode="XX"/>
+      <attribute  code="oh_lagerung"           type="key"              attributegroup="Organik" label="Oh - Lagerung"  table="oh_lagerung" field="idoh_lagerung" _boriscode="XX"/>
+      <attribute  code="m_maecht"              type="float"            attributegroup="Organik" label="M - Mächtigkeit"  field="m_maecht" _boriscode="XX"/>
+      <attribute  code="torf_zersetzung"       type="key"              attributegroup="Organik" label="Torf - Zersetzung"  table="torf_zersetzung" field="idtorf_zersetzung" _boriscode="S338"/>
+      <attribute  code="torf_holz"             type="integer"          attributegroup="Organik" label="Torf - Holz (%)"  field="torf_holz" _boriscode="S339"/>
+      <attribute  code="torf_moos"             type="integer"          attributegroup="Organik" label="Torf - Moos (%)"  field="torf_moos" _boriscode="S340"/>
+      <attribute  code="torf_kraut"            type="integer"          attributegroup="Organik" label="Torf - Kraut (%)"  field="torf_kraut" _boriscode="S341"/>
+      <attribute  code="torf_minerogen"        type="integer"          attributegroup="Organik" label="Torf - Minerogen (%)"  field="torf_minerogen" _boriscode="S342"/>
+      <attribute  code="organik_text"          type="text"             attributegroup="Organik" label="Erläuterung org. Substanz"  field="organik_text" size="1000" _boriscode="S343"/>
+      <attribute  code="humusform"             type="key"              attributegroup="Organik" label="Humusform"  table="humusform" field="humusform" _boriscode="S175"/>
+
+      <!-- BODENSPEZIFISCHE MERKMALE -->
+      <!-- Attribute, die sich am SEPP-Aufnahmebogen befinden -->
+      <attribute  code="anthropogen"           type="key"              attributegroup="Bodenspezifische Merkmale1" label="Anthropogene Veränderung"  table="anthropogen" field="idanthropogen" _boriscode="S333"/>
+      <attribute  code="basenreichtum"         type="key"              attributegroup="Bodenspezifische Merkmale1" label="Basenreichtum" table="basenreichtum" field="idbasenreichtum" _boriscode="S165"/>
+      <attribute  code="karbonatgehalt"        type="key"              attributegroup="Bodenspezifische Merkmale1" label="Karbonatgehalt"  table="karbonatgehalt" field="idkarbonatgehalt" _boriscode="S166"/>
+      <attribute  code="locker_stein"          type="integer"          attributegroup="Bodenspezifische Merkmale1" label="Lockergestein, Anteil Stein/Blöcke"  field="locker_stein" _boriscode="S334"/>
+      <attribute  code="locker_kies_grob"      type="integer"          attributegroup="Bodenspezifische Merkmale1" label="Lockergestein, Anteil Grus/Kies grob"  field="locker_kies_grob" _boriscode="S335"/>
+      <attribute  code="locker_kies_fein"      type="integer"          attributegroup="Bodenspezifische Merkmale1" label="Lockergestein, Anteil Grus/Kies mittel/fein"  field="locker_kies_fein" _boriscode="S336" />
+      <attribute  code="locker_feinerde"       type="integer"          attributegroup="Bodenspezifische Merkmale1" label="Lockergestein, Anteil Feinerde"  field="locker_feinerde" _boriscode="S337"/>
+      <attribute  code="landnutzung"           type="multikey"         attributegroup="Bodenspezifische Merkmale2" label="Landnutzung" table="landnutzung" _boriscode="S178"/>
+      <attribute  code="landnutzung_text"      type="text"             attributegroup="Bodenspezifische Merkmale2" label="Erläuterung zur Landnutzung" multilingual="false"  size="3000" field="landnutzung" _boriscode="S179"/>
+      <attribute  code="vegetation"            type="multikey"         attributegroup="Bodenspezifische Merkmale2" label="Vegetation" table="vegetation" _boriscode="XX"/>
+      <attribute  code="vegetation_text"       type="text"             attributegroup="Bodenspezifische Merkmale2" label="Erläuterung zur Vegetation" multilingual="false"  size="3000" field="vegetation" _boriscode="S185"/>
+      <attribute  code="verdichtung"           type="key"              attributegroup="Bodenspezifische Merkmale2" label="Verdichtung aktuell" table="keinebishoch" field="idverdichtung" _boriscode="S355"/>
+      <attribute  code="gefaehrdung"           type="key"              attributegroup="Bodenspezifische Merkmale2" label="Gefährdung" table="geringbishoch" field="idgefaehrdung" _boriscode="S356"/>
+      <attribute  code="bodentyp_text"         type="text"             attributegroup="Bodenspezifische Merkmale2" label="Bodentyp/-form nach Killian et al. (2002)" multilingual="false" size="3000" field="bodentyp" _boriscode="S174"/>
+      <attribute  code="bodentyp_oe"           type="key"              attributegroup="Bodenspezifische Merkmale2" label="Öst. Bodensystematik 2000"  table="bodentyp_oe" field="idbodentyp_oe" _boriscode="S322"/>
+      <attribute  code="versiegelungsgrad"     type="integer"          attributegroup="Bodenspezifische Merkmale3" label="Versiegelungsgrad (%)" field="versiegelungsgrad" _boriscode="S344"/>
+      <attribute  code="vegetationsgrad"       type="integer"          attributegroup="Bodenspezifische Merkmale3" label="Vegetationsgrad (%)"  field="vegetationsgrad" _boriscode="S345"/>
+      <attribute  code="vegfrei"               type="integer"          attributegroup="Bodenspezifische Merkmale3" label="Vegetationsfrei (%)"  field="vegfrei" _boriscode="S350"/>
+      <attribute  code="moosschicht"           type="integer"          attributegroup="Bodenspezifische Merkmale3" label="Moosschicht (%)"  field="moosschicht" _boriscode="S346"/>
+      <attribute  code="krautschicht"          type="integer"          attributegroup="Bodenspezifische Merkmale3" label="Krautschicht (%)"  field="krautschicht" _boriscode="S347"/>
+      <attribute  code="strauchschicht"        type="integer"          attributegroup="Bodenspezifische Merkmale3" label="Strauchschicht (%)"  field="strauchschicht" _boriscode="S348"/>
+      <attribute  code="baumschicht"           type="integer"          attributegroup="Bodenspezifische Merkmale3" label="Baumschicht (%)"  field="baumschicht" _boriscode="S349"/>
+      <attribute  code="fels"                  type="integer"          attributegroup="Bodenspezifische Merkmale3" label="Fels (%)"  field="fels" _boriscode="S3451"/>
+      <attribute  code="bloeckesteine"         type="integer"          attributegroup="Bodenspezifische Merkmale3" label="Blöcke, Steine (%)"  field="bloeckesteine" _boriscode="S3452"/>
+      <attribute  code="offenerboden"          type="integer"          attributegroup="Bodenspezifische Merkmale3" label="Offener Boden (%)"  field="offenerboden" _boriscode="S353"/>
+      
+      <attribute  code="naturarchiv"           type="boolean"          attributegroup="Allgemeine Standortsmerkmale2" label="Naturarchiv" field="naturarchiv" _boriscode="XX"/>
+      <attribute  code="kulturarchiv"          type="boolean"          attributegroup="Allgemeine Standortsmerkmale2" label="Kulturarchiv" field="kulturarchiv" _boriscode="XX"/>
+      <attribute  code="drainage"              type="boolean"          attributegroup="Allgemeine Standortsmerkmale2" label="Drainagierung" field="drainage" _boriscode="S303"/>
+      <attribute  code="bewaesserung"          type="boolean"          attributegroup="Allgemeine Standortsmerkmale2" label="Bewässerung" field="bewaesserung" _boriscode="S304"/>
+      <attribute  code="erosionsschutz"        type="boolean"          attributegroup="Allgemeine Standortsmerkmale2" label="Erosionsschutz" field="erosionsschutz" _boriscode="S354"/>
+      <attribute  code="erosionsgrad"          type="key"              attributegroup="Allgemeine Standortsmerkmale2" label="Erosionsgrad (Tiefe)" table="erosionsgrad" field="iderosionsgrad" _boriscode="XX"/>
+      <attribute  code="erosionsausmass"       type="key"              attributegroup="Allgemeine Standortsmerkmale2" label="Erosionsausmaß (Fläche)" table="erosionsausmass" field="iderosionsausmass" _boriscode="XX"/>
+      
+      <attribute  code="wurzeln10"             type="key"              attributegroup="Bodenspezifische Merkmale4" label="Durchwurzelung 0-10cm" table="durchwurzelung" field="idwurzeln10" _boriscode="S952"/>
+      <attribute  code="wurzeln20"             type="key"              attributegroup="Bodenspezifische Merkmale4" label="Durchwurzelung 11-20cm" table="durchwurzelung" field="idwurzeln20" _boriscode="S953"/>
+      <attribute  code="wurzeln30"             type="key"              attributegroup="Bodenspezifische Merkmale4" label="Durchwurzelung 21-30cm" table="durchwurzelung" field="idwurzeln30" _boriscode="S954"/>
+      <attribute  code="wurzeln40"             type="key"              attributegroup="Bodenspezifische Merkmale4" label="Durchwurzelung 31-40cm" table="durchwurzelung" field="idwurzeln40" _boriscode="S955"/>
+      <attribute  code="wurzeln50"             type="key"              attributegroup="Bodenspezifische Merkmale4" label="Durchwurzelung 41-50cm" table="durchwurzelung" field="idwurzeln50" _boriscode="S956"/>
+      <attribute  code="durchgaengigkeit"      type="key"              attributegroup="Bodenspezifische Merkmale4" label="Durchgängikeit" table="geringbishoch" field="iddurchgaengigkeit" _boriscode="XX"/>
+      <attribute  code="matrixaustausch"       type="key"              attributegroup="Bodenspezifische Merkmale4" label="Matrixaustauch" table="geringbishoch" field="idmatrix" _boriscode="XX"/>
+      <attribute  code="zeigerarten"           type="text"             attributegroup="Bodenspezifische Merkmale4" label="Wichtige Zeigerarten"  multilingual="false"  size="400"  field="zeigerarten" _boriscode="XX"/>
+      <attribute  code="sonstige"              type="text"             attributegroup="Bodenspezifische Merkmale4" label="Sonstige Ergänzung"  multilingual="false"  size="1000"  field="sonstige" _boriscode="XX"/>
+
+      <!-- Zusätzliche BORIS-Attribute -->
+      <attribute  code="bodentyp"              type="key"              attributegroup="BORIS" label="Bodentyp (BORIS)" table="bodentyp" hidden="true" field="idbodentyp" _boriscode="S172"/>
+      <attribute  code="erosion"               type="key"              attributegroup="BORIS" label="Erosion" table="erosion" hidden="true" field="iderosion" _boriscode="S296"/>
+      <attribute  code="koernigkeit"           type="key"              attributegroup="BORIS" label="Körnigkeit" table="koernigkeit" field="idkoernigkeit" hidden="true" _boriscode="S168"/>
+
+      <!-- RELATION -->
+      <attribute  code="horizonte"             type="relation"         attributegroup="Horizonte" label="Horizonte"  relationcode="profilhorizont" autosort="tiefe" elementcodes="horizont" hidden="true" />
+
+      <!-- SONSTIGE -->
+      <attribute  code="organik"               type="boolean"          attributegroup="Horizonte" label="Profil hat organische Auflage" field="organik"/>
+      <attribute  code="wurzel"                type="integer"          attributegroup="Horizonte" label="Tatsächliche Durchwurzelungstiefe"  field="wurzel" _boriscode="SXXX" />
+
+      <!-- KOMPLEXE PARAMETER -->
+      <attribute  code="Sx01_FBges"            type="float"            attributegroup="Komplexe Parameter" label="Feinbodenmenge im gesamten Profil [kg/m²]"  field="Sx01_FBges" _boriscode="Sx01" />
+      <attribute  code="Sx02_TMges"            type="float"            attributegroup="Komplexe Parameter" label="Tonmenge im gesamten Profil [kg/m²]"  field="Sx02_TMges" _boriscode="Sx02" />
+      <attribute  code="Sx03_HMges"            type="float"            attributegroup="Komplexe Parameter" label="Humusmenge im gesamten Profil [kg/m²]"  field="Sx03_HMges" _boriscode="Sx03" />
+      <attribute  code="Sx04_nFKges"           type="float"            attributegroup="Komplexe Parameter" label="Nutzbare Feldkapazität im gesamten Profil [l/m²]"  field="Sx04_nFKges" _boriscode="Sx04" />
+      <attribute  code="Sx04a_nFKwe"           type="float"            attributegroup="Komplexe Parameter" label="Nutzbare Feldkapazität im Wurzelraum [l/m²]"  field="Sx04a_nFKwe" _boriscode="Sx04a" />
+      <attribute  code="Sx05_FKges"            type="float"            attributegroup="Komplexe Parameter" label="Feldkapazität im gesamten Profil [l/m²]"  field="Sx05_FKges" _boriscode="Sx05" />
+      <attribute  code="Sx05a_FKwe"            type="float"            attributegroup="Komplexe Parameter" label="Feldkapazität im Wurzelraum [l/m²]"  field="Sx05a_FKwe" _boriscode="Sx05a" />
+      <attribute  code="Sx06_LKges"            type="float"            attributegroup="Komplexe Parameter" label="Luftkapazität im gesamten Profil [l/m²]"  field="Sx06_LKges" _boriscode="Sx06" />
+      <attribute  code="Sx06a_LKwe"            type="float"            attributegroup="Komplexe Parameter" label="Luftkapazität im Wurzelraum [l/m²]"  field="Sx06_LKwe" _boriscode="Sx06a" />
+      <attribute  code="Sx07_LKoben"           type="float"            attributegroup="Komplexe Parameter" label="Luftkapazität oberhalb eines „Stauhorizontes“  [l/m²]"  field="Sx07_LKoben" _boriscode="Sx07" />
+      <attribute  code="Sx08_WSVges"           type="float"            attributegroup="Komplexe Parameter" label="Wasserspeichervermögen im gesamten Profil [l/m²]"  field="Sx08_WSVges" _boriscode="Sx08" />
+      <attribute  code="Sx09_WSVwe"            type="float"            attributegroup="Komplexe Parameter" label="Wasserspeichervermögen im Wurzelraum [l/m²]"  field="Sx09_WSVwe" _boriscode="Sx09" />
+      <attribute  code="Sx10_kfmin"            type="float"            attributegroup="Komplexe Parameter" label="Minimale gesättigte Wasserleitfähigkeit (kf-Wert) [cm/d]"  field="Sx10_kfmin" _boriscode="Sx10" />
+      <attribute  code="Sx11_kfave"            type="float"            attributegroup="Komplexe Parameter" label="Durchschnittliche gesättigte Wasserleitfähigkeit (kf-Wert) [cm/d]"  field="Sx11_kfave" _boriscode="Sx11" />
+      <attribute  code="Sx12_We"               type="integer"          attributegroup="Komplexe Parameter" label="Physiologische Gründigkeit"  field="Sx12_W" _boriscode="Sx12" />
+      <attribute  code="Sx13_KAKges"           type="float"            attributegroup="Komplexe Parameter" label="Eff. KAK im gesamten Profil (absolut) [cmol/m²]"  field="Sx13_KAKges" _boriscode="Sx13" />
+      <attribute  code="Sx14_KAKWe"            type="float"            attributegroup="Komplexe Parameter" label="Eff. KAK im Wurzelraum (absolut) [cmol/m²]"  field="Sx14_KAKWe" _boriscode="Sx14" />
+      <attribute  code="Sx15_MbWe"             type="float"            attributegroup="Komplexe Parameter" label="Vorrat austauschbar gebundener basischer Kationen im Wurzelraum [cmol/m²]"  field="Sx15_MbWe" _boriscode="Sx15" />
+
+      <!-- BEWERTUNG -->
+      <attribute  code="Leben_Tr"              type="integer"          attributegroup="Lebensraumfunktionen" label="1a.2 Lebensraum für Tiere und Pflanzen - Trockenstandort"  field="Leben_Tr" _boriscode="S902"/>
+      <attribute  code="Leben_Fe"              type="integer"          attributegroup="Lebensraumfunktionen" label="1a.2 Lebensraum für Tiere und Pflanzen - Feuchtstandort"  field="Leben_Fe" _boriscode="S903"/>
+      <attribute  code="Leben_Org"             type="integer"          attributegroup="Lebensraumfunktionen" label="1a.3 Lebensraum für Bodenorganismen"  field="Leben_Org" _boriscode="S904"/>
+      <attribute  code="Leben_Kult"            type="integer"          attributegroup="Lebensraumfunktionen" label="1a.4 Lebensraum für Kulturpflanzen"  field="Leben_Kult" _boriscode="S905"/>
+
+      <attribute  code="Retent_ave"            type="integer"          attributegroup="Funktionen im Naturhaushalt" label="1c.1 Retentionsvermögen für Niederschläge - mit durchschn. kf-Wert"  field="Retent_ave" _boriscode="S906"/>
+      <attribute  code="Retent_min"            type="integer"          attributegroup="Funktionen im Naturhaushalt" label="1c.1 Retentionsvermögen für Niederschläge - mit minimalem kf-Wert"  field="Retent_min" _boriscode="S907"/>
+      <attribute  code="Retent_stark"          type="integer"          attributegroup="Funktionen im Naturhaushalt" label="1c.2 Kurzfristiges Retentionsvermögen für Starkniederschläge"  field="Retent_stark" _boriscode="S908"/>
+      <attribute  code="GWneu"                 type="integer"          attributegroup="Funktionen im Naturhaushalt" label="1c.3 Potenzial des Bodens für qualitativ hochwertige Grundwasserneubildung"  field="GWneu" _boriscode="S909"/>
+      <attribute  code="Naehrstoff"            type="integer"          attributegroup="Funktionen im Naturhaushalt" label="1c.4 Potenzial des Bodens zur Nährstoffbereitstellung für Pflanzen"  field="Naehrstoff" _boriscode="S910"/>
+      <attribute  code="CO2_Senke"             type="integer"          attributegroup="Funktionen im Naturhaushalt" label="1c.5 Potenzial des Bodens als CO2-Senke"  field="CO2_Senke" _boriscode="S911"/>
+
+      <attribute  code="FiltPuff"              type="integer"          attributegroup="Umwandlungs- und Ausgleichsfunktionen" label="1d.1 Rückhaltepotenzial für Schwermetalle"  field="FiltPuff" _boriscode="S912"/>
+      <attribute  code="Transform"             type="integer"          attributegroup="Umwandlungs- und Ausgleichsfunktionen" label="1d.2 Transformationpotenzial für organische Schadstoffe"  field="Transform" _boriscode="S913"/>
+      <attribute  code="FiltPuff_Org"          type="integer"          attributegroup="Umwandlungs- und Ausgleichsfunktionen" label="1d.3 Filter- und Pufferpotenzial für organische Schadstoffe"  field="FiltPuff_Org" _boriscode="S914"/>
+      <attribute  code="FiltPuff_Nit"          type="integer"          attributegroup="Umwandlungs- und Ausgleichsfunktionen" label="1d.4 Rückhaltepotenzial für wasserlösliche Schadstoffe"  field="FiltPuff_Nit" _boriscode="S915"/>
+      <attribute  code="Puff_sauer"            type="integer"          attributegroup="Umwandlungs- und Ausgleichsfunktionen" label="1d.5 Puffer für versauernd wirkende Einträge"  field="Puff_sauer" _boriscode="S916"/>
+
+      <attribute  code="Arc_Nat"               type="integer"          attributegroup="Archivfunktionen" label="2a Potenzial als Archiv der Naturgeschichte"  field="Arc_Nat" _boriscode="S900"/>
+      <attribute  code="Arc_Kult"              type="integer"          attributegroup="Archivfunktionen" label="2b Potenzial als Archiv der Kulturgeschichte"  field="Arc_Kult" _boriscode="S901"/>
+
+      <!-- TEMPLATE -->
+      <attribute  code="dateeval"              type="date"             attributegroup="Verwaltung" label="Datum Evaluierung" field="dateeval" format="yyyy-MM-dd" />
+      
+      <!-- TEMPLATE -->
+      <attribute  code="template"              type="boolean"          attributegroup="Verwaltung" label="Vorlage" field="template" hidden="true"/>
+      <attribute  code="templatename"          type="text"             attributegroup="Verwaltung" label="Name der Vorlage"  multilingual="false"  size="250"  field="templatename"/>
+
+    </elementtype>
+
+    <elementtype class="at.grid.sepp.core.elements.ds1.CmsHorizont" code="horizont" table="tdtaelehorizont">
+      <attribute  code="bezeichnung"           type="text"             attributegroup="Allgemeine Horizontmerkmale1" label="Bezeichnung"  multilingual="false"  size="50"  field="bezeichnung" _boriscode="XX" />
+      <attribute  code="tiefe"                 type="integer"          attributegroup="Allgemeine Horizontmerkmale1" label="Tiefe"  field="tiefe" _boriscode="XX"/>
+      <attribute  code="uebergang_cm"          type="integer"          attributegroup="Allgemeine Horizontmerkmale1" label="Übergang (cm)"  field="uebergang_cm" _boriscode="XX" />
+      <attribute  code="uebergang_form"        type="key"              attributegroup="Allgemeine Horizontmerkmale1" label="Form des Übergangs"  table="uebergang" field="iduebergang_form" _boriscode="XX" />
+      <attribute  code="art"                   type="key"              attributegroup="Allgemeine Horizontmerkmale1" label="Art"  table="art" field="idart" _boriscode="XX"/>
+      <attribute  code="umlagerung"            type="boolean"          attributegroup="Allgemeine Horizontmerkmale1" label="Umlagerung" field="umlagerung" _boriscode="P171"/>
+      <attribute  code="ph_wert"               type="float"            attributegroup="Allgemeine Horizontmerkmale1" label="Feld pH-Wert"  field="ph_feld" _boriscode="P149" />
+      <attribute  code="bodenart"              type="key"              attributegroup="Allgemeine Horizontmerkmale1" label="Bodenart"  table="bodenart" field="idbodenart" _boriscode="P140"/>
+      <attribute  code="farbe_munsell"         type="text"             attributegroup="Allgemeine Horizontmerkmale1" label="Munsell Farbe"  multilingual="false"  size="100"  field="farbe_munsell" _boriscode="P118" />
+      <attribute  code="farbe_sonst"           type="text"             attributegroup="Allgemeine Horizontmerkmale1" label="Bodenfarbe (Text)"  multilingual="false"  size="100"  field="farbe_sonst" _boriscode="P120" />
+      <attribute  code="feinwurzeln"           type="key"              attributegroup="Allgemeine Horizontmerkmale2" label="Feinwurzeln (&lt; 2mm)" table="feinwurzeln" field="idfeinwurzeln" _boriscode="P136" />
+      <attribute  code="grobwurzeln"           type="key"              attributegroup="Allgemeine Horizontmerkmale2" label="Grobwurzeln" table="grobwurzeln" field="idgrobwurzeln" _boriscode="P173" />
+      <attribute  code="humus_klasse"          type="key"              attributegroup="Allgemeine Horizontmerkmale2" label="Humusgehalt (Klasse)"  table="humus_klasse" field="idhumus_klasse" _boriscode="P168" />
+      <attribute  code="humus_wert"            type="float"            attributegroup="Allgemeine Horizontmerkmale2" label="Humusgehalt (Wert)"  field="humus_wert" _boriscode="B104" />
+      <attribute  code="skelett_wert"          type="float"            attributegroup="Allgemeine Horizontmerkmale2" label="Skelettgehalt (Wert)"  field="skelett_wert" _boriscode="B224" />
+      <attribute  code="skelett_klasse"        type="key"              attributegroup="Allgemeine Horizontmerkmale2" label="Skelettgehalt (Klasse)"  table="skelett_klasse" field="idskelett_klasse" _boriscode="P116" />
+      <attribute  code="dichte_wert"           type="float"            attributegroup="Allgemeine Horizontmerkmale2" label="Lagerungsdichte (Wert)"  field="dichte_wert" _boriscode="B210" />
+      <attribute  code="dichte_klasse"         type="key"              attributegroup="Allgemeine Horizontmerkmale2" label="Lagerungsdichte (Klasse)"  table="dichte_klasse" field="iddichte_klasse" _boriscode="P162" />
+      <attribute  code="carbonat_wert"         type="float"            attributegroup="Allgemeine Horizontmerkmale3" label="Carbonat (Wert)"  field="carbonat_wert" _boriscode="B100" />
+      <attribute  code="carbonat_klasse"       type="key"              attributegroup="Allgemeine Horizontmerkmale3" label="Carbonat (Klasse)"  table="carbonat_klasse" field="idcarbonat_klasse" _boriscode="P127" />
+      <attribute  code="porositaet"            type="key"              attributegroup="Allgemeine Horizontmerkmale3" label="Porosität"  table="porositaet" field="idporositaet" _boriscode="P134" />
+      <attribute  code="gefuege1"              type="key"              attributegroup="Allgemeine Horizontmerkmale3" label="Primär-Bodenstruktur (Klasse)"  table="gefuege" field="idgefuege1" _boriscode="P128" />
+      <attribute  code="gefuege1_anteil"       type="integer"          attributegroup="Allgemeine Horizontmerkmale3" label="Primär-Bodenstruktur (Anteil)"  field="gefuege1_anteil" _boriscode="P174" />
+      <attribute  code="gefuege2"              type="key"              attributegroup="Allgemeine Horizontmerkmale3" label="Sekundär-Bodenstruktur (Klasse)"  table="gefuege" field="idgefuege2" _boriscode="P131" />
+      <attribute  code="gefuege2_anteil"       type="integer"          attributegroup="Allgemeine Horizontmerkmale3" label="Sekundär-Bodenstruktur (Anteil)"  field="gefuege2_anteil" _boriscode="XX" />
+
+      <attribute  code="fleckenzahl"           type="key"              attributegroup="Allgemeine Horizontmerkmale4" label="Flecken (Zahl)"  table="fleckenzahl" field="idfleckenzahl" _boriscode="XX" />
+      <attribute  code="fleckenart"            type="multikey"         attributegroup="Allgemeine Horizontmerkmale4" label="Flecken (Art)"  table="fleckenart" _boriscode="XX" />
+      <attribute  code="konkretionen"          type="key"              attributegroup="Allgemeine Horizontmerkmale4" label="Konkretionen"  table="konkretionen" field="idkonkretionen" _boriscode="P123" />
+      <attribute  code="artefakte"             type="multikey"         attributegroup="Allgemeine Horizontmerkmale4" label="Artefakte"  table="artefakte" _boriscode="P172" />
+      <attribute  code="kommentar"             type="text"             attributegroup="Allgemeine Horizontmerkmale4" label="Kommentar"  multilingual="false"  size="1000"  field="kommentar" _boriscode="P141" />
+
+      <attribute  code="bodenartlabor"         type="key"              attributegroup="Zusätzliche Horizontmerkmale" label="Bodenart (Labor)"  table="bodenart" field="idbodenartlabor" _boriscode="B209"/>
+      <attribute  code="ton"                   type="float"            attributegroup="Zusätzliche Horizontmerkmale" label="Ton % (&lt; 2µm)"  field="ton" _boriscode="B200" />
+      <attribute  code="schluff"               type="float"            attributegroup="Zusätzliche Horizontmerkmale" label="Schluff % (2-63µm)"  field="schluff" _boriscode="B201" />
+      <attribute  code="sand"                  type="float"            attributegroup="Zusätzliche Horizontmerkmale" label="Sand % (63-2000µm)"  field="sand" _boriscode="B202" />
+      <attribute  code="sand_fein"             type="float"            attributegroup="Zusätzliche Horizontmerkmale" label="Feinsand % (63-200µm)"  field="sand_fein" _boriscode="B206" />
+      <attribute  code="sand_mittel"           type="float"            attributegroup="Zusätzliche Horizontmerkmale" label="Mittelsand % (200-630µm)"  field="sand_mittel" _boriscode="B207" />
+      <attribute  code="sand_grob"             type="float"            attributegroup="Zusätzliche Horizontmerkmale" label="Grobsand  % (630-2000µm)"  field="sand_grob" _boriscode="B208" />
+      <attribute  code="phmethode"             type="key"              attributegroup="Zusätzliche Horizontmerkmale" label="Messmethode pH-Wert"  table="phmethode" field="idphmethode" _boriscode="P152" />
+      <attribute  code="fleckung"              type="key"              attributegroup="Zusätzliche Horizontmerkmale" label="Fleckung (BORIS)"  table="fleckung" field="idfleckung" _boriscode="P121" />
+      
+      <!-- RELATION -->
+      <attribute  code="profil"                type="relation"         label="Profil"  relationcode="profilhorizont" hidden="true" elementcodes="profil" size="1" inverse="true"/>
+
+      <attribute  code="evaluate"              type="button"           attributegroup="Komplexe Parameter" label="Berechnen" />
+      <!-- KOMPLEXE PARAMETER -->
+      <attribute  code="Px01_Hu"               type="float"            attributegroup="Komplexe Parameter" label="Humusgehalt (Klassenmittelwert) [%]"  field="Px01_Hu" _boriscode="Px01" />
+      <attribute  code="Px02_Sk"               type="float"            attributegroup="Komplexe Parameter" label="Skelettgehalt (Klassenmittelwert) [%]"  field="Px02_Sk" _boriscode="Px02" />
+      <attribute  code="Px03_Ld"               type="text"             attributegroup="Komplexe Parameter" label="Lagerungsdichte (Klasse)"  field="Px03_Ld" _boriscode="Px03" />
+      <attribute  code="Px03a_LdZ"             type="float"            attributegroup="Komplexe Parameter" label="Lagerungsdichte [g/cm³]"  field="Px03a_LdZ" _boriscode="Px03a" />
+      <attribute  code="Px04_FB"               type="float"            attributegroup="Komplexe Parameter" label="Feinbodenmenge [kg/m³]"  field="Px04_FB" _boriscode="Px04" />
+      <attribute  code="Px05_TM"               type="float"            attributegroup="Komplexe Parameter" label="Tonmenge [kg/m³]"  field="px05" _boriscode="Px05" />
+      <attribute  code="Px06_HM"               type="float"            attributegroup="Komplexe Parameter" label="Humusmenge [kg/m³]"  field="px06" _boriscode="Px06" />
+      <attribute  code="Px07_nFK"              type="float"            attributegroup="Komplexe Parameter" label="Nutzbare Feldkapazität [l/m²]"  field="Px07_nFK" _boriscode="Px07" />
+      <attribute  code="Px08_FK"               type="float"            attributegroup="Komplexe Parameter" label="Feldkapazität [l/m²]"  field="Px08_FK" _boriscode="Px08" />
+      <attribute  code="Px09_LK"               type="float"            attributegroup="Komplexe Parameter" label="Luftkapazität [l/m²]"  field="Px09_LK" _boriscode="Px09" />
+      <attribute  code="Px10_WSV"              type="float"            attributegroup="Komplexe Parameter" label="Wasserspeichervermögen [l/m²]"  field="Px10_WSV" _boriscode="Px10" />
+      <attribute  code="Px11_GPV"              type="float"            attributegroup="Komplexe Parameter" label="Gesamtes Porenvolumen [l/m²]"  field="Px11_GPV" _boriscode="Px11" />
+      <attribute  code="Px12_kf"               type="float"            attributegroup="Komplexe Parameter" label="Gesättigte Wasserleitfähigkeit [cm/d]"  field="Px12_kf" _boriscode="Px12" />
+      <attribute  code="Px13_KAKpot"           type="float"            attributegroup="Komplexe Parameter" label="Potentielle Kationenaustauschkapazität [cmol/kg]"  field="Px13_KAKpot" _boriscode="Px13" />
+      <attribute  code="Px14_KAKeff"           type="float"            attributegroup="Komplexe Parameter" label="Effektike Kationenaustauschkapazität [cmol/kg]"  field="Px14_KAKeff" _boriscode="Px14" />
+      <attribute  code="Px15_Mb"               type="float"            attributegroup="Komplexe Parameter" label="Basensättigungsgrad (V-Wert) [%]"  field="Px15_Mb" _boriscode="Px15" />
+    </elementtype>
+    
+    
+    <!--################## DSII (BODENKARTE) #########################-->
+
+    <elementtype class="at.grid.sepp3.core.element.CmsBodenkarte" code="bodenkarte" table="tdtaelebodenkarte">
+      <!-- ALLGEMEIN -->
+      <attribute  code="nummer"                type="text"             attributegroup="Allgemein" label="Nummer" field="nummer"/>
+      <attribute  code="Bodentyp"              type="key"              attributegroup="Allgemein" label="Bodentyp (lang)" table="bodentyp" field="Bodentyp"/>
+      <attribute  code="Landnutzung"           type="key"              attributegroup="Allgemein" label="Landnutzung" table="landnutzung" field="Landnutzung"/>
+      <attribute  code="Bodenart_OB_1"         type="key"              attributegroup="Allgemein" label="1. Bodenart Oberboden" table="bodenart" field="Bodenart_OB_1"/>
+      <attribute  code="Bodenart_OB_2"         type="key"              attributegroup="Allgemein" label="2. Bodenart Oberboden" table="bodenart" field="Bodenart_OB_2"/>
+      <attribute  code="Bodenart_UB_1"         type="key"              attributegroup="Allgemein" label="1. Bodenart Unterboden" table="bodenart" field="Bodenart_UB_1"/>
+      <attribute  code="Bodenart_UB_2"         type="key"              attributegroup="Allgemein" label="2. Bodenart Unterboden" table="bodenart" field="Bodenart_UB_2"/>
+      <!-- Komplexe Parameter -->
+      <attribute  code="Py01_OB_cm"            type="float"            attributegroup="Allgemein" label="Mächtigkeit Oberboden"  field="Py01_OB_cm" />
+      <attribute  code="Py02_UB_cm"            type="float"            attributegroup="Allgemein" label="Mächtigkeit Unterboden"  field="Py02_UB_cm"/>
+      <attribute  code="Py03_Hu_min"           type="key"              attributegroup="Allgemein" label="Humusgehalt (min)"  table="humusgehalt" field="Py03_Hu_min" />
+      <attribute  code="Py03_Hu_max"           type="key"              attributegroup="Allgemein" label="Humusgehalt (max)"  table="humusgehalt" field="Py03_Hu_max" />
+      <attribute  code="Py03a_Hf"              type="key"              attributegroup="Allgemein" label="Humusform"  table="humusform2" field="Py03a_Hf"/>
+      <attribute  code="Py04_OB_Sk_min"        type="key"              attributegroup="Allgemein" label="Skelettgehalt Oberboden (min)" table="skelettgehalt" field="Py04_OB_Sk_min" />
+      <attribute  code="Py04_OB_Sk_max"        type="key"              attributegroup="Allgemein" label="Skelettgehalt Oberboden (max)" table="skelettgehalt" field="Py04_OB_Sk_max" />
+      <attribute  code="Py04_UB_Sk_min"        type="key"              attributegroup="Allgemein" label="Skelettgehalt Unterboden (min)" table="skelettgehalt" field="Py04_UB_Sk_min" />
+      <attribute  code="Py04_UB_Sk_max"        type="key"              attributegroup="Allgemein" label="Skelettgehalt Unterboden (max)" table="skelettgehalt" field="Py04_UB_Sk_max" />
+      <attribute  code="Py05_OB_Ton"           type="boolean"          attributegroup="Allgemein" label="Tongehalt Oberboden" table="tongehalt" field="Py05_OB_Ton" />
+      <attribute  code="Py05_UB_Ton"           type="boolean"          attributegroup="Allgemein" label="Tongehalt Unterboden" table="tongehalt" field="Py05_UB_Ton" />
+      <attribute  code="Py06_OB_pH_min"        type="key"              attributegroup="Allgemein" label="pH-Wert Oberboden (min)" table="phwert" field="Py06_OB_pH_min" />
+      <attribute  code="Py06_OB_pH_max"        type="key"              attributegroup="Allgemein" label="pH-Wert Oberboden (max)" table="phwert" field="Py06_OB_pH_max" />
+      <attribute  code="Py06_UB_pH_min"        type="key"              attributegroup="Allgemein" label="pH-Wert Unterboden (min)" table="phwert" field="Py06_UB_pH_min" />
+      <attribute  code="Py06_UB_pH_max"        type="key"              attributegroup="Allgemein" label="pH-Wert Unterboden (max)" table="phwert" field="Py06_UB_pH_max" />
+      <attribute  code="Py07_Typ"              type="key"              attributegroup="Allgemein" label="Bodentyp (kurz)" table="bodentypkurz" field="Py07_Typ" />
+      <attribute  code="Py08_Feuchte_min"      type="key"              attributegroup="Allgemein" label="Feuchtestufe (min)"  table="feuchtestufe" field="Py08_Feuchte_min" />
+      <attribute  code="Py08_Feuchte_max"      type="key"              attributegroup="Allgemein" label="Feuchtestufe (max)"  table="feuchtestufe" field="Py08_Feuchte_max" />
+      <attribute  code="Py09_WSV_min"          type="key"              attributegroup="Allgemein" label="Wasserspeichervermögen (min)" table="wsv" field="Py09_WSV_min" />
+      <attribute  code="Py09_WSV_max"          type="key"              attributegroup="Allgemein" label="Wasserspeichervermögen (max)" table="wsv" field="Py09_WSV_max" />
+      <attribute  code="Py10_kf_min"           type="key"              attributegroup="Allgemein" label="Durchlässigkeit (min)" table="durchlaessigkeit" field="Py10_kf_min" />
+      <attribute  code="Py10_kf_max"           type="key"              attributegroup="Allgemein" label="Durchlässigkeit (max)" table="durchlaessigkeit" field="Py10_kf_max" />
+      <attribute  code="Py11_Gefahr_1"         type="multikey"         attributegroup="Allgemein" label="Gefährdung 1" table="gefaehrdung" />
+      <attribute  code="Py11_Gefahr_2"         type="multikey"         attributegroup="Allgemein" label="Gefährdung 2" table="gefaehrdung" />
+      <attribute  code="Py12_Bearb_1"          type="multikey"         attributegroup="Allgemein" label="Bearbeitbarkeit 1" table="bearbeitbarkeit" />
+      <attribute  code="Py12_Bearb_2"          type="multikey"         attributegroup="Allgemein" label="Bearbeitbarkeit 2" table="bearbeitbarkeit" />
+      <attribute  code="Py13_BWA"              type="key"              attributegroup="Allgemein" label="Bodenwert Acker" table="bodenwertacker" field="Py13_BWA" />
+      <attribute  code="Py14_BWG"              type="key"              attributegroup="Allgemein" label="Bodenwert Grünland" table="bodenwertgruenland" field="Py14_BWG" />
+
+      <!-- BEWERTUNG -->
+      <attribute  code="Leben_Tr"              type="key"              attributegroup="Lebensraumfunktionen" label="1a.2 Lebensraum für Tiere und Pflanzen - Trockenstandort" table ="eval" field="Leben_Tr" />
+      <attribute  code="Leben_Fe"              type="key"              attributegroup="Lebensraumfunktionen" label="1a.2 Lebensraum für Tiere und Pflanzen - Feuchtstandort" table ="eval" field="Leben_Fe" />
+      <attribute  code="Leben_Org"             type="key"              attributegroup="Lebensraumfunktionen" label="1a.3 Lebensraum für Bodenorganismen" table ="eval" field="Leben_Org" />
+      <attribute  code="Leben_Kult"            type="key"              attributegroup="Lebensraumfunktionen" label="1a.4 Lebensraum für Kulturpflanzen" table ="eval" field="Leben_Kult" />
+      <attribute  code="Retention"             type="key"              attributegroup="Funktionen im Naturhaushalt" label="1c.1 Retentionsvermögen für Niederschläge" table ="eval" field="Retention" />
+      <attribute  code="GWneu"                 type="key"              attributegroup="Funktionen im Naturhaushalt" label="1c.3 Potenzial des Bodens für qualitativ hochwertige Grundwasserneubildung" table ="eval" field="GWneu" />
+      <attribute  code="CO2_Senke"             type="key"              attributegroup="Funktionen im Naturhaushalt" label="1c.5 Potenzial des Bodens als CO2-Senke" table ="eval" field="CO2_Senke" />
+      <attribute  code="FiltPuff"              type="key"              attributegroup="Umwandlungs- und Ausgleichsfunktionen" label="1d.1 Rückhaltepotenzial für Schwermetalle" table ="eval" field="FiltPuff" />
+      <attribute  code="Transform"             type="key"              attributegroup="Umwandlungs- und Ausgleichsfunktionen" label="1d.2 Transformationspotenzial für organische Schadstoffe" table ="eval" field="Transform" />
+      <attribute  code="FiltPuff_Nit"          type="key"              attributegroup="Umwandlungs- und Ausgleichsfunktionen" label="1d.4 Rückhaltepotenzial für wasserlösliche Schadstoffe" table ="eval" field="FiltPuff_Nit" />
+    </elementtype>
+    
+    
+    
+  </elementtypes>
+
+  <subelements/>
+  <keytables>
+      
+    <keytable table="exposition">
+      <item id="1" lang="de" term="E" />
+      <item id="2" lang="de" term="EBEN" />
+      <item id="3" lang="de" term="ENE" />
+      <item id="4" lang="de" term="ESE" />
+      <item id="5" lang="de" term="N" />
+      <item id="6" lang="de" term="NE" />
+      <item id="7" lang="de" term="NNE" />
+      <item id="8" lang="de" term="NNW" />
+      <item id="9" lang="de" term="NW" />
+      <item id="10" lang="de" term="S" />
+      <item id="11" lang="de" term="SE" />
+      <item id="12" lang="de" term="SSE" />
+      <item id="13" lang="de" term="SSW" />
+      <item id="14" lang="de" term="SW" />
+      <item id="15" lang="de" term="W" />
+      <item id="16" lang="de" term="WNW" />
+      <item id="17" lang="de" term="WSW" />
+    </keytable>
+    <keytable table="projektion">
+      <item id="0" lang="de" term="Digitalisiert aus Karte" />
+      <item id="1" lang="de" term="LCC &quot;neu&quot; (47.50° N)" />
+      <item id="2" lang="de" term="Gauß-Krüger Projektion" />
+      <item id="3" lang="de" term="Bundesmeldenetz" />
+      <item id="4" lang="de" term="Militärkoordinaten" />
+      <item id="5" lang="de" term="geogr. Koordinaten" />
+      <item id="6" lang="de" term="LCC &quot;alt&quot; (48.00° N)" />
+      <item id="7" lang="de" term="Traktnummern (6-stellig)" />
+      <item id="8" lang="de" term="UTM-Koordinaten" />
+      <item id="9" lang="de" term="Keine Angabe" />
+    </keytable>
+    <keytable table="level">
+      <item id="1" lang="de" term="DS I"/>
+      <item id="2" lang="de" term="DS II"/>
+      <item id="3" lang="de" term="DS III"/>
+    </keytable>
+    <keytable table="srid">
+      <item id="3416" lang="de" term="ETRS89 / Austria Lambert (EPSG:3416)" />
+      <item id="31251" lang="de" term="MGI (Ferro) / Austria GK West Zone (EPSG:31251)" />
+      <item id="31252" lang="de" term="MGI (Ferro) / Austria GK Central Zone (EPSG:31252)" />
+      <item id="31253" lang="de" term="MGI (Ferro) / Austria GK East Zone (EPSG:31253)" />
+      <item id="31254" lang="de" term="MGI / Austria GK West (EPSG:31254)" />
+      <item id="31255" lang="de" term="MGI / Austria GK Central (EPSG:31255)" />
+      <item id="31256" lang="de" term="MGI / Austria GK East (EPSG:31256)" />
+      <item id="31257" lang="de" term="MGI / Austria GK M28 (EPSG:31257) [Bundesmeldenetz]" />
+      <item id="31258" lang="de" term="MGI / Austria GK M31 (EPSG:31258) [Bundesmeldenetz]" />
+      <item id="31259" lang="de" term="MGI / Austria GK M34 (EPSG:31259) [Bundesmeldenetz]" />
+      <item id="4326" lang="de" term="WGS84 (EPSG:4326) [Geogr. Koord.]" />
+    </keytable>
+    
+    <keytable table="gruendigkeit">
+      <item id="11" lang="de" term="sehr flachgründig (bis 15cm)" />
+      <item id="12" lang="de" term="flachgründig (16 bis 30cm)" />
+      <item id="13" lang="de" term="mittelgründig (31 bis 60cm)" />
+      <item id="14" lang="de" term="tiefgründig (61 bis 120cm)" />
+      <item id="15" lang="de" term="sehr tiefgründig (&gt; 120cm)" />
+      <item id="21" lang="de" term="seichtgründig (bis 30 cm)" />
+      <item id="22" lang="de" term="mittelgründig (31 bis 70 cm)" />
+      <item id="23" lang="de" term="tiefgründig (&gt; 70cm)" />
+    </keytable>
+    <keytable table="hoehenstufe">
+      <item id="10" lang="de" term="Tieflage" />
+      <item id="11" lang="de" term="Kollin-planar" />
+      <item id="12" lang="de" term="submontan" />
+      <item id="20" lang="de" term="Mittellage" />
+      <item id="21" lang="de" term="tiefmontan" />
+      <item id="22" lang="de" term="mittelmontan" />
+      <item id="23" lang="de" term="hochmontan" />
+      <item id="30" lang="de" term="Hochlage" />
+      <item id="31" lang="de" term="tief-subalpin" />
+      <item id="32" lang="de" term="hoch-subalpin" />
+    </keytable>
+    <keytable table="witterung">
+      <item id="1" lang="de" term="trocken seit 1 Monat" />
+      <item id="2" lang="de" term="trocken seit 1 Woche" />
+      <item id="3" lang="de" term="trocken seit 1 Tag" />
+      <item id="4" lang="de" term="leichter Regen" />
+      <item id="5" lang="de" term="Starkregen" />
+      <item id="6" lang="de" term="extremer Regen/Schmelze" />
+    </keytable>
+    <keytable table="hangneigung">
+      <item id="11" lang="de" term="FW-eben" />
+      <item id="12" lang="de" term="FW-schwach geneigt" />
+      <item id="13" lang="de" term="FW-mäßig geneigt" />
+      <item id="14" lang="de" term="FW-stark geneigt" />
+      <item id="15" lang="de" term="FW-steil" />
+      <item id="16" lang="de" term="FW-schroff" />
+      <item id="17" lang="de" term="FW-sehr schroff" />
+      <item id="21" lang="de" term="LW-eben" />
+      <item id="22" lang="de" term="LW-schwach geneigt" />
+      <item id="23" lang="de" term="LW-leicht hängig" />
+      <item id="24" lang="de" term="LW-hängig" />
+      <item id="25" lang="de" term="LW-stark hängig" />
+      <item id="26" lang="de" term="LW-steilhängig" />
+      <item id="27" lang="de" term="LW-sehr steilhängig" />
+    </keytable>
+    <keytable table="makrorelief">
+      <item id="1" lang="de" term="Ebene" />
+      <item id="10" lang="de" term="Oberhang" />
+      <item id="11" lang="de" term="Unterhang" />
+      <item id="12" lang="de" term="Mittelhang" />
+      <item id="19" lang="de" term="Schwemm-/Schuttfächer" />
+      <item id="20" lang="de" term="Schwemm-/Schuttkegel" />
+      <item id="3" lang="de" term="Talboden / Talsohle" />
+      <item id="4" lang="de" term="Terrasse" />
+      <item id="5" lang="de" term="Plateau / Hochfläche" />
+    </keytable>
+    <keytable table="mesorelief">
+      <item id="2" lang="de" term="Verebnung" />
+      <item id="13" lang="de" term="Hangversteilung" />
+      <item id="14" lang="de" term="Hangverflachung" />
+      <item id="15" lang="de" term="Kuppe" />
+      <item id="16" lang="de" term="Rücken" />
+      <item id="17" lang="de" term="Riedel, Wall" />
+      <item id="18" lang="de" term="Hangfuß" />
+      <item id="6" lang="de" term="Mulde, Kessel" />
+      <item id="8" lang="de" term="Graben" />
+    </keytable>
+    <keytable table="woelbung">
+      <item id="1" lang="de" term="konvex (&gt; 1,3m)" />
+      <item id="11" lang="de" term="X/X - konvex/konvex" />
+      <item id="12" lang="de" term="G/X - gestreckt/konvex" />
+      <item id="13" lang="de" term="X/G - konvex/gestreckt" />
+      <item id="2" lang="de" term="konkav (&gt; 1,3m)" />
+      <item id="21" lang="de" term="V/V - konkav/konkav" />
+      <item id="22" lang="de" term="G/V - gestreckt/konkav" />
+      <item id="23" lang="de" term="V/G - konkav/gestreckt" />
+      <item id="3" lang="de" term="konvex-konkav (&gt; 1,3m)" />
+      <item id="31" lang="de" term="X/V - konvex/konkav" />
+      <item id="32" lang="de" term="V/X - konkav/konvex" />
+      <item id="4" lang="de" term="intermediär (&lt; 1,3m)" />
+      <item id="5" lang="de" term="eben" />
+      <item id="51" lang="de" term="G/G gestreckt/gestreckt" />
+      <item id="6" lang="de" term="Radius &gt; 1,3m" />
+      <item id="7" lang="de" term="Radius &lt;= 1,3m" />
+    </keytable>
+    <keytable table="woelbungsstaerke">
+      <item id="1" lang="de" term="nicht" />
+      <item id="2" lang="de" term="sehr schwach" />
+      <item id="3" lang="de" term="schwach" />
+      <item id="4" lang="de" term="mittel" />
+      <item id="5" lang="de" term="stark" />
+      <item id="6" lang="de" term="sehr stark" />
+      <item id="7" lang="de" term="&lt;keine Angabe&gt;" />
+    </keytable>
+    <keytable table="mikrorelief_b">
+      <item id="1" lang="de" term="glatt, eben" />
+      <item id="2" lang="de" term="unruhig (wellig, stufig)" />
+      <item id="3" lang="de" term="Rinnen, Gräben, Furchen" />
+      <item id="4" lang="de" term="Buckel, Schichtköpfe" />
+      <item id="5" lang="de" term="Blockflur" />
+    </keytable>
+    <keytable table="mikrorelief">
+      <item id="1" lang="de" term="glatt, eben" />
+      <item id="2" lang="de" term="rillig" />
+      <item id="3" lang="de" term="wellig" />
+      <item id="4" lang="de" term="höckerig" />
+      <item id="5" lang="de" term="kesselig" />
+      <item id="6" lang="de" term="stufig" />
+      <item id="7" lang="de" term="zerschnitten" />
+    </keytable>
+    <keytable table="anthropogen">
+      <item id="1" lang="de" term="keine" />
+      <item id="2" lang="de" term="künstliche Aufschüttung" />
+      <item id="3" lang="de" term="künstlicher Abtrag" />
+      <item id="4" lang="de" term="Muldenverfüllung" />
+      <item id="5" lang="de" term="Planierung" />
+      <item id="6" lang="de" term="Terrassierung" />
+    </keytable>
+    <keytable table="ausgangsmaterial">
+      <item id="10000" lang="de" term="Tiefen- und Ganggesteine" />
+      <item id="20000" lang="de" term="Vulkanite" />
+      <item id="30000" lang="de" term="Metamorphe Gesteine" />
+      <item id="40000" lang="de" term="Feste Sedimentgesteine" />
+      <item id="50000" lang="de" term="Lockersedimente" />
+    </keytable>
+    <keytable table="koernigkeit">
+      <item id="1" lang="de" term="feinkörnig" />
+      <item id="12" lang="de" term="fein- und mittelkörnig" />
+      <item id="13" lang="de" term="fein- und grobkörnig" />
+      <item id="2" lang="de" term="mittelkörnig" />
+      <item id="21" lang="de" term="mittel- und feinkörnig" />
+      <item id="23" lang="de" term="mittel- und grobkörnig" />
+      <item id="3" lang="de" term="grobkörnig" />
+      <item id="31" lang="de" term="grob- und feinkörnig" />
+      <item id="32" lang="de" term="grob- und mittelkörnig" />
+    </keytable>
+    <keytable table="hangwasser">
+      <item id="00" lang="de" term="keine Hangwasserbeeinflußung" />
+      <item id="39" lang="de" term="Hangwasser allgemein, keine Angabe über die Dauer" />
+    </keytable>
+    <keytable table="humusform">
+      <item id="900" lang="de" term="keine Auflage/Humus" />
+      <item id="110" lang="de" term="Mull" />
+      <item id="112" lang="de" term="Moderartiger Mull" />
+      <item id="114" lang="de" term="Anmoormull" />
+      <item id="120" lang="de" term="Moder" />
+      <item id="130" lang="de" term="Rohhumus" />
+      <item id="210" lang="de" term="Feuchtmull" />
+      <item id="220" lang="de" term="Feuchtmoder" />
+      <item id="230" lang="de" term="Feuchtrohhumus" />
+      <item id="240" lang="de" term="Hochmoortorf" />
+      <item id="260" lang="de" term="Anmoorhumus" />
+      <item id="310" lang="de" term="Niedermoortorf" />
+    </keytable>
+    <keytable table="grundstauwasser">
+      <item id="00" lang="de" term="keine Grund- u. Stauwasserbeeinflussung" />
+      <item id="11" lang="de" term="Stauwasser, überwiegende Trockenphase" />
+      <item id="12" lang="de" term="Stauwasser, Trocken-, Naßphase gleich lang" />
+      <item id="13" lang="de" term="Stauwasser, überwiegende Naßphase" />
+      <item id="19" lang="de" term="Stauwasser, keine Angabe über Dauer" />
+      <item id="21" lang="de" term="Grundwasser, überwiegende Trockenphase" />
+      <item id="22" lang="de" term="Grundwasser, Trocken-, Naßphase gleich lang" />
+      <item id="23" lang="de" term="Grundwasser, überwiegende Naßphase" />
+      <item id="29" lang="de" term="Grundwasser, keine Angabe über Dauer" />
+      <item id="31" lang="de" term="Grund- und Stauwasser, überwiegende Trockenphase" />
+      <item id="32" lang="de" term="Grund- und Stauwasser, Trocken-, Naßphase gleich lang" />
+      <item id="33" lang="de" term="Grund- und Stauwasser, überwiegende Naßphase" />
+      <item id="39" lang="de" term="Grund- und Stauwasser, keine Angabe über Dauer" />
+    </keytable>
+    <keytable table="bodentyp">
+      <item id="0" lang="de" term="keine Angabe" />
+      <item id="1100" lang="de" term="Moor- und Anmoorgruppe" />
+      <item id="1101" lang="de" term="Hochmoor" />
+      <item id="1102" lang="de" term="Übergangsmoor" />
+      <item id="1103" lang="de" term="Niedermoor / Flachmoor" />
+      <item id="1201" lang="de" term="Anmoor" />
+      <item id="1300" lang="de" term="Aubodengruppe" />
+      <item id="1301" lang="de" term="Rohauboden" />
+      <item id="1302" lang="de" term="grauer Auboden" />
+      <item id="1303" lang="de" term="brauner Auboden" />
+      <item id="1304" lang="de" term="Schwemmboden" />
+      <item id="1400" lang="de" term="Gleygruppe" />
+      <item id="1401" lang="de" term="typischer Gley" />
+      <item id="1402" lang="de" term="extremer Gley" />
+      <item id="1403" lang="de" term="Hanggley" />
+      <item id="1500" lang="de" term="Salzbodengruppe" />
+      <item id="1501" lang="de" term="Solontschak" />
+      <item id="1502" lang="de" term="Solontschak - Solonetz" />
+      <item id="1503" lang="de" term="Solonetz" />
+      <item id="1600" lang="de" term="Rohbodengruppe" />
+      <item id="1601" lang="de" term="Gesteinsrohboden" />
+      <item id="1602" lang="de" term="Lockersediment-Rohboden" />
+      <item id="1700" lang="de" term="Rendsina - Ranker - Gruppe" />
+      <item id="1701" lang="de" term="Rendsina" />
+      <item id="1702" lang="de" term="Pararendsina" />
+      <item id="1703" lang="de" term="Ranker" />
+      <item id="1800" lang="de" term="Schwarzerdegruppe" />
+      <item id="1801" lang="de" term="Gebirgsschwarzerde" />
+      <item id="1802" lang="de" term="Tschernosem" />
+      <item id="1803" lang="de" term="Brauner Tschernosem" />
+      <item id="1804" lang="de" term="Paratschernosem" />
+      <item id="1805" lang="de" term="Feuchtschwarzerde" />
+      <item id="1900" lang="de" term="Braunerdegruppe" />
+      <item id="1901" lang="de" term="Felsbraunerde" />
+      <item id="1902" lang="de" term="Lockersedimentbraunerde" />
+      <item id="1903" lang="de" term="Parabraunerde" />
+      <item id="2000" lang="de" term="Podsolgruppe" />
+      <item id="2001" lang="de" term="Semipodsol" />
+      <item id="2002" lang="de" term="typischer Podsol" />
+      <item id="2100" lang="de" term="Pseudogley-Gruppe" />
+      <item id="2101" lang="de" term="typischer Pseudogley" />
+      <item id="2102" lang="de" term="extremer Pseudogley" />
+      <item id="2103" lang="de" term="Stagnogley" />
+      <item id="2104" lang="de" term="Hangpseudogley" />
+      <item id="2200" lang="de" term="Reliktbodengruppe" />
+      <item id="2201" lang="de" term="Braunlehm" />
+      <item id="2202" lang="de" term="Rotlehm" />
+      <item id="2203" lang="de" term="Roterde" />
+      <item id="2204" lang="de" term="Reliktpseudogley" />
+      <item id="2205" lang="de" term="Terra Fusca" />
+      <item id="2300" lang="de" term="atypische Böden" />
+      <item id="2310" lang="de" term="Ortsboden" />
+      <item id="2311" lang="de" term="Farb-Ortsboden" />
+      <item id="2312" lang="de" term="Textur-Ortsboden" />
+      <item id="2313" lang="de" term="Struktur-Ortsboden" />
+      <item id="2320" lang="de" term="gestörter Boden" />
+      <item id="2321" lang="de" term="Restboden" />
+      <item id="2322" lang="de" term="Kulturrohboden" />
+      <item id="2323" lang="de" term="Gartenboden" />
+      <item id="2330" lang="de" term="Rigolboden" />
+      <item id="2340" lang="de" term="Schüttungsboden" />
+      <item id="2341" lang="de" term="Haldenboden - Planieboden" />
+      <item id="2342" lang="de" term="Kolluvium - Bodensedimente" />
+      <item id="2400" lang="de" term="nicht identifizierbare Böden" />
+    </keytable>
+    <keytable table="erosion">
+      <item id="0" lang="de" term="keine Erosion" />
+      <item id="10" lang="de" term="Erosion" />
+      <item id="11" lang="de" term="schwache Erosion" />
+      <item id="12" lang="de" term="(mäßige) Erosion" />
+      <item id="13" lang="de" term="starke Erosion" />
+      <item id="99" lang="de" term="keine Angabe" />
+    </keytable>
+    <keytable table="erosionsgrad">
+      <item id="1" lang="de" term="keine" />
+      <item id="2" lang="de" term="gering" />
+      <item id="3" lang="de" term="mittel" />
+      <item id="4" lang="de" term="hoch" />
+      <item id="5" lang="de" term="sehr hoch" />
+    </keytable>
+    <keytable table="erosionsausmass">
+      <item id="1" lang="de" term="keine (0%)" />
+      <item id="2" lang="de" term="gering (1 bis 5%)" />
+      <item id="3" lang="de" term="mittel (6 bis 10%)" />
+      <item id="4" lang="de" term="hoch (11 bis 20%)" />
+      <item id="5" lang="de" term="sehr hoch (>20%)" />
+    </keytable>
+    <keytable table="landnutzung">
+      <item id="100" lang="de" term="Wald/Forst" />
+      <item id="200" lang="de" term="Grünland" />
+      <item id="250" lang="de" term="Alm, Vor- und Zwischenalm" />
+      <!-- CODE is '2A0', use 2990 -->
+      <item id="2990" lang="de" term="Landwirtschaftliche Brachfläche" />
+      <item id="300" lang="de" term="Acker" />
+      <item id="500" lang="de" term="Sonderkultur" />
+      <item id="600" lang="de" term="Gartenanlage" />
+      <item id="640" lang="de" term="Kleingarten" />
+      <item id="700" lang="de" term="Verkehrsfläche" />
+      <item id="801" lang="de" term="geschlossene/dichte Bebauung" />
+      <item id="802" lang="de" term="offene Bebauung (v.a. Wohnen)" />
+      <item id="810" lang="de" term="Kinderspielplatz" />
+      <item id="820" lang="de" term="Park, Friedhof" />
+      <item id="830" lang="de" term="Sport-, Freizeitanlage" />
+      <item id="850" lang="de" term="Betriebsfläche" />
+      <item id="910" lang="de" term="Golfplatz" />
+      <item id="912" lang="de" term="Skipiste" />
+      <item id="950" lang="de" term="Moor (unkultiviert)" />
+      <item id="960" lang="de" term="Schutt, Geröll, Fels" />
+      <item id="990" lang="de" term="Sonstiges" />
+      <item id="99999" lang="de" term="Keine Angabe" />
+    </keytable>
+    <keytable table="vegetation">
+      <item id="1" lang="de" term="Laubwald" />
+      <item id="2" lang="de" term="Mischwald" />
+      <item id="3" lang="de" term="Nadelwald" />
+      <item id="4" lang="de" term="Lärchenwald/-wiese" />
+      <item id="5" lang="de" term="Latschengebüsch" />
+      <item id="6" lang="de" term="Grünerlen-/Weidengebüsch" />
+      <item id="7" lang="de" term="Kahlschlag, Windwurf" />
+      <item id="8" lang="de" term="Alpenrosengebüsch" />
+      <item id="9" lang="de" term="Zwergstrauchheide" />
+      <item id="10" lang="de" term="Hochstaudenflur" />
+      <item id="11" lang="de" term="Feuchtflächen, Moore" />
+      <item id="12" lang="de" term="Fels, Schutt, Pioniervegetation" />
+      <item id="13" lang="de" term="alpine Rasen, allgemein" />
+      <item id="14" lang="de" term="Bürstlingrasen" />
+      <item id="15" lang="de" term="Weide (mager)" />
+      <item id="16" lang="de" term="Weide (fett)" />
+      <item id="17" lang="de" term="Mähwiese" />
+      <item id="18" lang="de" term="Zierrasen" />
+      <item id="19" lang="de" term="Gartenbeete" />
+      <item id="20" lang="de" term="Ackerflächen" />
+      <item id="21" lang="de" term="Ruderalvegetation" />
+      <item id="22" lang="de" term="sonstige" />
+    </keytable>
+    <keytable table="keinebishoch">
+      <item id="1" lang="de" term="keine / gering" />
+      <item id="2" lang="de" term="mittel" />
+      <item id="3" lang="de" term="hoch" />
+    </keytable>
+    <keytable table="geringbishoch">
+      <item id="1" lang="de" term="gering" />
+      <item id="2" lang="de" term="mittel" />
+      <item id="3" lang="de" term="hoch" />
+    </keytable>
+    <keytable table="durchwurzelung">
+      <item id="1" lang="de" term="nicht" />
+      <item id="2" lang="de" term="schwach" />
+      <item id="3" lang="de" term="mittel" />
+      <item id="4" lang="de" term="stark" />
+      <item id="5" lang="de" term="sehr stark" />
+      <item id="6" lang="de" term="Wurzelfilz" />
+    </keytable>
+    <keytable table="abzufluss">
+      <item id="1" lang="de" term="Abfluss &gt; Zufluss" />
+      <item id="2" lang="de" term="Abfluss = Zufluss" />
+      <item id="3" lang="de" term="Abfluss &lt; Zufluss" />
+    </keytable>
+    <keytable table="stauwasser">
+      <item id="1" lang="de" term="kurz nass / lange trocken" />
+      <item id="2" lang="de" term="gleich lange nass und trocken" />
+      <item id="3" lang="de" term="lange nass / kurz trocken" />
+    </keytable>
+    <keytable table="oekofeuchte">
+      <item id="210" lang="de" term="sehr trocken" />
+      <item id="220" lang="de" term="trocken" />
+      <item id="230" lang="de" term="mäßig trocken" />
+      <item id="240" lang="de" term="gut versorgt" />
+      <item id="250" lang="de" term="mäßig feucht" />
+      <item id="260" lang="de" term="feucht" />
+      <item id="270" lang="de" term="nass" />
+      <item id="280" lang="de" term="wechselfeucht" />
+    </keytable>
+    <keytable table="basenreichtum">
+      <item id="1" lang="de" term="basenreich" />
+      <item id="2" lang="de" term="basenarm" />
+      <item id="3" lang="de" term="intermediär" />
+      <item id="9" lang="de" term="keine Angabe" />
+    </keytable>
+    <keytable table="karbonatgehalt">
+      <item id="10" lang="de" term="karbonathältig" />
+      <item id="20" lang="de" term="karbonatfrei" />
+      <item id="30" lang="de" term="nicht eindeutig bestimmbar" />
+    </keytable>
+    <keytable table="art">
+      <item id="1" lang="de" term="Profilgrube" />
+      <item id="2" lang="de" term="Spatenstich" />
+      <item id="3" lang="de" term="Bohrstock" />
+    </keytable>
+    <keytable table="uebergang">
+      <item id="1" lang="de" term="gerade" />
+      <item id="2" lang="de" term="wellig" />
+      <item id="3" lang="de" term="taschenförmig" />
+      <item id="4" lang="de" term="unterbrochen" />
+    </keytable>
+    <keytable table="bodenart">
+      <item id="101" lang="de" term="S - Sand" />
+      <item id="121" lang="de" term="uS - schluffiger Sand" />
+      <item id="202" lang="de" term="U - Schluff" />
+      <item id="212" lang="de" term="sU - sandiger Schluff" />
+      <item id="231" lang="de" term="lS - lehmiger Sand" />
+      <item id="313" lang="de" term="sL - sandiger Lehm" />
+      <item id="332" lang="de" term="lU - lehmiger Schluff" />
+      <item id="341" lang="de" term="tS - toniger Sand" />
+      <item id="403" lang="de" term="L - Lehm" />
+      <item id="414" lang="de" term="sT - sandiger Ton" />
+      <item id="423" lang="de" term="uL - schluffiger Lehm" />
+      <item id="504" lang="de" term="T - Ton" />
+      <item id="534" lang="de" term="lT - lehmiger Ton" />
+    </keytable>
+    <keytable table="feinwurzeln">
+      <item id="0" lang="de" term="keine Feinwurzeln" />
+      <item id="1" lang="de" term="schwach durchwurzelt (1-5)" />
+      <item id="2" lang="de" term="mittel durchwurzelt (6-10)" />
+      <item id="3" lang="de" term="stark durchwurzelt (11-20)" />
+      <item id="4" lang="de" term="sehr stark durchwurzelt (21-50)" />
+      <item id="7" lang="de" term="Wurzelfilz (&gt;50)" />
+    </keytable>
+    <keytable table="grobwurzeln">
+      <item id="0" lang="de" term="keine Grobwurzeln" />
+      <item id="1" lang="de" term="sehr wenige (1-2)" />
+      <item id="2" lang="de" term="wenige (3-10)" />
+      <item id="3" lang="de" term="normal (11-20)" />
+      <item id="4" lang="de" term="viele (21-30)" />
+      <item id="5" lang="de" term="sehr viele (&gt;30)" />
+    </keytable>
+    <keytable table="humus_klasse">
+      <item id="0" lang="de" term="humusfrei (0%)" />
+      <item id="10" lang="de" term="sehr schwach humos (&lt; 1%)" />
+      <item id="20" lang="de" term="schwach humos (1-2%)" />
+      <item id="30" lang="de" term="mittel humos (2-4%)" />
+      <item id="40" lang="de" term="stark humos (4-8%)" />
+      <item id="50" lang="de" term="sehr stark humos (8-15%)" />
+      <item id="60" lang="de" term="anmoorig bzw. äußerst humos (15-30%)" />
+      <item id="70" lang="de" term="Torf (&gt; 30%)" />
+    </keytable>
+    <keytable table="skelett_klasse">
+      <item id="0" lang="de" term="kein (0%)" />
+      <item id="199" lang="de" term="gering (0 bis &lt;10%)" />
+      <item id="299" lang="de" term="mäßig (10 bis &lt;20%)" />
+      <item id="399" lang="de" term="hoch (20 bis &lt;40%)" />
+      <item id="499" lang="de" term="sehr hoch (40 bis &lt;80%)" />
+      <item id="599" lang="de" term="vorwiegend (über 80%)" />
+    </keytable>
+    <keytable table="dichte_klasse">
+      <item id="10" lang="de" term="sehr locker" />
+      <item id="20" lang="de" term="locker" />
+      <item id="30" lang="de" term="mittel" />
+      <item id="50" lang="de" term="dicht" />
+      <item id="60" lang="de" term="sehr dicht" />
+    </keytable>
+    <keytable table="carbonat_klasse">
+      <item id="12" lang="de" term="kalkfrei bis kalkarm (&lt;0.5%)" />
+      <item id="3" lang="de" term="schwach kalkhaltig (0.5 bis &lt;1.5%)" />
+      <item id="4" lang="de" term="mäßig kalkhaltig (1.5 bis 5%)" />
+      <item id="5" lang="de" term="stark kalkhaltig (&gt;5%)" />
+    </keytable>
+    <keytable table="porositaet">
+      <item id="0" lang="de" term="makroskopisch keine Poren vorhanden" />
+      <item id="11" lang="de" term="schwach feinporös" />
+      <item id="12" lang="de" term="schwach mittelporös" />
+      <item id="13" lang="de" term="schwach grobporös" />
+      <item id="19" lang="de" term="schwacher Porenanteil am Bodenvolumen (k.A. zur Größe)" />
+      <item id="21" lang="de" term="mittel feinporös" />
+      <item id="22" lang="de" term="mittel mittelporös" />
+      <item id="23" lang="de" term="mittel grobporös" />
+      <item id="29" lang="de" term="mittlerer Porenanteil am Bodenvolumen (k.A. zur Größe)" />
+      <item id="31" lang="de" term="stark feinporös" />
+      <item id="32" lang="de" term="stark mittelporös" />
+      <item id="33" lang="de" term="stark grobporös" />
+      <item id="39" lang="de" term="starker Porenanteil am Bodenvolumen (k.A. zur Größe)" />
+      <item id="91" lang="de" term="feine Poren (keine Angabe zum Anteil am Bodenvolumen)" />
+      <item id="92" lang="de" term="mittlere Poren (keine Angabe zum Anteil am Bodenvolumen)" />
+      <item id="93" lang="de" term="grobe Poren (keine Angabe zum Anteil am Bodenvolumen)" />
+    </keytable>
+    <keytable table="gefuege">
+      <item id="199" lang="de" term="ohne Struktur (z.B. Torf)" />
+      <item id="299" lang="de" term="Einzelkorn" />
+      <item id="399" lang="de" term="Kohärentgefüge" />
+      <item id="410" lang="de" term="Platten" />
+      <item id="420" lang="de" term="Prismen" />
+      <item id="430" lang="de" term="Säulen" />
+      <item id="440" lang="de" term="Polyeder" />
+      <item id="450" lang="de" term="Subpolyeder" />
+      <item id="460" lang="de" term="Körner" />
+      <item id="470" lang="de" term="Krümel" />
+      <item id="480" lang="de" term="Bröckel (&lt;50mm)" />
+      <item id="490" lang="de" term="Klumpen (Schollen) (&gt;50 mm)" />
+      <item id="499" lang="de" term="Aggregatstruktur ohne nähere Angabe" />
+    </keytable>
+    <keytable table="artefakte">
+      <item id="1" lang="de" term="keine" />
+      <item id="2" lang="de" term="Schutt/Ziegel" />
+      <item id="3" lang="de" term="Kohle" />
+      <item id="4" lang="de" term="Schlacken" />
+      <item id="5" lang="de" term="Aschen" />
+      <item id="6" lang="de" term="Müll" />
+      <item id="7" lang="de" term="Industriemüll" />
+      <item id="8" lang="de" term="Schlämme" />
+      <item id="9" lang="de" term="org. Substrate" />
+      <item id="10" lang="de" term="sonstige" />
+    </keytable>
+    <keytable table="konkretionen">
+      <item id="0" lang="de" term="keine Konkretionen" />
+      <item id="9199" lang="de" term="einzelne Konkretionen (keine näheren Angaben)" />
+      <item id="9299" lang="de" term="mehrere Konkretionen (keine näheren Angaben)" />
+      <item id="9399" lang="de" term="viele Konkretionen (keine näheren Angaben)" />
+    </keytable>
+    <keytable table="fleckenzahl">
+      <item id="1" lang="de" term="keine" />
+      <item id="2" lang="de" term="einzelne" />
+      <item id="3" lang="de" term="mehrere" />
+      <item id="4" lang="de" term="viele" />
+    </keytable>
+    <keytable table="fleckenart">
+      <item id="1" lang="de" term="Bleichung" />
+      <item id="2" lang="de" term="Rost" />
+      <item id="3" lang="de" term="Humus" />
+      <item id="4" lang="de" term="Mangan" />
+      <item id="5" lang="de" term="Verwiterung" />
+      <item id="6" lang="de" term="Reduktion" />
+    </keytable>
+    <keytable table="fleckung">
+      <item id="1" lang="de" term="0 - keine Flecken" />
+      <item id="2" lang="de" term="919F9 - einzelne Fahlflecken" />
+      <item id="3" lang="de" term="919B9 - einzelne Bleichflecken" />
+      <item id="4" lang="de" term="919R9 - einzelne Rostflecken" />
+      <item id="5" lang="de" term="919H9 - einzelne Humusflecken" />
+      <item id="6" lang="de" term="919M9 - einzelne Manganflecken" />
+      <item id="7" lang="de" term="919V9 - einzelne Verwitterungsflecken" />
+      <item id="8" lang="de" term="919D9 - einzelne Reduktionsflecken" />
+      <item id="9" lang="de" term="919X9 - einzelne, unidentifizierbare Flecken" />
+      <item id="10" lang="de" term="929F9 - mehrere Fahlflecken" />
+      <item id="11" lang="de" term="929B9 - mehrere Bleichflecken" />
+      <item id="12" lang="de" term="929R9 - mehrere Rostflecken" />
+      <item id="13" lang="de" term="929H9 - mehrere Humusflecken" />
+      <item id="14" lang="de" term="929M9 - mehrere Manganflecken" />
+      <item id="15" lang="de" term="929V9 - mehrere Verwitterungsflecken" />
+      <item id="16" lang="de" term="929D9 - mehrere Reduktionsflecken" />
+      <item id="17" lang="de" term="929X9 - mehrere, unidentifizierbare Flecken" />
+      <item id="18" lang="de" term="939F9 - viele Fahlflecken" />
+      <item id="19" lang="de" term="939B9 - viele Bleichflecken" />
+      <item id="20" lang="de" term="939R9 - viele Rostflecken" />
+      <item id="21" lang="de" term="939H9 - viele Humusflecken" />
+      <item id="22" lang="de" term="939M9 - viele Manganflecken" />
+      <item id="23" lang="de" term="939V9 - viele Verwitterungsflecken" />
+      <item id="24" lang="de" term="939D9 - viele Reduktionsflecken" />
+      <item id="25" lang="de" term="939X9 - viele, unidentifizierbare Flecken" />
+      <item id="26" lang="de" term="99999 - keine Angabe" />
+    </keytable>
+    <keytable table="ol_lagerung">
+      <item id="1" lang="de" term="locker" />
+      <item id="2" lang="de" term="verklebt" />
+    </keytable>
+    <keytable table="of_lagerung">
+      <item id="1" lang="de" term="locker" />
+      <item id="2" lang="de" term="verklebt" />
+      <item id="3" lang="de" term="schichtig" />
+    </keytable>
+    <keytable table="oh_lagerung">
+      <item id="1" lang="de" term="locker" />
+      <item id="2" lang="de" term="verklebt" />
+      <item id="3" lang="de" term="schichtig" />
+      <item id="4" lang="de" term="brechbar" />
+      <item id="5" lang="de" term="anders" />
+    </keytable>
+    <keytable table="torf_zersetzung">
+      <item id="1" lang="de" term="sehr schwach" />
+      <item id="2" lang="de" term="schwach" />
+      <item id="3" lang="de" term="mittel" />
+      <item id="4" lang="de" term="stark" />
+      <item id="5" lang="de" term="sehr stark" />
+    </keytable>
+    <keytable table="phmethode">
+      <item id="1" lang="de" term="pH-Meter" />
+      <item id="2" lang="de" term="Indikatorstäbchen/-flüssigkeit" />
+    </keytable>
+    <keytable table="bodentyp_oe">
+      <item id="1100" lang="de" term="Terrestrische Rohböden"/>
+      <item id="1110" lang="de" term="Grobmaterial Rohboden (CG)"/>
+      <item id="1111" lang="de" term="Carbonatfreier Grobmaterial-Rohboden"/>
+      <item id="1112" lang="de" term="Carbonathaltiger Grobmaterial-Rohboden"/>
+      <item id="1120" lang="de" term="Feinmaterial - Rohboden (CF)"/>
+      <item id="1121" lang="de" term="carbonatfreier Feinmaterial - Rohboden"/>
+      <item id="1122" lang="de" term="carbonathaltiger Feinmaterial - Rohboden"/>
+      <item id="1200" lang="de" term="Auflagehumusböden und entwickelte A-C-Böden"/>
+      <item id="1210" lang="de" term="Fels-Auflagehumusboden (RA)"/>
+      <item id="1220" lang="de" term="Rendzina (RN)"/>
+      <item id="1221" lang="de" term="Proto - Rendzina"/>
+      <item id="1222" lang="de" term="Mull-Rendzina"/>
+      <item id="1223" lang="de" term="Mullartige Rendzina"/>
+      <item id="1224" lang="de" term="Moder-Rendzina"/>
+      <item id="1225" lang="de" term="Tangel-Rendzina"/>
+      <item id="1226" lang="de" term="Pech-Rendzina"/>
+      <item id="1230" lang="de" term="Kalklehm-Rendzina (RT)"/>
+      <item id="1231" lang="de" term="Mull - Kalklehm-Rendzina"/>
+      <item id="1232" lang="de" term="Moder - Kalklehm-Rendzina"/>
+      <item id="1240" lang="de" term="Pararendzina"/>
+      <item id="1241" lang="de" term="Proto - Pararendzina"/>
+      <item id="1242" lang="de" term="Mull-Pararendzina"/>
+      <item id="1243" lang="de" term="Moder - Pararendzina"/>
+      <item id="1250" lang="de" term="Ranker (RR)"/>
+      <item id="1251" lang="de" term="Proto - Ranker"/>
+      <item id="1252" lang="de" term="Mull - Ranker"/>
+      <item id="1253" lang="de" term="Mullartige Ranker"/>
+      <item id="1254" lang="de" term="Moder - Ranker"/>
+      <item id="1255" lang="de" term="Tangel - Ranker"/>
+      <item id="1260" lang="de" term="Tschernosem (ST)"/>
+      <item id="1261" lang="de" term="Carbonathaltiger Tschernosem"/>
+      <item id="1262" lang="de" term="Carbonathaltiger brauner Tschernosem"/>
+      <item id="1263" lang="de" term="Carbonatfreier Tschernosem"/>
+      <item id="1270" lang="de" term="Rumpf - Tschernosem (SR)"/>
+      <item id="1271" lang="de" term="Carbonatfreier Rumpf - Tschernosem"/>
+      <item id="1272" lang="de" term="carbonathaltiger Rumpf - Tschernosem"/>
+      <item id="1300" lang="de" term="Braunerden"/>
+      <item id="1310" lang="de" term="Braunerde (BN)"/>
+      <item id="1311" lang="de" term="carbonatfreie Braunerde"/>
+      <item id="1312" lang="de" term="carbonathaltige Braunerde"/>
+      <item id="1313" lang="de" term="carbonatfreie Relikt-Braunerde"/>
+      <item id="1314" lang="de" term="carbonathaltige Relikt-Braunerde"/>
+      <item id="1320" lang="de" term="Parabraunerde (BP)"/>
+      <item id="1321" lang="de" term="rezente Parabraunerde"/>
+      <item id="1322" lang="de" term="Relikt - Parabraunerde"/>
+      <item id="1400" lang="de" term="Podsole"/>
+      <item id="1410" lang="de" term="Semipodsol (OS)"/>
+      <item id="1420" lang="de" term="Podsol (OT)"/>
+      <item id="1421" lang="de" term="Eisen - Humus - Podsol"/>
+      <item id="1422" lang="de" term="Eisen - Podsol"/>
+      <item id="1423" lang="de" term="Humus - Podsol"/>
+      <item id="1430" lang="de" term="Staupodsol (OW)"/>
+      <item id="1431" lang="de" term="Eisen - Humus - Staupodsol"/>
+      <item id="1432" lang="de" term="Eisen - Staupodsol"/>
+      <item id="1433" lang="de" term="Humus - Staupodsol"/>
+      <item id="1500" lang="de" term="Kalklehme"/>
+      <item id="1510" lang="de" term="Kalkbraunlehm (TB)"/>
+      <item id="1520" lang="de" term="Kalkrotlehm (TR)"/>
+      <item id="1600" lang="de" term="Substratböden"/>
+      <item id="1610" lang="de" term="Farb - Substratboden (UF)"/>
+      <item id="1620" lang="de" term="Textursubstratboden (UT)"/>
+      <item id="1700" lang="de" term="Kolluvien und Anthrosole"/>
+      <item id="1710" lang="de" term="Kolluvisol (YK)"/>
+      <item id="1711" lang="de" term="karbonatfreier Kolluvisol"/>
+      <item id="1712" lang="de" term="karbonathaltiger Kolluvisol"/>
+      <item id="1720" lang="de" term="Kultur - Rohboden (YR)"/>
+      <item id="1721" lang="de" term="karbonatfreier Kulturrohboden"/>
+      <item id="1722" lang="de" term="karbonathaltiger Kulturrohboden"/>
+      <item id="1730" lang="de" term="Gartenboden (YG)"/>
+      <item id="1731" lang="de" term="karbonatfreier Gartenboden"/>
+      <item id="1732" lang="de" term="karbonathaltiger Gartenboden"/>
+      <item id="1740" lang="de" term="Rigolboden (YW)"/>
+      <item id="1741" lang="de" term="karbonatfreier Rigolboden"/>
+      <item id="1742" lang="de" term="karbonathaltiger Rigolboden"/>
+      <item id="1750" lang="de" term="Schüttungsboden (YS)"/>
+      <item id="1751" lang="de" term="Planieboden"/>
+      <item id="1752" lang="de" term="Haldenboden"/>
+      <item id="1760" lang="de" term="Deponieboden (YD)"/>
+      <item id="1761" lang="de" term="karbonatfreier Deponieboden"/>
+      <item id="1762" lang="de" term="karbonathaltiger Deponieboden"/>
+      <item id="1800" lang="de" term="Auböden"/>
+      <item id="1810" lang="de" term="Auboden (AT)"/>
+      <item id="1811" lang="de" term="karbonatfreier Auboden"/>
+      <item id="1812" lang="de" term="karbonathaltiger Auboden"/>
+      <item id="1820" lang="de" term="Augley (AG)"/>
+      <item id="1821" lang="de" term="carbonatfreier Augley"/>
+      <item id="1822" lang="de" term="carbonathaltiger Augley"/>
+      <item id="1830" lang="de" term="Schwemmboden (AS)"/>
+      <item id="1831" lang="de" term="karbonatfreier Schwemmboden"/>
+      <item id="1832" lang="de" term="karbonathaltiger Schwemmboden"/>
+      <item id="1840" lang="de" term="Rohauboden (AR)"/>
+      <item id="1841" lang="de" term="karbonatfreier Rohauboden"/>
+      <item id="1842" lang="de" term="karbonathaltiger Rohauboden"/>
+      <item id="1900" lang="de" term="Pseudogleye"/>
+      <item id="1910" lang="de" term="typischer Pseudogley (PT)"/>
+      <item id="1920" lang="de" term="Stagnogley (PS)"/>
+      <item id="1921" lang="de" term="typischer Stagnogley"/>
+      <item id="1922" lang="de" term="anmooriger Stagnogley"/>
+      <item id="1930" lang="de" term="Hangpseudogley (PH)"/>
+      <item id="1940" lang="de" term="Haftnässe - Pseudogley (PW)"/>
+      <item id="1950" lang="de" term="Reliktpseudogley (PR)"/>
+      <item id="2000" lang="de" term="Gleye"/>
+      <item id="2010" lang="de" term="Gley (GT)"/>
+      <item id="2011" lang="de" term="typischer Gley"/>
+      <item id="2012" lang="de" term="brauner Gley"/>
+      <item id="2020" lang="de" term="Nassgley (GW)"/>
+      <item id="2021" lang="de" term="typischer Nassgley"/>
+      <item id="2022" lang="de" term="anmooriger Nassgley"/>
+      <item id="2023" lang="de" term="Torf-Nassgley"/>
+      <item id="2030" lang="de" term="Hanggley (Quellgley) (GH)"/>
+      <item id="2031" lang="de" term="typischer Hanggley"/>
+      <item id="2032" lang="de" term="anmooriger Hanggley"/>
+      <item id="2033" lang="de" term="Torf-Hanggley"/>
+      <item id="2100" lang="de" term="Moore Anmoore und Feuchtschwarzerden"/>
+      <item id="2110" lang="de" term="Niedermoor (NH)"/>
+      <item id="2111" lang="de" term="typisches Niedermoor"/>
+      <item id="2112" lang="de" term="Übergangsmoor"/>
+      <item id="2120" lang="de" term="Anmoor (MN)"/>
+      <item id="2130" lang="de" term="Feuchtschwarzerde (MS)"/>
+      <item id="2131" lang="de" term="karbonatfreie Feuchtschwarzerde"/>
+      <item id="2132" lang="de" term="karbonathaltige Feuchtschwarzerde"/>
+      <item id="2200" lang="de" term="Unterwasserböden"/>
+      <item id="2210" lang="de" term="Dy (WD)"/>
+      <item id="2220" lang="de" term="Gyttja (WG)"/>
+      <item id="2230" lang="de" term="Saprobel (WS)"/>
+      <item id="2300" lang="de" term="Salzböden"/>
+      <item id="2310" lang="de" term="Solontschak (ZK)"/>
+      <item id="2320" lang="de" term="Solonetz (ZZ)"/>
+      <item id="2330" lang="de" term="Solontschack - Solonetz (ZS)"/>
+      <item id="2400" lang="de" term="nicht identifizierbare Böden"/>
+    </keytable>
+    
+    
+    <!-- DSII -->
+    
+    <keytable table="eval">
+      <item id="1" lang="de" term="1 - sehr gut"/>
+      <item id="2" lang="de" term="2 - gut"/>
+      <item id="3" lang="de" term="3 - mäßig"/>
+      <item id="4" lang="de" term="4 - schlecht"/>
+      <item id="5" lang="de" term="5 - sehr schlecht"/>
+    </keytable>
+    
+    
+    <keytable table="humusgehalt">
+      <item id="0" lang="de" term="humusfrei (0%)" />
+      <item id="1" lang="de" term="schwach humos, humusfleckig (&lt;1.5%)" />
+      <item id="2" lang="de" term="(mittel-)humos (&gt;1.5-4%)" />
+      <item id="3" lang="de" term="stark humos (&gt;4-15%)" />
+      <item id="4" lang="de" term="Anmoorhumus (&gt;15-30%)" />
+      <item id="5" lang="de" term="Torf (&gt;30%)" />
+    </keytable>
+    <keytable table="humusform2">
+      <item id="1" lang="de" term="Mull" />
+      <item id="2" lang="de" term="Anmoormull" />
+      <item id="3" lang="de" term="Anmoorhumus" />
+      <item id="4" lang="de" term="Modermull, Mullartiger Humus" />
+      <item id="5" lang="de" term="Moder" />
+      <item id="6" lang="de" term="Rohhumus" />
+      <item id="7" lang="de" term="Feuchtmull" />
+      <item id="8" lang="de" term="Feuchthumus" />
+      <item id="0" lang="de" term="Niedermoortorf" />
+    </keytable>
+    <keytable table="skelettgehalt">
+      <item id="0" lang="de" term="kein Grobanteil / keine Angabe (0%)" />
+      <item id="5" lang="de" term="geringer Grobanteil (&gt;0 bis 10%)" />
+      <item id="15" lang="de" term="mäßiger Grobanteil (&gt;10 bis 20%)" />
+      <item id="30" lang="de" term="hoher Grobanteil (&gt;20 bis 40%)" />
+      <item id="60" lang="de" term="sehr hoher Grobanteil (&gt;40 bis 80%)" />
+      <item id="90" lang="de" term="vorherrschend Grobanteil (&gt;80 bis 99%)" />
+      <item id="100" lang="de" term="Fels (100%)" />
+    </keytable>
+    <keytable table="tongehalt">
+      <item id="0" lang="de" term="Sand (S), schluffiger Sand (uS), lehmiger Sand (lS), sandiger Schluff (sU), Schluff (U), lehmiger Schluff (lU)" />
+      <item id="1" lang="de" term="toniger Sand (tS), sandiger Lehm (sL), Lehm (L), schluffiger Lehm (uL), sandiger Ton(sT), lehmiger Ton (lT), Ton (T)" />
+    </keytable>
+    <keytable table="phwert">
+      <item id="1" lang="de" term="stark sauer" />
+      <item id="2" lang="de" term="sauer" />
+      <item id="3" lang="de" term="schwach sauer" />
+      <item id="4" lang="de" term="neutral" />
+      <item id="5" lang="de" term="alkalisch" />
+    </keytable>
+    <keytable table="bodentypkurz">
+      <item id="1" lang="de" term="Mo - Moore" />
+      <item id="2" lang="de" term="G - Gleye" />
+      <item id="3" lang="de" term="PG - Pseudogleye" />
+      <item id="4" lang="de" term="TB - terrestrische Böden" />
+    </keytable>
+    <keytable table="feuchtestufe">
+      <item id="1" lang="de" term="sehr trocken" />
+      <item id="2" lang="de" term="trocken" />
+      <item id="3" lang="de" term="mäßig trocken" />
+      <item id="4" lang="de" term="gut versorgt" />
+      <item id="5" lang="de" term="mäßig feucht" />
+      <item id="6" lang="de" term="feucht" />
+      <item id="7" lang="de" term="nass" />
+      <item id="8" lang="de" term="mäßig wechselfeucht" />
+      <item id="9" lang="de" term="wechselfeucht" />
+    </keytable>
+    <keytable table="wsv">
+      <item id="5" lang="de" term="sehr gering" />
+      <item id="4" lang="de" term="gering" />
+      <item id="3" lang="de" term="mäßig" />
+      <item id="2" lang="de" term="hoch" />
+      <item id="1" lang="de" term="sehr hoch" />
+    </keytable>
+    <keytable table="durchlaessigkeit">
+      <item id="5" lang="de" term="sehr gering" />
+      <item id="4" lang="de" term="gering" />
+      <item id="3" lang="de" term="mäßig" />
+      <item id="2" lang="de" term="hoch" />
+      <item id="1" lang="de" term="sehr hoch" />
+    </keytable>
+    <keytable table="gefaehrdung">
+      <item id="0" lang="de" term="keine" />
+      <item id="1" lang="de" term="vertrittgefährdet" />
+      <item id="2" lang="de" term="rutschgefährdet" />
+      <item id="3" lang="de" term="überschwemmungsgefährdet" />
+      <item id="4" lang="de" term="überstauungsgefährdet" />
+      <item id="5" lang="de" term="vermurungsgefährdet" />
+      <item id="20" lang="de" term="zum Teil, unter bestimmten Bedingungen" />
+      <item id="30" lang="de" term="mäßig" />
+      <item id="31" lang="de" term="mäßig bis stark" />
+      <item id="32" lang="de" term="stark" />
+    </keytable>
+    <keytable table="bearbeitbarkeit">
+      <item id="0" lang="de" term="keine Einschränkung („gut zu befahren, beweiden, bearbeiten“)" />
+      <item id="1" lang="de" term="Beweidbarkeit" />
+      <item id="2" lang="de" term="Befahrbarkeit" />
+      <item id="3" lang="de" term="Bearbeitbarkeit" />
+      <item id="20" lang="de" term="erschwert durch Hangneigung" />
+      <item id="21" lang="de" term="erschwert durch Relief" />
+      <item id="22" lang="de" term="erschwert durch Grobanteil" />
+      <item id="23" lang="de" term="erschwert bei/durch Nässe/Feuchtigkeit" />
+    </keytable>
+    <keytable table="bodenwertacker">
+      <item id="5" lang="de" term="geringwertig" />
+      <item id="4" lang="de" term="gering- bis mittelwertig" />
+      <item id="3" lang="de" term="mittelwertig" />
+      <item id="2" lang="de" term="mittel- bis hochwertig" />
+      <item id="1" lang="de" term="hochwertig" />
+      <item id="0" lang="de" term="&lt;keine Angabe&gt;" />
+    </keytable>
+    <keytable table="bodenwertgruenland">
+      <item id="5" lang="de" term="geringwertig" />
+      <item id="4" lang="de" term="gering- bis mittelwertig" />
+      <item id="3" lang="de" term="mittelwertig" />
+      <item id="2" lang="de" term="mittel- bis hochwertig" />
+      <item id="1" lang="de" term="hochwertig" />
+      <item id="0" lang="de" term="&lt;keine Angabe&gt;" />
+    </keytable>
+    
+  </keytables>
+  <application/>
+</gridcms>
