@@ -1,0 +1,892 @@
+Horizont 'Ah' -> Berechnung der komplexen Parameter gestartet!
+1) Humusgehalt (Klassenmittelwert) [%]
+   Klassenwert gefunden ('Humusgehalt (Klasse)')
+   -> stark humos (4-8%)
+   Wert (Zahl) wird für die Berechnung ermittelt
+   ERGEBNIS => 6.0 %
+-------------------
+2) Skelettgehalt (Klassenmittelwert) [%]
+   Skelettgehalt (Wert) gefunden
+   -> 40.0 %
+   Laborwert wird übernommen.
+   ERGEBNIS => 40.0 %
+-------------------
+3) Lagerungsdichte (Klasse)
+   Lagerungsdichte (Klasse) gefunden
+   -> locker
+   Bewertungsklasse wird ermittelt [Ld1, Ld2, Ld3, Ld4, Ld4, Ld5]
+   ERGEBNIS => Ld2
+-------------------
+4) Lagerungsdichte [g/cm³]
+   Komplexer Parameter 'Lagerungsdichte (Klasse)' gefunden
+   -> Ld2
+   Wert (Zahl) wird für die Berechnung ermittelt
+   ERGEBNIS => 1.3 g/cm³
+-------------------
+5) Feinbodenmenge [kg/m³]
+   Komplexer Parameter 'Lagerungsdichte (Klasse)' gefunden
+   -> Ld2
+   Mächtigkeit des Horizontes berechnet
+   -> 10 cm
+   Berechnung anhand der Lagerungsdichteklasse, der Horizontmächtigkeit und des Skelettgehaltes
+   ERGEBNIS => 78 kg/m³
+-------------------
+6) Tonmenge [kg/m³]
+   Tongehalt nicht gefunden, es wird versucht, diesen über die Bodenart zu bestimmen...
+   Bodenart  gefunden
+   -> sU - sandiger Schluff
+   Für die Bestimmung des Tongehaltes wird diese Klasse verwendet
+   ERGEBNIS => 6 kg/m³
+-------------------
+7) Humusmenge [kg/m³]
+   Humusgehalt (Klassenmittelwert) [%]  gefunden
+   -> 6.0 %
+   Feinbodenmenge [kg/m³]  gefunden
+   -> 78.0 kg/m³
+   Berechnung anhand des Humusgehaltes und der Feinbodenmenge
+   ERGEBNIS => 4.7 kg/m³
+-------------------
+8) Nutzbare Feldkapazität [l/m²]
+   Bodenart  gefunden
+   -> sU - sandiger Schluff
+   Lagerungsdichte (Klasse) -> Ld2
+   Nutzbare Feldkapazität anhand der Lagerungsdichte und der Bodenart ermittelt
+   nFK -> 26.0 l/m²
+   Nutzbare Feldkapazität wird anhand des Humusgehaltes und der Bodenart korrigiert
+   Humusgehalt (Klassenmittelwert) [%] -> 6.0 %
+   Korrigierte nFK -> 29.5 l/m²
+   Berechnung anhand der Horizontmächtigkeit, des Skelettgehaltes und der nFK
+   ERGEBNIS => 18 l/m²
+-------------------
+9) Feldkapazität [l/m²]
+   Bodenart  gefunden
+   -> sU - sandiger Schluff
+   Lagerungsdichte (Klasse) -> Ld2
+   Bodenart -> sU - sandiger Schluff
+   Feldkapazität anhand der Lagerungsdichte und der Bodenart ermittelt
+   FK -> 39.0 l/m²
+   Feldkapazität wird anhand des Humusgehaltes und der Bodenart korrigiert
+   Humusgehalt (Klassenmittelwert) [%] -> 6.0 %
+   Korrigierte FK -> 46.5 l/m²
+   Berechnung anhand der Horizontmächtigkeit, des Skelettgehaltes und der FK
+   ERGEBNIS => 28 l/m²
+-------------------
+10) Luftkapazität [l/m²]
+   Bodenart  gefunden
+   -> sU - sandiger Schluff
+   Lagerungsdichte (Klasse) -> Ld2
+   Bodenart -> sU - sandiger Schluff
+   Luftkapazität anhand der Lagerungsdichte und der Bodenart ermittelt
+   LK -> 8.5 l/m²
+   Luftkapazität wird anhand des Humusgehaltes und der Bodenart korrigiert
+   Humusgehalt (Klassenmittelwert) [%] -> 6.0 %
+   Korrigierte LK -> 11.0 l/m²
+   Berechnung anhand der Horizontmächtigkeit, des Skelettgehaltes und der FK
+   ERGEBNIS => 7 l/m²
+-------------------
+11) Wasserspeichervermögen [l/m²]
+   Große Hangneigung des Profils!
+   -> WSV entspricht der nFK
+   ERGEBNIS => 18 l/m²
+-------------------
+12) Gesamtes Porenvolumen [l/m²]
+   Bodenart  gefunden
+   -> sU - sandiger Schluff
+   Lagerungsdichte (Klasse) -> Ld2
+   Bodenart -> sU - sandiger Schluff
+   Gesamtes Porenvolumen anhand der Lagerungsdichte und der Bodenart ermittelt
+   GPV -> 47.5 l/m²
+   Gesamtes Porenvolumen wird anhand des Humusgehaltes und der Bodenart korrigiert
+   Humusgehalt (Klassenmittelwert) [%] -> 6.0 %
+   Korrigierter GPV -> 59.0 l/m²
+   Berechnung anhand der Horizontmächtigkeit, des Skelettgehaltes und der GPV
+   ERGEBNIS => 35 l/m²
+-------------------
+13) Gesättigte Wasserleitfähigkeit [cm/d]
+   Bodenart  gefunden
+   -> sU - sandiger Schluff
+   Lagerungsdichte (Klasse) -> Ld2
+   Bodenart -> sU - sandiger Schluff
+   Gesättigte Wasserleitfähigkeit anhand der Lagerungsdichte und der Bodenart ermittelt
+   kf -> 32.0 cm/d
+   ERGEBNIS => 32 cm/d
+-------------------
+14) Potentielle Kationenaustauschkapazität [cmol/kg]
+   Mineralbodenanteil
+   Keinen Ton- oder Schluffgehalt gefunden, pot. KAK wird anhand Bodenart ermittelt
+   HINWEIS => Die Berechnung ist genauer mit Ton- und Schluffgehalt!
+   Bodenart  gefunden
+   -> sU - sandiger Schluff
+   KAK (pot.) -> 8.0 cmol/kg
+   Humusanteil
+   KAK-Humus (pot.) -> 12.0 cmol/kg
+   Summe -> 20.0 cmol/kg
+   ERGEBNIS => 20 cmol/kg
+-------------------
+15) Effektike Kationenaustauschkapazität [cmol/kg]
+   Eff. KAK ergibt sich aus der Umrechnung der pot. KAK
+   Umrechnungsfaktor -> 0.3
+   ERGEBNIS => 6 cmol/kg
+-------------------
+16) Basensättigungsgrad (V-Wert) [%]
+   Ermittlung anhand des pH-Werts
+   ERGEBNIS => 10 %
+Horizont 'Ah' -> Berechnung der komplexen Parameter fertig!
+============================================
+Horizont 'Bv' -> Berechnung der komplexen Parameter gestartet!
+1) Humusgehalt (Klassenmittelwert) [%]
+   Klassenwert gefunden ('Humusgehalt (Klasse)')
+   -> stark humos (4-8%)
+   Wert (Zahl) wird für die Berechnung ermittelt
+   ERGEBNIS => 6.0 %
+-------------------
+2) Skelettgehalt (Klassenmittelwert) [%]
+   Skelettgehalt (Wert) gefunden
+   -> 40.0 %
+   Laborwert wird übernommen.
+   ERGEBNIS => 40.0 %
+-------------------
+3) Lagerungsdichte (Klasse)
+   Lagerungsdichte (Klasse) gefunden
+   -> mittel
+   Bewertungsklasse wird ermittelt [Ld1, Ld2, Ld3, Ld4, Ld4, Ld5]
+   ERGEBNIS => Ld3
+-------------------
+4) Lagerungsdichte [g/cm³]
+   Komplexer Parameter 'Lagerungsdichte (Klasse)' gefunden
+   -> Ld3
+   Wert (Zahl) wird für die Berechnung ermittelt
+   ERGEBNIS => 1.55 g/cm³
+-------------------
+5) Feinbodenmenge [kg/m³]
+   Komplexer Parameter 'Lagerungsdichte (Klasse)' gefunden
+   -> Ld3
+   Mächtigkeit des Horizontes berechnet
+   -> 15 cm
+   Berechnung anhand der Lagerungsdichteklasse, der Horizontmächtigkeit und des Skelettgehaltes
+   ERGEBNIS => 140 kg/m³
+-------------------
+6) Tonmenge [kg/m³]
+   Tongehalt nicht gefunden, es wird versucht, diesen über die Bodenart zu bestimmen...
+   Bodenart  gefunden
+   -> sU - sandiger Schluff
+   Für die Bestimmung des Tongehaltes wird diese Klasse verwendet
+   ERGEBNIS => 11 kg/m³
+-------------------
+7) Humusmenge [kg/m³]
+   Humusgehalt (Klassenmittelwert) [%]  gefunden
+   -> 6.0 %
+   Feinbodenmenge [kg/m³]  gefunden
+   -> 140.0 kg/m³
+   Berechnung anhand des Humusgehaltes und der Feinbodenmenge
+   ERGEBNIS => 8.4 kg/m³
+-------------------
+8) Nutzbare Feldkapazität [l/m²]
+   Bodenart  gefunden
+   -> sU - sandiger Schluff
+   Lagerungsdichte (Klasse) -> Ld3
+   Nutzbare Feldkapazität anhand der Lagerungsdichte und der Bodenart ermittelt
+   nFK -> 23.5 l/m²
+   Nutzbare Feldkapazität wird anhand des Humusgehaltes und der Bodenart korrigiert
+   Humusgehalt (Klassenmittelwert) [%] -> 6.0 %
+   Korrigierte nFK -> 27.0 l/m²
+   Berechnung anhand der Horizontmächtigkeit, des Skelettgehaltes und der nFK
+   ERGEBNIS => 24 l/m²
+-------------------
+9) Feldkapazität [l/m²]
+   Bodenart  gefunden
+   -> sU - sandiger Schluff
+   Lagerungsdichte (Klasse) -> Ld3
+   Bodenart -> sU - sandiger Schluff
+   Feldkapazität anhand der Lagerungsdichte und der Bodenart ermittelt
+   FK -> 33.5 l/m²
+   Feldkapazität wird anhand des Humusgehaltes und der Bodenart korrigiert
+   Humusgehalt (Klassenmittelwert) [%] -> 6.0 %
+   Korrigierte FK -> 41.0 l/m²
+   Berechnung anhand der Horizontmächtigkeit, des Skelettgehaltes und der FK
+   ERGEBNIS => 37 l/m²
+-------------------
+10) Luftkapazität [l/m²]
+   Bodenart  gefunden
+   -> sU - sandiger Schluff
+   Lagerungsdichte (Klasse) -> Ld3
+   Bodenart -> sU - sandiger Schluff
+   Luftkapazität anhand der Lagerungsdichte und der Bodenart ermittelt
+   LK -> 5.5 l/m²
+   Luftkapazität wird anhand des Humusgehaltes und der Bodenart korrigiert
+   Humusgehalt (Klassenmittelwert) [%] -> 6.0 %
+   Korrigierte LK -> 8.0 l/m²
+   Berechnung anhand der Horizontmächtigkeit, des Skelettgehaltes und der FK
+   ERGEBNIS => 7 l/m²
+-------------------
+11) Wasserspeichervermögen [l/m²]
+   Große Hangneigung des Profils!
+   -> WSV entspricht der nFK
+   ERGEBNIS => 24 l/m²
+-------------------
+12) Gesamtes Porenvolumen [l/m²]
+   Bodenart  gefunden
+   -> sU - sandiger Schluff
+   Lagerungsdichte (Klasse) -> Ld3
+   Bodenart -> sU - sandiger Schluff
+   Gesamtes Porenvolumen anhand der Lagerungsdichte und der Bodenart ermittelt
+   GPV -> 39.0 l/m²
+   Gesamtes Porenvolumen wird anhand des Humusgehaltes und der Bodenart korrigiert
+   Humusgehalt (Klassenmittelwert) [%] -> 6.0 %
+   Korrigierter GPV -> 50.5 l/m²
+   Berechnung anhand der Horizontmächtigkeit, des Skelettgehaltes und der GPV
+   ERGEBNIS => 45 l/m²
+-------------------
+13) Gesättigte Wasserleitfähigkeit [cm/d]
+   Bodenart  gefunden
+   -> sU - sandiger Schluff
+   Lagerungsdichte (Klasse) -> Ld3
+   Bodenart -> sU - sandiger Schluff
+   Gesättigte Wasserleitfähigkeit anhand der Lagerungsdichte und der Bodenart ermittelt
+   kf -> 11.0 cm/d
+   ERGEBNIS => 11 cm/d
+-------------------
+14) Potentielle Kationenaustauschkapazität [cmol/kg]
+   Mineralbodenanteil
+   Keinen Ton- oder Schluffgehalt gefunden, pot. KAK wird anhand Bodenart ermittelt
+   HINWEIS => Die Berechnung ist genauer mit Ton- und Schluffgehalt!
+   Bodenart  gefunden
+   -> sU - sandiger Schluff
+   KAK (pot.) -> 8.0 cmol/kg
+   Humusanteil
+   KAK-Humus (pot.) -> 12.0 cmol/kg
+   Summe -> 20.0 cmol/kg
+   ERGEBNIS => 20 cmol/kg
+-------------------
+15) Effektike Kationenaustauschkapazität [cmol/kg]
+   Eff. KAK ergibt sich aus der Umrechnung der pot. KAK
+   Umrechnungsfaktor -> 0.3
+   ERGEBNIS => 6 cmol/kg
+-------------------
+16) Basensättigungsgrad (V-Wert) [%]
+   Ermittlung anhand des pH-Werts
+   ERGEBNIS => 10 %
+Horizont 'Bv' -> Berechnung der komplexen Parameter fertig!
+============================================
+Horizont 'BvCv' -> Berechnung der komplexen Parameter gestartet!
+1) Humusgehalt (Klassenmittelwert) [%]
+   Klassenwert gefunden ('Humusgehalt (Klasse)')
+   -> humusfrei (0%)
+   Wert (Zahl) wird für die Berechnung ermittelt
+   ERGEBNIS => 0.0 %
+-------------------
+2) Skelettgehalt (Klassenmittelwert) [%]
+   Skelettgehalt (Wert) gefunden
+   -> 60.0 %
+   Laborwert wird übernommen.
+   ERGEBNIS => 60.0 %
+-------------------
+3) Lagerungsdichte (Klasse)
+   Lagerungsdichte (Klasse) gefunden
+   -> sehr dicht
+   Bewertungsklasse wird ermittelt [Ld1, Ld2, Ld3, Ld4, Ld4, Ld5]
+   ERGEBNIS => Ld5
+-------------------
+4) Lagerungsdichte [g/cm³]
+   Komplexer Parameter 'Lagerungsdichte (Klasse)' gefunden
+   -> Ld5
+   Wert (Zahl) wird für die Berechnung ermittelt
+   ERGEBNIS => 2.0 g/cm³
+-------------------
+5) Feinbodenmenge [kg/m³]
+   Komplexer Parameter 'Lagerungsdichte (Klasse)' gefunden
+   -> Ld5
+   Mächtigkeit des Horizontes berechnet
+   -> 25 cm
+   Berechnung anhand der Lagerungsdichteklasse, der Horizontmächtigkeit und des Skelettgehaltes
+   ERGEBNIS => 200 kg/m³
+-------------------
+6) Tonmenge [kg/m³]
+   Tongehalt nicht gefunden, es wird versucht, diesen über die Bodenart zu bestimmen...
+   Bodenart  gefunden
+   -> sU - sandiger Schluff
+   Für die Bestimmung des Tongehaltes wird diese Klasse verwendet
+   ERGEBNIS => 15 kg/m³
+-------------------
+7) Humusmenge [kg/m³]
+   Humusgehalt (Klassenmittelwert) [%]  gefunden
+   -> 0.0 %
+   Feinbodenmenge [kg/m³]  gefunden
+   -> 200.0 kg/m³
+   Berechnung anhand des Humusgehaltes und der Feinbodenmenge
+   ERGEBNIS => 0.0 kg/m³
+-------------------
+8) Nutzbare Feldkapazität [l/m²]
+   Bodenart  gefunden
+   -> sU - sandiger Schluff
+   Lagerungsdichte (Klasse) -> Ld5
+   Nutzbare Feldkapazität anhand der Lagerungsdichte und der Bodenart ermittelt
+   nFK -> 21.0 l/m²
+   Nutzbare Feldkapazität wird anhand des Humusgehaltes und der Bodenart korrigiert
+   Humusgehalt (Klassenmittelwert) [%] -> 0.0 %
+   Korrigierte nFK -> 21.0 l/m²
+   Berechnung anhand der Horizontmächtigkeit, des Skelettgehaltes und der nFK
+   ERGEBNIS => 21 l/m²
+-------------------
+9) Feldkapazität [l/m²]
+   Bodenart  gefunden
+   -> sU - sandiger Schluff
+   Lagerungsdichte (Klasse) -> Ld5
+   Bodenart -> sU - sandiger Schluff
+   Feldkapazität anhand der Lagerungsdichte und der Bodenart ermittelt
+   FK -> 31.0 l/m²
+   Feldkapazität wird anhand des Humusgehaltes und der Bodenart korrigiert
+   Humusgehalt (Klassenmittelwert) [%] -> 0.0 %
+   Korrigierte FK -> 31.0 l/m²
+   Berechnung anhand der Horizontmächtigkeit, des Skelettgehaltes und der FK
+   ERGEBNIS => 31 l/m²
+-------------------
+10) Luftkapazität [l/m²]
+   Bodenart  gefunden
+   -> sU - sandiger Schluff
+   Lagerungsdichte (Klasse) -> Ld5
+   Bodenart -> sU - sandiger Schluff
+   Luftkapazität anhand der Lagerungsdichte und der Bodenart ermittelt
+   LK -> 3.0 l/m²
+   Luftkapazität wird anhand des Humusgehaltes und der Bodenart korrigiert
+   Humusgehalt (Klassenmittelwert) [%] -> 0.0 %
+   Korrigierte LK -> 3.0 l/m²
+   Berechnung anhand der Horizontmächtigkeit, des Skelettgehaltes und der FK
+   ERGEBNIS => 3 l/m²
+-------------------
+11) Wasserspeichervermögen [l/m²]
+   Große Hangneigung des Profils!
+   -> WSV entspricht der nFK
+   ERGEBNIS => 21 l/m²
+-------------------
+12) Gesamtes Porenvolumen [l/m²]
+   Bodenart  gefunden
+   -> sU - sandiger Schluff
+   Lagerungsdichte (Klasse) -> Ld5
+   Bodenart -> sU - sandiger Schluff
+   Gesamtes Porenvolumen anhand der Lagerungsdichte und der Bodenart ermittelt
+   GPV -> 34.0 l/m²
+   Gesamtes Porenvolumen wird anhand des Humusgehaltes und der Bodenart korrigiert
+   Humusgehalt (Klassenmittelwert) [%] -> 0.0 %
+   Korrigierter GPV -> 34.0 l/m²
+   Berechnung anhand der Horizontmächtigkeit, des Skelettgehaltes und der GPV
+   ERGEBNIS => 34 l/m²
+-------------------
+13) Gesättigte Wasserleitfähigkeit [cm/d]
+   Bodenart  gefunden
+   -> sU - sandiger Schluff
+   Lagerungsdichte (Klasse) -> Ld5
+   Bodenart -> sU - sandiger Schluff
+   Gesättigte Wasserleitfähigkeit anhand der Lagerungsdichte und der Bodenart ermittelt
+   kf -> 4.0 cm/d
+   Skelettgehalt über 60%!
+   Korrigierter kf-Wert -> 300.0 cm/d
+   ERGEBNIS => 300 cm/d
+-------------------
+14) Potentielle Kationenaustauschkapazität [cmol/kg]
+   Mineralbodenanteil
+   Keinen Ton- oder Schluffgehalt gefunden, pot. KAK wird anhand Bodenart ermittelt
+   HINWEIS => Die Berechnung ist genauer mit Ton- und Schluffgehalt!
+   Bodenart  gefunden
+   -> sU - sandiger Schluff
+   KAK (pot.) -> 8.0 cmol/kg
+   Humusanteil
+   KAK-Humus (pot.) -> 0.0 cmol/kg
+   Summe -> 8.0 cmol/kg
+   ERGEBNIS => 8 cmol/kg
+-------------------
+15) Effektike Kationenaustauschkapazität [cmol/kg]
+   Eff. KAK ergibt sich aus der Umrechnung der pot. KAK
+   Umrechnungsfaktor -> 0.3
+   ERGEBNIS => 2 cmol/kg
+-------------------
+16) Basensättigungsgrad (V-Wert) [%]
+   Ermittlung anhand des pH-Werts
+   ERGEBNIS => 20 %
+Horizont 'BvCv' -> Berechnung der komplexen Parameter fertig!
+============================================
+Horizont 'IICv' -> Berechnung der komplexen Parameter gestartet!
+1) Humusgehalt (Klassenmittelwert) [%]
+   Klassenwert gefunden ('Humusgehalt (Klasse)')
+   -> humusfrei (0%)
+   Wert (Zahl) wird für die Berechnung ermittelt
+   ERGEBNIS => 0.0 %
+-------------------
+2) Skelettgehalt (Klassenmittelwert) [%]
+   Skelettgehalt (Wert) gefunden
+   -> 80.0 %
+   Laborwert wird übernommen.
+   ERGEBNIS => 80.0 %
+-------------------
+3) Lagerungsdichte (Klasse)
+   Lagerungsdichte (Klasse) gefunden
+   -> sehr dicht
+   Bewertungsklasse wird ermittelt [Ld1, Ld2, Ld3, Ld4, Ld4, Ld5]
+   ERGEBNIS => Ld5
+-------------------
+4) Lagerungsdichte [g/cm³]
+   Komplexer Parameter 'Lagerungsdichte (Klasse)' gefunden
+   -> Ld5
+   Wert (Zahl) wird für die Berechnung ermittelt
+   ERGEBNIS => 2.0 g/cm³
+-------------------
+5) Feinbodenmenge [kg/m³]
+   Komplexer Parameter 'Lagerungsdichte (Klasse)' gefunden
+   -> Ld5
+   Mächtigkeit des Horizontes berechnet
+   -> 20 cm
+   Berechnung anhand der Lagerungsdichteklasse, der Horizontmächtigkeit und des Skelettgehaltes
+   ERGEBNIS => 80 kg/m³
+-------------------
+6) Tonmenge [kg/m³]
+   Tongehalt nicht gefunden, es wird versucht, diesen über die Bodenart zu bestimmen...
+   Bodenart  gefunden
+   -> sU - sandiger Schluff
+   Für die Bestimmung des Tongehaltes wird diese Klasse verwendet
+   ERGEBNIS => 6 kg/m³
+-------------------
+7) Humusmenge [kg/m³]
+   Humusgehalt (Klassenmittelwert) [%]  gefunden
+   -> 0.0 %
+   Feinbodenmenge [kg/m³]  gefunden
+   -> 80.0 kg/m³
+   Berechnung anhand des Humusgehaltes und der Feinbodenmenge
+   ERGEBNIS => 0.0 kg/m³
+-------------------
+8) Nutzbare Feldkapazität [l/m²]
+   Bodenart  gefunden
+   -> sU - sandiger Schluff
+   Lagerungsdichte (Klasse) -> Ld5
+   Nutzbare Feldkapazität anhand der Lagerungsdichte und der Bodenart ermittelt
+   nFK -> 21.0 l/m²
+   Nutzbare Feldkapazität wird anhand des Humusgehaltes und der Bodenart korrigiert
+   Humusgehalt (Klassenmittelwert) [%] -> 0.0 %
+   Korrigierte nFK -> 21.0 l/m²
+   Berechnung anhand der Horizontmächtigkeit, des Skelettgehaltes und der nFK
+   ERGEBNIS => 8 l/m²
+-------------------
+9) Feldkapazität [l/m²]
+   Bodenart  gefunden
+   -> sU - sandiger Schluff
+   Lagerungsdichte (Klasse) -> Ld5
+   Bodenart -> sU - sandiger Schluff
+   Feldkapazität anhand der Lagerungsdichte und der Bodenart ermittelt
+   FK -> 31.0 l/m²
+   Feldkapazität wird anhand des Humusgehaltes und der Bodenart korrigiert
+   Humusgehalt (Klassenmittelwert) [%] -> 0.0 %
+   Korrigierte FK -> 31.0 l/m²
+   Berechnung anhand der Horizontmächtigkeit, des Skelettgehaltes und der FK
+   ERGEBNIS => 12 l/m²
+-------------------
+10) Luftkapazität [l/m²]
+   Bodenart  gefunden
+   -> sU - sandiger Schluff
+   Lagerungsdichte (Klasse) -> Ld5
+   Bodenart -> sU - sandiger Schluff
+   Luftkapazität anhand der Lagerungsdichte und der Bodenart ermittelt
+   LK -> 3.0 l/m²
+   Luftkapazität wird anhand des Humusgehaltes und der Bodenart korrigiert
+   Humusgehalt (Klassenmittelwert) [%] -> 0.0 %
+   Korrigierte LK -> 3.0 l/m²
+   Skelettgehalt über 60%!
+   Korrigierte LK -> 25.0 l/m²
+   Berechnung anhand der Horizontmächtigkeit, des Skelettgehaltes und der FK
+   ERGEBNIS => 10 l/m²
+-------------------
+11) Wasserspeichervermögen [l/m²]
+   Große Hangneigung des Profils!
+   -> WSV entspricht der nFK
+   ERGEBNIS => 8 l/m²
+-------------------
+12) Gesamtes Porenvolumen [l/m²]
+   Bodenart  gefunden
+   -> sU - sandiger Schluff
+   Lagerungsdichte (Klasse) -> Ld5
+   Bodenart -> sU - sandiger Schluff
+   Gesamtes Porenvolumen anhand der Lagerungsdichte und der Bodenart ermittelt
+   GPV -> 34.0 l/m²
+   Gesamtes Porenvolumen wird anhand des Humusgehaltes und der Bodenart korrigiert
+   Humusgehalt (Klassenmittelwert) [%] -> 0.0 %
+   Korrigierter GPV -> 34.0 l/m²
+   Berechnung anhand der Horizontmächtigkeit, des Skelettgehaltes und der GPV
+   ERGEBNIS => 14 l/m²
+-------------------
+13) Gesättigte Wasserleitfähigkeit [cm/d]
+   Bodenart  gefunden
+   -> sU - sandiger Schluff
+   Lagerungsdichte (Klasse) -> Ld5
+   Bodenart -> sU - sandiger Schluff
+   Gesättigte Wasserleitfähigkeit anhand der Lagerungsdichte und der Bodenart ermittelt
+   kf -> 4.0 cm/d
+   Skelettgehalt über 60%!
+   Korrigierter kf-Wert -> 300.0 cm/d
+   ERGEBNIS => 300 cm/d
+-------------------
+14) Potentielle Kationenaustauschkapazität [cmol/kg]
+   Mineralbodenanteil
+   Keinen Ton- oder Schluffgehalt gefunden, pot. KAK wird anhand Bodenart ermittelt
+   HINWEIS => Die Berechnung ist genauer mit Ton- und Schluffgehalt!
+   Bodenart  gefunden
+   -> sU - sandiger Schluff
+   KAK (pot.) -> 8.0 cmol/kg
+   Humusanteil
+   KAK-Humus (pot.) -> 0.0 cmol/kg
+   Summe -> 8.0 cmol/kg
+   ERGEBNIS => 8 cmol/kg
+-------------------
+15) Effektike Kationenaustauschkapazität [cmol/kg]
+   Eff. KAK ergibt sich aus der Umrechnung der pot. KAK
+   Umrechnungsfaktor -> 0.3
+   ERGEBNIS => 2 cmol/kg
+-------------------
+16) Basensättigungsgrad (V-Wert) [%]
+   Ermittlung anhand des pH-Werts
+   ERGEBNIS => 10 %
+Horizont 'IICv' -> Berechnung der komplexen Parameter fertig!
+============================================
+Profil 'Profilnummer 57_T' -> Berechnung der komplexen Parameter gestartet!
+1) Physiologische Gründigkeit
+   Gruendigkeit von Kartierer wird übernommen! -> 70.0 cm
+-------------------
+2) Minimale gesättigte Wasserleitfähigkeit (kf-Wert) [cm/d]
+   Minimaler kf-Wert konnte ermittelt werden
+   ERGEBNIS => 11 cm/d
+-------------------
+3) Feinbodenmenge im gesamten Profil [kg/m²]
+   ERGEBNIS => 498 kg/m²
+-------------------
+4) Tonmenge im gesamten Profil [kg/m²]
+   ERGEBNIS => 38 kg/m²
+-------------------
+5) Humusmenge im gesamten Profil [kg/m²]
+   ERGEBNIS => 13 kg/m²
+-------------------
+6) Nutzbare Feldkapazität im gesamten Profil [l/m²]
+   ERGEBNIS => 71 l/m²
+-------------------
+7) Nutzbare Feldkapazität im Wurzelraum [l/m²]
+   Wurzeltiefe des Profils : 70.0 cm
+   'Ah' : Tiefe (10cm) ist kleiner als Wurzeltiefe
+   -> nFK des Horizontes fließt zur Gänze in die nFK-Summe für den Wurzelraum
+   'Bv' : Tiefe (25cm) ist kleiner als Wurzeltiefe
+   -> nFK des Horizontes fließt zur Gänze in die nFK-Summe für den Wurzelraum
+   'BvCv' : Tiefe (50cm) ist kleiner als Wurzeltiefe
+   -> nFK des Horizontes fließt zur Gänze in die nFK-Summe für den Wurzelraum
+   'IICv' : Tiefe (70cm) ist kleiner als Wurzeltiefe
+   -> nFK des Horizontes fließt zur Gänze in die nFK-Summe für den Wurzelraum
+   ERGEBNIS => 71 l/m²
+-------------------
+8) Feldkapazität im gesamten Profil [l/m²]
+   ERGEBNIS => 108 l/m²
+-------------------
+8) Feldkapazität im Wurzelraum [l/m²]
+   Wurzeltiefe des Profils : 70.0 cm
+   'Ah' : Tiefe (10cm) ist kleiner als Wurzeltiefe
+   -> FK des Horizontes fließt zur Gänze in die FK-Summe für den Wurzelraum
+   'Bv' : Tiefe (25cm) ist kleiner als Wurzeltiefe
+   -> FK des Horizontes fließt zur Gänze in die FK-Summe für den Wurzelraum
+   'BvCv' : Tiefe (50cm) ist kleiner als Wurzeltiefe
+   -> FK des Horizontes fließt zur Gänze in die FK-Summe für den Wurzelraum
+   'IICv' : Tiefe (70cm) ist kleiner als Wurzeltiefe
+   -> FK des Horizontes fließt zur Gänze in die FK-Summe für den Wurzelraum
+   ERGEBNIS => 108 l/m²
+-------------------
+9) Luftkapazität im gesamten Profil [l/m²]
+   ERGEBNIS => 27 l/m²
+-------------------
+10) Luftkapazität im Wurzelraum [l/m²]
+   Wurzeltiefe des Profils : 70.0 cm
+   'Ah' : Tiefe (10cm) ist kleiner als Wurzeltiefe
+   -> LK des Horizontes fließt zur Gänze in die LK-Summe für den Wurzelraum
+   'Bv' : Tiefe (25cm) ist kleiner als Wurzeltiefe
+   -> LK des Horizontes fließt zur Gänze in die LK-Summe für den Wurzelraum
+   'BvCv' : Tiefe (50cm) ist kleiner als Wurzeltiefe
+   -> LK des Horizontes fließt zur Gänze in die LK-Summe für den Wurzelraum
+   'IICv' : Tiefe (70cm) ist kleiner als Wurzeltiefe
+   -> LK des Horizontes fließt zur Gänze in die LK-Summe für den Wurzelraum
+   ERGEBNIS => 27 l/m²
+-------------------
+11) Luftkapazität oberhalb eines „Stauhorizontes“  [l/m²]
+   Ermittlung der "Stautiefe"...
+   Grundwasser -> Flurabstand wurde gesetzt oder Boden ist dem Gleye zuzuteilen
+   Es wird geprüft, ob ein 'Gr' oder 'G2' Horizont vorhanden ist
+   Ungültiger Wert für "Stautiefe", wird auf Standardtiefe gesetzt -> 100 cm
+   Horizont mit minimalen kf-Wert wird gesucht
+   "Stautiefe" auf Untegrenze von Bv-Horizont (25 cm) gesetzt
+   LK der darüber liegenden Horizonte werden aufsummiert.
+   ERGEBNIS => 14 l/m²
+-------------------
+12) Wasserspeichervermögen im gesamten Profil [l/m²]
+   ERGEBNIS => 71 l/m²
+-------------------
+13) Wasserspeichervermögen im Wurzelraum [l/m²]
+   Wurzeltiefe des Profils : 70.0 cm
+   'Ah' : Tiefe (10cm) ist kleiner als Wurzeltiefe
+   -> WSV des Horizontes fließt zur Gänze in die WSV-Summe für den Wurzelraum
+   'Bv' : Tiefe (25cm) ist kleiner als Wurzeltiefe
+   -> WSV des Horizontes fließt zur Gänze in die WSV-Summe für den Wurzelraum
+   'BvCv' : Tiefe (50cm) ist kleiner als Wurzeltiefe
+   -> WSV des Horizontes fließt zur Gänze in die WSV-Summe für den Wurzelraum
+   'IICv' : Tiefe (70cm) ist kleiner als Wurzeltiefe
+   -> WSV des Horizontes fließt zur Gänze in die WSV-Summe für den Wurzelraum
+   ERGEBNIS => 71 l/m²
+-------------------
+14) Durchschnittliche gesättigte Wasserleitfähigkeit (kf-Wert) [cm/d]
+   FRÜHER:Es wird immer 100 cm als Profilmächtigkeit angenommen!
+   JETZT: HARMONISCHES MITTEL BEZOGEN AUF DIE PROFILTIEFE
+   ERGEBNIS => 38 cm/d
+-------------------
+15) Eff. KAK im gesamten Profil (absolut) [cmol/m²]
+   ERGEBNIS => 1868 cmol/m²
+-------------------
+16) Eff. KAK im Wurzelraum (absolut) [cmol/m²]
+   Wurzeltiefe des Profils : 70.0 cm
+   'Ah' : Tiefe (10cm) ist kleiner als Wurzeltiefe
+   -> Eff. KAK des Horizontes fließt zur Gänze in die eff. KAK-Summe für den Wurzelraum
+   'Bv' : Tiefe (25cm) ist kleiner als Wurzeltiefe
+   -> Eff. KAK des Horizontes fließt zur Gänze in die eff. KAK-Summe für den Wurzelraum
+   'BvCv' : Tiefe (50cm) ist kleiner als Wurzeltiefe
+   -> Eff. KAK des Horizontes fließt zur Gänze in die eff. KAK-Summe für den Wurzelraum
+   'IICv' : Tiefe (70cm) ist kleiner als Wurzeltiefe
+   -> Eff. KAK des Horizontes fließt zur Gänze in die eff. KAK-Summe für den Wurzelraum
+   ERGEBNIS => 1868 cmol/m²
+-------------------
+17) Vorrat austauschbar gebundener basischer Kationen im Wurzelraum [cmol/m²]
+   Wurzeltiefe des Profils : 70.0 cm
+   Anhand dessen pH-Wert wird für jedes Horizont über diese Wurzeltiefe der Umrechnungsfaktor ermittelt
+   'Ah'- Horizont
+   Umrechnungsfaktor -> 0.1
+   'Ah' : Tiefe (10cm) ist kleiner als Wurzeltiefe
+   -> Horizont fließt zur Gänze in die Summe für den Wurzelraum
+   'Bv'- Horizont
+   Umrechnungsfaktor -> 0.1
+   'Bv' : Tiefe (25cm) ist kleiner als Wurzeltiefe
+   -> Horizont fließt zur Gänze in die Summe für den Wurzelraum
+   'BvCv'- Horizont
+   Umrechnungsfaktor -> 0.1
+   'BvCv' : Tiefe (50cm) ist kleiner als Wurzeltiefe
+   -> Horizont fließt zur Gänze in die Summe für den Wurzelraum
+   'IICv'- Horizont
+   Umrechnungsfaktor -> 0.1
+   'IICv' : Tiefe (70cm) ist kleiner als Wurzeltiefe
+   -> Horizont fließt zur Gänze in die Summe für den Wurzelraum
+   ERGEBNIS => 660 cmol/m²
+Profil 'Profilnummer 57_T' -> Berechnung der komplexen Parameter fertig!
+-> Oberboden wird definiert
+   Terrestrischer Boden! Es werden A* Horizonte gesucht
+   Oberboden -> Ah 
+-> Unterboden wird definiert
+   Terrestricher Boden! Es werden Horizonte gesucht, die keine M* Horizonte sind, deren Untergrenze sich aber noch im Wurzelraum befindet (Tiefe <= Wurzeltiefe)
+   Unterboden -> Bv BvCv IICv 
+Profil 'Profilnummer 57_T' -> Bewertung gestartet!
+-------------------
+1) 1a.2 Lebensraum für Tiere und Pflanzen - Trockenstandort
+   Überprüfe Landnutzung und Bodentyp
+   Profil konnte nicht anhand Landnutzung oder Bodentyp bewertet werden
+   Es wird versucht, über diesen Boden anhand der nFK zu bewerten
+   ERGEBNIS => 3
+-------------------
+2) 1a.2 Lebensraum für Tiere und Pflanzen - Feuchtstandort
+   Überprüfe Bodentyp
+   ERGEBNIS => 4
+-------------------
+3) 1a.3 Lebensraum für Bodenorganismen
+   Mächtigster Horizont im Oberboden -> Ah
+   BLGT B -> pH-Wert < 4.2
+   -> B1
+   ERGEBNIS => 4
+-------------------
+4) 1a.4 Lebensraum für Kulturpflanzen
+   A) Allgemeine Standortsbedingungen
+   A1
+   A1 -> 3
+   A2
+   Zur Bestimmung der Struktur des Oberbodens wird der mächtigste Horizont ermittelt
+   Mächtigster Horizont im Oberboden -> Ah
+   Im Ober- und Unterboden wird jeweils der Horizont gesucht, der die höchste Lagerungsdichte aufweist
+   A2 -> 5
+   B) Wasserverhältnisse
+   B1
+   B1 -> 4
+   C) Durchlüftung
+   C -> 5
+   D) Nährstoffversorgung
+   D -> 1
+   E) Einfluss der Temperatur (Jahresmitteltemperatur)
+   ACHTUNG => Mitteltemperatur der Vegetationsperiode nicht gesetzt
+   HINWEIS => E wird genauer bewertet, wenn dieser Parameter vorhanden ist!
+   E -> 1
+   Bewertung -> 6 Zwischenergebnisse!
+             -> [1] x 2
+             -> [2] x 0
+             -> [3] x 1
+             -> [4] x 1
+             -> [5] x 2
+   Vorläufige Gesamtbewertung -> 4
+   Korrektur nach Hangneigung -> 5
+   ERGEBNIS => 5
+-------------------
+6) 1c.1 Retentionsvermögen für Niederschläge - mit durchschn. kf-Wert
+   Bestimmung des zu bewertenden Bereiches (BB)
+   Grundwasser -> Flurabstand wurde gesetzt oder Boden ist dem Gleye zuzuteilen
+   Es wird geprüft, ob ein 'Gr' oder 'G2' Horizont vorhanden ist
+   BB-Untergrenze wird auf Standardtiefe gesetzt -> 100 cm
+   BB -> 0 bis 100 cm
+   Für die WSV-Summe und den minimalen kf-Wert werden NUR Horizonte berücksichtigt, die sich zur Gänze in diesem Bereich befinden!
+   BB deckt den gesamten Profil ab, einfach die entsprechenden Parameter verwenden
+   Bewertung -> durchschn. kf-Wert: 38.0 cm/d     WSV-Summe: 71.0 l/m²
+   ERGEBNIS => 4
+-------------------
+5) 1c.1 Retentionsvermögen für Niederschläge - mit minimalem kf-Wert
+   BB -> 0 bis 100 cm
+   Für die WSV-Summe und den minimalen kf-Wert werden NUR Horizonte berücksichtigt, die sich zur Gänze in diesem Bereich befinden!
+   BB deckt das gesamte Profil ab, einfach die entsprechenden Parameter verwenden
+   Bewertung -> min. kf-Wert: 11.0 cm/d    WSV-Summe: 71.0 l/m²
+   ERGEBNIS => 5
+-------------------
+7) 1c.2 Kurzfristiges Retentionsvermögen für Starkniederschläge
+   Korrektur des Bemessungsniederschlags!
+   ERGEBNIS => 3
+-------------------
+8) 1c.3 Potenzial des Bodens für qualitativ hochwertige Grundwasserneubildung
+   BB -> 0 bis 100 cm
+   Für die WSV-Summe und den minimalen kf-Wert werden NUR Horizonte berücksichtigt, die sich zur Gänze in diesem Bereich befinden!
+   BB deckt das gesamte Profil ab, einfach die entsprechenden Parameter verwenden
+   Bewertung -> min. kf-Wert: 11.0 cm/d    WSV-Summe: 71.0 l/m²
+   ERGEBNIS => 2
+-------------------
+9) 1c.4 Potenzial des Bodens zur Nährstoffbereitstellung für Pflanzen
+   ERGEBNIS => 5
+-------------------
+10) 1c.5 Potenzial des Bodens als CO2-Senke
+   Landnutzung Wald, Laubwald, Mischwald, Nadelwald oder Moor!
+   Korrektur -> 1
+   ERGEBNIS => 1
+-------------------
+11) 1d.1 Rückhaltepotenzial für Schwermetalle
+   GW-Flurabstand bekannt, es werden NUR Horizonte berücksichtigt, die sich vollständig DARÜBER befinden (Untergrenze <= GW-Flurabstand)
+   Für folgende Horizonte wird die relative Bindungsstärke für Cadmium bestimmt
+   -> Ah Bv BvCv IICv 
+   Für die Gewichtung der Horizonte wird die Mächtigkeit aller berücksichtigten Horizonte aufsummiert
+   -> 70 cm
+   'Ah'-Horizont :
+   Korrektur der rel. Bindungsstärke anhand Humusmenge
+   Korrektur -> +0.5
+   Korrektur der rel. Bindungsstärke anhand Tongehalt bzw. Bodenart
+   Bodenart  gefunden
+   -> sU - sandiger Schluff
+   Bodenart gefunden -> Korrektur
+   Keine Korrektur
+   Korrektur der rel. Bindungsstärke anhand Skelettgehalt
+   Korrektur erfolgreich!
+   'Bv'-Horizont :
+   Korrektur der rel. Bindungsstärke anhand Humusmenge
+   Korrektur -> +0.5
+   Korrektur der rel. Bindungsstärke anhand Tongehalt bzw. Bodenart
+   Bodenart  gefunden
+   -> sU - sandiger Schluff
+   Bodenart gefunden -> Korrektur
+   Keine Korrektur
+   Korrektur der rel. Bindungsstärke anhand Skelettgehalt
+   Korrektur erfolgreich!
+   'BvCv'-Horizont :
+   Korrektur der rel. Bindungsstärke anhand Humusmenge
+   Keine Korrektur
+   Korrektur der rel. Bindungsstärke anhand Tongehalt bzw. Bodenart
+   Bodenart  gefunden
+   -> sU - sandiger Schluff
+   Bodenart gefunden -> Korrektur
+   Keine Korrektur
+   Korrektur der rel. Bindungsstärke anhand Skelettgehalt
+   Korrektur erfolgreich!
+   'IICv'-Horizont :
+   Korrektur der rel. Bindungsstärke anhand Humusmenge
+   Keine Korrektur
+   Korrektur der rel. Bindungsstärke anhand Tongehalt bzw. Bodenart
+   Bodenart  gefunden
+   -> sU - sandiger Schluff
+   Bodenart gefunden -> Korrektur
+   Keine Korrektur
+   Korrektur der rel. Bindungsstärke anhand Skelettgehalt
+   Korrektur erfolgreich!
+   Summe (Cd-rel) für das gesamte Profil -> 0.415
+   ERGEBNIS => 5
+-------------------
+12) 1d.2 Transformationpotenzial für organische Schadstoffe
+   Suche der Horizonte, die für die Bewertung relevant sind
+   Berücksichtigte Horizonte -> Ah Bv 
+   Zwischensumme Humusmenge -> 13.099999
+   Zwischensumme Tonmenge -> 17.0
+   Mikrobielles Abbauvermögen (Klasse) -> 2
+   ERGEBNIS => 5
+-------------------
+13) 1d.3 Filter- und Pufferpotenzial für organische Schadstoffe
+   Für die Bewertung relevante Horizonte werden gesucht
+   Berücksichtigte Horizonte -> Ah Bv 
+   'Ah'-Horizont
+   "Mittlere" relative Bindungsstärke durch Humusanteil -> 2.0
+   Laborwert für Tongehalt nicht gefunden -> 'Ah'
+   Versuch einer Ableitung durch Bodenart
+   Bodenart  gefunden
+   -> sU - sandiger Schluff
+   "Mittlere" relative Bindungsstärke durch Tonanteil -> 1.5
+   Vorläufige "Mittlere" relative Bindungsstärke -> 3.5
+   Abziehen des Grobanteils -> 2.1
+   'Bv'-Horizont
+   "Mittlere" relative Bindungsstärke durch Humusanteil -> 2.0
+   Laborwert für Tongehalt nicht gefunden -> 'Bv'
+   Versuch einer Ableitung durch Bodenart
+   Bodenart  gefunden
+   -> sU - sandiger Schluff
+   "Mittlere" relative Bindungsstärke durch Tonanteil -> 1.5
+   Vorläufige "Mittlere" relative Bindungsstärke -> 3.5
+   Abziehen des Grobanteils -> 2.1
+   Überprüfen, ob Auflagehorizonte vorhanden sind
+   Ol-Horizont gefunden!
+   Rel. Bindungsstärke durch Humusanteil -> 2.0 
+   Mächtigkeit -> 0.5 cm
+   Of-Horizont gefunden!
+   Rel. Bindungsstärke durch Humusanteil -> 2.5 
+   Mächtigkeit -> 0.5 cm
+   Oh-Horizont gefunden!
+   Rel. Bindungsstärke durch Humusanteil -> 3.0 
+   Mächtigkeit -> 0.5 cm
+   Summe für das gesamte Profil -> 0.5625
+   ERGEBNIS => 5
+-------------------
+14) 1d.4 Rückhaltepotenzial für wasserlösliche Schadstoffe
+   Mächtigster Horizont im Oberboden -> Ah
+   Bodenart  gefunden
+   -> sU - sandiger Schluff
+   Jährliche Austauschhäufigkeit -> 1.7685186
+   ERGEBNIS => 4
+-------------------
+15) 1d.5 Puffer für versauernd wirkende Einträge
+   HINWEIS => CaCO3-Werte müssen nach Scheibler (gasvolumetrische Methode) bestimmt werden für genaue Berechnung, sonst kann nur ein Minimalwert für die carbonatabhängige Pufferkapazität berechnet werden!
+ Carbonatklasse gefunden!   Ah    mit Karbonatklasse 12
+ Carbonatklasse gefunden!   Bv    mit Karbonatklasse 12
+ Carbonatklasse gefunden!   BvCv    mit Karbonatklasse 12
+ Carbonatklasse gefunden!   IICv    mit Karbonatklasse 12
+   Überprüfung, ob Auflagehorizonte vorhanden sind
+   HINWEIS => Die Auflagehorizonte sind in Hinsicht auf der Bestimmung der Pufferkapazität der Humusauflage als ein Horizont zu betrachten.
+              Dies ist notwendig, da die Humusform nicht differenziert aufgenommen wird.
+   Ol-Horizont gefunden!
+   Mächtigkeit -> 0.5 cm
+   Of-Horizont gefunden!
+   Mächtigkeit -> 0.5 cm
+   Oh-Horizont gefunden!
+   Mächtigkeit -> 0.5 cm
+   Mächtigkeit der organischen Auflage -> 1.5 cm
+   Moder!
+   Humusauflage -> 76.05 cmolc/m²
+   Mineralboden -> 820.0 cmolc/m²
+   Summe -> 896.05 cmolc/m²
+   ERGEBNIS => 5
+-------------------
+16) 2a Potenzial als Archiv der Naturgeschichte
+   ERGEBNIS => 5
+-------------------
+17) 2b Potenzial als Archiv der Kulturgeschichte
+   ERGEBNIS => 5
+Profil 'Profilnummer 57_T' -> Bewertung fertig!
+
