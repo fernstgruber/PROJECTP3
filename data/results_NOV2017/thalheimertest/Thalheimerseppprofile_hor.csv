@@ -1,0 +1,9 @@
+profilnummer	bezeichnung	tiefe	ph_wert	carbonat_klasse	carbonat_wert	bodenart	humus_klasse	humus_wert	skelett_wert	skelett_klasse	dichte_klasse	gefuege1	gefuege1_anteil	T	U	fS	S	ton	schluff	sand
+1	Ap1	15	7.13		30	313		5.16		299	20	470	100					17	44	39
+1	Ap2	38	7.3		31	313		2.494		399	30	450	100					17	45	38
+1	Ap3	55	7.42		42	313		1.204		399	30	450	100					16	41	43
+1	C	150	7.75		58	231		0.1548		499	50	399	100					6	41	53
+2	Ap1	55	7.3		68	231		3.9										11	46	43
+2	Ap2	85	7.51		77	231		1.3										10	47	43
+2	C	160	7.7		90	231		0.36										5	33	62
+2	Ab	260	7.54		78	231		1.25										13	53	34
