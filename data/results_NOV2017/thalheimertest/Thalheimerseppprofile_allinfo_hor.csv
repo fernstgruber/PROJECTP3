@@ -1,0 +1,235 @@
+profilnummer	bezeichnung	tiefe	ph_wert	carbonat_klasse	carbonat_wert	bodenart	bodenart_text	humus_klasse	humus_wert	skelett_wert	skelett_klasse	skelett_text	dichte_klasse	dichtklasse_text	gefuege1	gefuege_text	poroes	gefuege_text2	gefuege_auspraegung	zerdürckbar	gefuege1_anteil	T	U	fS	S	ton	schluff	sand
+1	Ap1	15	7.13		30	313	sL		5.16		299	mittel steinig	20	locker	470	Krümel	ja	Fein-mittel	-		100	17	40	11	43	17	44	39
+1	Ap2	38	7.3		31	313	SL		2.494		399	stark steinig	30	mittel	450	Subpolyeder	ja	Mittel-grob	-		100	17	41	11	42	17	45	38
+1	Ap3	55	7.42		42	313	SL		1.204		399	stark steinig	30	mittel	450	Subpolyeder	-	Mittel-grob	-		100	16	37	11	47	16	41	43
+1	C	150	7.75		58	231	lS		0.1548		599	skelettboden	50	dicht	399	Kohärentgefüge	-	-	-		100	6	36	14	58	6	41	53
+2	Ap1	55	7.3		68	231	lS		3.9		299	mittel steinig			470	Krümel	ja	Mittel-fein	mäßig			11	43	10	46	11	46	43
+2	Ap2	85	7.51		77	231	lS		1.3		399	stark steinig			440	Polyeder	ja	Mittel-grob	schwach			10	44	10	46	10	47	43
+2	C	160	7.7		90	231	lS		0.36		599	skelettboden			399	Kohärentgefüge	ja	-	-			5	29	11	66	5	33	62
+2	Ab	260	7.54		78	231	lS		1.25		399	stark steinig			450	Subpolyeder	ja	mittel	mäßig			13	49	12	38	13	53	34
+3	Y	15	7.41		35				1.17													15	55	10	30			
+3	Ap1	30	7.19		11				4.82		199	geringer Grobanteil			450	Subpolyeder	ja	mittel	deutlich			23	48	13	29			
+3	Ap2	60	7.39		11				1.94		199	Sehr geringer Grobanteil			420	Prismen	ja	Mittel-grob	deutlich			24	55	11	21			
+3	Abb	105	7.46		22				1.05		199	Sehr geringer Grobanteil			420	Prismen	ja	Grob-sehr grob	deutlich			37	52	5	11			
+3	Bb	220	7.61		53				0.51		199	Sehr geringer Grobanteil			420	Prismen	ja	Grob-sehr grob	deutlich			29	70	0	1			
+4	Ap1	55	7.36		38				2.53		299	Gering-mäßgier Grobanteil			450	Subpolyeder	ja	Fein-mittel	schwach			22	51	12	27			
+4	Ap2	75	7.46		39				2.2		299	Gering-mäßgier Grobanteil			450	Subpolyeder	ja	grob	deutlich			22	52	11	26			
+4	Bb	160	7.53		22				1.3		399	stark steinig			450	Subpolyeder	ja	Grob-fein	deutlich			29	50	12	21			
+4	BC	305	7.85		64				0.34		199	Sehr geringer Grobanteil			420	Prismen	-	grob	schwach			14	69	11	17			
+5	Ap1	25	7.37		23				2.48		299	mittlerer Grobanteil			450	Subpolyeder	ja	Mittel-fein	mäßig			25	43	14	32			
+5	Ap2	60	7.42		27				2.17		299	mittlerer Grobanteil			440	Polyeder	ja	Mittel-grob	deutlich			23	45	11	32			
+5	B1	96	7.46		20				1.65		399	stark steinig			440	Polyeder	-	grob	deutlich			24	42	15	34			
+5	B2	130	7.49		28				1.34		399	stark steinig			440	Polyeder	-	grob	deutlich			22	41	13	37			
+6	Ap1	16	7.2		26				5.93		299	mittlerer Grobanteil			450	Subpolyeder	ja	Mittel-fein	deutlich			22	41	13	37			
+6	Ap2	35	7.22		26				3.44		399	stark steinig			440	Polyeder	ja	grob	deutlich			23	40	13	37			
+6	B	75	7.37		28				1.01		499	sehr stark steinig			450	Subpolyeder	ja	mittel	schwach			21	39	13	40			
+6	C	135	7.61		57				0.5		499	sehr stark steinig			399	Kohärentgefüge	ja	-	-			11	37	22	52			
+7	Ap1	10	7.22		19				3.96		299	mittlerer Grobanteil			450	Subpolyeder und Krümel	-	fein	deutlich		50	23	41	14	36			
+7	Ap2	32	7.37		15				1.84		299	mittlerer Grobanteil			440	Polyeder	-	grob	mäßig			26	41	14	33			
+7	B	70	7.44		34				0.82		399	stark steinig			440	Polyeder	-	mittelgroß	deutlich			22	41	13	37			
+7	BC	95	7.59		46				0.77		399	stark steinig			440	Polyeder	-	Grob-mittel#	mäßig			14	43	11	43			
+7	C	130	7.75		67				0.2		399	stark steinig			399	Kohärentgefüge	-	leicht zerdrückbar				9	42	13	49			
+8	Ap1	20									299	mittlerer Grobanteil			450	Subpolyeder	ja	Mittel-fein	mittel									
+8	Ap2	50									299	mittlerer Grobanteil			450	Subpolyeder	ja	Grob-mittel	mittel									
+8	BC	85									399	stark steinig			450	Subpolyeder	ja	Grob-mittel	schwach									
+8	C	180									399	stark steinig			399	Kohärentgefüge	ja	-	-									
+9	Ap1	30									199	geringer Grobanteil			450	Subpolyeder	feinporös	Fein-mittel	deutlich									
+9	Ap2	70									199	geringer Grobanteil			450	Subpolyeder	feinporös	Fein-mittel	stark									
+9	B	125									199	Sehr geringer Grobanteil			420	Prismen	feinporös	mittel	mittel									
+10	Ap1	32									299	mittlerer Grobanteil			450	Subpolyeder	ja	Fein-mittel	schwach									
+10	Ap2	90									299	mittlerer Grobanteil			450	Subpolyeder	ja	grob	schwach									
+10	C	130									299	mittlerer Grobanteil			399	Kohärentgefüge	-	-	-									
+11	Ap1	20									299	mittlerer Grobanteil			450	Subpolyeder		Mittel-fein	schwach									
+11	B	90									299	mittlerer Grobanteil			450	Subpolyeder		Mittel-grob	schwach									
+11	C																											
+12	Ap1	20									399	stark steinig			450	Subpolyeder und Bröckel	ja	Mittel-fein	schwach		50							
+12	C	80									499	sehr stark steinig			299	Einzelkorn und Bröckel	ja	leicht zerdrückbar	-									
+13	Ap1	30									199	Sehr geringer Grobanteil			440	Polyeder	-	grob bis sehr grob	mittel									
+13	Ap2	60									199	Sehr geringer Grobanteil			440	Polyeder	-	sehr grob	mittel									
+13	ApC	85									199	Sehr geringer Grobanteil			440	Polyeder	-	sehr grob	schwach									
+13	C	120									199	Sehr geringer Grobanteil			399	Kohärentgefüge	-	plattig	-									
+14	Ap1	25									199	Sehr geringer Grobanteil			450	Subpolyeder	-	Mittel-grob	schwach									
+14	Ap2	77									199	geringer Grobanteil			450	Subpolyeder	-	Mittel-grob	schwach									
+14	B	95									199	Sehr geringer Grobanteil			440	Polyeder	-	Grob-mittel	sehr schwach									
+14	BC	145									199	Sehr geringer Grobanteil			399	Kohärentgefüge	-	leicht zerdrückbar	-									
+14	C	170									199	Sehr geringer Grobanteil			399	Kohärentgefüge	-	sehr leicht zerdrückbar	-									
+15	Ap1	25									199	Sehr geringer Grobanteil			450	Subpolyeder	-	grob	schwach									
+15	Ap2	45									199	geringer Grobanteil			450	Subpolyeder	-	Grob-mittel	mittel									
+15	B1	90									199	geringer Grobanteil			450	Subpolyeder	-	Grob-mittel	mittel									
+15	B2	130									199	Sehr geringer Grobanteil			450	Subpolyeder	-	grob	schwach									
+15	Bct	170									199	Sehr geringer Grobanteil			440	Polyeder	-	sehr grob	schwach									
+16	Ap1	30									299	mittlerer Grobanteil			450	Subpolyeder	ja	Grob-mittel	schwach									
+16	Ap2	65									299	mittlerer Grobanteil			450	Subpolyeder	-	Mittel-grob	schwach									
+16	2Ck	130									199	geringer Grobanteil			399	Kohärentgefüge	-	leicht zerdrückbar										
+17	Ap1	15									199	geringer Grobanteil			450	Subpolyeder	ja	Fein-mittel	schwach									
+17	Ap2	60									199	geringer Grobanteil			440	Polyeder und subpolyeder	ja	Grobe-feine	mittel		50							
+17	B1	110									199	geringer Grobanteil			440	Polyeder	ja	sehr grob	mittel									
+17	B2	150									299	mittlerer Grobanteil			440	Polyeder	-	grob	schwach									
+17	BC	170									199	geringer Grobanteil			399	Kohärentgefüge	-	leicht zerdrückbar										
+18	Ap1	12									199	Sehr geringer Grobanteil			399	Kohärentgefüge	-	sehr leicht zerdrückbar										
+18	Ap2	55									199	Sehr geringer Grobanteil			399	Kohärentgefüge	-	sehr leicht zerdrückbar										
+18	E	115									199	Sehr geringer Grobanteil			399	Kohärentgefüge	-	sehr leicht zerdrückbar										
+18	Bt1	130									199	Sehr geringer Grobanteil			440	Polyeder	-	Mittel-grob	schwach									
+18	Bt2	148									199	Sehr geringer Grobanteil			440	Polyeder	-	Mittel-grob	mäßig									
+18	Bct	173									199	Sehr geringer Grobanteil			399	Kohärentgefüge	-	sehr leicht zerdrückbar										
+18	CB	200									199	Sehr geringer Grobanteil			399	Kohärentgefüge	-	zerfallend										
+19	Ap1	10									199	geringer Grobanteil			450	Subpolyeder	-	Fein-mittel	schwach									
+19	Ap2	72									199	geringer Grobanteil			450	Subpolyeder	-	Fein-grob	schwach									
+19	Bct	90									199	geringer Grobanteil			399	Kohärentgefüge	-	mäßig leicht zerdrückbar										
+19	BC	125									199	geringer Grobanteil			399	Kohärentgefüge	-	mäßig schwer zerdrückbar										
+20	Ap1	20									199	geringer Grobanteil			399	Kohärent und Bröckel	-	leicht zerdrückbar		leicht	50							
+20	Ap2	47									199	geringer Grobanteil			450	Subpolyeder	-	mittel	mäßig	leicht								
+20	O	65																										
+20	Cg1	75									199	geringer Grobanteil			450	Subpolyeder	-	mittel	mäßig	sehr leicht								
+20	Cg2	110									199	geringer Grobanteil			440	Polyeder		grob	mäßig	sehr leicht								
+21	Ap1	30									199	geringer Grobanteil			450	Subpolyeder	ja	Mittel-grob	mäßig	leicht								
+21	Ap2	60									299	mittlerer Grobanteil			450	Subpolyeder	ja	Mittel-grob	mäßig	leicht								
+21	Bct	100									299	mittlerer Grobanteil			440	Polyeder	-	grob	mittel	Mäßig-schwer								
+21	Ct	135									399	starker grobanteil			399	Kohärentgefüge	-			leicht								
+22	Ap1	24									199	geringer Grobanteil			450	Subpolyeder	ja	mitteil	schwach	leicht								
+22	Ap2	60									199	geringer Grobanteil			450	Subpolyeder	ja	mittel	schwach	sehr leicht								
+22	Bck	82									199	geringer Grobanteil			440	Polyeder	-	Mittel-grob	mäßig	leicht								
+22	2Ck	115									399	starker grobanteil			399	Kohärentgefüge	-			sehr leicht								
+23	Ap1	14									199	geringer Grobanteil			450	Subpolyeder und Krümel	-			leicht	50							
+23	Ap2	43									199	geringer Grobanteil			450	Subpolyeder		Mittel-fein	mäßig	leicht								
+23	Bt1	80									299	mittlerer Grobanteil			450	Subpolyeder		Mittel-fein	mäßig	leicht								
+23	Bt2	100									299	mittlerer Grobanteil			450	Subpolyeder		Mittel-grob	schwach	sehr leicht								
+23	BC	120									299	mittlerer Grobanteil			450	Subpolyeder		Mittel-grob	schwach	sehr leicht								
+23	CB	170									299	mittlerer Grobanteil			399	Kohärentgefüge				leicht								
+24	Ap1	15																										
+24	Ap2	50																										
+24	Ap3	90																										
+24	2B	145																										
+25	Ap1	35																										
+25	Ap2	63																										
+25	E	92																										
+25	Bt1	115																										
+25	Bt2	140																										
+25	CB	145																										
+26	Ap1	12																										
+26	Ap2	48																										
+26	Bct	64																										
+26	C	115																										
+27	Ap1	20																										
+27	Ap2	62																										
+27	B	130																										
+27	C/B	160																										
+28	Ap1	10																										
+28	Ap2	25																										
+28	Ap3	73																										
+28	Bt1	105																										
+28	BC	125																										
+29	Ap1	17																										
+29	Ap2	60																										
+29	Ap3	90																										
+29	B	130																										
+30	Ap1	15																										
+30	Ap2	38																										
+30	E	65																										
+30	2Bt	110																										
+31	Ap1	60																										
+31	BC	78																										
+31	C	115																										
+32	Ap	20																										
+32	C	50																										
+32	Ab1	75																										
+32	Ab2	90																										
+32	C	140																										
+33	Ap1	15																										
+33	Ap2	35																										
+33	B	62																										
+33	CB	85																										
+33	C	128																										
+33	2C	165																										
+34	Ap1	12																										
+34	Ap2	38																										
+34	Bt1	90																										
+34	2Bt2	135																										
+35	Ap1	13																										
+35	Ap2	38																										
+35	B	85																										
+35	BC	105																										
+35	Cbt	135																										
+36	Ap	80																										
+36	BC	110																										
+37	Ap1	21																										
+37	Ap2	47																										
+37	Bt1	75																										
+37	2BC	140																										
+38	Ap1	32																										
+38	Ap2	75																										
+38	Bt1	110																										
+38	Ct	160																										
+39	Ap1	17																										
+39	Ap2	75																										
+39	B/C	160																										
+40	Ap1	15																										
+40	Ap2	50																										
+40	C1	60																										
+40	C2	85																										
+40	C3	120																										
+40	C4	160																										
+41	Ap1	16																										
+41	Ap2	55																										
+41	Bt	85																										
+41	Bct	115																										
+41	Cbt	160																										
+42	Ap1	18																										
+42	Ap2	40																										
+42	B	120																										
+42	BC	150																										
+43	Ap1	15																										
+43	Ap2	53																										
+43	2C	110																										
+44	Ap1	28																										
+44	Ap2	65																										
+44	C	120																										
+45	Ap1	18																										
+45	Ap2	50																										
+45	Bt	83																										
+45	BC	115																										
+45	2C	160																										
+46	Ap1	40																										
+46	Ap2	75																										
+46	B	130																										
+47	Ap1	18																										
+47	Ap2	65																										
+47	Bt	125																										
+47	BC	150																										
+48	Ap1	12																										
+48	Ap2	38																										
+48	B	110																										
+49	Ap1	12																										
+49	Ap2	55																										
+49	C1	75																										
+49	C2	85																										
+50	Ap1	28																										
+50	Ap2	72																										
+50	C	100																										
+51	Ap1	14																										
+51	Ap2	36																										
+51	B	71																										
+51	C1	100																										
+51	C2	120																										
+52	Ap1	15																										
+52	Ap2	65																										
+52	B	135																										
+53	Ap	40																										
+53	B	130																										
+54	Ap	40																										
+54	B	90																										
+54	2C	150																										
+55	Ap1	20																										
+55	Ap2	65																										
+55	B	125																										
+56	Ap	55																										
+56	BC	110																										
+56	C																											
+57	Ap	52																										
+57	C	125																										
+58	Ap	60																										
+58	Bt	100																										
+58	C	125																										
+59	Ap1	50																										
+59	Ap2	75																										
+59	C	105																										
