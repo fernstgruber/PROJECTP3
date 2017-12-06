@@ -86,7 +86,7 @@ profilnummer	bezeichnung	tiefe	ph_wert	carbonat_klasse	carbonat_wert	bodenart	bo
 21	Ap2	60									299	mittlerer Grobanteil			450	Subpolyeder	ja	Mittel-grob	mäßig	leicht								
 21	Bct	100									299	mittlerer Grobanteil			440	Polyeder	-	grob	mittel	Mäßig-schwer								
 21	Ct	135									399	starker grobanteil			399	Kohärentgefüge	-			leicht								
-22	Ap1	24									199	geringer Grobanteil			450	Subpolyeder	ja	mitteil	schwach	leicht								
+22	Ap1	24									199	geringer Grobanteil			450	Subpolyeder	ja	mittel	schwach	leicht								
 22	Ap2	60									199	geringer Grobanteil			450	Subpolyeder	ja	mittel	schwach	sehr leicht								
 22	Bck	82									199	geringer Grobanteil			440	Polyeder	-	Mittel-grob	mäßig	leicht								
 22	2Ck	115									399	starker grobanteil			399	Kohärentgefüge	-			sehr leicht								
@@ -96,29 +96,29 @@ profilnummer	bezeichnung	tiefe	ph_wert	carbonat_klasse	carbonat_wert	bodenart	bo
 23	Bt2	100									299	mittlerer Grobanteil			450	Subpolyeder		Mittel-grob	schwach	sehr leicht								
 23	BC	120									299	mittlerer Grobanteil			450	Subpolyeder		Mittel-grob	schwach	sehr leicht								
 23	CB	170									299	mittlerer Grobanteil			399	Kohärentgefüge				leicht								
-24	Ap1	15																										
-24	Ap2	50																										
-24	Ap3	90																										
-24	2B	145																										
-25	Ap1	35																										
-25	Ap2	63																										
-25	E	92																										
-25	Bt1	115																										
-25	Bt2	140																										
-25	CB	145																										
-26	Ap1	12																										
-26	Ap2	48																										
-26	Bct	64																										
-26	C	115																										
-27	Ap1	20																										
-27	Ap2	62																										
-27	B	130																										
-27	C/B	160																										
-28	Ap1	10																										
-28	Ap2	25																										
-28	Ap3	73																										
-28	Bt1	105																										
-28	BC	125																										
+24	Ap1	15									199	geringer Grobanteil			450	Subpolyeder	ja	Mittel-grob	mittel	leicht								
+24	Ap2	50									199	geringer Grobanteil			450	Subpolyeder	ja	Mittel-grob	mittel	sehr leicht								
+24	Ap3	90									199	geringer Grobanteil			450	Subpolyeder	-	Mittel-grob	mittel	sehr leicht								
+24	2B	145									199	Sehr geringer Grobanteil			450	Subpolyeder	-	Mittel-grob	mittel	leicht								
+25	Ap1	35									199	geringer Grobanteil			450	Subpolyeder	ja	Mittel-grob	mäßig	leicht								
+25	Ap2	63									199	geringer Grobanteil			450	Subpolyeder	ja	mittel	schwach	sehr leicht								
+25	E	92									199	Sehr geringer Grobanteil			450	Subpolyeder	-	Mittel-grob	schwach	sehr leicht								
+25	Bt1	115									199	Sehr geringer Grobanteil			440	Polyeder	-	Mittel-grob	mittel	sehr leicht								
+25	Bt2	140									399	starker grobanteil			440	Polyeder	-	Mittel-grob	schwach	leicht								
+25	CB	145													399	Kohärentgefüge	-	-	schwach	leicht								
+26	Ap1	12									199	geringer Grobanteil			450	Subpolyeder	-	mittel	mäßig	leicht								
+26	Ap2	48									299	mittlerer Grobanteil			450	Subpolyeder	-	mittel	mäßig	leicht								
+26	Bct	64									299	mittlerer Grobanteil			450	Subpolyeder	-	mittel	mittel	leicht								
+26	C	115									299	mittlerer Grobanteil			399	Kohärentgefüge	-	-	-	sehr leicht								
+27	Ap1	20									199	geringer Grobanteil			450	Subpolyeder	ja	mittel	schwach	leicht								
+27	Ap2	62									199	geringer Grobanteil			450	Subpolyeder	ja	Mittel-grob	schwach	leicht								
+27	B	130									299	mittlerer Grobanteil			450	Subpolyeder	-	Mittel-grob	schwach	leicht								
+27	C/B	160									299	mittlerer Grobanteil			399	Kohärentgefüge	-	-	-	leicht								
+28	Ap1	10									199	geringer Grobanteil			470	Krümel	ja	Fein-mittel	schwach	sehr leicht								
+28	Ap2	25									199	geringer Grobanteil			450	Subpolyeder	ja	grob	mittel	leicht								
+28	Ap3	73									199	geringer Grobanteil			450	Subpolyeder	ja	grob	mittel	leicht								
+28	Bt1	105									199	geringer Grobanteil			440	Polyeder	-	grob	mittel	leicht								
+28	BC	125									399	starker grobanteil			399	Kohärentgefüge	-	-	-	sehr leicht								
 29	Ap1	17																										
 29	Ap2	60																										
 29	Ap3	90																										
