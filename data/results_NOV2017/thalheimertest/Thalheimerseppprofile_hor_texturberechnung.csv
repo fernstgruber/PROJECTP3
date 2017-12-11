@@ -1,0 +1,229 @@
+profilnummer	bezeichnung	tiefe	ph_wert	carbonat_klasse	carbonat_wert	bodenart	bodenart_text	humus_klasse	humus_wert	skelett_wert	skelett_klasse	skelett_text	dichte_klasse	dichtklasse_text	gefuege1	gefuege_text	poroes	gefuege_text2	gefuege_auspraegung	zerdürckbar	gefuege1_anteil	T	U	fS	S	ton	schluff	sand
+1	Ap1	15	7.13		30	313	sL		5.16		299	mittel steinig	20	locker	470	Krümel	ja	Fein-mittel	-		100	17	40	11	43	17	44	39
+1	Ap2	38	7.3		31	313	SL		2.494		399	stark steinig	30	mittel	450	Subpolyeder	ja	Mittel-grob	-		100	17	41	11	42	17	45	38
+1	Ap3	55	7.42		42	313	SL		1.204		399	stark steinig	30	mittel	450	Subpolyeder	-	Mittel-grob	-		100	16	37	11	47	16	41	43
+1	C	150	7.75		58	231	lS		0.1548		599	skelettboden	50	dicht	399	Kohärentgefüge	-	-	-		100	6	36	14	58	6	41	53
+2	Ap1	55	7.3		68	231	lS		3.9		299	mittel steinig			470	Krümel	ja	Mittel-fein	mäßig			11	43	10	46	11	46	43
+2	Ap2	85	7.51		77	231	lS		1.3		399	stark steinig			440	Polyeder	ja	Mittel-grob	schwach			10	44	10	46	10	47	43
+2	C	160	7.7		90	231	lS		0.36		599	skelettboden			399	Kohärentgefüge	ja	-	-			5	29	11	66	5	33	62
+2	Ab	260	7.54		78	231	lS		1.25		399	stark steinig			450	Subpolyeder	ja	mittel	mäßig			13	49	12	38	13	53	34
+3	Y	15	7.41		35				1.17													15	55	10	30			
+3	Ap1	30	7.19		11				4.82		199	geringer Grobanteil			450	Subpolyeder	ja	mittel	deutlich			23	48	13	29			
+3	Ap2	60	7.39		11				1.94		199	Sehr geringer Grobanteil			420	Prismen	ja	Mittel-grob	deutlich			24	55	11	21			
+3	Abb	105	7.46		22				1.05		199	Sehr geringer Grobanteil			420	Prismen	ja	Grob-sehr grob	deutlich			37	52	5	11			
+3	Bb	220	7.61		53				0.51		199	Sehr geringer Grobanteil			420	Prismen	ja	Grob-sehr grob	deutlich			29	70	0	1			
+4	Ap1	55	7.36		38				2.53		299	Gering-mäßgier Grobanteil			450	Subpolyeder	ja	Fein-mittel	schwach			22	51	12	27			
+4	Ap2	75	7.46		39				2.2		299	Gering-mäßgier Grobanteil			450	Subpolyeder	ja	grob	deutlich			22	52	11	26			
+4	Bb	160	7.53		22				1.3		399	stark steinig			450	Subpolyeder	ja	Grob-fein	deutlich			29	50	12	21			
+4	BC	305	7.85		64				0.34		199	Sehr geringer Grobanteil			420	Prismen	-	grob	schwach			14	69	11	17			
+5	Ap1	25	7.37		23				2.48		299	mittlerer Grobanteil			450	Subpolyeder	ja	Mittel-fein	mäßig			25	43	14	32			
+5	Ap2	60	7.42		27				2.17		299	mittlerer Grobanteil			440	Polyeder	ja	Mittel-grob	deutlich			23	45	11	32			
+5	B1	96	7.46		20				1.65		399	stark steinig			440	Polyeder	-	grob	deutlich			24	42	15	34			
+5	B2	130	7.49		28				1.34		399	stark steinig			440	Polyeder	-	grob	deutlich			22	41	13	37			
+6	Ap1	16	7.2		26				5.93		299	mittlerer Grobanteil			450	Subpolyeder	ja	Mittel-fein	deutlich			22	41	13	37			
+6	Ap2	35	7.22		26				3.44		399	stark steinig			440	Polyeder	ja	grob	deutlich			23	40	13	37			
+6	B	75	7.37		28				1.01		499	sehr stark steinig			450	Subpolyeder	ja	mittel	schwach			21	39	13	40			
+6	C	135	7.61		57				0.5		499	sehr stark steinig			399	Kohärentgefüge	ja	-	-			11	37	22	52			
+7	Ap1	10	7.22		19				3.96		299	mittlerer Grobanteil			450	Subpolyeder und Krümel	-	fein	deutlich		50	23	41	14	36			
+7	Ap2	32	7.37		15				1.84		299	mittlerer Grobanteil			440	Polyeder	-	grob	mäßig			26	41	14	33			
+7	B	70	7.44		34				0.82		399	stark steinig			440	Polyeder	-	mittelgroß	deutlich			22	41	13	37			
+7	BC	95	7.59		46				0.77		399	stark steinig			440	Polyeder	-	Grob-mittel	mäßig			14	43	11	43			
+7	C	130	7.75		67				0.2		399	stark steinig			399	Kohärentgefüge	-	leicht zerdrückbar				9	42	13	49			
+8	Ap1	20	7.3		12				2.56		299	mittlerer Grobanteil			450	Subpolyeder	ja	Mittel-fein	mittel			23	40	16	37			
+8	Ap2	50	7.39		16				1.93		299	mittlerer Grobanteil			450	Subpolyeder	ja	Grob-mittel	mittel			23	40	16	37			
+8	BC	85	7.53		24				1.24		399	stark steinig			450	Subpolyeder	ja	Grob-mittel	schwach			22	43	14	35			
+8	C	180	7.7		51				0.32		399	stark steinig			399	Kohärentgefüge	ja	-	-			10	48	14	42			
+9	Ap1	30	7.32		20				4.44		199	geringer Grobanteil			450	Subpolyeder	feinporös	Fein-mittel	deutlich			20	40	13	40			
+9	Ap2	70	7.46		23				2.27		199	geringer Grobanteil			450	Subpolyeder	feinporös	Fein-mittel	stark			22	47	10	31			
+9	B	125	7.76		49				0.35		199	Sehr geringer Grobanteil			420	Prismen	feinporös	mittel	mittel			18	68	7	14			
+10	Ap1	32	7.13		14				2.22		299	mittlerer Grobanteil			450	Subpolyeder	ja	Fein-mittel	schwach			9	26	14	65			
+10	Ap2	90	7.46		15				0.74		299	mittlerer Grobanteil			450	Subpolyeder	ja	grob	schwach			9	26	10	65			
+10	C	130	7.71		12				0.06		299	mittlerer Grobanteil			399	Kohärentgefüge	-	-	-			12	31	11	57			
+11	Ap1	20	7.12		6				4.04		299	mittlerer Grobanteil			450	Subpolyeder		Mittel-fein	schwach			14	30	16	56			
+11	B	90	7.39		3				0.74		299	mittlerer Grobanteil			450	Subpolyeder		Mittel-grob	schwach			17	26	18	57			
+12	Ap1	20	7.25		62				3.34		399	stark steinig			450	Subpolyeder und Bröckel	ja	Mittel-fein	schwach		50	15	39	12	46			
+12	C	80	7.51		68				1.22		499	sehr stark steinig			299	Einzelkorn und Bröckel	ja	leicht zerdrückbar	-			14	40	13	46			
+13	Ap1	30	7.42		7				1.28		199	Sehr geringer Grobanteil			440	Polyeder	-	grob bis sehr grob	mittel			58	36	5	6			
+13	Ap2	60	7.59		6				0.83		199	Sehr geringer Grobanteil			440	Polyeder	-	sehr grob	mittel			54	41	0	5			
+13	ApC	85	7.66		6				0.63		199	Sehr geringer Grobanteil			440	Polyeder	-	sehr grob	schwach			55	40	1	5			
+13	C	120	7.76		8				0.24		199	Sehr geringer Grobanteil			399	Kohärentgefüge	-	plattig	-			68	30	1	2			
+14	Ap1	25	5.65		0				1.53		199	Sehr geringer Grobanteil			450	Subpolyeder	-	Mittel-grob	schwach			13	36	20	51			
+14	Ap2	77	5.96		0				0.62		199	geringer Grobanteil			450	Subpolyeder	-	Mittel-grob	schwach			13	37	23	50			
+14	B	95	6.16		0				0.34		199	Sehr geringer Grobanteil			440	Polyeder	-	Grob-mittel	sehr schwach			13	38	22	49			
+14	BC	145	6.37		0				0.19		199	Sehr geringer Grobanteil			399	Kohärentgefüge	-	leicht zerdrückbar	-			8	32	27	60			
+14	C	170	6.49		0				0.02		199	Sehr geringer Grobanteil			399	Kohärentgefüge	-	sehr leicht zerdrückbar	-			3	22	30	75			
+15	Ap1	25	5.59		0				1.98		199	Sehr geringer Grobanteil			450	Subpolyeder	-	grob	schwach			13	36	20	51			
+15	Ap2	45	6.06		0				0.71		199	geringer Grobanteil			450	Subpolyeder	-	Grob-mittel	mittel			14	37	22	49			
+15	B1	90	6.18		0				0.48		199	geringer Grobanteil			450	Subpolyeder	-	Grob-mittel	mittel			15	33	23	52			
+15	B2	130	6.5		0				0.26		199	Sehr geringer Grobanteil			450	Subpolyeder	-	grob	schwach			10	35	24	55			
+15	Bct	170	6.69		0				0.21		199	Sehr geringer Grobanteil			440	Polyeder	-	sehr grob	schwach			13	29	27	58			
+16	Ap1	30	7.14		3				2.1		299	mittlerer Grobanteil			450	Subpolyeder	ja	Grob-mittel	schwach			6	27	67	67			
+16	Ap2	65	7.31		2				1.45		299	mittlerer Grobanteil			450	Subpolyeder	-	Mittel-grob	schwach			7	26	67	67			
+16	2Ck	130	7.69		5				0.2		199	geringer Grobanteil			399	Kohärentgefüge	-	leicht zerdrückbar				3	38	59	59			
+17	Ap1	15	7.17		6				3.68		199	geringer Grobanteil			450	Subpolyeder	ja	Fein-mittel	schwach			17	30	14	53			
+17	Ap2	60	7.32		3				1.33		199	geringer Grobanteil			440	Polyeder und subpolyeder	ja	Grobe-feine	mittel		50	19	31	14	50			
+17	B1	110	7.34		1				0.35		199	geringer Grobanteil			440	Polyeder	ja	sehr grob	mittel			15	40	19	45			
+17	B2	150	7.46		2				0.38		299	mittlerer Grobanteil			440	Polyeder	-	grob	schwach			15	39	20	46			
+17	BC	170	7.43		1				0.26		199	geringer Grobanteil			399	Kohärentgefüge	-	leicht zerdrückbar				12	45	23	43			
+18	Ap1	12	5.72		0				1.52		199	Sehr geringer Grobanteil			399	Kohärentgefüge	-	sehr leicht zerdrückbar				5	13	18	82			
+18	Ap2	55	6.12		0				0.96		199	Sehr geringer Grobanteil			399	Kohärentgefüge	-	sehr leicht zerdrückbar				5	12	17	83			
+18	E	115	6.64		0				0.2		199	Sehr geringer Grobanteil			399	Kohärentgefüge	-	sehr leicht zerdrückbar				5	12	21	83			
+18	Bt1	130	6.74		0				0.18		199	Sehr geringer Grobanteil			440	Polyeder	-	Mittel-grob	schwach			8	26	26	66			
+18	Bt2	148	6.76		0				0.15		199	Sehr geringer Grobanteil			440	Polyeder	-	Mittel-grob	mäßig			9	27	32	64			
+18	Bct	173	6.74		0				0.09		199	Sehr geringer Grobanteil			399	Kohärentgefüge	-	sehr leicht zerdrückbar				5	21	36	74			
+18	CB	200	6.88		0				0.1		199	Sehr geringer Grobanteil			399	Kohärentgefüge	-	zerfallend				3	31	31	66			
+19	Ap1	10	5.55		0				3.58		199	geringer Grobanteil			450	Subpolyeder	-	Fein-mittel	schwach			9	31	14	60			
+19	Ap2	72	6.165		0				0.87		199	geringer Grobanteil			450	Subpolyeder	-	Fein-grob	schwach			9	31	16	60			
+19	Bct	90	6.17		0				0.19		199	geringer Grobanteil			399	Kohärentgefüge	-	mäßig leicht zerdrückbar				4	27	17	69			
+19	BC	125	6.45		0				0.05		199	geringer Grobanteil			399	Kohärentgefüge	-	mäßig schwer zerdrückbar				5	34	15	61			
+20	Ap1	20	7.31		17				2.99		199	geringer Grobanteil			399	Kohärent und Bröckel	-	leicht zerdrückbar		leicht	50	6	26	20	68			
+20	Ap2	47	7.41		19				8.31		199	geringer Grobanteil			450	Subpolyeder	-	mittel	mäßig	leicht		8	38	10	54			
+20	Cg1	75	7.48		20				18.75		199	geringer Grobanteil			450	Subpolyeder	-	mittel	mäßig	sehr leicht		10	74	6	16			
+20	Cg2	110	7.7		11				2.05		199	geringer Grobanteil			440	Polyeder		grob	mäßig	sehr leicht		8	45	32	47			
+21	Ap1	30	7.19		8				2.72		199	geringer Grobanteil			450	Subpolyeder	ja	Mittel-grob	mäßig	leicht		17	39	12	44			
+21	Ap2	60	7.34		1				1.49		299	mittlerer Grobanteil			450	Subpolyeder	ja	Mittel-grob	mäßig	leicht		19	35	12	46			
+21	Bct	100	7.26		0				0.17		299	mittlerer Grobanteil			440	Polyeder	-	grob	mittel	Mäßig-schwer		15	39	9	46			
+21	Ct	135	7.41		0				0.1		399	starker grobanteil			399	Kohärentgefüge	-			leicht		15	34	10	51			
+22	Ap1	24	6.15		1				1.5		199	geringer Grobanteil			450	Subpolyeder	ja	mittel	schwach	leicht		11	34	14	55			
+22	Ap2	60	5.9		0				2.51		199	geringer Grobanteil			450	Subpolyeder	ja	mittel	schwach	sehr leicht		11	35	13	54			
+22	Bck	82	7.67		7				0.27		199	geringer Grobanteil			440	Polyeder	-	Mittel-grob	mäßig	leicht		6	34	14	60			
+22	2Ck	115	7.77		6				0.15		399	starker grobanteil			399	Kohärentgefüge	-			sehr leicht		4	24	11	72			
+23	Ap1	14	5.95		0				3.13		199	geringer Grobanteil			450	Subpolyeder und Krümel	-			leicht	50	15	39	13	46			
+23	Ap2	43	5.93		0				1.6		199	geringer Grobanteil			450	Subpolyeder		Mittel-fein	mäßig	leicht		13	34	17	53			
+23	Bt1	80	6.14		0				0.35		299	mittlerer Grobanteil			450	Subpolyeder		Mittel-fein	mäßig	leicht		10	28	13	62			
+23	Bt2	100	6.17		0				0.21		299	mittlerer Grobanteil			450	Subpolyeder		Mittel-grob	schwach	sehr leicht		7	29	13	64			
+23	BC	120	6.28		0				0.24		299	mittlerer Grobanteil			450	Subpolyeder		Mittel-grob	schwach	sehr leicht		7	27	14	66			
+23	CB	170	6.34		0				0.05		299	mittlerer Grobanteil			399	Kohärentgefüge				leicht		3	23	16	74			
+24	Ap1	15	7.01		2				4.87		199	geringer Grobanteil			450	Subpolyeder	ja	Mittel-grob	mittel	leicht		15	29	16	56			
+24	Ap2	50	6.88		0				2.36		199	geringer Grobanteil			450	Subpolyeder	ja	Mittel-grob	mittel	sehr leicht		13	34	15	53			
+24	Ap3	90	6.96		0				0.83		199	geringer Grobanteil			450	Subpolyeder	-	Mittel-grob	mittel	sehr leicht		14	36	17	50			
+24	2B	145	6.83		0				0.51		199	Sehr geringer Grobanteil			450	Subpolyeder	-	Mittel-grob	mittel	leicht		13	43	20	44			
+25	Ap1	35	5.62		0				1.68		199	geringer Grobanteil			450	Subpolyeder	ja	Mittel-grob	mäßig	leicht		11	34	20	55			
+25	Ap2	63	5.93		0				1.86		199	geringer Grobanteil			450	Subpolyeder	ja	mittel	schwach	sehr leicht		12	32	19	56			
+25	E	92	6.38		0				0.44		199	Sehr geringer Grobanteil			450	Subpolyeder	-	Mittel-grob	schwach	sehr leicht		11	42	25	47			
+25	Bt1	115	6.46		0				0.3		199	Sehr geringer Grobanteil			440	Polyeder	-	Mittel-grob	mittel	sehr leicht		10	44	26	46			
+25	Bt2	140	6.58		0				0.15		399	starker grobanteil			440	Polyeder	-	Mittel-grob	schwach	leicht		9	32	19	59			
+26	Ap1	12	5.64		0				4.39		199	geringer Grobanteil			450	Subpolyeder	-	mittel	mäßig	leicht		11	29	11	60			
+26	Ap2	48	6.08		0				1.06		299	mittlerer Grobanteil			450	Subpolyeder	-	mittel	mäßig	leicht		12.5	25.5	12.5	62			
+26	Bct	64	7.15		2				0.38		299	mittlerer Grobanteil			450	Subpolyeder	-	mittel	mittel	leicht		14	25	14	61			
+26	C	115	7.72		7				0.05		299	mittlerer Grobanteil			399	Kohärentgefüge	-	-	-	sehr leicht		5	28	12	67			
+27	Ap1	20	6.15		0				2.67		199	geringer Grobanteil			450	Subpolyeder	ja	mittel	schwach	leicht		10	25	15	65			
+27	Ap2	62	6.21		0				1.34		199	geringer Grobanteil			450	Subpolyeder	ja	Mittel-grob	schwach	leicht		10	28	10	62			
+27	B	130	6.5		0				0.21		299	mittlerer Grobanteil			450	Subpolyeder	-	Mittel-grob	schwach	leicht		7	22	14	71			
+27	C/B	160	6.69		0				0.03		299	mittlerer Grobanteil			399	Kohärentgefüge	-	-	-	leicht		5	30	12	65			
+28	Ap1	10	6.25		0				5.87		199	geringer Grobanteil			470	Krümel	ja	Fein-mittel	schwach	sehr leicht		15	35	16	50			
+28	Ap2	25	6.37		0				2.27		199	geringer Grobanteil			450	Subpolyeder	ja	grob	mittel	leicht		14	32	14	54			
+28	Ap3	73	6.83		0				1.16		199	geringer Grobanteil			450	Subpolyeder	ja	grob	mittel	leicht		13	32	16	55			
+28	Bt1	105	6.98		0				0.36		199	geringer Grobanteil			440	Polyeder	-	grob	mittel	leicht		13	42	18	45			
+28	BC	125	7.01		0				0.24		399	starker grobanteil			399	Kohärentgefüge	-	-	-	sehr leicht		7	35	17	58			
+29	Ap1	17	5.3		0				4.35		199	geringer Grobanteil			450	Subpolyeder	-	Mittel-fein	schwach	sehr leicht		19	38	14	43			
+29	Ap2	60	6.4		0				2.77		199	geringer Grobanteil			450	Subpolyeder	-	Mittel-grob	mittel	sehr leicht		18	37	10	45			
+29	Ap3	90	6.9		0				0.79		199	geringer Grobanteil			420	Prismen	-	mittel	mäßig	leicht		18	37	18	45			
+29	B	130	7.01		0				0.62		199	Sehr geringer Grobanteil			420	Prismen	-	Mittel-grob	mäßig	leicht		21	44	13	35			
+30	Ap1	15	6.04		0				4.25		199	geringer Grobanteil			450	Subpolyeder	ja	mittel	schwach	sehr leicht		11	26	13	63			
+30	Ap2	38	6.07		0				1.86		299	mittlerer Grobanteil			450	Subpolyeder	ja	Mittel-grob	schwach	sehr leicht		10	25	9	65			
+30	E	65	6.18		0				0.17		299	mittlerer Grobanteil			299	Einzelkorn	ja	-	-	-		8	8	3	84			
+30	2Bt	110	6.19		0				0.35		499	sehr starker Grobanteil			399	Kohärentgefüge	ja	-	-	-		18	13	4	69			
+31	Ap1	60	6.5		0				2.51		299	mittlerer Grobanteil			450	Subpolyeder	ja	Mittel-fein	-	sehr leicht		11	26	13	63			
+31	BC	78	7.31		0				0.17		299	mittlerer Grobanteil			399	Kohärentgefüge	-	-	-	leicht		7	33	16	60			
+31	C	115	7.94		1				0.04		399	starker grobanteil			399	Kohärentgefüge	-	-	-	leicht		5	30	11	65			
+32	Ap	20	7.25		52				3.77		399	starker grobanteil			470	Krümel	ja	Fein-mittel	schwach	leicht		13	35	14	52			
+32	C	50	7.61		61				1.02		399	starker grobanteil			480	Bröckel	ja	Grob-mittel	-	leicht		13	35	10	52			
+32	Ab1	75	7.56		30				2.18		399	starker grobanteil			450	Subpolyeder und Bröckel	ja	Mittel-fein	schwach	leicht	50	16	39	11	45			
+32	Ab2	90	7.65		56				1.31		399	starker grobanteil			480	Bröckel	ja	Mittel-fein	-	leicht		13	33	12	54			
+32	C	140	7.84		68				0.42		499	sehr starker Grobanteil			399	Kohärentgefüge	-	-	-	sehr schwer		12	33	11	55			
+33	Ap1	15	6.81		19				9.31		199	geringer Grobanteil			470	Krümel	ja	Mittel-fein	deutlich	leicht		22	52	9	26			
+33	Ap2	35	6.98		20				7.02		199	geringer Grobanteil			470	Krümel	ja	mittel	deutlich	leicht		28	51	6	21			
+33	B	62	7.44		29				1.61		299	mittlerer Grobanteil			420	Prismen	ja	Grob-mittel	deutlich	Mäßig-leicht		28	53	9	19			
+33	CB	85	7.58		29				0.78		299	mittlerer Grobanteil			420	Prismen	-	-	schwach	schwer		24	43	18	33			
+33	C	128	7.78		57				0.22		299	mittlerer Grobanteil			399	Kohärentgefüge	-	-	-	leicht		14	45	11	41			
+33	2C	165	7.63		4				0.18		199	Sehr geringer Grobanteil			399	Kohärentgefüge	-	-	-	sehr leicht		8	39	30	53			
+34	Ap1	12	5.75		0				1.89		299	mittlerer Grobanteil			440	Polyeder	ja	fein	schwach	leicht		11	34	17	55			
+34	Ap2	38	5.42		0				0.63		299	mittlerer Grobanteil			450	Subpolyeder	ja	Grob-mittel	Mäßig-schwach	leicht		12	36	15	52			
+34	Bt1	90	5.67		0				0.16		499	sehr starker Grobanteil			440	Polyeder	-	Grob-mittel	stark	Mäßig-leicht		9	30	15	61			
+34	2Bt2	135	5.72		0				0.26		599	skelettboden			450	Subpolyeder und Einzelkorn	-	mittel	schwach	leicht	50	13	15	5	72			
+35	Ap1	13	7.31		3				1.65		199	Sehr geringer Grobanteil			299	Einzelkorn	-	-	-	-		5	25	22	70			
+35	Ap2	38	7.49		4				0.9		199	Sehr geringer Grobanteil			299	Einzelkorn	-	-	-	-		5	29	21	66			
+35	B	85	7.64		3				0.42		199	Sehr geringer Grobanteil			450	Subpolyeder und Einzelkorn	-	-	sehr schwach	-	50	4	27	21	69			
+35	BC	105	7.83		3				0.31		199	Sehr geringer Grobanteil			450	Subpolyeder	-	Grob-mittel	-	-		5	25	19	70			
+35	Cbt	135	7.94		1				0.02		199	Sehr geringer Grobanteil			399	Kohärentgefüge	-	-	-	leicht		3	22	15	75			
+36	Ap	80	7.46		43				1.22		299	mittlerer Grobanteil			440	Polyeder	ja	Mittel-fein	stark	Mäßig-leicht		24	47	12	29			
+36	BC	110	7.64		59				0.77		299	mittlerer Grobanteil			440	Polyeder	ja	Mittel-grob	mäßig	leicht		19	54	11	27			
+37	Ap1	21	6.25		1				2.13		299	mittlerer Grobanteil			440	Polyeder	-	Fein-sehr fein	schwach	sehr leicht		12	28	14	60			
+37	Ap2	47	6.55		1				0.96		299	mittlerer Grobanteil			440	Polyeder	-	mittel	schwach	leicht		12	26	11	62			
+37	Bt1	75	6.75		1				0.1		399	starker grobanteil			440	Polyeder und Kohärent	-	mittel	schwach	leicht	50	16	18	3	66			
+37	2BC	140	6.9		1				0.12		499	sehr starker Grobanteil			450	Subpolyeder und Kohärent	-	grob	schwach	sehr leicht	50	18	16	3	66			
+38	Ap1	32	5.37		0				1.72		199	geringer Grobanteil			450	Subpolyeder	-	mittel	schwach	sehr leicht		10	29	17	61			
+38	Ap2	75	5.08		0				0.61		199	geringer Grobanteil			450	Subpolyeder	-	mittel	schwach	sehr leicht		10	28	18	62			
+38	Bt1	110	5.4		0				0.22		299	mittlerer Grobanteil			450	Subpolyeder	-	mittel	schwach	sehr leicht		6	35	17	59			
+38	Ct	160	5.72		0				0.06		199	geringer Grobanteil			399	Kohärentgefüge bis Einzelkorn	-	-	-	leicht	50	3	28	10	69			
+39	Ap1	17	6.53		1				2.2		199	geringer Grobanteil			450	Subpolyeder	ja	Mittel-fein	schwach	sehr leicht		7	17	1	76			
+39	Ap2	75	6.96		1				0.49		199	geringer Grobanteil			450	Subpolyeder	ja	mittel	schwach	sehr leicht		5	16	2	79			
+39	B/C	160	7.29		1				0.31		299	mittlerer Grobanteil			450	Subpolyeder und Einzelkorn	ja	mittel	sehr schwach	-	50	6	20	1	74			
+40	Ap1	15	7.08		20				2.3		299	mittlerer Grobanteil			470	Krümel	ja	Mittel-fein	deutlich	leicht		9	23	8	68			
+40	Ap2	50	7.29		19				1.42		299	mittlerer Grobanteil			450	Subpolyeder	ja	Mittel-grob	deutlich	leicht		10	23	14	67			
+40	C2	85	7.78		30				0.15		199	geringer Grobanteil			399	Kohärentgefüge	-	-	-	sehr leicht		7	34	19	59			
+40	C3	120	7.81		37				0.14		599	skelettboden			299	Einzelkorn	-	-	-	-		5	23	10	72			
+40	C4	160	7.73		33				0.01		299	mittlerer Grobanteil			299	Einzelkorn	-	-	-	-		3	8	10	89			
+41	Ap1	16	5.39		0				2.58		299	mittlerer Grobanteil			470	Krümel	-	mittel	schwach	leicht		13	37	15	49			
+41	Ap2	55	4.93		0				0.95		299	mittlerer Grobanteil			450	Subpolyeder	-	Mittel-grob	mäßig	leicht		13	36	16	51			
+41	Bt	85	5.1		0				0.27		299	mittlerer Grobanteil			450	Subpolyeder	ja	Mittel-grob	mäßig	leicht		11	28	14	61			
+41	Bct	115	5.39		0				0.14		299	mittlerer Grobanteil			450	Subpolyeder	-	grob	schwach	leicht		7	25	12	68			
+41	Cbt	160	5.67		0				0.09		299	mittlerer Grobanteil			399	Kohärentgefüge	-	-	-	leicht		7	38	16	55			
+42	Ap1	18	6.93		5				4.18		299	mittlerer Grobanteil			450	Subpolyeder	ja	mittel	mäßig	leicht		27	42	11	31			
+42	Ap2	40	6.99		2				2.53		199	geringer Grobanteil			450	Subpolyeder	ja	Mittel-grob	deutlich	leicht		28	41	12	31			
+42	B	120	7.11		1				0.49		199	geringer Grobanteil			450	Subpolyeder	-	Mittel-grob	stark	leicht		25	56	13	30			
+42	BC	150	7.62		30				0.23		199	geringer Grobanteil			399	Kohärentgefüge	-	-	-	leicht		15	70	9	15			
+43	Ap1	15	6.73		11				4.15		199	geringer Grobanteil			450	Subpolyeder	ja	Mittel-grob	mäßig	leicht		14	31	15	55			
+43	Ap2	53	7.14		9				1.18		299	mittlerer Grobanteil			450	Subpolyeder	ja	Mittel-grob	mäßig	leicht		14	33	16	53			
+43	2C	110	7.61		4				0.17		199	geringer Grobanteil			399	Kohärentgefüge	-	-	-	leicht		6	39	18	55			
+44	Ap1	28	6.81		3				1.4		299	mittlerer Grobanteil			470	Krümel und Einzelkorn	ja	Mittel-fein	schwach	sehr leicht		7	14	6	79			
+44	Ap2	65	6.8		4				1.89		399	starker grobanteil			299	Einzelkorn	ja	-	-	-		7	16	6	77			
+44	C	120	6.99		2				0.86		499	sehr starker Grobanteil			299	Einzelkorn	ja	-	-	-		8	16	8	76			
+45	Ap1	18	5.88		0				2.05		199	geringer Grobanteil			450	Subpolyeder	ja	Mittel-fein	mäßig	leicht		14	33	15	53			
+45	Ap2	50	6.11		0				0.85		199	geringer Grobanteil			450	Subpolyeder	ja	mittel	mäßig	leicht		15	33	15	52			
+45	Bt	83	6.21		0				0.22		299	mittlerer Grobanteil			450	Subpolyeder		mittel	mäßig	leicht		20	20	11	60			
+45	BC	115	6.4		0				0.12		299	mittlerer Grobanteil			399	Kohärent und Einzelkorn	-	-	-	-	50	8	17	17	75			
+46	Ap1	40	6.05		0				4.51		199	geringer Grobanteil			450	Subpolyeder	ja	Mittel-grob	mäßig	leicht		19	39	13	42			
+46	Ap2	75	6.02		0				0.84		199	geringer Grobanteil			450	Subpolyeder	ja	Mittel-grob	mäßig	leicht		19	38	12	43			
+46	B	130	6.13		0				0.4		199	Sehr geringer Grobanteil			450	Subpolyeder	ja	mittel	mäßig	sehr leicht		18	39	18	43			
+47	Ap1	18	6.23		0				2.01		299	mittlerer Grobanteil			450	Subpolyeder	ja	Mittel-fein	mäßig	leicht		13	32	14	55			
+47	Ap2	65	6.28		0				1.04		299	mittlerer Grobanteil			450	Subpolyeder	ja	Mittel-grob	schwach	leicht		13	32	16	55			
+47	Bt	125	6.53		0				0.18		299	mittlerer Grobanteil			450	Subpolyeder	ja	Mittel-grob	deutlich	leicht		11	19	17	70			
+47	BC	150	6.61		0				0.08		299	mittlerer Grobanteil			399	Kohärentgefüge	-	-	-	leicht		6	21	14	73			
+48	Ap1	12	5.87		0				3.13		299	mittlerer Grobanteil			450	Subpolyeder und Krümel	ja	Fein-mittel	schwach	leicht	50	9	21	9	70			
+48	Ap2	38	6.5		0				2.48		399	starker grobanteil			450	Subpolyeder	ja	mittel	schwach	sehr leicht		9	21	10	70			
+48	B	110	6.37		0				0.42		499	sehr starker Grobanteil			299	Einzelkorn	ja	-	-	-		5	8	4	87			
+49	Ap1	12	7.13		5				1.51		299	mittlerer Grobanteil			450	Subpolyeder und Krümel	-	Fein-mittel	mäßig	leicht	50	16	31	12	53			
+49	Ap2	55	7.54		5				0.2		299	mittlerer Grobanteil			450	Subpolyeder	-	Mittel-grob	mäßig	leicht		17	33	11	50			
+49	C1	75	7.64		7				0.1		499	sehr starker Grobanteil			299	Einzelkorn	-	-	-	-		12	17	5	71			
+49	C2	85	7.77		11				0.12		299	mittlerer Grobanteil			399	Kohärentgefüge	-	-	-	-		37	45	7	18			
+50	Ap1	28	7.13		36				6.3		399	starker grobanteil			450	Subpolyeder und Krümel	ja	Mittel-fein	deutlich	leicht	50	21	41	11	38			
+50	Ap2	72	7.26		42				1.79		499	sehr starker Grobanteil			450	Subpolyeder	ja	Mittel-fein	deutlich	leicht		24	38	12	38			
+50	C	100	7.66		88				0.58		499	sehr starker Grobanteil			450	Subpolyeder	ja	mittel	mäßig	leicht		19	47	9	34			
+51	Ap1	14	6.9		13				3.1		299	mittlerer Grobanteil			450	Subpolyeder und Krümel	ja	fein	deutlich	leicht	50	13	29	12	58			
+51	Ap2	36	9.96		11				2.25		299	mittlerer Grobanteil			450	Subpolyeder	ja	mittel	deutlich	leicht		14	28	12	58			
+51	B	71	7.44		13				0.44		399	starker grobanteil			450	Subpolyeder	ja	Mittel-fein	mäßig	leicht		10	23	10	67			
+51	C1	100	7.71		19				0.09		499	sehr starker Grobanteil			450	Subpolyeder	ja	mittel	schwach	sehr leicht		4	9	7	87			
+51	C2	120	7.64		21				0.24		199	geringer Grobanteil			399	Kohärent und Einzelkorn	-	-	-	-	50	6	34	20	60			
+52	Ap1	15	6.4		0				3.47		199	geringer Grobanteil			450	Subpolyeder	ja	Mittel-fein	mäßig	leicht		15	31	15	54			
+52	Ap2	65	6.53		0				1.25		199	geringer Grobanteil			450	Subpolyeder	ja	Mittel-grob	mäßig	leicht		17	34	15	49			
+52	B	135	6.91		0				0.81		199	geringer Grobanteil			450	Subpolyeder	ja	Mittel-grob	deutlich	leicht		16	31	14	53			
+53	Ap	40	6.98		0				3.51		499	sehr starker Grobanteil			450	Subpolyeder	ja	Fein-mittel	stark	leicht		34	50	9	16			
+53	B	130	6.9		0				0.88		499	sehr starker Grobanteil			450	Subpolyeder	ja	Mittel-grob	stark	leicht		35	52	7	13			
+54	Ap	40	7.08		35				4.49		199	geringer Grobanteil			480	Bröckel	ja	Grob-mittel	-	leicht		19	45	16	36			
+54	B	90	7.39		24				2.73		199	geringer Grobanteil			450	Subpolyeder	ja	Mittel-grob	deutlich	leicht		24	51	13	25			
+54	2C	150	7.57		34				0.52		399	starker grobanteil			299	Einzelkorn	ja	-	-	-		7	16	8	77			
+55	Ap1	20	5.75		0				1.81		299	mittlerer Grobanteil			450	Subpolyeder und Einzelkorn	ja	fein	schwach	sehr leicht	50	8	18	8	74			
+55	Ap2	65	5.85		0				0.38		499	sehr starker Grobanteil			450	Subpolyeder und Einzelkorn	ja	zerfallend	-	sehr leicht	50	7	17	8	76			
+55	B	125	5.82		0				0.15		399	starker grobanteil			450	Subpolyeder und Einzelkorn	ja	zerfallend	-	sehr leicht	50	7	13	9	80			
+56	Ap	55	6.81		5				2.51		299	mittlerer Grobanteil			450	Subpolyeder	ja	Mittel-grob	schwach	leicht		14	24	11	62			
+56	BC	110	7.38		10				0.5		399	starker grobanteil			450	Subpolyeder	ja	mittel	schwach	sehr leicht		10	20	9	70			
+57	Ap	52	7.34		36				4.28		299	mittlerer Grobanteil			450	Subpolyeder	ja	mittel	schwach	leicht		12	25	15	63			
+57	C	125	7.74		38				0.2		499	sehr starker Grobanteil			450	Subpolyeder	ja	mittel	schwach	leicht		4	22	14	74			
+58	Ap	60	5.8		0				2		299	mittlerer Grobanteil			450	Subpolyeder	ja	Mittel-grob	mäßig	leicht		14	33	15	53			
+58	Bt	100	6.17		0				0.18		499	sehr starker Grobanteil			450	Subpolyeder	ja	Mittel-fein	schwach	sehr leicht		10	21	12	69			
+58	C	125	6.3		0				0.1		399	starker grobanteil			399	Kohärentgefüge	-	-	-	leicht		14	31	12	55			
+59	Ap1	50	7.24		20				4.06		199	geringer Grobanteil			450	Subpolyeder	ja	Mittel-grob	deutlich	leicht		20	42	15	38			
+59	Ap2	75	7.57		24				0.87		299	mittlerer Grobanteil			450	Subpolyeder	ja	mittel	mäßig	leicht		12	25	17	63			
+59	C	105	7.86		35				0.07		299	mittlerer Grobanteil			299	Einzelkorn	ja	-	-	-		3	10	23	87			

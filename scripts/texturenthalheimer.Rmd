@@ -1,0 +1,32 @@
+---
+title: "Untitled"
+author: "fabian gruber"
+date: "December 11, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+require(RCurl)
+myfunctions <- getURL("https://raw.githubusercontent.com/fernstgruber/Rstuff/master/fabiansandrossitersfunctions.R", ssl.verifypeer = FALSE)
+eval(parse(text = myfunctions))
+setwd("/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/")
+proj3path="/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/"
+horizonte<- read.table("./data/results_NOV2017/thalheimertest/Thalheimerseppprofile_hor_texturberechnung.csv",sep="\t",header=T)
+for (i in names(horizonte[c(3,4,6,10,22,23,24,25,26)])){
+  horizonte[[i]] <- as.numeric(horizonte[[i]])
+}
+horizonte$SohnefS <- horizonte$S - horizonte$fS
+```
+
+
+
+```{r cars}
+for (i in 1:nrow(horizonte)){
+  print(horizonte$profilnummer[i])
+result <- schluff_oe(portions=c(horizonte$T[i],horizonte$U[i],horizonte$fS[i], horizonte$SohnefS[i]),breaks=c(0.002,0.05,0.1,2))
+horizonte$textur[i] <- textur_oe(t=result[1],u=result[2])
+horizonte$ton[i] <- result[1]
+horizonte$schluff[i] <- result[2]
+horizonte$sand[i]<- result[3]
+}
+```
