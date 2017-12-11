@@ -29,4 +29,6 @@ horizonte$ton[i] <- result[1]
 horizonte$schluff[i] <- result[2]
 horizonte$sand[i]<- result[3]
 }
+write.table(horizonte,"./data/results_NOV2017/thalheimertest/thalheimerhorizontemittextur.txt",sep="\t",row.names=F)
+
 ```
