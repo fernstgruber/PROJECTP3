@@ -1,60 +1,60 @@
-profilnummer	rechtswert	hochwert	neigungmikro	gruendigkeit_wert	ol_maecht	of_maecht	oh_maecht	flurabstand	ausgangsmaterial	Substrat	bodentyp_oe	bodentyp_text	humusform	humusform_text	hoehenstufe	hoehenstufe_text	oekofeuchte	oekofeuchte_text	landnutzung	landnutzung_text	
-1	11.23944444	46.40444444	10	100	0	0	0	10	Lockersedimente	Kalkgesteinschutt	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	240	frisch	500	Sonderkultur	Weinrebe
-2	11.24361111	46.45527778	8	185	0	0	0	10	Lockersedimente	Kalkgesteinschutt	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
-3	11.26833333	46.45527778	0	220	0	0	0	10	Lockersedimente	Kalkgesteinschutt	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	250	Frisch-feucht	500	Sonderkultur	Apfel
-4	11.26361111	46.44916667	5	400	0	0	0	10	Lockersedimente	Kalkgesteinschutt	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	240	frisch	500	Sonderkultur	Weinrebe
-5	11.23972222	46.46972222	10	130	0	0	0	10	Lockersedimente	Kalkgesteinschutt	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	270	stark feucht	500	Sonderkultur	Weinrebe
-6	11.24611111	46.46666667	8	135	0	0	0	10	Lockersedimente	Kalkgesteinschutt	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	270	stark feucht	500	Sonderkultur	Weinrebe
-7	11.24333333	46.46555556	6	130	0	0	0	10	Lockersedimente	Kalkgesteinschutt	1312	karbonathaltige Braunerde	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
-8	11.25166667	46.46666667	7	180	0	0	0	10	Lockersedimente	Kalkgesteinschutt	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
-9	11.25555556	46.46166667	3	125	0	0	0	10	Lockersedimente	Kalkgesteinschutt	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Apfel
-10	11.25027778	46.48861111	10	90	0	0	0	10	Lockersedimente	Kalkgesteinschutt	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
-11	11.24833333	46.48805556	3	90	0	0	0	10	Lockersedimente	Kolluvium	1312	karbonathaltige Braunerde	110	Mull	11	Kollin-planar	270	stark feucht	500	Sonderkultur	Apfel
-12	11.25555556	46.4825	5	80	0	0	0	10	Lockersedimente	Kalkgesteinschutt			110	Mull	11	Kollin-planar	270	stark feucht	500	Sonderkultur	Weinrebe
-13	11	46	14	120	0	0	0	10	Lockersedimente	lakustrisches Sediment	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	270	stark feucht	500	Sonderkultur	Weinrebe
-14	11	46	0	170	0	0	0	10	Lockersedimente	lakustrisches Sediment	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	270	stark feucht	500	Sonderkultur	Weinrebe
-15	11	46	0	170	0	0	0	10	Lockersedimente	lakustrisches Sediment	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	270	stark feucht	500	Sonderkultur	Weinrebe
-16	11	46	17	130	0	0	0	10	Lockersedimente	Moraene	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	270	stark feucht	500	Sonderkultur	Weinrebe
-17	11	46	7	170	0	0	0	10	Lockersedimente	Kalkgesteinschutt	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	270	stark feucht	500	Sonderkultur	Weinrebe
-18	11	46	0	200	0	0	0	10	Lockersedimente	Lakustrisches Sediment	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	270	stark feucht	500	Sonderkultur	Weinrebe
-19	11	46	6	125	0	0	0	10	Lockersedimente	Moraene	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
-20	11	46	0	110	0	0	0	10	Lockersedimente	aufgeschuettetes Niedermoor	2340	Schüttungsboden	110	Mull	11	Kollin-planar	270	nass	500	Sonderkultur	Apfel
-21	11	46	5	135	0	0	0	10	Lockersedimente	Moraene	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
-22	11	46	0	115	0	0	0	10	Lockersedimente	Moraene 	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
-23	11	46	0	170	0	0	0	10	Lockersedimente	Moraene	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
-24	11	46	2	145	0	0	0	10	Lockersedimente	Moraene	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
-25	11	46	2	145	0	0	0	10	Lockersedimente	Moraene	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe/Apfel
-26	11	46	5	115	0	0	0	10	Lockersedimente	Moraene	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
-27	11	46	5	160	0	0	0	10	Lockersedimente	Moraene	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
-28	11	46	3	125	0	0	0	10	Lockersedimente	Moraene	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe/Apfel
-29	11	46	0	130	0	0	0	10	Lockersedimente	Moraene	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Apfel
-30	11	46	15	110	0	0	0	10	Lockersedimente	Moraene	1311	karbonatfreie Braunerde	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
-31	11	46	3	115	0	0	0	10	Lockersedimente	Moraene	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
-32	11	46	25	140	0	0	0	10	Lockersedimente	Kalkgesteinschutt			110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
-33	11	46	4	165	0	0	0	10	Lockersedimente	Kalkgesteinschutt	1312	karbonathaltige Braunerde	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Apfel
-34	11	46	10	130	0	0	0	10	Lockersedimente	Moraene	1311	karbonatfreie Braunerde	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
-35	11	46	20	130	0	0	0	10	Lockersedimente	lakustrisches Sediment	1312	karbonathaltige Braunerde	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
-36	11	46	4	140	0	0	0	10	Lockersedimente	Kalkgesteinschutt	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
-37	11	46	7	130	0	0	0	10	Lockersedimente	Moraene	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	240	frisch	500	Sonderkultur	Apfel
-38	11	46	12	150	0	0	0	10	Lockersedimente	lakustrisches Sediment	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
-39	11	46	14	160	0	0	0	10	Lockersedimente	lakustrisches Sediment	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
-40	11	46	0	85	0	0	0	10	Lockersedimente	Kalkgesteinschutt	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
-41	11	46	8	150	0	0	0	10	Lockersedimente	Moraene	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
-42	11	46	0	150	0	0	0	10	Lockersedimente	Kalklehmkolluvium	1312	karbonathaltige Braunerde	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Apfel
-43	11	46	5	110	0	0	0	10	Lockersedimente	Kalkgesteinschutt	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
-44	11	46	17	120	0	0	0	10	Lockersedimente	fluviatile Schotter	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
-45	11	46	4	160	0	0	0	10	Lockersedimente	Kolluviuam	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
-46	11	46	0	130	0	0	0	10	Lockersedimente	Kolluvium	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
-47	11	46	6	150	0	0	0	10	Lockersedimente	Moraene	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
-48	11	46	5	120	0	0	0	10	Lockersedimente	fluviatile Schotter	1311	karbonatfreie Braunerde	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
-49	11	46	5	80	0	0	0	10	Lockersedimente	Moraene	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
-50	11	46	6	110	0	0	0	10	Lockersedimente	Kalkgesteinschutt	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
-51	11	46	6	120	0	0	0	10	Lockersedimente	Kalkgesteinschutt	1312	karbonathaltige Braunerde	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
-52	11	46	8	135	0	0	0	10	Lockersedimente	Kolluvium	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
-53	11	46	0	130	0	0	0	10	Lockersedimente	Kolluvium	1311	karbonatfreie Braunerde	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Apfel
-54	11	46	4	150	0	0	0	10	Lockersedimente	Kolluvium ueber Kalgesteinschutt	1312	karbonathaltige Braunerde	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Apfel
-55	11	46	8	125	0	0	0	10	Lockersedimente	fluviatile Schotter	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
-56	11	46	10	110	0	0	0	10	Lockersedimente	fluviatile Schotter	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
-57	11	46	10	125	0	0	0	10	Lockersedimente	Kalkgesteinschutt	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
-58	11	46	8	120	0	0	0	10	Lockersedimente	Moraene	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
-59	11	46	5	105	0	0	0	10	Lockersedimente	Kalkgesteinschutt	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Apfel
+profilnummer	rechtswert	hochwert	neigungmikro	gruendigkeit_wert	ol_maecht	of_maecht	oh_maecht	flurabstand	ausgangsmaterial	ausgangsmaterial_text	Substrat	bodentyp_oe	bodentyp_text	humusform	humusform_text	hoehenstufe	hoehenstufe_text	oekofeuchte	oekofeuchte_text	landnutzung	landnutzung_text	
+1	11.23944444	46.40444444	10	100	0	0	0	10	50000	Lockersedimente	Kalkgesteinschutt	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	240	frisch	500	Sonderkultur	Weinrebe
+2	11.24361111	46.45527778	8	185	0	0	0	10	50000	Lockersedimente	Kalkgesteinschutt	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
+3	11.26833333	46.45527778	0	220	0	0	0	10	50000	Lockersedimente	Kalkgesteinschutt	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	250	Frisch-feucht	500	Sonderkultur	Apfel
+4	11.26361111	46.44916667	5	400	0	0	0	10	50000	Lockersedimente	Kalkgesteinschutt	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	240	frisch	500	Sonderkultur	Weinrebe
+5	11.23972222	46.46972222	10	130	0	0	0	10	50000	Lockersedimente	Kalkgesteinschutt	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	270	stark feucht	500	Sonderkultur	Weinrebe
+6	11.24611111	46.46666667	8	135	0	0	0	10	50000	Lockersedimente	Kalkgesteinschutt	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	270	stark feucht	500	Sonderkultur	Weinrebe
+7	11.24333333	46.46555556	6	130	0	0	0	10	50000	Lockersedimente	Kalkgesteinschutt	1312	karbonathaltige Braunerde	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
+8	11.25166667	46.46666667	7	180	0	0	0	10	50000	Lockersedimente	Kalkgesteinschutt	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
+9	11.25555556	46.46166667	3	125	0	0	0	10	50000	Lockersedimente	Kalkgesteinschutt	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Apfel
+10	11.25027778	46.48861111	10	90	0	0	0	10	50000	Lockersedimente	Kalkgesteinschutt	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
+11	11.24833333	46.48805556	3	90	0	0	0	10	50000	Lockersedimente	Kolluvium	1312	karbonathaltige Braunerde	110	Mull	11	Kollin-planar	270	stark feucht	500	Sonderkultur	Apfel
+12	11.25555556	46.4825	5	80	0	0	0	10	50000	Lockersedimente	Kalkgesteinschutt			110	Mull	11	Kollin-planar	270	stark feucht	500	Sonderkultur	Weinrebe
+13	11	46	14	120	0	0	0	10	50000	Lockersedimente	lakustrisches Sediment	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	270	stark feucht	500	Sonderkultur	Weinrebe
+14	11	46	0	170	0	0	0	10	50000	Lockersedimente	lakustrisches Sediment	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	270	stark feucht	500	Sonderkultur	Weinrebe
+15	11	46	0	170	0	0	0	10	50000	Lockersedimente	lakustrisches Sediment	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	270	stark feucht	500	Sonderkultur	Weinrebe
+16	11	46	17	130	0	0	0	10	50000	Lockersedimente	Moraene	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	270	stark feucht	500	Sonderkultur	Weinrebe
+17	11	46	7	170	0	0	0	10	50000	Lockersedimente	Kalkgesteinschutt	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	270	stark feucht	500	Sonderkultur	Weinrebe
+18	11	46	0	200	0	0	0	10	50000	Lockersedimente	Lakustrisches Sediment	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	270	stark feucht	500	Sonderkultur	Weinrebe
+19	11	46	6	125	0	0	0	10	50000	Lockersedimente	Moraene	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
+20	11	46	0	110	0	0	0	10	50000	Lockersedimente	aufgeschuettetes Niedermoor	2340	Schüttungsboden	110	Mull	11	Kollin-planar	270	nass	500	Sonderkultur	Apfel
+21	11	46	5	135	0	0	0	10	50000	Lockersedimente	Moraene	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
+22	11	46	0	115	0	0	0	10	50000	Lockersedimente	Moraene 	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
+23	11	46	0	170	0	0	0	10	50000	Lockersedimente	Moraene	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
+24	11	46	2	145	0	0	0	10	50000	Lockersedimente	Moraene	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
+25	11	46	2	145	0	0	0	10	50000	Lockersedimente	Moraene	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe/Apfel
+26	11	46	5	115	0	0	0	10	50000	Lockersedimente	Moraene	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
+27	11	46	5	160	0	0	0	10	50000	Lockersedimente	Moraene	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
+28	11	46	3	125	0	0	0	10	50000	Lockersedimente	Moraene	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe/Apfel
+29	11	46	0	130	0	0	0	10	50000	Lockersedimente	Moraene	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Apfel
+30	11	46	15	110	0	0	0	10	50000	Lockersedimente	Moraene	1311	karbonatfreie Braunerde	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
+31	11	46	3	115	0	0	0	10	50000	Lockersedimente	Moraene	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
+32	11	46	25	140	0	0	0	10	50000	Lockersedimente	Kalkgesteinschutt			110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
+33	11	46	4	165	0	0	0	10	50000	Lockersedimente	Kalkgesteinschutt	1312	karbonathaltige Braunerde	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Apfel
+34	11	46	10	130	0	0	0	10	50000	Lockersedimente	Moraene	1311	karbonatfreie Braunerde	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
+35	11	46	20	130	0	0	0	10	50000	Lockersedimente	lakustrisches Sediment	1312	karbonathaltige Braunerde	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
+36	11	46	4	140	0	0	0	10	50000	Lockersedimente	Kalkgesteinschutt	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
+37	11	46	7	130	0	0	0	10	50000	Lockersedimente	Moraene	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	240	frisch	500	Sonderkultur	Apfel
+38	11	46	12	150	0	0	0	10	50000	Lockersedimente	lakustrisches Sediment	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
+39	11	46	14	160	0	0	0	10	50000	Lockersedimente	lakustrisches Sediment	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
+40	11	46	0	85	0	0	0	10	50000	Lockersedimente	Kalkgesteinschutt	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
+41	11	46	8	150	0	0	0	10	50000	Lockersedimente	Moraene	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
+42	11	46	0	150	0	0	0	10	50000	Lockersedimente	Kalklehmkolluvium	1312	karbonathaltige Braunerde	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Apfel
+43	11	46	5	110	0	0	0	10	50000	Lockersedimente	Kalkgesteinschutt	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
+44	11	46	17	120	0	0	0	10	50000	Lockersedimente	fluviatile Schotter	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
+45	11	46	4	160	0	0	0	10	50000	Lockersedimente	Kolluviuam	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
+46	11	46	0	130	0	0	0	10	50000	Lockersedimente	Kolluvium	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
+47	11	46	6	150	0	0	0	10	50000	Lockersedimente	Moraene	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
+48	11	46	5	120	0	0	0	10	50000	Lockersedimente	fluviatile Schotter	1311	karbonatfreie Braunerde	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
+49	11	46	5	80	0	0	0	10	50000	Lockersedimente	Moraene	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
+50	11	46	6	110	0	0	0	10	50000	Lockersedimente	Kalkgesteinschutt	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
+51	11	46	6	120	0	0	0	10	50000	Lockersedimente	Kalkgesteinschutt	1312	karbonathaltige Braunerde	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
+52	11	46	8	135	0	0	0	10	50000	Lockersedimente	Kolluvium	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
+53	11	46	0	130	0	0	0	10	50000	Lockersedimente	Kolluvium	1311	karbonatfreie Braunerde	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Apfel
+54	11	46	4	150	0	0	0	10	50000	Lockersedimente	Kolluvium ueber Kalgesteinschutt	1312	karbonathaltige Braunerde	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Apfel
+55	11	46	8	125	0	0	0	10	50000	Lockersedimente	fluviatile Schotter	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
+56	11	46	10	110	0	0	0	10	50000	Lockersedimente	fluviatile Schotter	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
+57	11	46	10	125	0	0	0	10	50000	Lockersedimente	Kalkgesteinschutt	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
+58	11	46	8	120	0	0	0	10	50000	Lockersedimente	Moraene	1741	karbonatfreier Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Weinrebe
+59	11	46	5	105	0	0	0	10	50000	Lockersedimente	Kalkgesteinschutt	1742	karbonathaltiger Rigolboden	110	Mull	11	Kollin-planar	260	feucht	500	Sonderkultur	Apfel

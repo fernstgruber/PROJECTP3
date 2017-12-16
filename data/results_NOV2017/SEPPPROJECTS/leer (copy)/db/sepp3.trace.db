@@ -1,0 +1,507 @@
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TDTAELEMENT" not found; SQL statement:
+SELECT * FROM tdtaelement LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYLANGUAGE" not found; SQL statement:
+SELECT * FROM TKEYLANGUAGE LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYLANGUAGELNG" not found; SQL statement:
+SELECT * FROM TKEYLANGUAGELNG LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "CONFIG" not found; SQL statement:
+SELECT * FROM CONFIG LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "CMS_CONFIG" not found; SQL statement:
+SELECT * FROM CMS_CONFIG LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TDTAELEMENT" not found; SQL statement:
+SELECT * FROM TDTAELEMENT LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TDTASYSTEMLOG" not found; SQL statement:
+SELECT * FROM TDTASYSTEMLOG LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TDTAELEMENTHISTORY" not found; SQL statement:
+SELECT * FROM TDTAELEMENTHISTORY LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYPERMISSIONLEVEL" not found; SQL statement:
+SELECT * FROM TKEYPERMISSIONLEVEL LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYPERMISSIONLEVEL" not found; SQL statement:
+SELECT * FROM TKEYPERMISSIONLEVEL LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYWORKFLOWSTATUS" not found; SQL statement:
+SELECT * FROM TKEYWORKFLOWSTATUS LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYWORKFLOWSTATUS" not found; SQL statement:
+SELECT * FROM TKEYWORKFLOWSTATUS LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TDTAELEMENT" not found; SQL statement:
+SELECT * FROM tdtaelement LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TDTAELEMENTLNG" not found; SQL statement:
+SELECT * FROM tdtaelementlng LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TDTAUSER" not found; SQL statement:
+SELECT * FROM tdtauser LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TDTAUSERLNG" not found; SQL statement:
+SELECT * FROM tdtauserlng LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TDTARELATION" not found; SQL statement:
+SELECT * FROM TDTARELATION LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TDTARELATION" not found; SQL statement:
+SELECT * FROM TDTARELATION LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TDTARELATION" not found; SQL statement:
+SELECT * FROM TDTARELATION LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TDTARELATION" not found; SQL statement:
+SELECT * FROM TDTARELATION LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TDTAGROUP" not found; SQL statement:
+SELECT * FROM tdtagroup LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TDTAGROUPLNG" not found; SQL statement:
+SELECT * FROM tdtagrouplng LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TDTARELATION" not found; SQL statement:
+SELECT * FROM TDTARELATION LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TDTARELATION" not found; SQL statement:
+SELECT * FROM TDTARELATION LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TDTARELATION" not found; SQL statement:
+SELECT * FROM TDTARELATION LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TDTAELEMENTLOCK" not found; SQL statement:
+SELECT * FROM TDTAELEMENTLOCK LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "CMS_CONFIG" not found; SQL statement:
+SELECT max(version) AS version FROM cms_config [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYLEVEL" not found; SQL statement:
+SELECT * FROM TKEYLEVEL LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYLEVEL" not found; SQL statement:
+SELECT * FROM TKEYLEVEL LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYSRID" not found; SQL statement:
+SELECT * FROM TKEYSRID LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYSRID" not found; SQL statement:
+SELECT * FROM TKEYSRID LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYEXPOSITION" not found; SQL statement:
+SELECT * FROM TKEYEXPOSITION LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYEXPOSITION" not found; SQL statement:
+SELECT * FROM TKEYEXPOSITION LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYHANGNEIGUNG" not found; SQL statement:
+SELECT * FROM TKEYHANGNEIGUNG LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYHANGNEIGUNG" not found; SQL statement:
+SELECT * FROM TKEYHANGNEIGUNG LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYGRUENDIGKEIT" not found; SQL statement:
+SELECT * FROM TKEYGRUENDIGKEIT LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYGRUENDIGKEIT" not found; SQL statement:
+SELECT * FROM TKEYGRUENDIGKEIT LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYHOEHENSTUFE" not found; SQL statement:
+SELECT * FROM TKEYHOEHENSTUFE LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYHOEHENSTUFE" not found; SQL statement:
+SELECT * FROM TKEYHOEHENSTUFE LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYWITTERUNG" not found; SQL statement:
+SELECT * FROM TKEYWITTERUNG LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYWITTERUNG" not found; SQL statement:
+SELECT * FROM TKEYWITTERUNG LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYMAKRORELIEF" not found; SQL statement:
+SELECT * FROM TKEYMAKRORELIEF LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYMAKRORELIEF" not found; SQL statement:
+SELECT * FROM TKEYMAKRORELIEF LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYMESORELIEF" not found; SQL statement:
+SELECT * FROM TKEYMESORELIEF LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYMESORELIEF" not found; SQL statement:
+SELECT * FROM TKEYMESORELIEF LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYWOELBUNG" not found; SQL statement:
+SELECT * FROM TKEYWOELBUNG LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYWOELBUNG" not found; SQL statement:
+SELECT * FROM TKEYWOELBUNG LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYWOELBUNGSSTAERKE" not found; SQL statement:
+SELECT * FROM TKEYWOELBUNGSSTAERKE LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYWOELBUNGSSTAERKE" not found; SQL statement:
+SELECT * FROM TKEYWOELBUNGSSTAERKE LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYMIKRORELIEF" not found; SQL statement:
+SELECT * FROM TKEYMIKRORELIEF LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYMIKRORELIEF" not found; SQL statement:
+SELECT * FROM TKEYMIKRORELIEF LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYMIKRORELIEF_B" not found; SQL statement:
+SELECT * FROM TKEYMIKRORELIEF_B LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYMIKRORELIEF_B" not found; SQL statement:
+SELECT * FROM TKEYMIKRORELIEF_B LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYAUSGANGSMATERIAL" not found; SQL statement:
+SELECT * FROM TKEYAUSGANGSMATERIAL LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYAUSGANGSMATERIAL" not found; SQL statement:
+SELECT * FROM TKEYAUSGANGSMATERIAL LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYABZUFLUSS" not found; SQL statement:
+SELECT * FROM TKEYABZUFLUSS LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYABZUFLUSS" not found; SQL statement:
+SELECT * FROM TKEYABZUFLUSS LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYHANGWASSER" not found; SQL statement:
+SELECT * FROM TKEYHANGWASSER LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYHANGWASSER" not found; SQL statement:
+SELECT * FROM TKEYHANGWASSER LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYSTAUWASSER" not found; SQL statement:
+SELECT * FROM TKEYSTAUWASSER LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYSTAUWASSER" not found; SQL statement:
+SELECT * FROM TKEYSTAUWASSER LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYGRUNDSTAUWASSER" not found; SQL statement:
+SELECT * FROM TKEYGRUNDSTAUWASSER LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYGRUNDSTAUWASSER" not found; SQL statement:
+SELECT * FROM TKEYGRUNDSTAUWASSER LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYOEKOFEUCHTE" not found; SQL statement:
+SELECT * FROM TKEYOEKOFEUCHTE LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYOEKOFEUCHTE" not found; SQL statement:
+SELECT * FROM TKEYOEKOFEUCHTE LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYOL_LAGERUNG" not found; SQL statement:
+SELECT * FROM TKEYOL_LAGERUNG LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYOL_LAGERUNG" not found; SQL statement:
+SELECT * FROM TKEYOL_LAGERUNG LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYOF_LAGERUNG" not found; SQL statement:
+SELECT * FROM TKEYOF_LAGERUNG LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYOF_LAGERUNG" not found; SQL statement:
+SELECT * FROM TKEYOF_LAGERUNG LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYOH_LAGERUNG" not found; SQL statement:
+SELECT * FROM TKEYOH_LAGERUNG LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYOH_LAGERUNG" not found; SQL statement:
+SELECT * FROM TKEYOH_LAGERUNG LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYTORF_ZERSETZUNG" not found; SQL statement:
+SELECT * FROM TKEYTORF_ZERSETZUNG LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYTORF_ZERSETZUNG" not found; SQL statement:
+SELECT * FROM TKEYTORF_ZERSETZUNG LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYHUMUSFORM" not found; SQL statement:
+SELECT * FROM TKEYHUMUSFORM LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYHUMUSFORM" not found; SQL statement:
+SELECT * FROM TKEYHUMUSFORM LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYANTHROPOGEN" not found; SQL statement:
+SELECT * FROM TKEYANTHROPOGEN LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYANTHROPOGEN" not found; SQL statement:
+SELECT * FROM TKEYANTHROPOGEN LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYBASENREICHTUM" not found; SQL statement:
+SELECT * FROM TKEYBASENREICHTUM LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYBASENREICHTUM" not found; SQL statement:
+SELECT * FROM TKEYBASENREICHTUM LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYKARBONATGEHALT" not found; SQL statement:
+SELECT * FROM TKEYKARBONATGEHALT LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYKARBONATGEHALT" not found; SQL statement:
+SELECT * FROM TKEYKARBONATGEHALT LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYLANDNUTZUNG" not found; SQL statement:
+SELECT * FROM TKEYLANDNUTZUNG LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYLANDNUTZUNG" not found; SQL statement:
+SELECT * FROM TKEYLANDNUTZUNG LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYVEGETATION" not found; SQL statement:
+SELECT * FROM TKEYVEGETATION LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYVEGETATION" not found; SQL statement:
+SELECT * FROM TKEYVEGETATION LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYKEINEBISHOCH" not found; SQL statement:
+SELECT * FROM TKEYKEINEBISHOCH LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYKEINEBISHOCH" not found; SQL statement:
+SELECT * FROM TKEYKEINEBISHOCH LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYGERINGBISHOCH" not found; SQL statement:
+SELECT * FROM TKEYGERINGBISHOCH LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYGERINGBISHOCH" not found; SQL statement:
+SELECT * FROM TKEYGERINGBISHOCH LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYBODENTYP_OE" not found; SQL statement:
+SELECT * FROM TKEYBODENTYP_OE LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYBODENTYP_OE" not found; SQL statement:
+SELECT * FROM TKEYBODENTYP_OE LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYEROSIONSGRAD" not found; SQL statement:
+SELECT * FROM TKEYEROSIONSGRAD LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYEROSIONSGRAD" not found; SQL statement:
+SELECT * FROM TKEYEROSIONSGRAD LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYEROSIONSAUSMASS" not found; SQL statement:
+SELECT * FROM TKEYEROSIONSAUSMASS LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYEROSIONSAUSMASS" not found; SQL statement:
+SELECT * FROM TKEYEROSIONSAUSMASS LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYDURCHWURZELUNG" not found; SQL statement:
+SELECT * FROM TKEYDURCHWURZELUNG LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYDURCHWURZELUNG" not found; SQL statement:
+SELECT * FROM TKEYDURCHWURZELUNG LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYBODENTYP" not found; SQL statement:
+SELECT * FROM TKEYBODENTYP LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYBODENTYP" not found; SQL statement:
+SELECT * FROM TKEYBODENTYP LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYEROSION" not found; SQL statement:
+SELECT * FROM TKEYEROSION LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYEROSION" not found; SQL statement:
+SELECT * FROM TKEYEROSION LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYKOERNIGKEIT" not found; SQL statement:
+SELECT * FROM TKEYKOERNIGKEIT LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYKOERNIGKEIT" not found; SQL statement:
+SELECT * FROM TKEYKOERNIGKEIT LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYUEBERGANG" not found; SQL statement:
+SELECT * FROM TKEYUEBERGANG LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYUEBERGANG" not found; SQL statement:
+SELECT * FROM TKEYUEBERGANG LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYART" not found; SQL statement:
+SELECT * FROM TKEYART LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYART" not found; SQL statement:
+SELECT * FROM TKEYART LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYBODENART" not found; SQL statement:
+SELECT * FROM TKEYBODENART LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYBODENART" not found; SQL statement:
+SELECT * FROM TKEYBODENART LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYFEINWURZELN" not found; SQL statement:
+SELECT * FROM TKEYFEINWURZELN LIMIT 1 [42102-140]
+04-05 12:42:49 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYFEINWURZELN" not found; SQL statement:
+SELECT * FROM TKEYFEINWURZELN LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYGROBWURZELN" not found; SQL statement:
+SELECT * FROM TKEYGROBWURZELN LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYGROBWURZELN" not found; SQL statement:
+SELECT * FROM TKEYGROBWURZELN LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYHUMUS_KLASSE" not found; SQL statement:
+SELECT * FROM TKEYHUMUS_KLASSE LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYHUMUS_KLASSE" not found; SQL statement:
+SELECT * FROM TKEYHUMUS_KLASSE LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYSKELETT_KLASSE" not found; SQL statement:
+SELECT * FROM TKEYSKELETT_KLASSE LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYSKELETT_KLASSE" not found; SQL statement:
+SELECT * FROM TKEYSKELETT_KLASSE LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYDICHTE_KLASSE" not found; SQL statement:
+SELECT * FROM TKEYDICHTE_KLASSE LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYDICHTE_KLASSE" not found; SQL statement:
+SELECT * FROM TKEYDICHTE_KLASSE LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYCARBONAT_KLASSE" not found; SQL statement:
+SELECT * FROM TKEYCARBONAT_KLASSE LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYCARBONAT_KLASSE" not found; SQL statement:
+SELECT * FROM TKEYCARBONAT_KLASSE LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYPOROSITAET" not found; SQL statement:
+SELECT * FROM TKEYPOROSITAET LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYPOROSITAET" not found; SQL statement:
+SELECT * FROM TKEYPOROSITAET LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYGEFUEGE" not found; SQL statement:
+SELECT * FROM TKEYGEFUEGE LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYGEFUEGE" not found; SQL statement:
+SELECT * FROM TKEYGEFUEGE LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYFLECKENZAHL" not found; SQL statement:
+SELECT * FROM TKEYFLECKENZAHL LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYFLECKENZAHL" not found; SQL statement:
+SELECT * FROM TKEYFLECKENZAHL LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYFLECKENART" not found; SQL statement:
+SELECT * FROM TKEYFLECKENART LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYFLECKENART" not found; SQL statement:
+SELECT * FROM TKEYFLECKENART LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYKONKRETIONEN" not found; SQL statement:
+SELECT * FROM TKEYKONKRETIONEN LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYKONKRETIONEN" not found; SQL statement:
+SELECT * FROM TKEYKONKRETIONEN LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYARTEFAKTE" not found; SQL statement:
+SELECT * FROM TKEYARTEFAKTE LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYARTEFAKTE" not found; SQL statement:
+SELECT * FROM TKEYARTEFAKTE LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYPHMETHODE" not found; SQL statement:
+SELECT * FROM TKEYPHMETHODE LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYPHMETHODE" not found; SQL statement:
+SELECT * FROM TKEYPHMETHODE LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYFLECKUNG" not found; SQL statement:
+SELECT * FROM TKEYFLECKUNG LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYFLECKUNG" not found; SQL statement:
+SELECT * FROM TKEYFLECKUNG LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TDTAELEPROFIL" not found; SQL statement:
+SELECT * FROM tdtaeleprofil LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TDTAELEPROFILLNG" not found; SQL statement:
+SELECT * FROM tdtaeleprofillng LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYMESORELIEFREL" not found; SQL statement:
+SELECT * FROM TKEYMESORELIEFREL LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYMIKRORELIEFREL" not found; SQL statement:
+SELECT * FROM TKEYMIKRORELIEFREL LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYLANDNUTZUNGREL" not found; SQL statement:
+SELECT * FROM TKEYLANDNUTZUNGREL LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYVEGETATIONREL" not found; SQL statement:
+SELECT * FROM TKEYVEGETATIONREL LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TDTAELEPROJECT" not found; SQL statement:
+SELECT * FROM tdtaeleproject LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TDTAELEPROJECTLNG" not found; SQL statement:
+SELECT * FROM tdtaeleprojectlng LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TDTAELEHORIZONT" not found; SQL statement:
+SELECT * FROM tdtaelehorizont LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TDTAELEHORIZONTLNG" not found; SQL statement:
+SELECT * FROM tdtaelehorizontlng LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYFLECKENARTREL" not found; SQL statement:
+SELECT * FROM TKEYFLECKENARTREL LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "TKEYARTEFAKTEREL" not found; SQL statement:
+SELECT * FROM TKEYARTEFAKTEREL LIMIT 1 [42102-140]
+04-05 12:42:50 jdbc[3]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "CMS_CONFIG" not found; SQL statement:
+SELECT max(version) AS version FROM cms_config [42102-140]
+04-05 12:43:00 jdbc[2]: Connection not closed
+java.lang.Exception: Stack Trace
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:95)
+	at org.h2.Driver.connect(Driver.java:73)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:208)
+	at at.grid.cms.storage.H2Datastorage.checkAndCreateDatabase(H2Datastorage.java:176)
+	at at.grid.cms.CmsApplication.initialise(CmsApplication.java:330)
+	at at.grid.cms.CmsApplication.initialise(CmsApplication.java:251)
+	at at.grid.sepp3.core.app.SeppProject.open(SeppProject.java:273)
+	at at.grid.sepp3.core.app.SeppApplication.createProject(SeppApplication.java:114)
+	at at.grid.sepp3.core.app.CreateProjectAction.actionPerformed(CreateProjectAction.java:47)
+	at org.openide.awt.AlwaysEnabledAction$1.run(AlwaysEnabledAction.java:199)
+	at org.openide.util.actions.ActionInvoker$1.run(ActionInvoker.java:95)
+	at org.openide.util.actions.ActionInvoker.doPerformAction(ActionInvoker.java:116)
+	at org.openide.util.actions.ActionInvoker.invokeAction(ActionInvoker.java:99)
+	at org.openide.awt.AlwaysEnabledAction.actionPerformed(AlwaysEnabledAction.java:202)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
+	at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:833)
+	at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:877)
+	at java.awt.Component.processMouseEvent(Component.java:6535)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6300)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4891)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4713)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4888)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4525)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4466)
+	at java.awt.Container.dispatchEventImpl(Container.java:2280)
+	at java.awt.Window.dispatchEventImpl(Window.java:2750)
+	at java.awt.Component.dispatchEvent(Component.java:4713)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at org.netbeans.core.TimableEventQueue.dispatchEvent(TimableEventQueue.java:159)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
