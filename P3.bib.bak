@@ -1,0 +1,20 @@
+% This file was created with JabRef 2.10b2.
+% Encoding: UTF-8
+
+
+@Article{Haslmayr2016,
+  Title                    = {Soil function evaluation in Austria — Development, concepts and examples},
+  Author                   = {Hans-Peter Haslmayr and Clemens Geitner and Gertraud Sutor and Andreas Knoll and Andreas Baumgarten},
+  Journal                  = {Geoderma},
+  Year                     = {2016},
+  Note                     = {Soil mapping, classification, and modelling: history and future directions},
+  Pages                    = {379 - 387},
+  Volume                   = {264},
+
+  Abstract                 = {Spatial planning decisions are frequently driven by short term economic interests influencing zoning regulations which determine subsequent spatial developments in the future. Not only does this frequently place constraints on prospective space for planning measures; it also leads to progressive soil loss. In order to integrate soil-related issues in decision-making processes, a broad range of specific soil services should be considered. Thus, approaches have been developed to convert available soil data to decision-relevant soil information. Soil function evaluation is used as a tool for differentiating soils due to their role in a functional context. This paper outlines development and concepts of this approach on the basis of available soil data records in Germany and Austria. It also demonstrates how an adapted hemeroby ranking can be integrated into soil evaluation. Furthermore, we present some evaluation examples from Austria, showing evaluation results and how to communicate them for better integration into spatial planning decisions. In general, this soil evaluation approach provides evidence that the results are suitable to be introduced into spatial planning procedures, which is crucial for sustainable land use in the future.},
+  Doi                      = {https://doi.org/10.1016/j.geoderma.2015.09.023},
+  ISSN                     = {0016-7061},
+  Keywords                 = {Soil functions, Soil function evaluation, Soil protection, Soil data, Spatial planning},
+  Url                      = {http://www.sciencedirect.com/science/article/pii/S0016706115300951}
+}
+
