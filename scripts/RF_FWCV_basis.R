@@ -3,28 +3,34 @@ require(RCurl)
 require(repmis)
 require(randomForest)
 require(rgdal)
-myfunctions <- getURL("https://raw.githubusercontent.com/fernstgruber/Rstuff/master/fabiansandrossitersfunctions.R", ssl.verifypeer = FALSE)
-eval(parse(text = myfunctions))
-load("/media/fabs/Volume/01_PAPERZEUG/paper2data/profiledata.RData")
+proj3path="/home/fabs/PROJECTP3"
+setwd(paste(proj3path,"/data/",sep=""))
+load(file=paste(proj3path, "/data/preppeddata.RData",sep=""))
+#myfunctions <- getURL("https://raw.githubusercontent.com/fernstgruber/Rstuff/master/fabiansandrossitersfunctions.R", ssl.verifypeer = FALSE)
+#eval(parse(text = myfunctions))
 allpreds <- c(localterrain,regionalterrain,roughness,heights)
 paramsets <- list(localterrain,regionalterrain,roughness,heights,allpreds)
 paramsetnames <- c("localterrain","regionalterrain","roughness","heights","allpreds")
-dependent="SGU_kartiert"
+dependentlist=names(preppeddata)[36:50]
 allpreds <- c(localterrain,regionalterrain,roughness,heights)
-allpreds <- c(allpreds[allpreds %in% names(profiledata)])
-nadata <- na.omit(profiledata)
-problempunkte <- profiledata[!(profiledata$ID %in% nadata$ID),]
-profiledata <- profiledata[profiledata$ID != "12884", ]
-profiledata <- profiledata[!(profiledata[[dependent]] %in% c("MrD")),]
-profiledata[[dependent]] <- droplevels(profiledata[[dependent]]) 
+allpreds <- c(allpreds[allpreds %in% names(preppeddata)])
+mdata <- preppeddata[c("profilnummer",dependentlist,allpreds)]
+nadata <- na.omit(mdata)
+problempunkte <- mdata[!(mdata$profilnummer %in% nadata$profilnummer),]
+mdata <- na.omit(mdata)
+#profiledata <- profiledata[profiledata$ID != "12884", ]
+dependent = dependentlist[1]
+for (dependent in dependentlist){
+mdata[[dependent]] <- droplevels(mdata[[dependent]]) 
+
 badones <-vector()
 for(pp in allpreds){
-    if(nrow(profiledata[is.na(profiledata[[pp]]),]) > 0) {
+    if(nrow(mdata[is.na(mdata[[pp]]),]) > 0) {
         badones <-c(badones,pp)
       }
 }
-for (p in allpreds){
-  if (summary(profiledata[[p]])[5] == 0.0 ) {
+ for (p in allpreds){
+  if (summary(mdata[[p]])[5] == 0.0 ) {
     badones <- c(badones,p)
   }
 }
@@ -33,14 +39,14 @@ paramsets[[5]] <- allpreds
 regionalterrain <- regionalterrain[regionalterrain %in% allpreds]
 paramsets[[2]] <- regionalterrain
 roughness <- roughness[roughness %in% allpreds]
-roughness <-roughness[roughness %in% names(profiledata)]
+roughness <-roughness[roughness %in% names(mdata)]
 paramsets[[3]] <- roughness
 allpreds <- c(localterrain,regionalterrain,roughness,heights)
-allpreds <- allpreds[allpreds %in% names(profiledata[names(profiledata) %in% c(dependent,"SGU_gk",allpreds)])]
-origmodeldata <- profiledata[names(profiledata) %in% c(dependent,"SGU_gk",allpreds)]
+allpreds <- allpreds[allpreds %in% names(mdata)]
+origmodeldata <- mdata[names(mdata) %in% c(dependent,allpreds)]
 
 
-psets <- c(3)
+psets <- c(5)
 classes <-  levels(origmodeldata[[dependent]])
 #save(classes,paramsets,modeldata,paramsetnames,file="classesandparamsets.RData")
 paramsetnames = paramsetnames[psets]
@@ -52,12 +58,12 @@ for (p in paramsets){
   predset_name <- paramsetnames[n]
   preds <- unlist(p)
   preds <- preds[preds %in% allpreds]
-  predset= c(preds,"SGU_gk")
+  predset= c(preds)
   mymodeldata <- origmodeldata[c(dependent,predset)]
   folds = sample(rep(1:5, length = nrow(mymodeldata)))
   
-  tt=1:20 #number of best parameters in combination
-  mydir=paste("ranfor_fw_5fold_20p_",dependent,"_",predset_name,"",sep="")
+  tt=1:10 #number of best parameters in combination
+  mydir=paste("ranfor_fw_5fold_10p_",dependent,"_",predset_name,sep="")
   dir.create(mydir)
   #############################################################################################################################
   #############################################################################################################################
@@ -114,9 +120,10 @@ for (p in paramsets){
       save(predictions_metrics,result_df,fit,keepers,traindatatable,testdatatable,importance,file=paste(mydir,"/k",k,"_round_",t,".RData",sep=""))
       predictions_metrics <- predictions_metrics[predictions_metrics$index != as.character(minindex),]
       
-    }
-  }
+    } #iteration through tt
+  } #iteration through k
   n=n+1
-}
+} #iteration through paramsets
 
 
+}   #iteration through dependentlist

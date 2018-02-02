@@ -12,8 +12,8 @@ load(paste(paperzeugpfad,"paper2data/profiledata.RData",sep=""))
 #proj3path="/media/fabs/Volume/01_PAPERZEUG/PROJECTP3"
 proj3path="/home/fabs/PROJECTP3"
 setwd(proj3path)
-spatialdata <- readOGR("./data/shapesSEPP/Profilpunktemitboden_UTM.shp",layer="Profilpunktemitboden_UTM")
-pointdata <- spatialdata@data
+#spatialdata <- readOGR("./data/shapesSEPP/Profilpunktemitboden_UTM.shp",layer="Profilpunktemitboden_UTM")
+#pointdata <- spatialdata@data
 thalheimer <- read.table("./data/results_NOV2017/Thalheimer_AND__ReBO_profileruns/Thalheimer_all_dez162017.csv",sep="\t",header=T)
 resultcolnumbers <- c(1,10:12,26,28,34,36,38,40,49,51,52,57:58,91,94,97:129)
 resultcols <- names(thalheimer)[resultcolnumbers]
@@ -27,3 +27,12 @@ factorcols <- resultcols[c(1,5,7,11,12,14,15,16,17,36,37,38,39,40,41,42,43,44,45
 for (i in factorcols){
   Sepp_UE[[i]] <- as.factor(Sepp_UE[[i]])
 }
+#identifier for pointdata: ID
+#identifier for Sepp_Ue:profilnummer
+#identifier for profiledata: ID
+summary(Sepp_UE$profilnummer %in% profiledata$ID)
+Sepp_UE[!(Sepp_UE$profilnummer %in% profiledata$ID),]
+preppeddata = merge(Sepp_UE, profiledata,by.x="profilnummer",by.y="ID",all.x=T)
+summary(preppeddata)
+save(preppeddata,heights,localterrain, regionalterrain,roughness, file=paste(proj3path, "/data/preppeddata.RData",sep="")) 
+write.table(Sepp_UE,"./data/SEPP_results.txt",sep="\t",row.names = F)

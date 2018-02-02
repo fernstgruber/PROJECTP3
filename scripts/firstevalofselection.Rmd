@@ -1,0 +1,24 @@
+---
+title: "first selections"
+author: "fabian gruber"
+date: "February 1, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+require(e1071)
+require(RCurl)
+require(repmis)
+require(randomForest)
+require(rgdal)
+myfunctions <- getURL("https://raw.githubusercontent.com/fernstgruber/Rstuff/master/fabiansandrossitersfunctions.R", ssl.verifypeer = FALSE)
+eval(parse(text = myfunctions))
+proj3path="/home/fabs/PROJECTP3"
+setwd(paste(proj3path,"/data/",sep=""))
+```
+
+
+```{r}
+evaluateforwardCV_anyerror(mypath=paste(proj2path,"/data2017/temprdata/ranfor_fw_5fold_6p_SGU_kartiert_roughness/",sep=""),kk=1:5,endround = 6,error = "cverror",geheim = "geheimerprederror",yrange=c(0,0.6))
+```
+
