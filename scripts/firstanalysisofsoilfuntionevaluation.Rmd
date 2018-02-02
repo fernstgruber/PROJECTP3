@@ -3,8 +3,8 @@ title: "First take on soil function evaluation of Ueberetsch"
 author: "fabian gruber"
 date: "January 31, 2018"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -14,8 +14,9 @@ require(repmis)
 require(randomForest)
 require(rgdal)
 require(knitr)
-proj3path="/home/fabs/PROJECTP3"
-setwd(paste(proj3path,"/data/",sep=""))
+#proj3path="/home/fabs/PROJECTP3"
+proj3path="/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/"
+setwd(proj3path)
 load(file=paste(proj3path, "/data/preppeddata.RData",sep=""))
 dependentlist=names(preppeddata)[36:50]
 dependentlist_eng <- c("1a.2.1 - Potential as a habitat for drought-tolerant species",
@@ -44,48 +45,55 @@ for (i in dependentlist){
 ## Soil functions
 1 = high potential, 5 = low potential  
 
-   ![Overview of points in the study area.](/home/fabs/PROJECTP3/maps/pointoverviewforrmd.png)
+
 
 ### Habitat for animals and plants  
-1a.2.1 - Potential as a habitat for drought-tolerant species:  
+   
 ```{r,echo=F}
 tbl <- table(preppeddata[dependentlist[1]])
 barplot(tbl, ylim=c(0,100), main=dependentlist_eng[1])
 ```
 
-1a.2.2 - Potential as a habitat for moisture-tolerant species  
+
+   ![Fig. 1: Potential as a habitat for drought-tolerant species.](/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/maps/Leben_Tr.png)   
+
+
 
 ```{r,echo=F}
 tbl <- table(preppeddata[dependentlist[2]])
 barplot(tbl, ylim=c(0,100), main=dependentlist_eng[2])
 ```
 
-   ![Overview of points in the study area.](/home/fabs/PROJECTP3/maps/pointoverviewforrmd.png)
-   
-1a.3 - Habitat for soil organisms  
+   ![Fig. 2: Potential as a habitat for moisture-tolerant species.](/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/maps/Leben_Feucht.png)   
+
 ```{r,echo=F}
 tbl <- table(preppeddata[dependentlist[3]])
 barplot(tbl, ylim=c(0,100), main=dependentlist_eng[3])
 ```
 
-   ![Overview of points in the study area.](/home/fabs/PROJECTP3/maps/pointoverviewforrmd.png)
-   
-1a.4 - Habitat for crops  
+   ![Fig. 3: Potential as a habitat for soil organisms.](/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/maps/Leben_Org.png)   
+
+
+
 
 ```{r,echo=F}
 tbl <- table(preppeddata[dependentlist[4]])
 barplot(tbl, ylim=c(0,100), main=dependentlist_eng[4])
 ```
 
-   ![Overview of points in the study area.](/home/fabs/PROJECTP3/maps/pointoverviewforrmd.png)
+   ![Fig. 4: Potential as a habitat for crops.](/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/maps/Leben_kult.png)   
+
 
 ### Infiltration and drainage regulation  
-1c.1 - Precipitation retention capacity  
+ 
 
 ```{r,echo=F}
 tbl <- table(preppeddata[dependentlist[5]])
 barplot(tbl, ylim=c(0,100), main=dependentlist_eng[5])
 ```
+
+   ![Fig. 5: Average precipitation retention capacity.](/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/maps/Retent_ave.png)   
+
 
 
 ```{r,echo=F}
@@ -93,74 +101,86 @@ tbl <- table(preppeddata[dependentlist[6]])
 barplot(tbl, ylim=c(0,100), main=dependentlist_eng[6])
 ```
 
+![Fig. 6: Minimum precipitation retention capacity.](/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/maps/Retent_min.png) 
 
-1c.2 - Retention capacity for heavy precipitation events  
+
+
 
 ```{r,echo=F}
 tbl <- table(preppeddata[dependentlist[7]])
 barplot(tbl, ylim=c(0,100), main=dependentlist_eng[7])
 ```
 
+![Fig. 7: Retention capacity for heavy precipitation events.](/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/maps/Retent_stark.png) 
 
-1c.3 - groundwater reformation rate  
+
 
 ```{r,echo=F}
 tbl <- table(preppeddata[dependentlist[8]])
 barplot(tbl, ylim=c(0,100), main=dependentlist_eng[8])
 ```
 
+![Fig. 8: Groundwater reformation rate.](/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/maps/GWneu.png) 
+
 ### Natural soil fertility  
-1c.4 - Potential for providing nutrients for plants  
+
 
 ```{r,echo=F}
 tbl <- table(preppeddata[dependentlist[9]])
 barplot(tbl, ylim=c(0,100), main=dependentlist_eng[9])
 ```
 
+![Fig. 9: Potential for providing nutrients for plants.](/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/maps/Naehrstoff.png) 
+
 ### Filter and buffer for pollutants
 
-1c.5 - Potential as a CO2 sink  
 
 ```{r,echo=F}
 tbl <- table(preppeddata[dependentlist[10]])
 barplot(tbl, ylim=c(0,100), main=dependentlist_eng[10])
 ```
 
-1d.1 - Potential for retention of heavy metals  
+![Fig. 10: Potential as a CO2 sink.](/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/maps/CO2Senke.png) 
+
+
 
 ```{r,echo=F}
 tbl <- table(preppeddata[dependentlist[11]])
 barplot(tbl, ylim=c(0,100), main=dependentlist_eng[11])
 ```
 
-1d.2 - Potential for transforming organic contaminants  
+![Fig. 11: Potential for retention of heavy metals.](/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/maps/Filtpuff.png) 
+
+
 
 ```{r,echo=F}
 tbl <- table(preppeddata[dependentlist[12]])
 barplot(tbl, ylim=c(0,100), main=dependentlist_eng[12])
 ```
 
+![Fig. 12: Potential for transforming organic contaminants.](/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/maps/Transformation.png) 
 
-1d.3 - Potential as filter and buffer for organic contaminants  
 
 ```{r,echo=F}
 tbl <- table(preppeddata[dependentlist[13]])
 barplot(tbl, ylim=c(0,100), main=dependentlist_eng[13])
 ```
 
-1d.4 - Potential for retention of water-soluble contaminants  
+![Fig. 13: Potential as filter and buffer for organic contaminants.](/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/maps/Filtpuff_Org.png) 
+
 
 ```{r,echo=F}
 tbl <- table(preppeddata[dependentlist[14]])
 barplot(tbl, ylim=c(0,100), main=dependentlist_eng[14])
 ```
+ 
+![Fig. 14: Potential for retention of water-soluble contaminants.](/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/maps/Filtpuff_Nit.png)
 
-
-1d.5 - Potential as buffer for acidic contaminants  
 
 ```{r,echo=F}
 tbl <- table(preppeddata[dependentlist[15]])
 barplot(tbl, ylim=c(0,100), main=dependentlist_eng[15])
 ```
 
+ ![Fig. 15: Potential as buffer for acidic contaminants.](/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/maps/Puffer_sauer.png)
  

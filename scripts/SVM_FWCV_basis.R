@@ -3,9 +3,11 @@ require(RCurl)
 require(repmis)
 require(randomForest)
 require(rgdal)
-proj3path="/home/fabs/PROJECTP3"
-setwd(paste(proj3path,"/data/",sep=""))
-load(file=paste(proj3path, "/data/preppeddata.RData",sep=""))
+#proj3path="/home/fabs/PROJECTP3"
+proj3path="/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/"
+setwd(proj3path)
+load(file="./data/preppeddata.RData")
+load(file="./data/SGUinfo.RData")
 #myfunctions <- getURL("https://raw.githubusercontent.com/fernstgruber/Rstuff/master/fabiansandrossitersfunctions.R", ssl.verifypeer = FALSE)
 #eval(parse(text = myfunctions))
 allpreds <- c(localterrain,regionalterrain,roughness,heights)
@@ -18,6 +20,8 @@ mdata <- preppeddata[c("profilnummer",dependentlist,allpreds)]
 nadata <- na.omit(mdata)
 problempunkte <- mdata[!(mdata$profilnummer %in% nadata$profilnummer),]
 mdata <- na.omit(mdata)
+mdata$profilnummer %in% SGUinfo$ID
+mdata <- merge(mdata,SGUinfo,by.x="profilnummer",by.y="ID",all.x=T)
 #profiledata <- profiledata[profiledata$ID != "12884", ]
 dependent = dependentlist[1]
 for (dependent in dependentlist){
@@ -35,25 +39,26 @@ for(pp in allpreds){
   }
 }
 allpreds=allpreds[!(allpreds %in% badones)]
-paramsets[[5]] <- allpreds
+paramsets[[5]] <- c(allpreds,"SGU","SGUT_wTGnew","SGUcode_vectorruggedness_hr_ws57_TRI_hr_ws31")
 regionalterrain <- regionalterrain[regionalterrain %in% allpreds]
 paramsets[[2]] <- regionalterrain
 roughness <- roughness[roughness %in% allpreds]
 roughness <-roughness[roughness %in% names(mdata)]
 paramsets[[3]] <- roughness
-allpreds <- c(localterrain,regionalterrain,roughness,heights)
+allpreds <- c(localterrain,regionalterrain,roughness,heights,"SGU","SGUT_wTGnew","SGUcode_vectorruggedness_hr_ws57_TRI_hr_ws31")
 allpreds <- allpreds[allpreds %in% names(mdata)]
 origmodeldata <- mdata[names(mdata) %in% c(dependent,allpreds)]
-
+#save(origmodeldata,paramsets,paramsetnames,dependent,file=paste("./data/modeldata/SVMorigmodeldatawithoutgeo_",dependent,".RData",sep="")) }
 
 psets <- c(5)
 classes <-  levels(origmodeldata[[dependent]])
 #save(classes,paramsets,modeldata,paramsetnames,file="classesandparamsets.RData")
-paramsetnames = paramsetnames[psets]
-paramsets = paramsets[psets]
+#paramsetnames = paramsetnames[psets]
+#paramsets = paramsets[psets]
 
-n=1
-p=paramsets[1]
+n=5
+p=paramsets[psets]
+#p=paramsets[1]
 #for (p in paramsets){
   predset_name <- paramsetnames[n]
   preds <- unlist(p)
@@ -63,7 +68,7 @@ p=paramsets[1]
   folds = sample(rep(1:5, length = nrow(mymodeldata)))
   
   tt=1:10 #number of best parameters in combination
-  mydir=paste("SVM2_fw_5fold_10p_",dependent,"_",predset_name,sep="")
+  mydir=paste("./data/SVMwithgeo_fw_5fold_10p_",dependent,"_",predset_name,sep="")
   dir.create(mydir)
   #############################################################################################################################
   #############################################################################################################################

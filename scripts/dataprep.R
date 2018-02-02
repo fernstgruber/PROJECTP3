@@ -4,13 +4,13 @@ require(repmis)
 require(randomForest)
 library(knitr)
 require(rgdal)
-#paperzeugpfad <- "/media/fabs/Volume/01_PAPERZEUG/"
-paperzeugpfad <- "//home/fabs/Data/"
+paperzeugpfad <- "/media/fabs/Volume/01_PAPERZEUG/"
+#paperzeugpfad <- "//home/fabs/Data/"
 myfunctions <- getURL("https://raw.githubusercontent.com/fernstgruber/Rstuff/master/fabiansandrossitersfunctions.R", ssl.verifypeer = FALSE)
 eval(parse(text = myfunctions))
 load(paste(paperzeugpfad,"paper2data/profiledata.RData",sep=""))
-#proj3path="/media/fabs/Volume/01_PAPERZEUG/PROJECTP3"
-proj3path="/home/fabs/PROJECTP3"
+proj3path="/media/fabs/Volume/01_PAPERZEUG/PROJECTP3"
+#proj3path="/home/fabs/PROJECTP3"
 setwd(proj3path)
 #spatialdata <- readOGR("./data/shapesSEPP/Profilpunktemitboden_UTM.shp",layer="Profilpunktemitboden_UTM")
 #pointdata <- spatialdata@data
@@ -34,5 +34,18 @@ summary(Sepp_UE$profilnummer %in% profiledata$ID)
 Sepp_UE[!(Sepp_UE$profilnummer %in% profiledata$ID),]
 preppeddata = merge(Sepp_UE, profiledata,by.x="profilnummer",by.y="ID",all.x=T)
 summary(preppeddata)
-save(preppeddata,heights,localterrain, regionalterrain,roughness, file=paste(proj3path, "/data/preppeddata.RData",sep="")) 
-write.table(Sepp_UE,"./data/SEPP_results.txt",sep="\t",row.names = F)
+SGUinfo <- read.table("./data/SGUinfo_fromP2.txt",sep=",",header=T)
+SGUinfo <- SGUinfo[c("ID", "SGUcode_vectorruggedness_hr_ws57_TRI_hr_ws31", "SGU" ,"SGUT_wTGnew" )]
+for (i in c("SGUcode_vectorruggedness_hr_ws57_TRI_hr_ws31", "SGU" ,"SGUT_wTGnew")){
+  SGUinfo[[i]] <- as.factor(SGUinfo[[i]])
+}
+save(SGUinfo,file="./data/SGUinfo.RData")
+geomorphons <- read.table("./data/Geominfo_fromP1.txt",sep=",",header=T)
+geomcols <- names(geomorphons)[90:454]
+for (i in geomcols) {
+  geomorphons[[i]] <- factor(geomorphons[[i]],levels=1:10)
+}
+geomdata <- geomorphons[c("ID",geomcols)]
+save(geomdata,geomcols,file="./data/geomorphoninfo.RData")
+#save(preppeddata,heights,localterrain, regionalterrain,roughness, file=paste(proj3path, "/data/preppeddata.RData",sep="")) 
+#write.table(Sepp_UE,"./data/SEPP_results.txt",sep="\t",row.names = F)

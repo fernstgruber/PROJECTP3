@@ -13,12 +13,58 @@ require(randomForest)
 require(rgdal)
 myfunctions <- getURL("https://raw.githubusercontent.com/fernstgruber/Rstuff/master/fabiansandrossitersfunctions.R", ssl.verifypeer = FALSE)
 eval(parse(text = myfunctions))
-proj3path="/home/fabs/PROJECTP3"
-setwd(paste(proj3path,"/data/",sep=""))
+#proj3path="/home/fabs/PROJECTP3"
+proj3path="/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/"
+#setwd(proj3path)
 ```
+##Potential as a habitat for drought-tolerant species
 
 
 ```{r}
-evaluateforwardCV_anyerror(mypath=paste(proj2path,"/data2017/temprdata/ranfor_fw_5fold_6p_SGU_kartiert_roughness/",sep=""),kk=1:5,endround = 6,error = "cverror",geheim = "geheimerprederror",yrange=c(0,0.6))
+  evaluateforwardCV_anyerror(mypath=paste(proj3path,"/data/FSCV/SVM_fw_5fold_10p_Leben_Tr_allpreds",sep=""),kk=1:5,endround = 10,error = "cverror",geheim = "geheimerprederror",yrange=c(0,1))
+
 ```
+
+```{r}
+load("../data/modeldata/SVMorigmodeldatawithgeo_Leben_Tr.RData")
+predict_radial_full(modeldata=origmodeldata, dependent=dependent, predictors=unlist(paramsets[5]))
+rm(origmodeldata,paramsets,paramsetnames,dependent)
+```
+with geology:
+
+
+```{r}
+  evaluateforwardCV_anyerror(mypath=paste(proj3path,"/data/FSCV/SVMwithgeo_fw_5fold_10p_Leben_Tr_allpreds",sep=""),kk=1:5,endround = 10,error = "cverror",geheim = "geheimerprederror",yrange=c(0,1))
+```
+
+```{r}
+load("../data/modeldata/SVMorigmodeldatawithgeo_Leben_Tr.RData")
+predict_radial_full(modeldata=origmodeldata, dependent=dependent, predictors=unlist(paramsets[5]))
+rm(origmodeldata,paramsets,paramsetnames,dependent)
+```
+```{r}
+
+```
+
+
+###with random forests
+
+```{r}
+  evaluateforwardCV_anyerror(mypath=paste(proj3path,"/data/FSCV/ranfor_fw_5fold_10p_Leben_Tr_allpreds",sep=""),kk=1:5,endround = 10,error = "cverror",geheim = "geheimerprederror",yrange=c(0,1))
+```
+with geology
+
+```{r}
+  evaluateforwardCV_anyerror(mypath=paste(proj3path,"/data/FSCV/RFwithgeo_fw_5fold_10p_Leben_Tr_allpreds",sep=""),kk=1:5,endround = 10,error = "cverror",geheim = "geheimerprederror",yrange=c(0,1))
+```
+
+
+
+```{r}
+load("../data/modeldata/RForigmodeldatawithgeo_Leben_Tr.RData")
+predict_ranfor_full(modeldata=origmodeldata, dependent=dependent, predictors=unlist(paramsets[5]),pset=5,altdata=origmodeldata)
+importance_ranfor_pset(modeldata=origmodeldata, dependent=dependent,pset = 5,altdata=origmodeldata)
+```
+
+
 

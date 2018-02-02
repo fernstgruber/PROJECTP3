@@ -44,6 +44,7 @@ paramsets[[3]] <- roughness
 allpreds <- c(localterrain,regionalterrain,roughness,heights)
 allpreds <- allpreds[allpreds %in% names(mdata)]
 origmodeldata <- mdata[names(mdata) %in% c(dependent,allpreds)]
+#save(origmodeldata,paramsets,paramsetnames,dependent,file=paste("./data/modeldata/RForigmodeldatawithoutgeo_",dependent,".RData",sep="")) }
 
 
 psets <- c(5)
