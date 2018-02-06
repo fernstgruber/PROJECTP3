@@ -54,13 +54,13 @@ allpreds <- allpreds[allpreds %in% names(mdata)]
 origmodeldata <- mdata[names(mdata) %in% c(dependent,allpreds)]
 #save(origmodeldata,paramsets,paramsetnames,dependent,file=paste("./data/modeldata/SVMorigmodeldatawithgeoandgeom_",dependent,".RData",sep="")) }
 
-psets <- c(5)
+psets <- c(1)
 classes <-  levels(origmodeldata[[dependent]])
 #save(classes,paramsets,modeldata,paramsetnames,file="classesandparamsets.RData")
 #paramsetnames = paramsetnames[psets]
 #paramsets = paramsets[psets]
 
-n=5
+n=1
 p=paramsets[psets]
 #p=paramsets[1]
 #for (p in paramsets){

@@ -27,7 +27,7 @@ mdata$profilnummer %in% geomdata$ID
 mdata <- merge(mdata,geomdata,by.x="profilnummer",by.y="ID",all.x=T)
 #profiledata <- profiledata[profiledata$ID != "12884", ]
 dependent = dependentlist[1]
-for (dependent in dependentlist[15:10]){
+for (dependent in dependentlist){
 mdata[[dependent]] <- droplevels(mdata[[dependent]]) 
 
 badones <-vector()
@@ -55,13 +55,13 @@ origmodeldata <- mdata[names(mdata) %in% c(dependent,allpreds)]
 #save(origmodeldata,paramsets,paramsetnames,dependent,file=paste("./data/modeldata/RForigmodeldatawithgeoandgeom_",dependent,".RData",sep="")) }
 
 
-psets <- c(5)
+psets <- c(1)
 classes <-  levels(origmodeldata[[dependent]])
 #save(classes,paramsets,modeldata,paramsetnames,file="classesandparamsets.RData")
 #paramsetnames = paramsetnames[psets]
 #paramsets = paramsets[psets]
 
-n=5
+n=1
 p=paramsets[psets]
 #p=paramsets[1]
 #for (p in paramsets){
