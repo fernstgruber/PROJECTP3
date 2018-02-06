@@ -13,10 +13,11 @@ require(randomForest)
 require(rgdal)
 myfunctions <- getURL("https://raw.githubusercontent.com/fernstgruber/Rstuff/master/fabiansandrossitersfunctions.R", ssl.verifypeer = FALSE)
 eval(parse(text = myfunctions))
-#proj3path="/home/fabs/PROJECTP3"
-proj3path="/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/"
+proj3path="/home/fabs/PROJECTP3"
+#proj3path="/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/"
 #setwd(proj3path)
 ```
+
 ##Potential as a habitat for drought-tolerant species
 
 
@@ -67,4 +68,146 @@ importance_ranfor_pset(modeldata=origmodeldata, dependent=dependent,pset = 5,alt
 ```
 
 
+Potential as a habitat for moisture-tolerant species
 
+Random Forests with parent material
+
+```{r}
+  evaluateforwardCV_anyerror(mypath=paste(proj3path,"/data/FSCV/RFwithgeo_fw_5fold_10p_Leben_Fe_allpreds",sep=""),kk=1:5,endround = 10,error = "cverror",geheim = "geheimerprederror",yrange=c(0,1))
+load("../data/modeldata/RForigmodeldatawithgeo_Leben_Fe.RData")
+predict_ranfor_full(modeldata=origmodeldata, dependent=dependent, predictors=unlist(paramsets[5]),pset=5,altdata=origmodeldata)
+importance_ranfor_pset(modeldata=origmodeldata, dependent=dependent,pset = 5,altdata=origmodeldata)
+```
+
+
+1a.3 - Habitat for soil organisms
+Random Forests with parent material
+
+```{r}
+  evaluateforwardCV_anyerror(mypath=paste(proj3path,"/data/FSCV/RFwithgeo_fw_5fold_10p_Leben_Org_allpreds",sep=""),kk=1:5,endround = 10,error = "cverror",geheim = "geheimerprederror",yrange=c(0,1))
+  load("../data/modeldata/RForigmodeldatawithgeo_Leben_Org.RData")
+predict_ranfor_full(modeldata=origmodeldata, dependent=dependent, predictors=unlist(paramsets[5]),pset=5,altdata=origmodeldata)
+importance_ranfor_pset(modeldata=origmodeldata, dependent=dependent,pset = 5,altdata=origmodeldata)
+```
+
+1a.4 - Habitat for crops
+Random Forests with parent material
+
+```{r}
+  evaluateforwardCV_anyerror(mypath=paste(proj3path,"/data/FSCV/RFwithgeo_fw_5fold_10p_Leben_Kult_allpreds",sep=""),kk=1:5,endround = 10,error = "cverror",geheim = "geheimerprederror",yrange=c(0,1))
+load("../data/modeldata/RForigmodeldatawithgeo_Leben_Kult.RData")
+predict_ranfor_full(modeldata=origmodeldata, dependent=dependent, predictors=unlist(paramsets[5]),pset=5,altdata=origmodeldata)
+importance_ranfor_pset(modeldata=origmodeldata, dependent=dependent,pset = 5,altdata=origmodeldata)
+```
+
+1c.1 - Average precipitation retention capacity
+Random Forests with parent material
+
+```{r}
+  evaluateforwardCV_anyerror(mypath=paste(proj3path,"/data/FSCV/RFwithgeo_fw_5fold_10p_Retent_ave_allpreds",sep=""),kk=1:5,endround = 10,error = "cverror",geheim = "geheimerprederror",yrange=c(0,1))
+load("../data/modeldata/RForigmodeldatawithgeo_Retent_ave.RData")
+predict_ranfor_full(modeldata=origmodeldata, dependent=dependent, predictors=unlist(paramsets[5]),pset=5,altdata=origmodeldata)
+importance_ranfor_pset(modeldata=origmodeldata, dependent=dependent,pset = 5,altdata=origmodeldata)
+```
+
+1c.1 - Minimum precipitation retention capacity
+Random Forests with parent material
+
+```{r}
+  evaluateforwardCV_anyerror(mypath=paste(proj3path,"/data/FSCV/RFwithgeo_fw_5fold_10p_Retent_min_allpreds",sep=""),kk=1:5,endround = 10,error = "cverror",geheim = "geheimerprederror",yrange=c(0,1))
+load("../data/modeldata/RForigmodeldatawithgeo_Retent_min.RData")
+predict_ranfor_full(modeldata=origmodeldata, dependent=dependent, predictors=unlist(paramsets[5]),pset=5,altdata=origmodeldata)
+importance_ranfor_pset(modeldata=origmodeldata, dependent=dependent,pset = 5,altdata=origmodeldata)
+```
+
+1c.2 - Retention capacity for heavy precipitation events
+Random Forests with parent material
+
+```{r}
+  evaluateforwardCV_anyerror(mypath=paste(proj3path,"/data/FSCV/RFwithgeo_fw_5fold_10p_Leben_Fe_allpreds",sep=""),kk=1:5,endround = 10,error = "cverror",geheim = "geheimerprederror",yrange=c(0,1))
+load("../data/modeldata/RForigmodeldatawithgeo_Leben_Fe.RData")
+predict_ranfor_full(modeldata=origmodeldata, dependent=dependent, predictors=unlist(paramsets[5]),pset=5,altdata=origmodeldata)
+importance_ranfor_pset(modeldata=origmodeldata, dependent=dependent,pset = 5,altdata=origmodeldata)
+```
+
+1c.3 - groundwater reformation rate
+Random Forests with parent material
+
+```{r}
+  evaluateforwardCV_anyerror(mypath=paste(proj3path,"/data/FSCV/RFwithgeo_fw_5fold_10p_Leben_Fe_allpreds",sep=""),kk=1:5,endround = 10,error = "cverror",geheim = "geheimerprederror",yrange=c(0,1))
+load("../data/modeldata/RForigmodeldatawithgeo_Leben_Fe.RData")
+predict_ranfor_full(modeldata=origmodeldata, dependent=dependent, predictors=unlist(paramsets[5]),pset=5,altdata=origmodeldata)
+importance_ranfor_pset(modeldata=origmodeldata, dependent=dependent,pset = 5,altdata=origmodeldata)
+```
+
+
+1c.4 - Potential for providing nutrients for plants
+Random Forests with parent material
+
+```{r}
+  evaluateforwardCV_anyerror(mypath=paste(proj3path,"/data/FSCV/RFwithgeo_fw_5fold_10p_Leben_Fe_allpreds",sep=""),kk=1:5,endround = 10,error = "cverror",geheim = "geheimerprederror",yrange=c(0,1))
+load("../data/modeldata/RForigmodeldatawithgeo_Leben_Fe.RData")
+predict_ranfor_full(modeldata=origmodeldata, dependent=dependent, predictors=unlist(paramsets[5]),pset=5,altdata=origmodeldata)
+importance_ranfor_pset(modeldata=origmodeldata, dependent=dependent,pset = 5,altdata=origmodeldata)
+```
+
+1c.5 - Potential as a CO2 sink
+Random Forests with parent material
+
+```{r}
+  evaluateforwardCV_anyerror(mypath=paste(proj3path,"/data/FSCV/RFwithgeo_fw_5fold_10p_Leben_Fe_allpreds",sep=""),kk=1:5,endround = 10,error = "cverror",geheim = "geheimerprederror",yrange=c(0,1))
+load("../data/modeldata/RForigmodeldatawithgeo_Leben_Fe.RData")
+predict_ranfor_full(modeldata=origmodeldata, dependent=dependent, predictors=unlist(paramsets[5]),pset=5,altdata=origmodeldata)
+importance_ranfor_pset(modeldata=origmodeldata, dependent=dependent,pset = 5,altdata=origmodeldata)
+```
+
+1d.1 - Potential for retention of heavy metals
+Random Forests with parent material
+
+```{r}
+  evaluateforwardCV_anyerror(mypath=paste(proj3path,"/data/FSCV/RFwithgeo_fw_5fold_10p_Leben_Fe_allpreds",sep=""),kk=1:5,endround = 10,error = "cverror",geheim = "geheimerprederror",yrange=c(0,1))
+load("../data/modeldata/RForigmodeldatawithgeo_Leben_Fe.RData")
+predict_ranfor_full(modeldata=origmodeldata, dependent=dependent, predictors=unlist(paramsets[5]),pset=5,altdata=origmodeldata)
+importance_ranfor_pset(modeldata=origmodeldata, dependent=dependent,pset = 5,altdata=origmodeldata)
+```
+
+
+1d.2 - Potential for transforming organic contaminants
+Random Forests with parent material
+
+```{r}
+  evaluateforwardCV_anyerror(mypath=paste(proj3path,"/data/FSCV/RFwithgeo_fw_5fold_10p_Leben_Fe_allpreds",sep=""),kk=1:5,endround = 10,error = "cverror",geheim = "geheimerprederror",yrange=c(0,1))
+load("../data/modeldata/RForigmodeldatawithgeo_Leben_Fe.RData")
+predict_ranfor_full(modeldata=origmodeldata, dependent=dependent, predictors=unlist(paramsets[5]),pset=5,altdata=origmodeldata)
+importance_ranfor_pset(modeldata=origmodeldata, dependent=dependent,pset = 5,altdata=origmodeldata)
+```
+
+1d.3 - Potential as filter and buffer for organic contaminants
+Random Forests with parent material
+
+```{r}
+  evaluateforwardCV_anyerror(mypath=paste(proj3path,"/data/FSCV/RFwithgeo_fw_5fold_10p_Leben_Fe_allpreds",sep=""),kk=1:5,endround = 10,error = "cverror",geheim = "geheimerprederror",yrange=c(0,1))
+load("../data/modeldata/RForigmodeldatawithgeo_Leben_Fe.RData")
+predict_ranfor_full(modeldata=origmodeldata, dependent=dependent, predictors=unlist(paramsets[5]),pset=5,altdata=origmodeldata)
+importance_ranfor_pset(modeldata=origmodeldata, dependent=dependent,pset = 5,altdata=origmodeldata)
+```
+
+1d.4 - Potential for retention of water-soluble contaminants
+Random Forests with parent material
+
+```{r}
+  evaluateforwardCV_anyerror(mypath=paste(proj3path,"/data/FSCV/RFwithgeo_fw_5fold_10p_Leben_Fe_allpreds",sep=""),kk=1:5,endround = 10,error = "cverror",geheim = "geheimerprederror",yrange=c(0,1))
+load("../data/modeldata/RForigmodeldatawithgeo_Leben_Fe.RData")
+predict_ranfor_full(modeldata=origmodeldata, dependent=dependent, predictors=unlist(paramsets[5]),pset=5,altdata=origmodeldata)
+importance_ranfor_pset(modeldata=origmodeldata, dependent=dependent,pset = 5,altdata=origmodeldata)
+```
+
+1d.5 - Potential as buffer for acidic contaminants")             
+Random Forests with parent material
+
+```{r}
+  evaluateforwardCV_anyerror(mypath=paste(proj3path,"/data/FSCV/RFwithgeo_fw_5fold_10p_Leben_Fe_allpreds",sep=""),kk=1:5,endround = 10,error = "cverror",geheim = "geheimerprederror",yrange=c(0,1))
+load("../data/modeldata/RForigmodeldatawithgeo_Leben_Fe.RData")
+predict_ranfor_full(modeldata=origmodeldata, dependent=dependent, predictors=unlist(paramsets[5]),pset=5,altdata=origmodeldata)
+importance_ranfor_pset(modeldata=origmodeldata, dependent=dependent,pset = 5,altdata=origmodeldata)
+```
