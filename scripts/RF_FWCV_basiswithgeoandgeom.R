@@ -27,7 +27,7 @@ mdata$profilnummer %in% geomdata$ID
 mdata <- merge(mdata,geomdata,by.x="profilnummer",by.y="ID",all.x=T)
 #profiledata <- profiledata[profiledata$ID != "12884", ]
 dependent = dependentlist[1]
-for (dependent in dependentlist){
+for (dependent in dependentlist[15:10]){
 mdata[[dependent]] <- droplevels(mdata[[dependent]]) 
 
 badones <-vector()
