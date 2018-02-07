@@ -3,8 +3,8 @@ require(RCurl)
 require(repmis)
 require(randomForest)
 require(rgdal)
-#proj3path="/home/fabs/PROJECTP3"
-proj3path="/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/"
+proj3path="/home/fabs/PROJECTP3"
+#proj3path="/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/"
 setwd(proj3path)
 load(file="./data/preppeddata.RData")
 load(file="./data/SGUinfo.RData")
@@ -49,19 +49,20 @@ roughness <- roughness[roughness %in% allpreds]
 roughness <-roughness[roughness %in% names(mdata)]
 paramsets[[3]] <- roughness
 paramsets[[6]] <- geomcols
+paramsetnames[6] <- 'geoms'
 allpreds <- c(localterrain,regionalterrain,roughness,heights,"SGU","SGUT_wTGnew","SGUcode_vectorruggedness_hr_ws57_TRI_hr_ws31",geomcols)
 allpreds <- allpreds[allpreds %in% names(mdata)]
 origmodeldata <- mdata[names(mdata) %in% c(dependent,allpreds)]
 #save(origmodeldata,paramsets,paramsetnames,dependent,file=paste("./data/modeldata/RForigmodeldatawithgeoandgeom_",dependent,".RData",sep="")) }
 
 
-psets <- c(1)
+psets <- c(6)
 classes <-  levels(origmodeldata[[dependent]])
 #save(classes,paramsets,modeldata,paramsetnames,file="classesandparamsets.RData")
 #paramsetnames = paramsetnames[psets]
 #paramsets = paramsets[psets]
 
-n=1
+n=6
 p=paramsets[psets]
 #p=paramsets[1]
 #for (p in paramsets){

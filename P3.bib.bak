@@ -18,3 +18,44 @@
   Url                      = {http://www.sciencedirect.com/science/article/pii/S0016706115300951}
 }
 
+@Article{Karlen1997,
+  Title                    = {Soil Quality: A Concept, Definition, and Framework for Evaluation (A Guest Editorial)},
+  Author                   = {Karlen, D. L. and Mausbach, M. J. and Doran, J. W. and Cline, R. G. and Harris, R. F. and Schuman, G. E.},
+  Journal                  = {Soil Science Society of America Journal},
+  Year                     = {1997},
+  Number                   = {1},
+  Pages                    = {4--10},
+  Volume                   = {61},
+
+  __markedentry            = {[fabs:6]},
+  Abstract                 = {Abstract This essay summarizes deliberation by the Soil Science Society of America (SSSA) Ad Hoc Committee on Soil Quality (S-581) and was written to spur discussion among SSSA members. Varying perceptions of soil quality have emerged since the concept was suggested in the early 1990s, and dialogue among members is important because, unlike air and water quality, legislative standards for soil quality have not been and perhaps should not be defined. In simplest terms, soil quality is "the capacity (of soil) to function". This definition, based on function, reflects the living and dynamic nature of soil. Soil quality can be conceptualized as a three-legged stool, the function and balance of which requires an integration of three major components — sustained biological productivity, environmental quality, and plant and animal health. The concept attempts to balance multiple soil uses (e.g., for agricultural production, remediation of wastes, urban development, forest, range, or recreation) with goals for environmental quality. Assessing soil quality will require collaboration among all disciplines of science to examine and interpret their results in the context of land management strategies, interactions, and trade-offs. Society is demanding solutions from science. Simply measuring and reporting the response of an individual soil parameter to a given perturbation or management practice is no longer sufficient. The soil resource must be recognized as a dynamic living system that emerges through a unique balance and interaction of its biological, chemical, and physical components. We encourage SSSA members to consider the concept of soil quality (perhaps as a marketing tool) and to debate how it might enable us to more effectively meet the diverse natural resource needs and concerns of our rural, urban, and suburban clientele of today and tomorrow.},
+  Address                  = {Madison, WI},
+  Doi                      = {10.2136/sssaj1997.03615995006100010001x},
+  Owner                    = {fabs},
+  Publisher                = {Soil Science Society of America},
+  Timestamp                = {2018.01.29},
+  Url                      = {http://dx.doi.org/10.2136/sssaj1997.03615995006100010001x}
+}
+
+@Article{Nestroy2011,
+  Title                    = {{Systematische Gliederung der B\"oden \"Osterreichs. \"Osterreichische Bodensystematik 2000 in der revidierten Fassung von 2011}},
+  Author                   = {O. Nestroy and G. Aust and W.E.H. Blum and M. Englisch and H. Hager and E. Herzberger and W. Kilian and P. Nelhiebel and G. Ortner and, E. Pecina and A. Pehamberger W. Schneider und J. Wagner},
+  Journal                  = {{Mitt. \"Osterr. Bodenkdl. Ges.}},
+  Year                     = {2011},
+  Volume                   = {79},
+
+  Owner                    = {fabs},
+  Timestamp                = {2016.08.24}
+}
+
+@Article{Nestroy2000,
+  Title                    = {{Systematische Gliederung der B\"oden \"Osterreichischs (\"Osterreichische Bodensystematik 2000)}},
+  Author                   = {O. Nestroy and O.H. Danneberg and M. Englisch and A. Ge{\ss}l and H. Hager and E. Herzberger and W. Kilian and P. Nelhiebel and E. Pecina and A. Pehamberger and W. Schneider and J. Wagner},
+  Journal                  = {{Mitt. \"Osterr. Bodenkdl. Ges.}},
+  Year                     = {2000},
+  Volume                   = {60},
+
+  Owner                    = {fabs},
+  Timestamp                = {2016.08.24}
+}
+

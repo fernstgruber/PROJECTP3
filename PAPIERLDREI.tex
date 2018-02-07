@@ -70,22 +70,24 @@ soil function evaluation, Alpine environment
 \linenumbers
 
 \section{Introduction}
-Information on soil, a, at least from a human time perspective, non-renewable ressource, is of invreaseing importance given erosion, soil degradation and soil sealing. It is necessary to know where and where not certain practises are applicable and to adjust land-use planning appropriately. Accordingly, soil function evaluationis an invaluable tool for the future.
+Information on soil, a, at least from a human time perspective, non-renewable ressource, is of increasing importance given erosion, soil degradation and soil sealing. It is necessary to know where and where not certain practises are applicable and to adjust land-use planning appropriately. Accordingly, soil function evaluationis an invaluable tool for the future.
 
 In this study, we present the soil evaluation tool \emph{Soil Evaluation for Planning Procedures (SEPP)} and investigate topographic and parent material control of the different soil functions by applying a cross-validated machine learning approach based on availible soil pit information in the Oltradige/\"{U}beretsch region of the Autonomous Province Bolzano - South Tyrol.
 
 \citep{Haslmayr2016}
+\section{Data and methods}
 
-\section{Study area and soil data}
-\section{SEPP - Soil Evaluation for Planning Procedures}
+\subsection{Study area and soil data}
 
+\subsection{SEPP - Soil Evaluation for Planning Procedures}
+The software SEPP currently computes a soil function evaluation based on soil pit descriptions. It requires that the pit descriptions are performed following the Austrian Soil classification  \citep{Nestroy2000,Nestroy2011} and related mapping manuals. The minimum  soil profile site characteristics are local slope, Auflagemaechtigkeiten, Gruendigkeit, flurabstand, soil parent material, soil type, humus form, ecological hoehenstufe, oekofeuchte, land use ... For each horizon, the minimum characteristics necessary for computing the soil function are horizontbezeichnung, depth, ph value, carbonate class, texture, organic content class, Skelettanteil, dichte klasse, gefuege and gefuegeanteil. The soil functions for which 15 different potentials are computed are  \emph{habitat for living organisms} (specifically the potential as habitat for drought-tolerant species, moisture tolerant species, soil organisms and crops),  \emph{infiltration and drainage regulation} (minimum, average and heavy precipitation retention capacity as well as groundwater reformation rate), \emph{natural soil fertility} as well as \emph{filter and buffer for pollutants} (heavy metal, organic, acidifying and water-soluble). The result is the attribution of a grade between 1 and 5 for each soil function potential, with 1 signifying a high potential and 5 a low one.
 
 \section{Conclusion}
-
+ 
 
 \section*{Acknowledgements} This research was performed within the project 'Terrain Classification of ALS Data to support Digital Soil Mapping', funded by the Autonomous Province Bolzano -- South Tyrol (15/40.3).
 
 \section*{References}
-\bibliography{P3.bib}
+\bibliography{P3.bib}u
 
 \end{document}
