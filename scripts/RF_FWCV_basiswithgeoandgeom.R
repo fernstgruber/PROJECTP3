@@ -3,8 +3,8 @@ require(RCurl)
 require(repmis)
 require(randomForest)
 require(rgdal)
-proj3path="/home/fabs/PROJECTP3"
-#proj3path="/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/"
+#proj3path="/home/fabs/PROJECTP3"
+proj3path="/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/"
 setwd(proj3path)
 load(file="./data/preppeddata.RData")
 load(file="./data/SGUinfo.RData")
@@ -27,7 +27,7 @@ mdata$profilnummer %in% geomdata$ID
 mdata <- merge(mdata,geomdata,by.x="profilnummer",by.y="ID",all.x=T)
 #profiledata <- profiledata[profiledata$ID != "12884", ]
 dependent = dependentlist[1]
-for (dependent in dependentlist){
+for (dependent in dependentlist[c(1:9,15:10)]){
 mdata[[dependent]] <- droplevels(mdata[[dependent]]) 
 
 badones <-vector()
