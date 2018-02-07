@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{3}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\href}[2]{#2}
@@ -26,5 +26,33 @@
   \DOIprefix\doi{https://doi.org/10.1016/j.geoderma.2015.09.023}.
   \bibinfo{note}{soil mapping, classification, and modelling: history and
   future directions}.
+%Type = Article
+\bibitem[{Nestroy et~al.(2011)Nestroy, Aust, Blum, Englisch, Hager, Herzberger,
+  Kilian, Nelhiebel, G.~Ortner~and and und J.~Wagner}]{Nestroy2011}
+\bibinfo{author}{Nestroy, O.}, \bibinfo{author}{Aust, G.},
+  \bibinfo{author}{Blum, W.}, \bibinfo{author}{Englisch, M.},
+  \bibinfo{author}{Hager, H.}, \bibinfo{author}{Herzberger, E.},
+  \bibinfo{author}{Kilian, W.}, \bibinfo{author}{Nelhiebel, P.},
+  \bibinfo{author}{G.~Ortner~and, E.P.}, \bibinfo{author}{und J.~Wagner,
+  A.P.W.S.}, \bibinfo{year}{2011}.
+\newblock \bibinfo{title}{{Systematische Gliederung der B\"oden \"Osterreichs.
+  \"Osterreichische Bodensystematik 2000 in der revidierten Fassung von 2011}}.
+\newblock \bibinfo{journal}{{Mitt. \"Osterr. Bodenkdl. Ges.}}
+  \bibinfo{volume}{79}.
+%Type = Article
+\bibitem[{Nestroy et~al.(2000)Nestroy, Danneberg, Englisch, Ge{\ss}l, Hager,
+  Herzberger, Kilian, Nelhiebel, Pecina, Pehamberger, Schneider and
+  Wagner}]{Nestroy2000}
+\bibinfo{author}{Nestroy, O.}, \bibinfo{author}{Danneberg, O.},
+  \bibinfo{author}{Englisch, M.}, \bibinfo{author}{Ge{\ss}l, A.},
+  \bibinfo{author}{Hager, H.}, \bibinfo{author}{Herzberger, E.},
+  \bibinfo{author}{Kilian, W.}, \bibinfo{author}{Nelhiebel, P.},
+  \bibinfo{author}{Pecina, E.}, \bibinfo{author}{Pehamberger, A.},
+  \bibinfo{author}{Schneider, W.}, \bibinfo{author}{Wagner, J.},
+  \bibinfo{year}{2000}.
+\newblock \bibinfo{title}{{Systematische Gliederung der B\"oden
+  \"Osterreichischs (\"Osterreichische Bodensystematik 2000)}}.
+\newblock \bibinfo{journal}{{Mitt. \"Osterr. Bodenkdl. Ges.}}
+  \bibinfo{volume}{60}.
 
 \end{thebibliography}

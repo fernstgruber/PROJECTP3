@@ -59,9 +59,12 @@ with geology
   evaluateforwardCV_anyerror(mypath=paste(proj3path,"/data/FSCV/RFwithgeo_fw_5fold_10p_Leben_Tr_allpreds",sep=""),kk=1:5,endround = 10,error = "cverror",geheim = "geheimerprederror",yrange=c(0,1))
 ```
 
+and geomorphongs
 
 
 ```{r}
+
+  evaluateforwardCV_anyerror(mypath=paste(proj3path,"/data/FSCV/RF_geoandgeom/RFwithgeoandgeom_fw_5fold_6p_Leben_Tr_allpreds",sep=""),kk=1:5,endround = 6,error = "cverror",geheim = "geheimerprederror",yrange=c(0,1))
 load("../data/modeldata/RForigmodeldatawithgeo_Leben_Tr.RData")
 predict_ranfor_full(modeldata=origmodeldata, dependent=dependent, predictors=unlist(paramsets[5]),pset=5,altdata=origmodeldata)
 importance_ranfor_pset(modeldata=origmodeldata, dependent=dependent,pset = 5,altdata=origmodeldata)
@@ -124,7 +127,7 @@ importance_ranfor_pset(modeldata=origmodeldata, dependent=dependent,pset = 5,alt
 Random Forests with parent material
 
 ```{r}
-  evaluateforwardCV_anyerror(mypath=paste(proj3path,"/data/FSCV/RFwithgeo_fw_5fold_10p_Leben_Fe_allpreds",sep=""),kk=1:5,endround = 10,error = "cverror",geheim = "geheimerprederror",yrange=c(0,1))
+  evaluateforwardCV_anyerror(mypath=paste(proj3path,"/data/FSCV/RF_geoandgeom/RFwithgeoandgeom_fw_5fold_10",sep=""),kk=1:5,endround = 10,error = "cverror",geheim = "geheimerprederror",yrange=c(0,1))
 load("../data/modeldata/RForigmodeldatawithgeo_Leben_Fe.RData")
 predict_ranfor_full(modeldata=origmodeldata, dependent=dependent, predictors=unlist(paramsets[5]),pset=5,altdata=origmodeldata)
 importance_ranfor_pset(modeldata=origmodeldata, dependent=dependent,pset = 5,altdata=origmodeldata)
