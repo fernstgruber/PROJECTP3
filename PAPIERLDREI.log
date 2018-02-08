@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.8.24)  6 FEB 2018 21:07
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.8.24)  8 FEB 2018 10:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -321,21 +321,21 @@ Underfull \hbox (badness 1642) in paragraph at lines 17--31
  []
 
 [2])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 93.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 94.
  [3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 93.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 94.
  (./PAPIERLDREI.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 93.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 93.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 94.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 94.
 Package rerunfilecheck Info: File `PAPIERLDREI.out' has not changed.
-(rerunfilecheck)             Checksum: 59580AF333B0BE7F97A97B8DB0C2AFF0;311.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 93.
+(rerunfilecheck)             Checksum: 0B6578020E8B3BC0D4CC169D4E2F1922;353.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 94.
  ) 
 Here is how much of TeX's memory you used:
- 5894 strings out of 493304
- 85500 string characters out of 6139871
+ 5896 strings out of 493304
+ 85520 string characters out of 6139871
  175238 words of memory out of 5000000
- 9288 multiletter control sequences out of 15000+600000
+ 9289 multiletter control sequences out of 15000+600000
  9351 words of font info for 33 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  34i,7n,34p,1388b,440s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -351,10 +351,10 @@ onts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
 7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on PAPIERLDREI.pdf (3 pages, 152144 bytes).
+Output written on PAPIERLDREI.pdf (3 pages, 153366 bytes).
 PDF statistics:
- 116 PDF objects out of 1000 (max. 8388607)
- 97 compressed objects within 1 object stream
- 17 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 121 PDF objects out of 1000 (max. 8388607)
+ 101 compressed objects within 2 object streams
+ 18 named destinations out of 1000 (max. 500000)
+ 49 words of extra memory for PDF output out of 10000 (max. 10000000)
 
