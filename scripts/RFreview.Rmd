@@ -27,18 +27,18 @@ for(i in 1:length(dependentlist)){
   load(paste("../data/modeldata/RForigmodeldatawithgeoandgeom_",dep,".RData",sep=""))  
   preds <- evaluateforwardCV_anyerror(mypath=paste("../data/FSCV/RF_geoandgeom/RFwithgeoandgeom_fw_5fold_6p_",dep,"_allpreds",sep=""),kk=1:5,endround = 6,error = "cverror",geheim = "geheimerprederror",yrange=c(0,1))
   print(preds)
-  importance_ranfor_pset(modeldata=origmodeldata,dependent=dep,pset=5,altdata=origmodeldata)
+  importance_ranfor_pset(modeldata=origmodeldata,dependent=dep,pset=5,altdata=origmodeldata,withalt=F)
   predictors <- c(as.character(preds[1,1]),as.character(preds[2,1]))
-  predict_ranfor_full(modeldata=origmodeldata, dependent=dep, predictors=predictors,pset=5,kappasum = F,tausum = F,altdata=origmodeldata)
+  predict_ranfor_full(modeldata=origmodeldata, dependent=dep, predictors=predictors,pset=5,kappasum = F,tausum = F,altdata=origmodeldata,withalt=F)
   predictors = vector()
   for (n in 1:ncol(preds)){
     for (n2 in 1:nrow(preds)){
       predictors <- c(predictors,as.character(preds[n2,n]))
     }
   } 
-    print("###################### WITH  PREDICTORS from the FW SELECTION ###################")
+  print("###################### WITH  PREDICTORS from the FW SELECTION ###################")
   uniquepredictors <- unique(predictors)
-  predict_ranfor_full(modeldata=origmodeldata, dependent=dep, predictors=predictors,pset=5,kappasum = F,tausum = F,altdata=origmodeldata)
+  predict_ranfor_full(modeldata=origmodeldata, dependent=dep, predictors=uniquepredictors,pset=5,kappasum = F,tausum = F,altdata=origmodeldata,withalt=F)
   
 }
 ```
@@ -62,53 +62,9 @@ predictors <- c(as.character(preds[1,1]),as.character(preds[2,1]))
   } 
     print("###################### WITH  PREDICTORS from the FW SELECTION ###################")
   uniquepredictors <- unique(predictors)
-  predict_ranfor_full(modeldata=origmodeldata, dependent=dep, predictors=predictors,pset=1,kappasum = F,tausum = F,altdata=origmodeldata)
+  predict_ranfor_full(modeldata=origmodeldata, dependent=dep, predictors=uniquepredictors,pset=1,kappasum = F,tausum = F,altdata=origmodeldata,withalt=F)
   
 }
 ```
 
 
-```{r}
-ttt <- function(modeldata,dependent,pset,altdata,withalt=TRUE){
-  require(randomForest)
-  predictors = unlist(paramsets[[pset]])
-  predictors = predictors[predictors %in% names(modeldata)]
-  fullmodel <- randomForest(as.formula(paste(dependent,"~.")),na.omit(modeldata[c(dependent,predictors)]),importance=T)
-print(paste("OBB error with all predictors of ",paramsetnames[pset], "is ",fullmodel$err.rate[nrow(fullmodel$err.rate),1]))
- importance <- as.data.frame(fullmodel$importance)
-importance$parameters <- row.names(importance)
-importance <- importance[order(importance$MeanDecreaseAccuracy,decreasing = T),]
-print(importance[1:10,c("MeanDecreaseGini","MeanDecreaseAccuracy")])
-if(withalt==TRUE){
-  altmodeldata <- na.omit(altdata[c(dependent,predictors)])
-  altpreddata<-altmodeldata[predictors]
-  altpreds <- predict(fullmodel,altpreddata)
-  ACM <- table(altpreds, altmodeldata[[dependent]])
-  print(ACM)
-  print(paste("classification error rate with altdata: ",mean(altpreds != altmodeldata[[dependent]])))
-}
-}
-
-ttt(modeldata=origmodeldata,dependent = dep,pset=1,altdata = origmodeldata,withalt=F)
-```
-
-
-ttt <- function(modeldata,dependent,pset,altdata,withalt=TRUE){
-  require(randomForest)
-  predictors = unlist(paramsets[[pset]])
-  predictors = predictors[predictors %in% names(modeldata)]
-  fullmodel <- randomForest(as.formula(paste(dependent,"~.")),na.omit(modeldata[c(dependent,predictors)]))
-print(paste("OBB error with all predictors of ",paramsetnames[pset], "is ",fullmodel$err.rate[nrow(fullmodel$err.rate),1]))
- importance <- as.data.frame(fullmodel$importance)
-importance$parameters <- row.names(importance)
-importance <- importance[order(importance$MeanDecreaseAccuracy,decreasing = T),]
-print(importance[1:10,c("MeanDecreaseGini","MeanDecreaseAccuracy")])
-if(withalt=TRUE){
-  altmodeldata <- na.omit(altdata[c(dependent,predictors)])
-  altpreddata<-altmodeldata[paramsets[[pset]]]
-  altpreds <- predict(fullmodel,altpreddata)
-  ACM <- table(altpreds, altmodeldata[[dependent]])
-  print(ACM)
-  print(paste("classification error rate with altdata: ",mean(altpreds != altmodeldata[[dependent]])))
-}
-}
