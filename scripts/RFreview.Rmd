@@ -17,7 +17,10 @@ eval(parse(text = myfunctions))
 #proj3path="/home/fabs/PROJECTP3"
 proj3path="/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/"
 load('../data/dependentlists.RData')
+
 ```
+
+
 
 ```{r}
 i=1
@@ -53,7 +56,7 @@ for(i in 1:length(dependentlist)){
   print(preds)
   importance_ranfor_pset(modeldata=origmodeldata,dependent=dep,pset=1,altdata=origmodeldata,withalt=F)
 predictors <- c(as.character(preds[1,1]),as.character(preds[2,1]))
-  predict_ranfor_full(modeldata=origmodeldata, dependent=dep, predictors=predictors,pset=1,kappasum = F,tausum = F,altdata=origmodeldata)
+  predict_ranfor_full(modeldata=origmodeldata, dependent=dep, predictors=predictors,pset=1,kappasum = F,tausum = F,altdata=origmodeldata,withalt=F)
   predictors = vector()
   for (n in 1:ncol(preds)){
     for (n2 in 1:nrow(preds)){

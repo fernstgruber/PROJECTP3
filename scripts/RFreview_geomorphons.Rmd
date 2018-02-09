@@ -1,0 +1,46 @@
+---
+title: "RandomForest analysis"
+author: "fabian gruber"
+date: "February 6, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+require(e1071)
+require(RCurl)
+require(repmis)
+require(randomForest)
+require(rgdal)
+myfunctions <- getURL("https://raw.githubusercontent.com/fernstgruber/Rstuff/master/fabiansandrossitersfunctions.R", ssl.verifypeer = FALSE)
+eval(parse(text = myfunctions))
+#proj3path="/home/fabs/PROJECTP3"
+proj3path="/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/"
+load('../data/dependentlists.RData')
+
+```
+
+
+
+```{r}
+i=1
+for(i in 1:length(dependentlist)){
+  dep=dependentlist[i]
+  print(dependentlist_eng[i])
+  load(paste("../data/modeldata/RForigmodeldatawithgeoandgeom_",dep,".RData",sep=""))  
+  preds <- evaluateforwardCV_anyerror(mypath=paste("../data/FSCV/RF_geoms/RFwithgeoandgeom_fw_5fold_6p_",dep,"_geoms",sep=""),kk=1:5,endround = 6,error = "cverror",geheim = "geheimerprederror",yrange=c(0,1))
+  print(preds)
+  importance_ranfor_pset(modeldata=origmodeldata,dependent=dep,pset=6,altdata=origmodeldata,withalt=F,returnimportance = F)
+  predictors <- c(as.character(preds[1,1]),as.character(preds[2,1]))
+  predict_ranfor_full(modeldata=origmodeldata, dependent=dep, predictors=predictors,pset=5,kappasum = F,tausum = F,altdata=origmodeldata,withalt=F)
+  predictors = vector()
+  for (n in 1:ncol(preds)){
+    for (n2 in 1:nrow(preds)){
+      predictors <- c(predictors,as.character(preds[n2,n]))
+    }
+  } 
+  print("###################### WITH  PREDICTORS from the FW SELECTION ###################")
+  uniquepredictors <- unique(predictors)
+  predict_ranfor_full(modeldata=origmodeldata, dependent=dep, predictors=uniquepredictors,pset=6,kappasum = F,tausum = F,altdata=origmodeldata,withalt=F)
+  }
+```

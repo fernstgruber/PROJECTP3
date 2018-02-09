@@ -1,0 +1,35 @@
+---
+title: "RandomForest analysis"
+author: "fabian gruber"
+date: "February 6, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+require(e1071)
+require(RCurl)
+require(repmis)
+require(randomForest)
+require(rgdal)
+myfunctions <- getURL("https://raw.githubusercontent.com/fernstgruber/Rstuff/master/fabiansandrossitersfunctions.R", ssl.verifypeer = FALSE)
+eval(parse(text = myfunctions))
+#proj3path="/home/fabs/PROJECTP3"
+proj3path="/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/"
+load('../data/dependentlists.RData')
+
+```
+
+
+
+```{r,echo=F}
+i=15
+  dep=dependentlist[i]
+  print(dependentlist_eng[i])
+  load(paste("../data/modeldata/RForigmodeldatawithgeoandgeom_",dep,".RData",sep=""))  
+  imp <- importance_ranfor_pset(modeldata=origmodeldata,dependent=dep,pset=5,altdata=origmodeldata,withalt=F,returnimportance = TRUE)
+  
+  predictors <- c(as.character(imp[1,"parameters"]),as.character(imp[2,"parameters"]))
+  predict_ranfor_full(modeldata=origmodeldata, dependent=dep, predictors=predictors,pset=5,kappasum = F,tausum = F,altdata=origmodeldata,withalt=F,withmodelconfusion = FALSE)
+
+```
