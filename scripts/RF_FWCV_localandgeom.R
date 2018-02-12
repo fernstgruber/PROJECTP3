@@ -71,6 +71,8 @@ for (dependent in dependentlist){
   preds <- preds[preds %in% allpreds]
   predset= c(preds)
   mymodeldata <- origmodeldata[c(dependent,predset)]
+  #mymodeldata <- mymodeldata[mymodeldata$CO2_Senke != 2,]
+  #mymodeldata$CO2_Senke <- droplevels(mymodeldata$CO2_Senke)
   folds = sample(rep(1:5, length = nrow(mymodeldata)))
   
   tt=1:6 #number of best parameters in combination
