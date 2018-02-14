@@ -14,10 +14,11 @@ require(randomForest)
 require(rgdal)
 myfunctions <- getURL("https://raw.githubusercontent.com/fernstgruber/Rstuff/master/fabiansandrossitersfunctions.R", ssl.verifypeer = FALSE)
 eval(parse(text = myfunctions))
-proj3path="/home/fabs/PROJECTP3"
-#proj3path="/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/"
-#setwd(proj3path)
+#proj3path="/home/fabs/PROJECTP3"
+proj3path="/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/"
+#setwd(paste(proj3path,'scripts',sep=""))
 load('../data/dependentlists.RData')
+
 ```
 
 #Geomorphons
@@ -28,7 +29,10 @@ for(i in 1:length(dependentlist)){
   dep=dependentlist[i]
   print(dependentlist_eng[i])
   load(paste("../data/modeldata/SVMorigmodeldatawithgeoandgeom_",dep,".RData",sep=""))  
-  preds <- evaluateforwardCV_anyerror(mypath=paste("../data/FSCV/SVM_localandgeom/SVMwithgeoandgeom_fw_5fold_10p_",dep,"_NA",sep=""),kk=1:5,endround = 10,error = "cverror",geheim = "geheimerprederror",yrange=c(0,1))
+  geomandlocal=c(unlist(paramsets[[1]]),unlist(paramsets[[6]]))
+paramsets[[7]] <- geomandlocal
+paramsetnames[7] <- 'geomandlocal'
+  preds <- evaluateforwardCV_anyerror(mypath=paste("../data/FSCV/SVM_localandgeom/SVMwithgeoandgeom_fw_5fold_6p_",dep,"_geomandlocal",sep=""),kk=1:5,endround = 6,error = "cverror",geheim = "geheimerprederror",yrange=c(0,1))
   predictors <- c(as.character(preds[1,1]),as.character(preds[2,1]))
   print(preds)
   predict_radial_full(modeldata=origmodeldata, dependent=dep, predictors=predictors,kappasum = F,tausum = F)
@@ -42,7 +46,7 @@ for(i in 1:length(dependentlist)){
   uniquepredictors <- unique(predictors)
   predict_radial_full(modeldata=origmodeldata, dependent=dep, predictors=uniquepredictors)
   #print("######################WITH ALL GEOMANDLOCAL###################")
-  predict_radial_full(modeldata=origmodeldata, dependent=dep, predictors=unlist(paramsets[7]),printpreds = FALSE)
+  #predict_radial_full(modeldata=origmodeldata, dependent=dep, predictors=unlist(paramsets[7]),printpreds = FALSE)
   rm(origmodeldata,paramsets,paramsetnames,dependent)
   
 }
