@@ -54,7 +54,7 @@ pot_EPPAN <- EPPAN_mapsets[c(4:10)]
 ##############################################################################################
 initGRASS(gisBase = gisBase,gisDbase = gisDbase,location=location,mapset=mapset,override = TRUE)
 try(execGRASS("g.mapset",flags=c("c"), mapset=paste("predict_",dependent,sep="")))
-region <- execGRASS("g.region" ,flags=c("m"))
+region <- execGRASS("g.region" ,flags=c("p"),rast="xxxx") #hier fehlt noch der raster!
 p=predictors[2]
 for (p in predictors){
   if (p %in% c(res10m_dtm,predsgeom,res50m_mitsaga)){
