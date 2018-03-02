@@ -1,14 +1,21 @@
 ##TO TO: die region passt nicht!, schreib funktion um mapset zu entfernen!
-
+library(lattice)
 require(e1071)
 require(rgdal)
 require(rgrass7)
-proj3path="/home/fabs/PROJECTP3"
-#proj3path="/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/"
+#proj3path="/home/fabs/PROJECTP3"
+proj3path="/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/"
 setwd(proj3path)
 load('./data/dependentlists.RData')
 load(file="./data/modeldata/predictorlists_SVM_localandgeomtop2.RData")
-
+###setup GRASS################################################################################
+gisBase="/usr/local/src/grass70_release/dist.x86_64-unknown-linux-gnu"                       #
+gisDbase =  "/media/fabs/Volume/Data/GRASSDATA/"                                             #
+#gisDbase =  "/home/fabs/Data/GRASSDATA/"                                                     #
+location="EPPAN_vhr"                                                                         #
+mapset="PERMANENT"                                                                           #
+##############################################################################################
+###check predictorlists#####################################################################################################################################
 res10m_dtm <- c( "minic_ws3","slope_ws11","profc_ws15",  "maxic_ws15", "GeneralCurvature","minic_ws11", "crosc_ws11", "longc_ws15",
                  "MinimalCurvature",  "profc_ws11", "profc_ws5",  "minic_ws15", "crosc_ws5", "profc_ws3","LongitudinalCurvature",
                  "maxic_ws3", "maxic_ws7","MaximalCurvature","PlanCurvature", "slope_ws5" , "planc_ws11")
@@ -28,18 +35,11 @@ dtm_hr <- c("minic_ws9_hr","Total_Curvature_hr","Longitudinal_Curvature_hr" ,"cr
              "planc_ws11_hr","crosc_ws29_hr","planc_ws5_hr","planc_ws23_hr")
 allpredictors <- c(res10m_dtm,res50m_mitsaga,predsgeom,dtm_hr)
 
-
-
+############################################################################################################################################################
 ####SET PREDICTORS AND DEPENDENT#############################################################
 predictors <- c("geom_10m_fl4_L10","slope_DTM_50m_avg_ws7")
 oldprednames<- c("geom_10m_fl4_L10","slope_DTM_50m_avg_ws7_50m")
 dependent=dependentlist[1]
-###setup GRASS################################################################################
-gisBase="/usr/local/src/grass70_release/dist.x86_64-unknown-linux-gnu"                       #
-#gisDbase =  "/media/fabs/Volume/Data/GRASSDATA/"                                             #
-gisDbase =  "/home/fabs/Data/GRASSDATA/"                                                     #
-location="EPPAN_vhr"                                                                         #
-mapset="PERMANENT"                                                                           #
 ### get raster names##########################################################################
 ST = "SUEDTIROL_DTM_NEU"                                                                     #
 ST_mapsets= list.dirs(paste(gisDbase,"/",ST,sep=""),recursive = F,full.names = F)            #
@@ -62,7 +62,7 @@ pot_EPPAN <- EPPAN_mapsets
 initGRASS(gisBase = gisBase,gisDbase = gisDbase,location=location,mapset=mapset,override = TRUE)
 mapsetnew=paste("predict_",dependent,sep="")
 try(execGRASS("g.mapset",flags=c("c"), mapset=mapsetnew))
-region <- execGRASS("g.region" ,flags=c("p"),rast="dtm_hr_eppan@dtm_hr") #hier fehlt noch der raster!
+region <- execGRASS("g.region" ,flags=c("p"),raster="dtm_hr_eppan@PERMANENT") #hier fehlt noch der raster!
 p=predictors[2]
 for (p in predictors){
   if (p %in% c(res10m_dtm,predsgeom,res50m_mitsaga)){
@@ -90,33 +90,53 @@ for (i in predictors[2:length(predictors)]){
 }
 names(data) <- oldprednames
 data$UID <- 1:nrow(data)
-
+###was ist mit NA ? ist das jetzt ein Factor? oder muss ich vorher schon na.omit() machen
 modeldata <- origmodeldata[c(modelcols)]
+preddata <- na.omit(data)
+p=predictors[1]
 for (p in predictors){
   if (p %in% predsgeom){
     id <- which(predictors==p)
     str(modeldata[oldprednames[id]])
-    str(data[oldprednames[id]])
-    data[oldprednames[id]] <-factor(data[oldprednames[id]],levels=levels(modeldata[[oldprednames[id]]]))
+    str(preddata[oldprednames[id]])
+    preddata[[oldprednames[id]]]<-factor(preddata[[oldprednames[id]]],levels=levels(modeldata[[oldprednames[id]]]))
   }
 }
-summary(modeldata)##geom geht
+summary(preddata)
 f <- paste(dependent,"~.")
 fit <- do.call("svm",list(as.formula(f),modeldata,cross=10))
 print(fit$tot.accuracy)
-preddata <- na.omit((data))
+
+#predictions <- predict(fit,newdata=preddata)
 preddata[["preds"]] <- predict(fit,newdata=preddata)
 data[["preds"]] <- predict(fit,newdata=data)
-
-SGU_modell <- SGU_gk
-names(legend) <- c("SGU","SGU_predcodes")
-data <- merge(data,legend,by.x="preds",by.y="SGU",all.x=T)
-data <-data[order(data$UID,decreasing = F),]
-SGU_modell@data <- data
-summary(SGU_modell)
-outname=paste(predictors,collapse="_")
-writeRAST(SGU_modell["SGU_predcodes"],vname = outname)
+modeldata[["preds"]] <- predict(fit,newdata=modeldata)
+hist <- table(preddata$preds)
+CM <- table(modeldata$preds,modeldata[[dependent]])
+save(fit,CM,hist,modeldata,file=paste("./data/fits/",paste(predictors,sep="",collapse="_et_"),"_",dependent,".RData",sep=""))
+preddata[["preds"]] <- as.integer(preddata[["preds"]])
+SPDF <- pred1
+SPDFdata <- merge(data,preddata,by="UID",all.x=T)
+SPDFdata <-SPDFdata[order(SPDFdata$UID,decreasing = F),]
+SPDF@data <- SPDFdata
+summary(SPDF)
+outname=paste(paste(predictors,sep="",collapse="_et_"),"_",dependent,sep="")
+writeRAST(SPDF["preds"],vname = outname)
 execGRASS("r.to.vect",input=outname,output=outname,type="area")
-execGRASS("v.out.ogr",input=outname,output=paste(outname,".shp",sep=""))
+execGRASS("v.out.ogr",input=outname,output=paste("./data/fits/",outname,".shp",sep=""))
+vect2 <- readOGR(dsn=paste("./data/fits/",outname,".shp",sep=""),layer=outname)
+vect2@data$value <- factor(vect2@data$value,levels=1:5)
+summary(vect2)
+collegend=data.frame(preds=factor(1:5),colorcol=c("goldenrod","aquamarine","purple","orange","firebrick"),stringsAsFactors = F)
+#lookupTable <- unique(collegend)
+#colRegions <- as.vector(lookupTable$colorcol[match(levels(vect2@data$value), lookupTable$preds)])
+summaryvect2
+vect2@data$UID <- 1:nrow(vect2@data)
+vect2@data <- merge(vect2@data,collegend,by.x="value",by.y="preds",all.x=T)
+vect2@data <- vect2@data[order(vect2@data$UID)]
+pdf(paste("./data/fits/",outname,".pdf",sep=""))
+plot(vect2,col=vect2@data$colorcol,border="transparent",main=dependent)
+legend("topright",legend=collegend$preds,fill = collegend$colorcol)
+dev.off()
 ###################################
 unlink(paste(gisDbase,location,"/",mapsetnew,sep=""), recursive = T)
