@@ -1,5 +1,4 @@
-##TO TO: die region passt nicht!, schreib funktion um mapset zu entfernen!
-
+##TO TO: die region passt nicht!
 require(e1071)
 require(rgdal)
 require(rgrass7)
@@ -27,12 +26,8 @@ dtm_hr <- c("minic_ws9_hr","Total_Curvature_hr","Longitudinal_Curvature_hr" ,"cr
             "crosc_ws5_hr","profc_ws29_hr", "minic_ws11_hr", "slope_ws11_hr", "Plan_Curvature_hr", "maxic_ws11_hr",
              "planc_ws11_hr","crosc_ws29_hr","planc_ws5_hr","planc_ws23_hr")
 allpredictors <- c(res10m_dtm,res50m_mitsaga,predsgeom,dtm_hr)
-
-
-
 ####SET PREDICTORS AND DEPENDENT#############################################################
 predictors <- c("geom_10m_fl4_L10","slope_DTM_50m_avg_ws7")
-oldprednames<- c("geom_10m_fl4_L10","slope_DTM_50m_avg_ws7_50m")
 dependent=dependentlist[1]
 ###setup GRASS################################################################################
 gisBase="/usr/local/src/grass70_release/dist.x86_64-unknown-linux-gnu"                       #
@@ -80,34 +75,27 @@ for (p in predictors){
 }
 execGRASS("g.list",type="rast",mapset=mapsetnew)
 ######LOAD THE MODELDATA
-load(paste("./data/modeldata/SVMorigmodeldatawithgeoandgeom_",dependent,".RData",sep=""))
-modelcols <- c(dependent,oldprednames)
+load(paste("./data/modeldata/SVMorigmodeldatawithgeo_",dependent,".RData",sep=""))
+#HIER WEITERMACHEN!!!!!!!!!!!!!!!!!!!!!!1
+#legend <- read.table(paste(proj2path,"data2017/SGU_legend_new.txt",sep=""),sep="\t",header=T)
+#names(legend) <- c("SGU","SGUcode")
+#dependent="SGU_kartiert"
+modelcols <- c(dependent,predictors)
 pred1 <-readRAST(predictors[1])
 data <- pred1@data
 for (i in predictors[2:length(predictors)]){
   temp <- readRAST(i)@data
   data[[i]] <- temp[[i]]
 }
-names(data) <- oldprednames
+names(data) <- predictors
 data$UID <- 1:nrow(data)
-
-modeldata <- origmodeldata[c(modelcols)]
-for (p in predictors){
-  if (p %in% predsgeom){
-    id <- which(predictors==p)
-    str(modeldata[oldprednames[id]])
-    str(data[oldprednames[id]])
-    data[oldprednames[id]] <-factor(data[oldprednames[id]],levels=levels(modeldata[[oldprednames[id]]]))
-  }
-}
-summary(modeldata)##geom geht
+modeldataoktober <- merge(modeldataoktober,legend,by.x="SGU_gk",by.y="SGU")
+modeldata <- modeldataoktober[c(modelcols)]
+modeldata$SGUcode <- factor(modeldata$SGUcode,levels=1:15)
+data$SGUcode <- factor(data$SGUcode,levels=1:15)
 f <- paste(dependent,"~.")
-fit <- do.call("svm",list(as.formula(f),modeldata,cross=10))
-print(fit$tot.accuracy)
-preddata <- na.omit((data))
-preddata[["preds"]] <- predict(fit,newdata=preddata)
+fit <- do.call("randomForest",list(as.formula(f),modeldata))
 data[["preds"]] <- predict(fit,newdata=data)
-
 SGU_modell <- SGU_gk
 names(legend) <- c("SGU","SGU_predcodes")
 data <- merge(data,legend,by.x="preds",by.y="SGU",all.x=T)
@@ -118,5 +106,4 @@ outname=paste(predictors,collapse="_")
 writeRAST(SGU_modell["SGU_predcodes"],vname = outname)
 execGRASS("r.to.vect",input=outname,output=outname,type="area")
 execGRASS("v.out.ogr",input=outname,output=paste(outname,".shp",sep=""))
-###################################
-unlink(paste(gisDbase,location,"/",mapsetnew,sep=""), recursive = T)
+
