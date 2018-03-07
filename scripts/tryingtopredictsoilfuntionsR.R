@@ -37,6 +37,11 @@ allpredictors <- c(res10m_dtm,res50m_mitsaga,predsgeom,dtm_hr)
 
 ############################################################################################################################################################
 ####SET PREDICTORS AND DEPENDENT#############################################################
+<<<<<<< HEAD
+#predictors <- c("geom_10m_fl4_L10","slope_DTM_50m_avg_ws7")
+#oldprednames<- c("geom_10m_fl4_L10","slope_DTM_50m_avg_ws7_50m")
+predictors <- c("geom_dtm_10m_hyd_fl5_L10","minic_ws9_hr")
+oldprednames<- c("geom_dtm_10m_hyd_fl5_L10","minic_ws9_hr_hr")
 predictors <- c("geom_10m_fl4_L10","slope_DTM_50m_avg_ws7")
 oldprednames<- c("geom_10m_fl4_L10","slope_DTM_50m_avg_ws7_50m")
 dependent=dependentlist[1]
@@ -72,7 +77,7 @@ for (p in predictors){
     execGRASS("r.proj",location=ST,mapset=ms,input=p)
     execGRASS("r.mapcalc", expression= paste(p," = ",p),flags=c("overwrite"))        }}
     }else {
-      for (ms in ST_mapsets){
+      for (ms in EPPAN_mapsets){
         rasts <-  list.files(paste(gisDbase,"/",location,"/",ms,"/",'cats',sep=""))
         if(p %in% rasts){
       execGRASS("g.copy",raster=paste(p,"@",ms,",",p,sep=""))}}
@@ -106,7 +111,6 @@ summary(preddata)
 f <- paste(dependent,"~.")
 fit <- do.call("svm",list(as.formula(f),modeldata,cross=10))
 print(fit$tot.accuracy)
-
 #predictions <- predict(fit,newdata=preddata)
 preddata[["preds"]] <- predict(fit,newdata=preddata)
 data[["preds"]] <- predict(fit,newdata=data)
@@ -123,14 +127,13 @@ summary(SPDF)
 outname=paste(paste(predictors,sep="",collapse="_et_"),"_",dependent,sep="")
 writeRAST(SPDF["preds"],vname = outname)
 execGRASS("r.to.vect",input=outname,output=outname,type="area")
-execGRASS("v.out.ogr",input=outname,output=paste("./data/fits/",outname,".shp",sep=""))
-vect2 <- readOGR(dsn=paste("./data/fits/",outname,".shp",sep=""),layer=outname)
+execGRASS("v.out.ogr",input=outname,output=paste("./data/fits/shapes/",outname,".shp",sep=""))
+vect2 <- readOGR(dsn=paste("./data/fits/shapes/",outname,".shp",sep=""),layer=outname)
 vect2@data$value <- factor(vect2@data$value,levels=1:5)
 summary(vect2)
-collegend=data.frame(preds=factor(1:5),colorcol=c("goldenrod","aquamarine","purple","orange","firebrick"),stringsAsFactors = F)
+collegend=data.frame(preds=factor(1:5),colorcol=c("forestgreen","aquamarine","purple","orange","firebrick"),stringsAsFactors = F)
 #lookupTable <- unique(collegend)
 #colRegions <- as.vector(lookupTable$colorcol[match(levels(vect2@data$value), lookupTable$preds)])
-summaryvect2
 vect2@data$UID <- 1:nrow(vect2@data)
 vect2@data <- merge(vect2@data,collegend,by.x="value",by.y="preds",all.x=T)
 vect2@data <- vect2@data[order(vect2@data$UID)]
