@@ -81,6 +81,61 @@ In this study, we present the soil evaluation tool \emph{Soil Evaluation for Pla
 
 \subsection{SEPP - Soil Evaluation for Planning Procedures}
 The software SEPP currently computes a soil function evaluation based on soil pit descriptions. It requires that the pit descriptions are performed following the Austrian Soil classification  \citep{Nestroy2000,Nestroy2011} and related mapping manuals. The minimum  soil profile site characteristics are local slope, Auflagemaechtigkeiten, Gruendigkeit, flurabstand, soil parent material, soil type, humus form, ecological hoehenstufe, oekofeuchte, land use ... For each horizon, the minimum characteristics necessary for computing the soil function are horizontbezeichnung, depth, ph value, carbonate class, texture, organic content class, Skelettanteil, dichte klasse, gefuege and gefuegeanteil. The soil functions for which 15 different potentials are computed are  \emph{habitat for living organisms} (specifically the potential as habitat for drought-tolerant species, moisture tolerant species, soil organisms and crops),  \emph{infiltration and drainage regulation} (minimum, average and heavy precipitation retention capacity as well as groundwater reformation rate), \emph{natural soil fertility} as well as \emph{filter and buffer for pollutants} (heavy metal, organic, acidifying and water-soluble). The result is the attribution of a grade between 1 and 5 for each soil function potential, with 1 signifying a high potential and 5 a low one.
+
+\subsubsection{Potential as a habitat for drought-tolerant species}
+
+\subsubsection{Potential as a habitat for moisture-tolerant species}
+
+\subsubsection{Habitat for soil organisms}
+
+\subsubsection{Habitat for crops}
+
+\subsubsection{Average and minimum precipitation retention capacity}
+5 
+6 'minic_DTM_50m_avg_ws5_50m'
+6 planc_ws29_hr_hr
+6 planc_ws29_hr_hr,minic_DTM_50m_avg_ws3_50m
+
+\subsubsection{Retention capacity for heavy precipitation events}
+7 longc_ws15_10m
+7 MinimalCurvature_10m 
+7 longc_ws15_10m,Profile_Curvature_50m
+\subsubsection{groundwater reformation rate}
+8 crosc_ws23_hr_hr
+8  geom_10m_fl10_L3
+8 crosc_ws23_hr_hr,profc_ws5_10m
+8  geom_10m_fl10_L3,Tangential_Curvature_50m
+\subsubsection{Potential for providing nutrients for plants}
+9 minic_ws9_hr_hr klarer sieger
+9  LongitudinalCurvature_10m
+9 minic_ws5_hr_hr,longc_DTM_50m_avg_ws7_50m,planc_DTM_50m_avg_ws5_50m
+9 
+\subsubsection{Potential as a CO2 sink}
+10 geom_10m_fl10_L10
+10 minic_ws11_hr_hr
+10 geom_10m_fl10_L10,Convexity_50m
+
+
+\subsubsection{Potential for retention of heavy metals}
+11 geom_10m_fl10_L7 4von5
+11 minic_ws11_hr_hr
+11  geom_10m_fl10_L7,minic_DTM_50m_avg_ws3_50m 
+
+\subsubsection{Potential for transforming organic contaminants}
+12 minic_ws5_hr_hr
+12 geom_10m_fl8_L50
+12 geom_10m_fl8_L50,maxic_ws7_10m
+12
+
+\subsubsection{Potential as filter and buffer for organic contaminants}
+13
+13
+13
+13
+\subsubsection{Potential for retention of water-soluble contaminants}
+\subsubsection{Potential as buffer for acidic contaminants}
+
+
 \section{Results}
 A first evaluation of the feature selection procedure shows that mostly 2 parameters are sufficient, that is that there is no increase in prediction accuracy  by adding more predictors, and most of the time these a combination of a landform classification and a roughness or also local terrain parameter.
 \section{Conclusion}
