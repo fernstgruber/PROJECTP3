@@ -1,2 +1,8 @@
 /data/fits/shapes
 /data/fits/plots
+/.RData
+/.Rhistory
+/data/.Rdata
+/scripts/.RData
+/scripts/.Rhistory
+/data/.Rhistory
