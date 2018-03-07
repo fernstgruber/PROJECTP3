@@ -96,7 +96,7 @@ for (p in predictors){
       if (p %in% rasts) {
         try(execGRASS("r.proj",location=ST,mapset=ms,input=p))
         try(execGRASS("r.mapcalc", expression= paste(p," = ",p),flags=c("overwrite")))
-        try(execGRASS('r.out.gdal',input=p, output=paste('/mnt/bola/rebo/5_Daten/Fabian_ausmisten/fits/tifs2/',p,'.tif',sep=""), type='Float64', createopt="PROFILE=GEOTIFF,TFW=YES"))
+        #try(execGRASS('r.out.gdal',input=p, output=paste('/mnt/bola/rebo/5_Daten/Fabian_ausmisten/fits/tifs2/',p,'.tif',sep=""), type='Float64', createopt="PROFILE=GEOTIFF,TFW=YES"))
         break}}
   }else {
     for (ms in EPPAN_mapsets){
@@ -104,7 +104,7 @@ for (p in predictors){
       if(p %in% rasts){
         try(execGRASS("g.copy",raster=paste(p,"@",ms,",",p,sep="")))
         try(execGRASS("r.mapcalc", expression= paste(p," = ",p),flags=c("overwrite")))
-        try(execGRASS('r.out.gdal',input=p, output=paste('/mnt/bola/rebo/5_Daten/Fabian_ausmisten/fits/tifs2/',p,'.tif',sep=""), type='Float64', createopt="PROFILE=GEOTIFF,TFW=YES"))
+        #try(execGRASS('r.out.gdal',input=p, output=paste('/mnt/bola/rebo/5_Daten/Fabian_ausmisten/fits/tifs2/',p,'.tif',sep=""), type='Float64', createopt="PROFILE=GEOTIFF,TFW=YES"))
         break}}
   }
 }
@@ -144,7 +144,9 @@ preddata[["preds"]] <- predict(fit,newdata=preddata)
 modeldata[["preds"]] <- predict(fit,newdata=modeldata)
 hist <- table(preddata$preds)
 CM <- table(modeldata$preds,modeldata[[dependent]])
-save(fit,CM,hist,modeldata,file=paste("/mnt/bola/rebo/5_Daten/Fabian_ausmisten/fits/",paste(predictors,sep="",collapse="_et_"),"_",dependent,".RData",sep=""))
+
+save(fit,CM,hist,modeldata,preddata,file=paste("/mnt/bola/rebo/5_Daten/Fabian_ausmisten/fits/",paste(predictors,sep="",collapse="_et_"),"_",dependent,".RData",sep=""))
+
 preddata[["preds"]] <- as.integer(preddata[["preds"]])
 SPDF <- pred1
 SPDFdata <- merge(data,preddata,by="UID",all.x=T)
