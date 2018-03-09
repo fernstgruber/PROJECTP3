@@ -6,18 +6,13 @@ require(rgrass7)
 dependentnr=1
 parameter="minic_ws9_hr_hr"
 parameternamegrass="minic_ws9_hr"
-
-proj3path="/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/"
+proj3path="/home/fabs/PROJECTP3/"
+#proj3path="/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/"
 setwd(proj3path)
 load('./data/dependentlists.RData')
 load(file="./data/modeldata/predictorlists_SVM_localandgeomtop2.RData")
-###setup GRASS################################################################################
-gisBase="/usr/local/src/grass70_release/dist.x86_64-unknown-linux-gnu"                       #
-gisDbase =  "/media/fabs/Volume/Data/GRASSDATA/"                                             #
-#gisDbase =  "/home/fabs/Data/GRASSDATA/"                                                     #
-location="EPPAN_vhr"                                                                         #
-mapset="PERMANENT"                                                                           #
-##############################################################################################
+load("/home/fabs/Data/fits/geom_dtm_10m_hyd_fl5_L10_et_minic_ws9_hr_Leben_Tr.RData")
+preddata[["preds"]] <- factor(preddata[["preds"]],levels=1:5)
 ######LOAD THE MODELDATA
 dependent=dependentlist[dependentnr]
 load(paste("./data/modeldata/SVMorigmodeldatawithgeoandgeom_",dependent,".RData",sep=""))
@@ -25,17 +20,24 @@ str(origmodeldata[dependent])
 ###################################################################################
 ##########BOXPLOTS FOR SOIL PROFILES
 ylim=c(summary(origmodeldata[[parameter]])[1],summary(origmodeldata[[parameter]])[6])
-
+ylim2=c(summary(preddata[[parameter]])[1],summary(preddata[[parameter]])[6])
 
 
 boxplot(data=origmodeldata[c(as.character(parameter),dependent)],
         as.formula(paste(as.character(parameter),"~ ", dependent,sep=" ")),
         outline=T,
         main=as.character(parameter),
-        ylim=ylim,
+        ylim=ylim2,
         varwidth=F)
+boxplot(data=preddata[c(as.character(parameter),"preds")],
+        as.formula(paste(as.character(parameter),"~ ", "preds",sep=" ")),
+        outline=T,
+        main=as.character(parameter),
+        ylim=ylim2,
+        varwidth=F,
+        add=F)
 for (i in 1:5){
-text(labels=paste('n = ',nrow(origmodeldata[origmodeldata[[dependent]] == i,]),sep=""),x=i,y=ylim[1])
+text(labels=paste('n = ',nrow(origmodeldata[origmodeldata[[dependent]] == i,]),sep=""),x=i,y=ylim2[1]+0.005)
 }
 
 
