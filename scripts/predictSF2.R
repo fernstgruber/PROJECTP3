@@ -19,9 +19,9 @@ if (length(args)==0) {
   predlist=c(strsplit(predictorsarg,split=","))
   oldprednames = unlist(predlist)
 }
-#dependentnr=2
-#predictors = c("Longitudinal_Curvature_hr","geom_10m_fl10_L70")
-#oldprednames=c("Longitudinal_Curvature_hr","geom_10m_fl10_L70")
+#dependentnr=1
+#predictors = c("geom_10m_fl4_L10","slope_DTM_50m_avg_ws7")
+#oldprednames=c("geom_10m_fl4_L10","slope_DTM_50m_avg_ws7_50m")
 #proj3path="/home/fabs/PROJECTP3"
 proj3path="/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/"
 setwd(proj3path)
@@ -85,9 +85,9 @@ initGRASS(gisBase = gisBase,gisDbase = gisDbase,location=location,mapset=mapset,
 mapsetnew=paste("temppredict_",dependent,sep="")
 try(execGRASS("g.mapset",flags=c("c"), mapset=mapsetnew))
 execGRASS("g.region" ,flags=c("p"),raster="dtm_hr_eppan@PERMANENT") #hier fehlt noch der raster!
-execGRASS("g.copy", vector="SGU@paper3data_predictparentmaterial,SGU")
-execGRASS("v.to.rast",input="SGU",output="SGU",use="val")
-execGRASS("r.mask", raster="SGU")
+execGRASS("v.in.ogr", input="/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/data/SHAPEDATA/unite2.shp")
+execGRASS("v.to.rast",input="unite2",output="unite2",use="val")
+execGRASS("r.mask", raster="unite2")
 p=predictors[1]
 for (p in predictors){
   if (p %in% c(res10m_dtm,predsgeom,res50m_mitsaga)){
@@ -140,6 +140,7 @@ fit <- do.call("svm",list(as.formula(f),modeldata,cross=10))
 print(fit$tot.accuracy)
 
 #predictions <- predict(fit,newdata=preddata)
+print("predicting soil functions")
 preddata[["preds"]] <- predict(fit,newdata=preddata)
 modeldata[["preds"]] <- predict(fit,newdata=modeldata)
 hist <- table(preddata$preds)
@@ -149,7 +150,9 @@ save(fit,CM,hist,modeldata,preddata,file=paste("/mnt/bola/rebo/5_Daten/Fabian_au
 
 preddata[["preds"]] <- as.integer(preddata[["preds"]])
 SPDF <- pred1
+print("merging predictions and full data set (containing NA's")
 SPDFdata <- merge(data,preddata,by="UID",all.x=T)
+print("ordering dataset")
 SPDFdata <-SPDFdata[order(SPDFdata$UID,decreasing = F),]
 SPDF@data <- SPDFdata
 summary(SPDF)
