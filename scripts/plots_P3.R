@@ -1,15 +1,24 @@
-library(lattice)
-require(e1071)
-require(rgdal)
-require(rgrass7)
+#!/usr/bin/env Rscript
+args = commandArgs(trailingOnly=TRUE)
+
+if (length(args)==0) {
+  stop("USAGE: dependentnr predictorascharacter  Rdata-name  \n", call.=FALSE)
+} else  {
+  # default output file
+  dependentnr = as.numeric(args[1])
+  parameter= as.character(args[2])
+  rdata = as.character(args[3])
+}
+
+#dependentnr = 1
+#parameter= "geom_10m_fl4_L10"
+#rdata = "geom_10m_fl4_L10_et_slope_DTM_50m_avg_ws7_Leben_Tr.RData"
 #proj3path="/home/fabs/PROJECTP3/"
 proj3path="/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/"
 setwd(proj3path)
 ###SET VARIABLES############################################################################################################
 dependentnr=1
-parameter="minic_ws9_hr_hr"
-#parameter="geom_dtm_10m_hyd_fl5_L10"
-load("/mnt/bola/rebo/5_Daten/Fabian_ausmisten/fits/geom_dtm_10m_hyd_fl5_L10_et_minic_ws9_hr_Leben_Tr.RData")
+load(paste("/mnt/bola/rebo/5_Daten/Fabian_ausmisten/fits/",rdata,sep=""))
 
 
 load('./data/dependentlists.RData')
@@ -50,14 +59,14 @@ parameterboxplots <- function(origmodeldata,preddata, dependent,parameter){
     boxplot(data=origmodeldata[c(as.character(parameter),dependent)],
           as.formula(paste(as.character(parameter),"~ ", dependent,sep=" ")),
           outline=T,
-          main=as.character(parameter),
+          main=paste(as.character(parameter),"\n for ",rdata,sep=""),
           ylim=ylim,
           varwidth=T,
-          border="green")
+          border="green",
+          cex.main=0.8)
   boxplot(data=preddata[c(as.character(parameter),"preds")],
           as.formula(paste(as.character(parameter),"~ ", "preds",sep=" ")),
           outline=T,
-          main=as.character(parameter),
           ylim=ylim,
           varwidth=T,
           add=T,
@@ -70,7 +79,7 @@ parameterboxplots <- function(origmodeldata,preddata, dependent,parameter){
 ####END FUNCTIONS#########################################################################################
 
 
-svg(paste("./Rplots/",parameter,".svg",sep=""))
+svg(paste("/mnt/bola/rebo/5_Daten/Fabian_ausmisten/fits/Rplots/",parameter,".svg",sep=""))
 if(parameter %in% predsgeom){
   par(mfcol=c(5,2))
   for (i in 1:5){
@@ -80,7 +89,7 @@ if(parameter %in% predsgeom){
     geombarplot(geomcol=parameter,thema="preds",data=preddata,einheit=i)
   }
   }else {
-    parameterboxplots(origmodeldata,preddata,dependent=dependentlist[1],parameter=parameter)
+    parameterboxplots(origmodeldata,preddata,dependent=dependent,parameter=parameter)
   }
 dev.off()
 
