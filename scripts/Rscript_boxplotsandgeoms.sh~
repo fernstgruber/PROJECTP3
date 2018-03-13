@@ -41,7 +41,7 @@ Rscript plots_P3.R 5 "Flow_Line_Curvature_50m" "Flow_Line_Curvature_Retent_ave.R
 Rscript plots_P3.R 5 "crosc_ws19_hr_hr" "crosc_ws19_hr_et_profc_ws15_Retent_ave.RData"
 Rscript plots_P3.R 5 "profc_ws15_10m" "crosc_ws19_hr_et_profc_ws15_Retent_ave.RData"
 
-Rscript plots_P3.R 6 "minic_DTM_50m_avg_50m" "minic_DTM_50m_avg_ws5_Retent_min.RData"
+Rscript plots_P3.R 6 "minic_DTM_50m_avg_ws5_50m" "minic_DTM_50m_avg_ws5_Retent_min.RData"
 
 Rscript plots_P3.R 6 "planc_ws29_hr_hr" "planc_ws29_hr_Retent_min.RData"
 
@@ -74,37 +74,37 @@ Rscript plots_P3.R 10 "minic_ws11_hr_hr" "minic_ws11_hr_CO2_Senke.RData"
 Rscript plots_P3.R 10 "geom_10m_fl10_L10" "geom_10m_fl10_L10_et_Convexity_CO2_Senke.RData"
 Rscript plots_P3.R 10 "Convexity_50m" "geom_10m_fl10_L10_et_Convexity_CO2_Senke.RData"
 
-Rscript plots_P3.R 11 "geom_10m_fl10" "geom_10m_fl10_L7_FiltPuff.RData"
+Rscript plots_P3.R 11 "geom_10m_fl10_L7" "geom_10m_fl10_L7_FiltPuff.RData"
 
 Rscript plots_P3.R 11 "minic_ws11_hr_hr" "minic_ws11_hr_FiltPuff.RData"
 
-Rscript plots_P3.R 11 "geom_10m_fl10_L7_et_minic_DTM_50m_avg_ws3_FiltPuff.RData"
-Rscript plots_P3.R 11 "geom_10m_fl10_L7_et_minic_DTM_50m_avg_ws3_FiltPuff.RData"
+Rscript plots_P3.R 11 "geom_10m_fl10_L7" "geom_10m_fl10_L7_et_minic_DTM_50m_avg_ws3_FiltPuff.RData"
+Rscript plots_P3.R 11 "minic_DTM_50m_avg_ws3_50m" "geom_10m_fl10_L7_et_minic_DTM_50m_avg_ws3_FiltPuff.RData"
 
-Rscript plots_P3.R 12 "minic_ws5_hr_Transform.RData"
+Rscript plots_P3.R 12 "minic_ws5_hr_hr" "minic_ws5_hr_Transform.RData"
 
-Rscript plots_P3.R 12 "geom_10m_fl8_L50_Transform.RData"
+Rscript plots_P3.R 12 "geom_10m_fl8_L50" "geom_10m_fl8_L50_Transform.RData"
 
-Rscript plots_P3.R 12 "geom_10m_fl8_L50_et_maxic_ws7_Transform.RData"
-Rscript plots_P3.R 12 "geom_10m_fl8_L50_et_maxic_ws7_Transform.RData"
+Rscript plots_P3.R 12  "geom_10m_fl8_L50" "geom_10m_fl8_L50_et_maxic_ws7_Transform.RData"
+Rscript plots_P3.R 12 "maxic_ws7_10m" "geom_10m_fl8_L50_et_maxic_ws7_Transform.RData"
 
-Rscript plots_P3.R 13 "geom_10m_fl1_L10_FiltPuff_Org.RData"
+Rscript plots_P3.R 13 "geom_10m_fl1_L10" "geom_10m_fl1_L10_FiltPuff_Org.RData"
 
-Rscript plots_P3.R 14 "minic_ws11_FiltPuff_Nit.RData"
+Rscript plots_P3.R 14 "minic_ws11_10m" "minic_ws11_FiltPuff_Nit.RData"
 
-Rscript plots_P3.R 14 "slope_ws11_hr_FiltPuff_Nit.RData"
+Rscript plots_P3.R 14 "slope_ws11_hr_hr" "slope_ws11_hr_FiltPuff_Nit.RData"
 
-Rscript plots_P3.R 14 "slope_ws11_hr_et_minic_ws3_hr_FiltPuff_Nit.RData"
-Rscript plots_P3.R 14 "slope_ws11_hr_et_minic_ws3_hr_FiltPuff_Nit.RData"
+Rscript plots_P3.R 14 "slope_ws11_hr_hr" "slope_ws11_hr_et_minic_ws3_hr_FiltPuff_Nit.RData"
+Rscript plots_P3.R 14 "minic_ws3_hr_hr" "slope_ws11_hr_et_minic_ws3_hr_FiltPuff_Nit.RData"
 
-Rscript plots_P3.R 14 "minic_ws11_et_General_Curvature_FiltPuff_Nit.RData"
-Rscript plots_P3.R 14 "minic_ws11_et_General_Curvature_FiltPuff_Nit.RData"
+Rscript plots_P3.R 14 "minic_ws11_10m" "minic_ws11_et_General_Curvature_FiltPuff_Nit.RData"
+Rscript plots_P3.R 14 "General_Curvature_50m" "minic_ws11_et_General_Curvature_FiltPuff_Nit.RData"
 
-Rscript plots_P3.R 15 "profc_ws11_Puff_sauer.RData"
+Rscript plots_P3.R 15 "profc_ws11_10m" "profc_ws11_Puff_sauer.RData"
 
-Rscript plots_P3.R 15 "profc_ws11_et_planc_ws23_hr_Puff_sauer.RData"
-Rscript plots_P3.R 15 "profc_ws11_et_planc_ws23_hr_Puff_sauer.RData"
+Rscript plots_P3.R 15 "profc_ws11_10m" "profc_ws11_et_planc_ws23_hr_Puff_sauer.RData"
+Rscript plots_P3.R 15 "planc_ws23_hr_hr" "profc_ws11_et_planc_ws23_hr_Puff_sauer.RData"
 
-Rscript plots_P3.R 15 "planc_ws5_hr_et_slope_ws5_hr_Puff_sauer.RData"
-Rscript plots_P3.R 15 "planc_ws5_hr_et_slope_ws5_hr_Puff_sauer.RData"
+Rscript plots_P3.R 15 "planc_ws5_hr_hr" "planc_ws5_hr_et_slope_ws5_hr_Puff_sauer.RData"
+Rscript plots_P3.R 15 "slope_ws5_hr_hr" "planc_ws5_hr_et_slope_ws5_hr_Puff_sauer.RData"
 

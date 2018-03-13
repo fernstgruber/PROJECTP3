@@ -41,7 +41,7 @@ Rscript plots_P3.R 5 "Flow_Line_Curvature_50m" "Flow_Line_Curvature_Retent_ave.R
 Rscript plots_P3.R 5 "crosc_ws19_hr_hr" "crosc_ws19_hr_et_profc_ws15_Retent_ave.RData"
 Rscript plots_P3.R 5 "profc_ws15_10m" "crosc_ws19_hr_et_profc_ws15_Retent_ave.RData"
 
-Rscript plots_P3.R 6 "minic_DTM_50m_avg_ws5_50m" "minic_DTM_50m_avg_ws5_Retent_min.RData"
+Rscript plots_P3.R 6 "minic_DTM_50m_avg_50m" "minic_DTM_50m_avg_ws5_Retent_min.RData"
 
 Rscript plots_P3.R 6 "planc_ws29_hr_hr" "planc_ws29_hr_Retent_min.RData"
 
@@ -74,7 +74,7 @@ Rscript plots_P3.R 10 "minic_ws11_hr_hr" "minic_ws11_hr_CO2_Senke.RData"
 Rscript plots_P3.R 10 "geom_10m_fl10_L10" "geom_10m_fl10_L10_et_Convexity_CO2_Senke.RData"
 Rscript plots_P3.R 10 "Convexity_50m" "geom_10m_fl10_L10_et_Convexity_CO2_Senke.RData"
 
-Rscript plots_P3.R 11 "geom_10m_fl10_L7" "geom_10m_fl10_L7_FiltPuff.RData"
+Rscript plots_P3.R 11 "geom_10m_fl10" "geom_10m_fl10_L7_FiltPuff.RData"
 
 Rscript plots_P3.R 11 "minic_ws11_hr_hr" "minic_ws11_hr_FiltPuff.RData"
 

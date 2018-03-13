@@ -10,19 +10,17 @@ if (length(args)==0) {
   rdata = as.character(args[3])
 }
 
-#dependentnr = 1
-#parameter= "geom_10m_fl4_L10"
-#rdata = "geom_10m_fl4_L10_et_slope_DTM_50m_avg_ws7_Leben_Tr.RData"
+#dependentnr = 2
+#parameter= "geom_10m_fl10_L70"
+#rdata = "geom_10m_fl10_L70_et_CrossSectionalCurvature_hr_Leben_Fe.RData"
 #proj3path="/home/fabs/PROJECTP3/"
 proj3path="/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/"
 setwd(proj3path)
 ###SET VARIABLES############################################################################################################
-dependentnr=1
 load(paste("/mnt/bola/rebo/5_Daten/Fabian_ausmisten/fits/",rdata,sep=""))
 
 
 load('./data/dependentlists.RData')
-
 
 preddata[["preds"]] <- factor(preddata[["preds"]],levels=1:5)
 dependent=dependentlist[dependentnr]
@@ -50,7 +48,7 @@ geombarplot <- function(geomcol,thema,einheit,data,...){
   L <- L[order(L$code),]
   main=paste(einheit,geomcol,sep="  -  ")
   par(mar=c(0.5,3,0.5,0))
-  barplot(L$freqrel,col=mycols,cex.main=0.5,las=2,ylab="%",ylim=c(0,100),cex.axis = 0.6,cex.lab=0.7, mgp=c(2, 1, 0),main=paste(dependent," = ",i))
+  barplot(L$freqrel,col=mycols,cex.main=0.5,las=2,ylab="%",ylim=c(0,100),cex.axis = 0.6,cex.lab=0.7, mgp=c(2, 1, 0),main=paste(rdata,sep=""),cex.main=0.8)
 }
 parameterboxplots <- function(origmodeldata,preddata, dependent,parameter){
   ylim=c(summary(origmodeldata[[parameter]])[1],summary(origmodeldata[[parameter]])[6])
@@ -78,12 +76,14 @@ parameterboxplots <- function(origmodeldata,preddata, dependent,parameter){
 
 ####END FUNCTIONS#########################################################################################
 
-
-svg(paste("/mnt/bola/rebo/5_Daten/Fabian_ausmisten/fits/Rplots/",parameter,".svg",sep=""))
+print(dependent)
+print(parameter)
+print(rdata)
+pdf(paste("/mnt/bola/rebo/5_Daten/Fabian_ausmisten/fits/Rplots/",parameter,"_",dependent,".pdf",sep=""),paper = "a4")
 if(parameter %in% predsgeom){
   par(mfcol=c(5,2))
   for (i in 1:5){
-    geombarplot(geomcol=parameter,thema="Leben_Tr",data=origmodeldata,einheit=i)
+    geombarplot(geomcol=parameter,thema=dependent,data=origmodeldata,einheit=i)
   }
   for (i in 1:5){
     geombarplot(geomcol=parameter,thema="preds",data=preddata,einheit=i)
