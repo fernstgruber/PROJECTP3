@@ -10,9 +10,9 @@ if (length(args)==0) {
   rdata = as.character(args[3])
 }
 
-#dependentnr = 2
-#parameter= "geom_10m_fl10_L70"
-#rdata = "geom_10m_fl10_L70_et_CrossSectionalCurvature_hr_Leben_Fe.RData"
+#dependentnr = 15
+#parameter= "planc_ws23_hr_hr"
+#rdata = "profc_ws11_et_planc_ws23_hr_Puff_sauer.RData"
 #proj3path="/home/fabs/PROJECTP3/"
 proj3path="/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/"
 setwd(proj3path)
@@ -64,7 +64,7 @@ parameterboxplots <- function(origmodeldata,preddata, dependent,parameter){
           cex.main=0.8)
   boxplot(data=preddata[c(as.character(parameter),"preds")],
           as.formula(paste(as.character(parameter),"~ ", "preds",sep=" ")),
-          outline=T,
+          outline=F,
           ylim=ylim,
           varwidth=T,
           add=T,
