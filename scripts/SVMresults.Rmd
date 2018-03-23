@@ -1,0 +1,64 @@
+---
+title: "SVM Results"
+author: "fabian gruber"
+date: "February 6, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+require(e1071)
+require(RCurl)
+require(repmis)
+require(randomForest)
+require(rgdal)
+myfunctions <- getURL("https://raw.githubusercontent.com/fernstgruber/Rstuff/master/fabiansandrossitersfunctions.R", ssl.verifypeer = FALSE)
+eval(parse(text = myfunctions))
+proj3path="/home/fabs/PROJECTP3"
+#proj3path="/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/"
+#setwd(proj3path)
+load('../data/dependentlists.RData')
+```
+
+Leben Trocken
+
+```{r}
+i=1
+filelist=c("../temporlarge/geom_10m_fl4_L9_Leben_Tr.RData","../temporlarge/geom_10m_fl4_L10_et_slope_DTM_50m_avg_ws7_Leben_Tr.RData","../temporlarge/geom_dtm_10m_hyd_fl5_L10_et_minic_ws9_hr_Leben_Tr.RData")
+for(f in filelist){
+  dep=dependentlist[i]
+  print(dependentlist_eng[i])
+  load(paste("../data/modeldata/SVMorigmodeldatawithgeoandgeom_",dep,".RData",sep=""))  
+  load(file=f)
+  print(paste("original distribution: "))
+  print(table(modeldata[dependent]))
+    print(f)
+  print(CM)
+  print(paste("predicted distribution"))
+  print(hist)
+    rm(origmodeldata,paramsets,paramsetnames,dependent)
+  
+}
+```
+
+Leben FEUCHT
+
+```{r}
+i=1
+filelist=c("../temporlarge/","../temporlarge/geom_10m_fl4_L10_et_slope_DTM_50m_avg_ws7_Leben_Tr.RData","../temporlarge/geom_dtm_10m_hyd_fl5_L10_et_minic_ws9_hr_Leben_Tr.RData")
+for(f in filelist){
+  dep=dependentlist[i]
+  print(dependentlist_eng[i])
+  load(paste("../data/modeldata/SVMorigmodeldatawithgeoandgeom_",dep,".RData",sep=""))  
+  load(file=f)
+  print(paste("original distribution: "))
+  print(table(modeldata[dependent]))
+    print(f)
+  print(CM)
+  print(paste("predicted distribution"))
+  print(hist)
+    rm(origmodeldata,paramsets,paramsetnames,dependent)
+  
+}
+```
+

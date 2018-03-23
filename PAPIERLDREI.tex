@@ -41,7 +41,7 @@
 
 \begin{frontmatter}
 
-\title{Topographic and geologic control on soil function evaluation -  a case study from South Tyrol}
+\title{Topographic control on soil function evaluation -  a case study from South Tyrol}
 
 
 %% Group authors per affiliation:
@@ -70,11 +70,12 @@ soil function evaluation, Alpine environment
 \linenumbers
 
 \section{Introduction}
-Information on soil, a, at least from a human time perspective, non-renewable ressource, is of increasing importance given erosion, soil degradation and soil sealing. It is necessary to know where and where not certain practises are applicable and to adjust land-use planning appropriately. Accordingly, soil function evaluationis an invaluable tool for the future.
+Information on soil, a, at least from a human time perspective, non-renewable ressource, is of increasing importance given erosion, soil degradation and soil sealing. It is necessary to know where and where not certain practises are applicable and to adjust land-use planning appropriately. Accordingly, soil function evaluation is an invaluable tool for the future.\newline
+
+\cite{Haslmayr2016} and further literature
+\newline
 
 In this study, we present the soil evaluation tool \emph{Soil Evaluation for Planning Procedures (SEPP)} and investigate topographic and parent material control of the different soil functions by applying a cross-validated machine learning approach based on availible soil pit information in the Oltradige/\"{U}beretsch region of the Autonomous Province Bolzano - South Tyrol.
-
-\citep{Haslmayr2016}
 \section{Data and methods}
 
 \subsection{Study area and soil data}
@@ -83,7 +84,7 @@ In this study, we present the soil evaluation tool \emph{Soil Evaluation for Pla
 The software SEPP currently computes a soil function evaluation based on soil pit descriptions. It requires that the pit descriptions are performed following the Austrian Soil classification  \citep{Nestroy2000,Nestroy2011} and related mapping manuals. The minimum  soil profile site characteristics are local slope, thickness of organic horizons, soil depth, groundwater table, soil parent material, soil type, humus form, altitudinal zone, moisture level, land use ... For each horizon, the minimum characteristics necessary for computing the soil function are the master horizon designation, depth, pH value, proportion of the dominant soil structure type and class membership with regard to carbonate content, soil texture, organic content, abundance of rock fragments, bulk density, soil structure. These class attributes can be substituted by exact values if available. The soil functions, for which 15 different potentials are computed, are  \emph{habitat for living organisms} (specifically the potential as habitat for drought-tolerant species, moisture tolerant species, soil organisms and crops),  \emph{infiltration and drainage regulation} (minimum, average and heavy precipitation retention capacity as well as groundwater reformation rate), \emph{natural soil fertility} as well as \emph{filter and buffer for pollutants} (heavy metal, organic, acidifying and water-soluble). The result is a grade between 1 and 5 for each soil function potential, with 1 signifying a high potential and 5 a low one.
 
 \paragraph{Potential as a habitat for drought-tolerant species}
-This potential is calculated 
+The evaluation of a soil's potential  as a habitat for drought-tolerant species is based on the parameters land use, soil type and available field capacity. While the first two parameters are applied to distinguish expecially suited (ruderal locations and corresponding soil types) or unsuited (mire deposits and soil types commonly found on these) sites, the latter is used to grade soil profile site's showing the remaining landuse and soil type combinations.
 \paragraph{Potential as a habitat for moisture-tolerant species}
 
 \paragraph{Habitat for soil organisms}
@@ -114,7 +115,9 @@ This potential is calculated
 
 
 \section{Results}
-A first evaluation of the feature selection procedure shows that mostly 2 parameters are sufficient, that is that there is no increase in prediction accuracy  by adding more predictors, and most of the time these a combination of a landform classification and a roughness or also local terrain parameter.
+A first evaluation of the feature selection procedure shows that mostly 2 parameters are sufficient, that is that there is no increase in cross-validated prediction accuracy  by adding more predictors, and most of the time these a combination of a landform classification and a roughness or also local terrain parameter.
+\subsection{Potential as a habitat for drought-tolerant species}
+As the predictor set does not contain landuse nor soil type, the SVM classification essentially attempts to model the different classes of available field capacity.
 \section{Conclusion}
  
 
