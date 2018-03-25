@@ -1,4 +1,4 @@
-#Rscript predictSF2.R 1 "geom_10m_fl4_L10,slope_DTM_50m_avg_ws7" "geom_10m_fl4_L10,slope_DTM_50m_avg_ws7_50m"
+Rscript predictSF2.R 1 "geom_10m_fl4_L10,slope_DTM_50m_avg_ws7" "geom_10m_fl4_L10,slope_DTM_50m_avg_ws7_50m"
 Rscript predictSF2.R 1 "geom_dtm_10m_hyd_fl5_L10,minic_ws9_hr" "geom_dtm_10m_hyd_fl5_L10,minic_ws9_hr_hr"
 Rscript predictSF2.R 1 "geom_10m_fl4_L9" "geom_10m_fl4_L9"
 Rscript predictSF2.R 2 "geom_10m_fl10_L70" "geom_10m_fl10_L70"

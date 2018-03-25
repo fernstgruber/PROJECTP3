@@ -6,7 +6,7 @@
     <layer-tree-layer expanded="1" checked="Qt::Checked" id="lakes20180312184230874" name="lakes">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" checked="Qt::Checked" id="planc_ws5_hr_et_slope_ws5_hr_Puff_sauer20180312195934403" name="planc_ws5_hr_et_slope_ws5_hr_Puff_sauer">
+    <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="planc_ws5_hr_et_slope_ws5_hr_Puff_sauer20180312195934403" name="planc_ws5_hr_et_slope_ws5_hr_Puff_sauer">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="profc_ws11_et_planc_ws23_hr_Puff_sauer20180312195833706" name="profc_ws11_et_planc_ws23_hr_Puff_sauer">
@@ -138,6 +138,9 @@
     <layer-tree-layer expanded="0" checked="Qt::Unchecked" id="geom_10m_fl4_L10_et_slope_DTM_50m_avg_ws7_Leben_Tr20180312173938239" name="geom_10m_fl4_L10_et_slope_DTM_50m_avg_ws7_Leben_Tr">
       <customproperties/>
     </layer-tree-layer>
+    <layer-tree-layer expanded="1" checked="Qt::Checked" id="Top15_Leben_Tr20180323141433553" name="Top15_Leben_Tr">
+      <customproperties/>
+    </layer-tree-layer>
     <layer-tree-layer expanded="1" checked="Qt::Checked" id="shade_10m20180312175334717" name="shade_10m">
       <customproperties/>
     </layer-tree-layer>
@@ -149,10 +152,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>667937.58617792918812484</xmin>
-      <ymin>5137353.14803604688495398</ymin>
-      <xmax>677849.58617808751296252</xmax>
-      <ymax>5156079.8980364641174674</ymax>
+      <xmin>670697.87222746305633336</xmin>
+      <ymin>5144207.90550207067281008</ymin>
+      <xmax>675653.87222754221875221</xmax>
+      <ymax>5153571.28050227928906679</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -169,8 +172,8 @@
       </spatialrefsys>
     </destinationsrs>
     <layer_coordinate_transform_info>
-      <layer_coordinate_transform destAuthId="EPSG:3044" srcAuthId="USER:100011" srcDatumTransform="-1" destDatumTransform="-1" layerid="slope_ws3_hr_Leben_Kult20180312191804097"/>
       <layer_coordinate_transform destAuthId="EPSG:3044" srcAuthId="USER:100011" srcDatumTransform="-1" destDatumTransform="-1" layerid="MinimalCurvature_10m_Retent_stark20180312193415402"/>
+      <layer_coordinate_transform destAuthId="EPSG:3044" srcAuthId="USER:100011" srcDatumTransform="-1" destDatumTransform="-1" layerid="slope_ws3_hr_Leben_Kult20180312191804097"/>
       <layer_coordinate_transform destAuthId="EPSG:3044" srcAuthId="EPSG:32632" srcDatumTransform="-1" destDatumTransform="-1" layerid="lakes20180312184230874"/>
       <layer_coordinate_transform destAuthId="EPSG:3044" srcAuthId="USER:100011" srcDatumTransform="-1" destDatumTransform="-1" layerid="slope_ws3_hr_et_minic_DTM_50m_avg_ws3_Leben_Kult20180309112730041"/>
       <layer_coordinate_transform destAuthId="EPSG:3044" srcAuthId="USER:100011" srcDatumTransform="-1" destDatumTransform="-1" layerid="minic_ws11_FiltPuff_Nit20180312195356191"/>
@@ -184,18 +187,19 @@
       <layer_coordinate_transform destAuthId="EPSG:3044" srcAuthId="USER:100011" srcDatumTransform="-1" destDatumTransform="-1" layerid="geom_10m_fl10_L70_et_CrossSectionalCurvature_hr_Leben_Fe20180312190930339"/>
       <layer_coordinate_transform destAuthId="EPSG:3044" srcAuthId="EPSG:32632" srcDatumTransform="-1" destDatumTransform="-1" layerid="hydro20180312183330559"/>
       <layer_coordinate_transform destAuthId="EPSG:3044" srcAuthId="USER:100011" srcDatumTransform="-1" destDatumTransform="-1" layerid="profc_ws11_Puff_sauer20180312195754632"/>
-      <layer_coordinate_transform destAuthId="EPSG:3044" srcAuthId="USER:100011" srcDatumTransform="-1" destDatumTransform="-1" layerid="Flow_Line_Curvature_Retent_ave20180312192208834"/>
       <layer_coordinate_transform destAuthId="EPSG:3044" srcAuthId="USER:100011" srcDatumTransform="-1" destDatumTransform="-1" layerid="profc_ws11_et_planc_ws23_hr_Puff_sauer20180312195833706"/>
+      <layer_coordinate_transform destAuthId="EPSG:3044" srcAuthId="USER:100011" srcDatumTransform="-1" destDatumTransform="-1" layerid="Flow_Line_Curvature_Retent_ave20180312192208834"/>
       <layer_coordinate_transform destAuthId="EPSG:3044" srcAuthId="USER:100011" srcDatumTransform="-1" destDatumTransform="-1" layerid="geom_dtm_10m_hyd_fl5_L10_et_minic_ws9_hr_Leben_Tr20180309112145854"/>
       <layer_coordinate_transform destAuthId="EPSG:3044" srcAuthId="USER:100011" srcDatumTransform="-1" destDatumTransform="-1" layerid="geom_10m_fl10_L10_CO2_Senke20180312194104271"/>
       <layer_coordinate_transform destAuthId="EPSG:3044" srcAuthId="EPSG:32632" srcDatumTransform="-1" destDatumTransform="-1" layerid="Bodenbedeckung_UeberetschTerlan20180312180651977"/>
       <layer_coordinate_transform destAuthId="EPSG:3044" srcAuthId="USER:100011" srcDatumTransform="-1" destDatumTransform="-1" layerid="planc_ws29_hr_Retent_min20180312192811831"/>
       <layer_coordinate_transform destAuthId="EPSG:3044" srcAuthId="USER:100011" srcDatumTransform="-1" destDatumTransform="-1" layerid="geom_10m_fl10_L6_Leben_Kult20180312191850456"/>
-      <layer_coordinate_transform destAuthId="EPSG:3044" srcAuthId="EPSG:3044" srcDatumTransform="-1" destDatumTransform="-1" layerid="shade_10m20180309103033140"/>
       <layer_coordinate_transform destAuthId="EPSG:3044" srcAuthId="USER:100011" srcDatumTransform="-1" destDatumTransform="-1" layerid="slope_ws11_hr_et_minic_ws3_hr_FiltPuff_Nit20180312195507108"/>
+      <layer_coordinate_transform destAuthId="EPSG:3044" srcAuthId="EPSG:3044" srcDatumTransform="-1" destDatumTransform="-1" layerid="shade_10m20180309103033140"/>
       <layer_coordinate_transform destAuthId="EPSG:3044" srcAuthId="USER:100011" srcDatumTransform="-1" destDatumTransform="-1" layerid="crosc_DTM_50m_avg_ws7_et_slope_DTM_50m_avg_ws7_Leben_Org20180309113023939"/>
       <layer_coordinate_transform destAuthId="EPSG:3044" srcAuthId="USER:100011" srcDatumTransform="-1" destDatumTransform="-1" layerid="minic_ws11_hr_CO2_Senke20180312194141711"/>
       <layer_coordinate_transform destAuthId="EPSG:3044" srcAuthId="USER:100011" srcDatumTransform="-1" destDatumTransform="-1" layerid="minic_DTM_50m_avg_ws5_Retent_min20180312192726025"/>
+      <layer_coordinate_transform destAuthId="EPSG:3044" srcAuthId="USER:100011" srcDatumTransform="-1" destDatumTransform="-1" layerid="Top15_Leben_Tr20180323141433553"/>
       <layer_coordinate_transform destAuthId="EPSG:3044" srcAuthId="USER:100011" srcDatumTransform="-1" destDatumTransform="-1" layerid="crosc_DTM_50m_avg_ws7_Leben_Org20180312191352552"/>
       <layer_coordinate_transform destAuthId="EPSG:3044" srcAuthId="USER:100011" srcDatumTransform="-1" destDatumTransform="-1" layerid="geom_10m_fl4_L10_et_slope_DTM_50m_avg_ws7_Leben_Tr20180312173938239"/>
       <layer_coordinate_transform destAuthId="EPSG:3044" srcAuthId="USER:100011" srcDatumTransform="-1" destDatumTransform="-1" layerid="minic_ws5_hr_Transform20180312194839785"/>
@@ -280,6 +284,7 @@
       <item>profc_ws11_Puff_sauer20180312195754632</item>
       <item>profc_ws11_et_planc_ws23_hr_Puff_sauer20180312195833706</item>
       <item>planc_ws5_hr_et_slope_ws5_hr_Puff_sauer20180312195934403</item>
+      <item>Top15_Leben_Tr20180323141433553</item>
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
@@ -288,9 +293,9 @@
         <legendlayerfile isInOverview="0" layerid="lakes20180312184230874" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="planc_ws5_hr_et_slope_ws5_hr_Puff_sauer" showFeatureCount="0">
-      <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="planc_ws5_hr_et_slope_ws5_hr_Puff_sauer20180312195934403" visible="1"/>
+    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="planc_ws5_hr_et_slope_ws5_hr_Puff_sauer" showFeatureCount="0">
+      <filegroup open="false" hidden="false">
+        <legendlayerfile isInOverview="0" layerid="planc_ws5_hr_et_slope_ws5_hr_Puff_sauer20180312195934403" visible="0"/>
       </filegroup>
     </legendlayer>
     <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="profc_ws11_et_planc_ws23_hr_Puff_sauer" showFeatureCount="0">
@@ -508,6 +513,11 @@
         <legendlayerfile isInOverview="0" layerid="geom_10m_fl4_L10_et_slope_DTM_50m_avg_ws7_Leben_Tr20180312173938239" visible="0"/>
       </filegroup>
     </legendlayer>
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Top15_Leben_Tr" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile isInOverview="0" layerid="Top15_Leben_Tr20180323141433553" visible="1"/>
+      </filegroup>
+    </legendlayer>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="shade_10m" showFeatureCount="0">
       <filegroup open="true" hidden="false">
         <legendlayerfile isInOverview="0" layerid="shade_10m20180312175334717" visible="1"/>
@@ -519,7 +529,7 @@
       </filegroup>
     </legendlayer>
   </legend>
-  <Composer title="sf" visible="1">
+  <Composer title="sf" visible="0">
     <Composition gridVisible="0" printResolution="300" paperWidth="100" snapGridOffsetX="0" guidesVisible="1" snapGridResolution="10" snapGridOffsetY="0" alignmentSnap="1" snapping="0" snapTolerancePixels="5" numPages="1" paperHeight="180" smartGuides="1" printAsRaster="1" generateWorldFile="0">
       <symbol alpha="1" type="fill" name="">
         <layer pass="0" class="SimpleFill" locked="0">
@@ -536,6 +546,14 @@
           <prop k="style" v="solid"/>
         </layer>
       </symbol>
+      <ComposerLabel valign="32" marginX="1" marginY="1" labelText="top 15 für Leben Tr" htmlState="0" halign="1">
+        <LabelFont description="Ubuntu,10,-1,5,50,0,0,0,0,0"/>
+        <FontColor red="0" blue="0" green="0"/>
+        <ComposerItem pagey="1.02757" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="45.1926" y="1.02757" visibility="1" zValue="4" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="32.7308" outlineWidth="0.3" excludeFromExports="0" uuid="{6e84163a-417a-466b-bb25-f1188bb889a8}" height="6" itemRotation="0" frame="false" pagex="45.1926">
+          <FrameColor alpha="255" red="0" blue="0" green="0"/>
+          <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+        </ComposerItem>
+      </ComposerLabel>
       <ComposerLegend symbolWidth="7" title="" boxSpace="2" splitLayer="0" equalColumnWidth="0" map="0" titleAlignment="1" symbolHeight="4" wmsLegendHeight="25" wrapChar="" fontColor="#000000" columnSpace="2" wmsLegendWidth="50" columnCount="1">
         <styles>
           <style marginBottom="2" name="title" font="Ubuntu,16,-1,5,50,0,0,0,0,0"/>
@@ -571,18 +589,64 @@
         </ComposerItem>
       </ComposerScaleBar>
       <ComposerMap mapRotation="0" keepLayerSet="false" id="0" previewMode="Cache" drawCanvasItems="true">
-        <Extent ymin="5137638.34451055247336626" xmin="667810.05532655585557222" ymax="5155640.94583610445261002" xmax="677810.05533675593324006"/>
+        <Extent ymin="5137638.34451055247336626" xmin="667810.05532655585557222" ymax="5155640.94452891498804092" xmax="677810.05533675593324006"/>
         <LayerSet/>
         <Grid/>
+        <ComposerMapGrid rightAnnotationDirection="0" gridFramePenColor="0,0,0,255" show="0" bottomAnnotationPosition="1" annotationFont="Ubuntu,11,-1,5,50,0,0,0,0,0" annotationPrecision="3" showAnnotation="0" topFrameDivisions="0" uuid="{c9899411-8c13-4514-bd60-3a374ef89ca3}" leftAnnotationDirection="0" topAnnotationPosition="1" rightAnnotationDisplay="0" offsetX="0" offsetY="0" rightFrameDivisions="0" gridStyle="0" annotationFontColor="0,0,0,255" intervalX="0" gridFrameSideFlags="15" intervalY="0" bottomAnnotationDirection="0" leftAnnotationDisplay="0" leftFrameDivisions="0" frameFillColor1="255,255,255,255" frameFillColor2="0,0,0,255" crossLength="3" gridFramePenThickness="0.5" bottomAnnotationDisplay="0" unit="0" topAnnotationDisplay="0" leftAnnotationPosition="1" blendMode="0" gridFrameStyle="0" rightAnnotationPosition="1" gridFrameWidth="2" name="Grid 1" annotationFormat="0" bottomFrameDivisions="0" topAnnotationDirection="0" frameAnnotationDistance="1">
+          <lineStyle>
+            <symbol alpha="1" type="line" name="">
+              <layer pass="0" class="SimpleLine" locked="0">
+                <prop k="capstyle" v="square"/>
+                <prop k="customdash" v="5;2"/>
+                <prop k="customdash_map_unit_scale" v="0,0"/>
+                <prop k="customdash_unit" v="MM"/>
+                <prop k="draw_inside_polygon" v="0"/>
+                <prop k="joinstyle" v="bevel"/>
+                <prop k="line_color" v="0,0,0,255"/>
+                <prop k="line_style" v="solid"/>
+                <prop k="line_width" v="0"/>
+                <prop k="line_width_unit" v="MM"/>
+                <prop k="offset" v="0"/>
+                <prop k="offset_map_unit_scale" v="0,0"/>
+                <prop k="offset_unit" v="MM"/>
+                <prop k="use_custom_dash" v="0"/>
+                <prop k="width_map_unit_scale" v="0,0"/>
+              </layer>
+            </symbol>
+          </lineStyle>
+          <markerStyle>
+            <symbol alpha="1" type="marker" name="">
+              <layer pass="0" class="SimpleMarker" locked="0">
+                <prop k="angle" v="0"/>
+                <prop k="color" v="0,0,0,255"/>
+                <prop k="horizontal_anchor_point" v="1"/>
+                <prop k="name" v="circle"/>
+                <prop k="offset" v="0,0"/>
+                <prop k="offset_map_unit_scale" v="0,0"/>
+                <prop k="offset_unit" v="MM"/>
+                <prop k="outline_color" v="0,0,0,255"/>
+                <prop k="outline_style" v="solid"/>
+                <prop k="outline_width" v="0"/>
+                <prop k="outline_width_map_unit_scale" v="0,0"/>
+                <prop k="outline_width_unit" v="MM"/>
+                <prop k="scale_method" v="area"/>
+                <prop k="size" v="2"/>
+                <prop k="size_map_unit_scale" v="0,0"/>
+                <prop k="size_unit" v="MM"/>
+                <prop k="vertical_anchor_point" v="1"/>
+              </layer>
+            </symbol>
+          </markerStyle>
+        </ComposerMapGrid>
         <AtlasMap scalingMode="2" atlasDriven="0" margin="0.10000000000000001"/>
-        <ComposerItem pagey="-0.0260131" page="1" id="" lastValidViewScaleFactor="2.31327" positionMode="0" positionLock="false" x="0" y="-0.0260131" visibility="1" zValue="1" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="100" outlineWidth="0.3" excludeFromExports="0" uuid="{1df727e9-ed8e-4150-a9ca-6819a2b239ed}" height="180.026" itemRotation="0" frame="false" pagex="0">
+        <ComposerItem pagey="-0.0260131" page="1" id="" lastValidViewScaleFactor="3.45241" positionMode="0" positionLock="false" x="0" y="-0.0260131" visibility="1" zValue="1" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="100" outlineWidth="0.3" excludeFromExports="0" uuid="{1df727e9-ed8e-4150-a9ca-6819a2b239ed}" height="180.026" itemRotation="0" frame="false" pagex="0">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
           <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
         </ComposerItem>
       </ComposerMap>
     </Composition>
   </Composer>
-  <projectlayers layercount="47">
+  <projectlayers layercount="48">
     <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>Flow_Line_Curvature_Retent_ave20180312192208834</id>
       <datasource>/mnt/bola/rebo/5_Daten/Fabian_ausmisten/fits/shapes2/Flow_Line_Curvature_Retent_ave.shp</datasource>
@@ -1588,6 +1652,338 @@
         <value></value>
       </keywordList>
       <layername>Slope_hr_Leben_Org</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=utm +zone=32 +ellps=GRS80 +units=m +no_defs</proj4>
+          <srsid>100011</srsid>
+          <srid>0</srid>
+          <authid>USER:100011</authid>
+          <description> * Generated CRS (+proj=utm +zone=32 +ellps=GRS80 +units=m +no_defs)</description>
+          <projectionacronym>utm</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <provider encoding="System">ogr</provider>
+      <previewExpression></previewExpression>
+      <vectorjoins/>
+      <expressionfields/>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <edittypes>
+        <edittype widgetv2type="TextEdit" name="cat">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="value">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="label">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+      </edittypes>
+      <renderer-v2 attr="value" symbollevels="0" type="categorizedSymbol">
+        <categories>
+          <category render="true" symbol="0" value="1" label="1"/>
+          <category render="true" symbol="1" value="2" label="2"/>
+          <category render="true" symbol="2" value="3" label="3"/>
+          <category render="true" symbol="3" value="4" label="4"/>
+          <category render="true" symbol="4" value="5" label="5"/>
+        </categories>
+        <symbols>
+          <symbol alpha="1" type="fill" name="0">
+            <layer pass="0" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="0,0"/>
+              <prop k="color" v="51,160,44,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="0,0,0,0"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
+            </layer>
+          </symbol>
+          <symbol alpha="1" type="fill" name="1">
+            <layer pass="0" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="0,0"/>
+              <prop k="color" v="138,228,231,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="0,0,0,0"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
+            </layer>
+          </symbol>
+          <symbol alpha="1" type="fill" name="2">
+            <layer pass="0" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="0,0"/>
+              <prop k="color" v="201,53,223,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="0,0,0,0"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
+            </layer>
+          </symbol>
+          <symbol alpha="1" type="fill" name="3">
+            <layer pass="0" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="0,0"/>
+              <prop k="color" v="206,182,42,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="0,0,0,0"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
+            </layer>
+          </symbol>
+          <symbol alpha="1" type="fill" name="4">
+            <layer pass="0" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="0,0"/>
+              <prop k="color" v="206,20,47,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="0,0,0,0"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
+            </layer>
+          </symbol>
+        </symbols>
+        <source-symbol>
+          <symbol alpha="1" type="fill" name="0">
+            <layer pass="0" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="0,0"/>
+              <prop k="color" v="198,23,217,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="0,0,0,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
+            </layer>
+          </symbol>
+        </source-symbol>
+        <rotation/>
+        <sizescale scalemethod="area"/>
+      </renderer-v2>
+      <customproperties>
+        <property key="labeling" value="pal"/>
+        <property key="labeling/addDirectionSymbol" value="false"/>
+        <property key="labeling/angleOffset" value="0"/>
+        <property key="labeling/blendMode" value="0"/>
+        <property key="labeling/bufferBlendMode" value="0"/>
+        <property key="labeling/bufferColorA" value="255"/>
+        <property key="labeling/bufferColorB" value="255"/>
+        <property key="labeling/bufferColorG" value="255"/>
+        <property key="labeling/bufferColorR" value="255"/>
+        <property key="labeling/bufferDraw" value="false"/>
+        <property key="labeling/bufferJoinStyle" value="64"/>
+        <property key="labeling/bufferNoFill" value="false"/>
+        <property key="labeling/bufferSize" value="1"/>
+        <property key="labeling/bufferSizeInMapUnits" value="false"/>
+        <property key="labeling/bufferSizeMapUnitMaxScale" value="0"/>
+        <property key="labeling/bufferSizeMapUnitMinScale" value="0"/>
+        <property key="labeling/bufferTransp" value="0"/>
+        <property key="labeling/centroidInside" value="false"/>
+        <property key="labeling/centroidWhole" value="false"/>
+        <property key="labeling/decimals" value="3"/>
+        <property key="labeling/displayAll" value="false"/>
+        <property key="labeling/dist" value="0"/>
+        <property key="labeling/distInMapUnits" value="false"/>
+        <property key="labeling/distMapUnitMaxScale" value="0"/>
+        <property key="labeling/distMapUnitMinScale" value="0"/>
+        <property key="labeling/enabled" value="false"/>
+        <property key="labeling/fieldName" value=""/>
+        <property key="labeling/fontBold" value="true"/>
+        <property key="labeling/fontCapitals" value="0"/>
+        <property key="labeling/fontFamily" value="Ubuntu"/>
+        <property key="labeling/fontItalic" value="false"/>
+        <property key="labeling/fontLetterSpacing" value="0"/>
+        <property key="labeling/fontLimitPixelSize" value="false"/>
+        <property key="labeling/fontMaxPixelSize" value="10000"/>
+        <property key="labeling/fontMinPixelSize" value="3"/>
+        <property key="labeling/fontSize" value="11"/>
+        <property key="labeling/fontSizeInMapUnits" value="false"/>
+        <property key="labeling/fontSizeMapUnitMaxScale" value="0"/>
+        <property key="labeling/fontSizeMapUnitMinScale" value="0"/>
+        <property key="labeling/fontStrikeout" value="false"/>
+        <property key="labeling/fontUnderline" value="false"/>
+        <property key="labeling/fontWeight" value="63"/>
+        <property key="labeling/fontWordSpacing" value="0"/>
+        <property key="labeling/formatNumbers" value="false"/>
+        <property key="labeling/isExpression" value="true"/>
+        <property key="labeling/labelOffsetInMapUnits" value="true"/>
+        <property key="labeling/labelOffsetMapUnitMaxScale" value="0"/>
+        <property key="labeling/labelOffsetMapUnitMinScale" value="0"/>
+        <property key="labeling/labelPerPart" value="false"/>
+        <property key="labeling/leftDirectionSymbol" value="&lt;"/>
+        <property key="labeling/limitNumLabels" value="false"/>
+        <property key="labeling/maxCurvedCharAngleIn" value="20"/>
+        <property key="labeling/maxCurvedCharAngleOut" value="-20"/>
+        <property key="labeling/maxNumLabels" value="2000"/>
+        <property key="labeling/mergeLines" value="false"/>
+        <property key="labeling/minFeatureSize" value="0"/>
+        <property key="labeling/multilineAlign" value="0"/>
+        <property key="labeling/multilineHeight" value="1"/>
+        <property key="labeling/namedStyle" value="Medium"/>
+        <property key="labeling/obstacle" value="true"/>
+        <property key="labeling/placeDirectionSymbol" value="0"/>
+        <property key="labeling/placement" value="1"/>
+        <property key="labeling/placementFlags" value="0"/>
+        <property key="labeling/plussign" value="false"/>
+        <property key="labeling/preserveRotation" value="true"/>
+        <property key="labeling/previewBkgrdColor" value="#ffffff"/>
+        <property key="labeling/priority" value="5"/>
+        <property key="labeling/quadOffset" value="4"/>
+        <property key="labeling/repeatDistance" value="0"/>
+        <property key="labeling/repeatDistanceMapUnitMaxScale" value="0"/>
+        <property key="labeling/repeatDistanceMapUnitMinScale" value="0"/>
+        <property key="labeling/repeatDistanceUnit" value="1"/>
+        <property key="labeling/reverseDirectionSymbol" value="false"/>
+        <property key="labeling/rightDirectionSymbol" value=">"/>
+        <property key="labeling/scaleMax" value="10000000"/>
+        <property key="labeling/scaleMin" value="1"/>
+        <property key="labeling/scaleVisibility" value="false"/>
+        <property key="labeling/shadowBlendMode" value="6"/>
+        <property key="labeling/shadowColorB" value="0"/>
+        <property key="labeling/shadowColorG" value="0"/>
+        <property key="labeling/shadowColorR" value="0"/>
+        <property key="labeling/shadowDraw" value="false"/>
+        <property key="labeling/shadowOffsetAngle" value="135"/>
+        <property key="labeling/shadowOffsetDist" value="1"/>
+        <property key="labeling/shadowOffsetGlobal" value="true"/>
+        <property key="labeling/shadowOffsetMapUnitMaxScale" value="0"/>
+        <property key="labeling/shadowOffsetMapUnitMinScale" value="0"/>
+        <property key="labeling/shadowOffsetUnits" value="1"/>
+        <property key="labeling/shadowRadius" value="1.5"/>
+        <property key="labeling/shadowRadiusAlphaOnly" value="false"/>
+        <property key="labeling/shadowRadiusMapUnitMaxScale" value="0"/>
+        <property key="labeling/shadowRadiusMapUnitMinScale" value="0"/>
+        <property key="labeling/shadowRadiusUnits" value="1"/>
+        <property key="labeling/shadowScale" value="100"/>
+        <property key="labeling/shadowTransparency" value="30"/>
+        <property key="labeling/shadowUnder" value="0"/>
+        <property key="labeling/shapeBlendMode" value="0"/>
+        <property key="labeling/shapeBorderColorA" value="255"/>
+        <property key="labeling/shapeBorderColorB" value="128"/>
+        <property key="labeling/shapeBorderColorG" value="128"/>
+        <property key="labeling/shapeBorderColorR" value="128"/>
+        <property key="labeling/shapeBorderWidth" value="0"/>
+        <property key="labeling/shapeBorderWidthMapUnitMaxScale" value="0"/>
+        <property key="labeling/shapeBorderWidthMapUnitMinScale" value="0"/>
+        <property key="labeling/shapeBorderWidthUnits" value="1"/>
+        <property key="labeling/shapeDraw" value="false"/>
+        <property key="labeling/shapeFillColorA" value="255"/>
+        <property key="labeling/shapeFillColorB" value="255"/>
+        <property key="labeling/shapeFillColorG" value="255"/>
+        <property key="labeling/shapeFillColorR" value="255"/>
+        <property key="labeling/shapeJoinStyle" value="64"/>
+        <property key="labeling/shapeOffsetMapUnitMaxScale" value="0"/>
+        <property key="labeling/shapeOffsetMapUnitMinScale" value="0"/>
+        <property key="labeling/shapeOffsetUnits" value="1"/>
+        <property key="labeling/shapeOffsetX" value="0"/>
+        <property key="labeling/shapeOffsetY" value="0"/>
+        <property key="labeling/shapeRadiiMapUnitMaxScale" value="0"/>
+        <property key="labeling/shapeRadiiMapUnitMinScale" value="0"/>
+        <property key="labeling/shapeRadiiUnits" value="1"/>
+        <property key="labeling/shapeRadiiX" value="0"/>
+        <property key="labeling/shapeRadiiY" value="0"/>
+        <property key="labeling/shapeRotation" value="0"/>
+        <property key="labeling/shapeRotationType" value="0"/>
+        <property key="labeling/shapeSVGFile" value=""/>
+        <property key="labeling/shapeSizeMapUnitMaxScale" value="0"/>
+        <property key="labeling/shapeSizeMapUnitMinScale" value="0"/>
+        <property key="labeling/shapeSizeType" value="0"/>
+        <property key="labeling/shapeSizeUnits" value="1"/>
+        <property key="labeling/shapeSizeX" value="0"/>
+        <property key="labeling/shapeSizeY" value="0"/>
+        <property key="labeling/shapeTransparency" value="0"/>
+        <property key="labeling/shapeType" value="0"/>
+        <property key="labeling/textColorA" value="255"/>
+        <property key="labeling/textColorB" value="0"/>
+        <property key="labeling/textColorG" value="0"/>
+        <property key="labeling/textColorR" value="0"/>
+        <property key="labeling/textTransp" value="0"/>
+        <property key="labeling/upsidedownLabels" value="0"/>
+        <property key="labeling/wrapChar" value=""/>
+        <property key="labeling/xOffset" value="0"/>
+        <property key="labeling/yOffset" value="0"/>
+      </customproperties>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerTransparency>70</layerTransparency>
+      <displayfield>cat</displayfield>
+      <label>0</label>
+      <labelattributes>
+        <label fieldname="" text="Label"/>
+        <family fieldname="" name="Ubuntu"/>
+        <size fieldname="" units="pt" value="12"/>
+        <bold fieldname="" on="0"/>
+        <italic fieldname="" on="0"/>
+        <underline fieldname="" on="0"/>
+        <strikeout fieldname="" on="0"/>
+        <color fieldname="" red="0" blue="0" green="0"/>
+        <x fieldname=""/>
+        <y fieldname=""/>
+        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
+        <angle fieldname="" value="0" auto="0"/>
+        <alignment fieldname="" value="center"/>
+        <buffercolor fieldname="" red="255" blue="255" green="255"/>
+        <buffersize fieldname="" units="pt" value="1"/>
+        <bufferenabled fieldname="" on=""/>
+        <multilineenabled fieldname="" on=""/>
+        <selectedonly on=""/>
+      </labelattributes>
+      <editform>.</editform>
+      <editforminit/>
+      <featformsuppress>0</featformsuppress>
+      <annotationform>.</annotationform>
+      <editorlayout>generatedlayout</editorlayout>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <attributeactions/>
+      <edittypes>
+        <edittype widgetv2type="TextEdit" name="cat">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="value">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="label">
+          <widgetv2config IsMultiline="0" fieldEditable="1" UseHtml="0" labelOnTop="0"/>
+        </edittype>
+      </edittypes>
+    </maplayer>
+    <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <id>Top15_Leben_Tr20180323141433553</id>
+      <datasource>/mnt/bola/rebo/5_Daten/Fabian_ausmisten/fits/shapes2/Top15_Leben_Tr.shp</datasource>
+      <title></title>
+      <abstract></abstract>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>Top15_Leben_Tr</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=utm +zone=32 +ellps=GRS80 +units=m +no_defs</proj4>
@@ -9479,10 +9875,10 @@
         <multilineenabled fieldname="" on=""/>
         <selectedonly on=""/>
       </labelattributes>
-      <editform></editform>
+      <editform>.</editform>
       <editforminit/>
       <featformsuppress>0</featformsuppress>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <editorlayout>generatedlayout</editorlayout>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
@@ -15626,12 +16022,96 @@
     <Digitizing>
       <DefaultSnapToleranceUnit type="int">2</DefaultSnapToleranceUnit>
       <LayerSnappingList type="QStringList">
+        <value>Flow_Line_Curvature_Retent_ave20180312192208834</value>
+        <value>Longitudinal_Curvature_hr_et_geom_10m_fl10_L70_Leben_Fe20180312191038383</value>
+        <value>MinimalCurvature_10m_Retent_stark20180312193415402</value>
+        <value>Slope_hr_Leben_Org20180312191220659</value>
+        <value>crosc_DTM_50m_avg_ws7_Leben_Org20180312191352552</value>
+        <value>crosc_DTM_50m_avg_ws7_et_slope_DTM_50m_avg_ws7_Leben_Org20180312191506584</value>
+        <value>crosc_DTM_50m_avg_ws7_et_slope_DTM_50m_avg_ws7_et_Convexity_Leben_Org20180312191712945</value>
+        <value>crosc_ws19_hr_et_profc_ws15_Retent_ave20180312192304479</value>
+        <value>crosc_ws23_hr_GWneu20180312193541604</value>
+        <value>crosc_ws23_hr_et_profc_ws5_GWneu20180312193740615</value>
+        <value>geom_10m_fl10_L10_CO2_Senke20180312194104271</value>
+        <value>geom_10m_fl10_L10_et_Convexity_CO2_Senke20180312194311621</value>
+        <value>geom_10m_fl10_L3_GWneu20180312193655397</value>
+        <value>geom_10m_fl10_L3_et_Tangential_Curvature_GWneu20180312193831997</value>
+        <value>geom_10m_fl10_L6_Leben_Kult20180312191850456</value>
+        <value>geom_10m_fl10_L6_et_slope_ws11_Leben_Kult20180312192002525</value>
+        <value>geom_10m_fl10_L70_Leben_Fe20180312190804864</value>
+        <value>geom_10m_fl10_L70_et_CrossSectionalCurvature_hr_Leben_Fe20180312190930339</value>
+        <value>geom_10m_fl10_L7_FiltPuff20180312194410828</value>
+        <value>geom_10m_fl10_L7_et_minic_DTM_50m_avg_ws3_FiltPuff20180312194618012</value>
+        <value>geom_10m_fl1_L10_FiltPuff_Org20180312195322252</value>
         <value>geom_10m_fl4_L10_et_slope_DTM_50m_avg_ws7_Leben_Tr20180312173938239</value>
-        <value>lakes20180312184230874</value>
-        <value>geom_dtm_10m_hyd_fl5_L10_et_minic_ws9_hr_Leben_Tr20180312185919046</value>
         <value>geom_10m_fl4_L9_Leben_Tr20180312190617809</value>
+        <value>geom_10m_fl8_L50_Transform20180312195036042</value>
+        <value>geom_10m_fl8_L50_et_maxic_ws7_Transform20180312195219375</value>
+        <value>geom_dtm_10m_hyd_fl5_L10_et_minic_ws9_hr_Leben_Tr20180312185919046</value>
+        <value>lakes20180312184230874</value>
+        <value>longc_ws15_Retent_stark20180312192957294</value>
+        <value>longc_ws15_et_Profile_Curvature_Retent_stark20180312193458345</value>
+        <value>minic_DTM_50m_avg_ws5_Retent_min20180312192726025</value>
+        <value>minic_ws11_FiltPuff_Nit20180312195356191</value>
+        <value>minic_ws11_et_General_Curvature_FiltPuff_Nit20180312195718747</value>
+        <value>minic_ws11_hr_CO2_Senke20180312194141711</value>
+        <value>minic_ws11_hr_FiltPuff20180312194450292</value>
+        <value>minic_ws5_hr_Transform20180312194839785</value>
+        <value>minic_ws9_hr_Naehrstoff20180312193904668</value>
+        <value>planc_ws29_hr_Retent_min20180312192811831</value>
+        <value>planc_ws29_hr_et_minic_DTM_50m_avg_ws3_Retent_min20180312192915808</value>
+        <value>planc_ws5_hr_et_slope_ws5_hr_Puff_sauer20180312195934403</value>
+        <value>profc_ws11_Puff_sauer20180312195754632</value>
+        <value>profc_ws11_et_planc_ws23_hr_Puff_sauer20180312195833706</value>
+        <value>slope_ws11_hr_FiltPuff_Nit20180312195435840</value>
+        <value>slope_ws11_hr_et_minic_ws3_hr_FiltPuff_Nit20180312195507108</value>
+        <value>slope_ws3_hr_Leben_Kult20180312191804097</value>
+        <value>slope_ws3_hr_et_minic_DTM_50m_avg_ws3_Leben_Kult20180312192108482</value>
+        <value>Top15_Leben_Tr20180323141433553</value>
       </LayerSnappingList>
       <LayerSnappingEnabledList type="QStringList">
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
+        <value>enabled</value>
         <value>enabled</value>
         <value>enabled</value>
         <value>enabled</value>
@@ -15644,8 +16124,92 @@
         <value>2</value>
         <value>2</value>
         <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
       </LayerSnappingToleranceUnitList>
       <LayerSnapToList type="QStringList">
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
         <value>to_vertex_and_segment</value>
         <value>to_vertex_and_segment</value>
         <value>to_vertex_and_segment</value>
@@ -15654,6 +16218,48 @@
       <DefaultSnapType type="QString">to vertex and segment</DefaultSnapType>
       <DefaultSnapTolerance type="double">12</DefaultSnapTolerance>
       <LayerSnappingToleranceList type="QStringList">
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
+        <value>12.000000</value>
         <value>12.000000</value>
         <value>12.000000</value>
         <value>12.000000</value>
