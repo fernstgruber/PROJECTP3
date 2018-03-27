@@ -5,8 +5,8 @@ require(repmis)
 require(randomForest)
 require(rgdal)
 require(knitr)
-#proj3path="/home/fabs/PROJECTP3"
-proj3path="/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/"
+proj3path="/home/fabs/PROJECTP3"
+#proj3path="/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/"
 pathtobarplots = "./Figures/barplots_SF/"
 setwd(proj3path)
 load(file=paste(proj3path, "/data/preppeddata.RData",sep=""))
@@ -32,15 +32,15 @@ for (i in dependentlist){
   preppeddata[[i]] <- factor(preppeddata[[i]],levels=1:5)
 }
 i =1
-#for ( i in 1:15 ){
-dependent=dependentlist[1]
+for ( i in 1:15 ){
+dependent=dependentlist[i]
 tbl <- table(preppeddata[dependentlist[i]])
-#svg(paste(pathtobarplots,dependentlist[i],"_distro.svg"))
-barplot(tbl, ylim=c(0,100), main=dependentlist_eng[1],space=0)
-#for (i in 1:5){
-  text(labels=paste('n = ',nrow(preppeddata[preppeddata[[dependent]] == i,]),sep=""),x=i,y=95)
-#}
-#dev.off()
-#}
-tbl <- table(preppeddata[dependentlist[2]])
-barplot(tbl, ylim=c(0,100), main=dependentlist_eng[2])
+tbl_df <- as.data.frame(tbl)
+tbl_df$perc <- tbl_df$Freq / sum(tbl_df$Freq) *100
+svg(paste(pathtobarplots,dependentlist[i],"_distro.svg",sep=""))
+barplot(height=tbl_df$perc, ylim=c(0,110), main=dependentlist_eng[i],space=0)
+for (j in 1:5){
+  text(labels=paste('n = ',nrow(preppeddata[preppeddata[[dependent]] == j,]),sep=""),x=j-0.5,y=100)
+}
+dev.off()
+}
