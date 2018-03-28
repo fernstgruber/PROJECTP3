@@ -2,6 +2,31 @@
 % Encoding: UTF-8
 
 
+@TechReport{BAYGLA2003,
+  Title                    = {{Das Schutzgut Boden in der Planung - Bewertung nat\"uhrlicher Bodenfunktionen und Umsetzung in Planungs- und Genehmigungsverfahren}},
+  Author                   = {{Bayerisches Geologisches Landesamt und Bayerisches Landesamt f\"ur Umweltschutz}},
+  Institution              = {{Bayerisches Geologisches Landesamt, M\"unchen und Bayerisches Landesamt f\"ur Umweltschutz, Augsburg}},
+  Year                     = {2003},
+
+  Address                  = {Augsburg},
+
+  Organization             = {{Bayerisches Geologisches Landesamt, München und Bayerisches Landesamt für Umweltschutz, Augsburg}},
+  Owner                    = {fabs},
+  Timestamp                = {2018.03.28},
+  Url                      = {https://www.lfu.bayern.de/boden/bodenfunktionen/ertragsfaehigkeit/doc/arbeitshilfe_boden.pdf}
+}
+
+@Article{Beylich2005,
+  Title                    = {Bewertung des Bodens als Lebensraum f\"ur Bodenorganismen im Rahmen von Planunsprozessen},
+  Author                   = {Anneke Beylich and  Heinrich H\"oper and Andrea Ruf and Berndt-Michael Wilke},
+  Journal                  = {Mitteilungen der Deutschen Bodenkundlichen Gesellschaft},
+  Year                     = {2005},
+  Volume                   = {107},
+
+  Owner                    = {fabs},
+  Timestamp                = {2018.03.28}
+}
+
 @Article{Haslmayr2016,
   Title                    = {Soil function evaluation in Austria — Development, concepts and examples},
   Author                   = {Hans-Peter Haslmayr and Clemens Geitner and Gertraud Sutor and Andreas Knoll and Andreas Baumgarten},
@@ -35,6 +60,32 @@
   Publisher                = {Soil Science Society of America},
   Timestamp                = {2018.01.29},
   Url                      = {http://dx.doi.org/10.2136/sssaj1997.03615995006100010001x}
+}
+
+@Book{Lehmann2008,
+  Title                    = {TUSEC - Bilingual-Edition: Eine Methode zur Bewertung nat\"urlicher und anthropogener B\"oden (Deutsche Fassung)
+Technique for Soil Evaluation and Categorization for Natural and Anthropogenic Soils (English Version)},
+  Author                   = {Andreas Lehmann and Susanne David and Karl Stahr},
+  Editor                   = {Ellen Kandeler and Yakov Kuzyakov and Karl Stahr and Thilo Streck and Landeshauptstadt M\"unchen, Referat f\"ur Gesundheit und Umwelt},
+  Publisher                = {Universit\"at Hohenheim - Institut f\"ur Bodenkunde und Standortslehre},
+  Year                     = {2008},
+  Series                   = {{Hohenheimer Bodenkundliche Hefte}},
+  Volume                   = {86},
+
+  Owner                    = {fabs},
+  Timestamp                = {2018.03.28}
+}
+
+@TechReport{Mueller2011,
+  Title                    = {Auswertungsmethoden im Bodenschutz - Dokumentation zur MethodMethode des Nieders\"achsischen Bodeinformationssystems (NIBIS)},
+  Author                   = {Udo M\"uller and Anja Waldeck},
+  Institution              = {Landesamt für Bergbau, Energie und Geologie},
+  Year                     = {2011},
+  Number                   = {19},
+  Type                     = {GeoBerichte},
+
+  Owner                    = {fabs},
+  Timestamp                = {2018.03.28}
 }
 
 @Article{Nestroy2011,

@@ -1,4 +1,4 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{5}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\href}[2]{#2}
@@ -11,6 +11,17 @@
 \providecommand{\Pubmed}[1]{\href{pmid:#1}{\path{#1}}}
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Techreport
+\bibitem[{{BayGLA and BayLfU}(2003)}]{BAYGLA2003}
+\bibinfo{author}{{BayGLA and BayLfU}}, \bibinfo{year}{2003}.
+\newblock \bibinfo{title}{{Das Schutzgut Boden in der Planung - Bewertung
+  nat\"uhrlicher Bodenfunktionen und Umsetzung in Planungs- und
+  Genehmigungsverfahren}}.
+\newblock \bibinfo{type}{Technical Report}. {Bayerisches Geologisches
+  Landesamt, M\"unchen und Bayerisches Landesamt f\"ur Umweltschutz, Augsburg}.
+  \bibinfo{address}{Augsburg}.
+\newblock \URLprefix
+  \url{https://www.lfu.bayern.de/boden/bodenfunktionen/ertragsfaehigkeit/doc/arbeitshilfe_boden.pdf}.
 %Type = Article
 \bibitem[{Haslmayr et~al.(2016)Haslmayr, Geitner, Sutor, Knoll and
   Baumgarten}]{Haslmayr2016}
@@ -26,6 +37,17 @@
   \DOIprefix\doi{https://doi.org/10.1016/j.geoderma.2015.09.023}.
   \bibinfo{note}{soil mapping, classification, and modelling: history and
   future directions}.
+%Type = Book
+\bibitem[{Lehmann et~al.(2008)Lehmann, David and Stahr}]{Lehmann2008}
+\bibinfo{author}{Lehmann, A.}, \bibinfo{author}{David, S.},
+  \bibinfo{author}{Stahr, K.}, \bibinfo{year}{2008}.
+\newblock \bibinfo{title}{TUSEC - Bilingual-Edition: Eine Methode zur Bewertung
+  nat\"urlicher und anthropogener B\"oden (Deutsche Fassung) Technique for Soil
+  Evaluation and Categorization for Natural and Anthropogenic Soils (English
+  Version)}. volume~\bibinfo{volume}{86} of
+  \textit{\bibinfo{series}{{Hohenheimer Bodenkundliche Hefte}}}.
+\newblock \bibinfo{publisher}{Universit\"at Hohenheim - Institut f\"ur
+  Bodenkunde und Standortslehre}.
 %Type = Article
 \bibitem[{Nestroy et~al.(2011)Nestroy, Aust, Blum, Englisch, Hager, Herzberger,
   Kilian, Nelhiebel, G.~Ortner~and and und J.~Wagner}]{Nestroy2011}
