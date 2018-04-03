@@ -116,10 +116,17 @@ This potential is evaluated similarly to the the one for drought-tolerant specie
 
 
 \section{Results}
+The soil function grades for each of the 15 potentials was calculated for each of the 108 soil profile pits in the study area with the SEPP app. Figure \ref{fig:SFdistro} shows the distribution of these grades.
+ \begin{figure}[ht!]
+\includegraphics[width=\textwidth,angle=0]{soilfunctiondistro.pdf}
+\caption{Barplots representing the distribution of the soil function grades for the various analysed potentials. }
+\label{fig:SFdistro}
+\end{figure}
 A first evaluation of the feature selection procedure shows that mostly 2 parameters are sufficient, that is that there is no increase in cross-validated prediction accuracy  by adding more predictors, and most of the time these a combination of a landform classification and a roughness or also local terrain parameter.
 \subsection{Potential as a habitat for drought-tolerant species}
-Distribution of the grades for the potential amongst the soil profiles. Of the 108 soil profile sites in the study area, 38 fall into class 4 (35\%) and 32 into class 5. The intermediate class 3 contains 21 soil profiles whereas the high potential classes 1 and 2 are attribute to only 4 and 13 sites, respectively. 
+Figure~\ref{fig:SFdistro} shows that of the 108 soil profile sites in the study area, 38 fall into class 4 (35\%) and 32 into class 5 regarding the potential as a habitat for drought-tolerant species. The intermediate class 3 contains 21 soil profiles whereas the high potential classes 1 and 2 are attribute to only 4 and 13 sites, respectively. 
 As the predictor set does not contain landuse nor soil type, the SVM classification essentially attempts to model the different classes of available field capacity. In the majority of the feature selection runs a landform map based on a flatness threshold between 3 and 5$^{\circ}$,a spatial resolution of 10~m and a search radius of 100~m was chosen as the first predictive feature. The landform flat is dominant amongst the profile sites with a graded potential of 5, which is accordingly connected to minimal curvature values around 0. The landform slope is  most common for profiles with a potential  of 4, whereas spurs and hollow can present profile locations with a  potential score of 2 and, as expected, have increasingly negative minimum curvature values. A support vector classifier using these two predictor variables results in a cross-validated prediction accuracy of 47\%, where the most common error is that  a large number of sites are mistakenly classified as having grade 4. Nevertheless, the general implications of the feature selection are plausible, as flat areas  can  be expected to have higher field capacity values than sloping regions with negative curvature values.
+\subsection{Potential as a habitat for moisture-tolerant species}
 \section{Conclusion}
  
 
