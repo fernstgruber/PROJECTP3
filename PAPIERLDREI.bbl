@@ -1,4 +1,4 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{6}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\href}[2]{#2}
@@ -22,6 +22,15 @@
   \bibinfo{address}{Augsburg}.
 \newblock \URLprefix
   \url{https://www.lfu.bayern.de/boden/bodenfunktionen/ertragsfaehigkeit/doc/arbeitshilfe_boden.pdf}.
+%Type = Article
+\bibitem[{Beylich et~al.(2005)Beylich, H\"oper, Ruf and Wilke}]{Beylich2005}
+\bibinfo{author}{Beylich, A.}, \bibinfo{author}{H\"oper, H.},
+  \bibinfo{author}{Ruf, A.}, \bibinfo{author}{Wilke, B.M.},
+  \bibinfo{year}{2005}.
+\newblock \bibinfo{title}{Bewertung des bodens als lebensraum f\"ur
+  bodenorganismen im rahmen von planunsprozessen}.
+\newblock \bibinfo{journal}{Mitteilungen der Deutschen Bodenkundlichen
+  Gesellschaft} \bibinfo{volume}{107}.
 %Type = Article
 \bibitem[{Haslmayr et~al.(2016)Haslmayr, Geitner, Sutor, Knoll and
   Baumgarten}]{Haslmayr2016}
