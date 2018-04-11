@@ -1,6 +1,7 @@
 \documentclass[preprint,12pt,authoryear]{elsarticle}
 %\documentclass[final,1p,times,twocolumn,authoryear]{elsarticle}
 \usepackage{lineno,hyperref}
+\usepackage{fixltx2e}
 \modulolinenumbers[5]
 
 \journal{Geoderma}
@@ -101,7 +102,7 @@ Following a modified versions of the procedure presented by \cite{BAYGLA2003}, t
 
 \paragraph{Potential for providing nutrients for plants}
 
-\paragraph{Potential as a CO2 sink}
+\paragraph{Potential as a CO\textsubscript{2} sink}
 
 \paragraph{Potential for retention of heavy metals}
 
@@ -124,16 +125,47 @@ The soil function grades for each of the 15 potentials was calculated for each o
 A first evaluation of the feature selection procedure shows that mostly 2 parameters are sufficient, that is that there is no increase in cross-validated prediction accuracy  by adding more predictors, and most of the time these a combination of a landform classification and a roughness or also local terrain parameter.
 \begin{table}[!htbp]
 
-\caption{Accuracy values (\%) for the different potentials}
+\caption{Accuracy values (\%) and parameters for the different potentials}
 \resizebox{0.95\textwidth}{!}{%
 \centering
-\begin{tabular}{p{4cm}|ccccc}
+\tiny
+\begin{tabular}{l|ccccc}
   \hline
   \hline
 potential & parameter & res & windowsize & acc & multiacc\\ 
   \hline
+habitat for drought-tolerant species & landforms & 10 & 100 & acc & multiacc\\ 
+ & min. curvature & 2.5 & 22.5 & acc & multiacc\\ 
+  \hline
+habitat for moisture-tolerant species & parameter & res & windowsize & acc & multiacc\\ 
+  \hline
+habitat for soil organisms & parameter & res & windowsize & acc & multiacc\\ 
+  \hline
+agricultural production & parameter & res & windowsize & acc & multiacc\\ 
+  \hline
+average precipitation retention capacity & parameter & res & windowsize & acc & multiacc\\ 
+  \hline
+minimum precipitation retention capacity & parameter & res & windowsize & acc & multiacc\\ 
+  \hline
+retention capacity for heavy precipitation events & parameter & res & windowsize & acc & multiacc\\ 
+  \hline
+groundwater reformation rate & parameter & res & windowsize & acc & multiacc\\ 
+  \hline
+providing nutrients for plants & parameter & res & windowsize & acc & multiacc\\ 
+  \hline
+CO\textsubscript{2} sink & parameter & res & windowsize & acc & multiacc\\ 
+  \hline
+retention of heavy metals & parameter & res & windowsize & acc & multiacc\\ 
+  \hline
+transforming organic contaminants & parameter & res & windowsize & acc & multiacc\\ 
+  \hline
+filter and buffer for organic contaminants & parameter & res & windowsize & acc & multiacc\\ 
+  \hline
+ retention of water-soluble contaminants & parameter & res & windowsize & acc & multiacc\\ 
+  \hline
+buffer for acidic contaminants & parameter & res & windowsize & acc & multiacc\\ 
+  \hline
 
- \hline
 \end{tabular}}
 \label{table:cvacc}
 \end{table}

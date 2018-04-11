@@ -24,8 +24,63 @@ Leben Trocken
 
 ```{r,echo=F}
 i=1
-f=1
 filelist=c("../temporlarge/geom_10m_fl4_L9_Leben_Tr.RData","../temporlarge/geom_10m_fl4_L10_et_slope_DTM_50m_avg_ws7_Leben_Tr.RData","../temporlarge/geom_dtm_10m_hyd_fl5_L10_et_minic_ws9_hr_Leben_Tr.RData")
+f=filelist[2]
+for(f in filelist){
+  dep=dependentlist[i]
+  print(dependentlist_eng[i])
+  load(paste("../data/modeldata/SVMorigmodeldatawithgeoandgeom_",dep,".RData",sep=""))  
+  load(file=f)
+  print(f)
+  print(paste("10fold cross-validated accuracy from main modelrunf: ",fit$tot.accuracy))
+  print(paste("original distribution: "))
+  print(table(modeldata[dependent]))
+  print(paste("predicted distribution of soil pit sites"))
+  print(table(modeldata["preds"]))
+  print(paste("confusion matrix"))
+  print(CM)
+  print(paste("predicted distribution of study area"))
+  print(hist)
+  print("what happens when CV is performed a 100 times")
+  cvaccs=vector()
+  newmodeldata = modeldata[!(names(modeldata) %in% c("preds"))]
+  newmodeldatawithpreds=newmodeldata
+  t=1
+  for (t in 1:100){
+    set.seed(t)
+    f <- paste(dep,"~.")
+    fit <- do.call("svm",list(as.formula(f),modeldata,cross=10))
+    cvaccs[t] = fit$tot.accuracy
+    colname=paste("predseed_",t,sep="")
+    newmodeldatawithpreds[[colname]] <- predict(fit,newdata=modeldata)
+    newmodeldatawithpreds[[colname]] <- factor(newmodeldatawithpreds[[colname]],levels=1:5)
+  }
+  ncols <- ncol(newmodeldatawithpreds)
+  startn = ncols-99
+  r=1
+  for (r in 1:nrow(newmodeldatawithpreds)){
+    vect <- newmodeldatawithpreds[r,c(startn:ncols)]
+    #vect <- as.character(vect)
+    newmodeldatawithpreds[r,"moderesult"] <- Modus(vect)
+  }
+newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5)
+  boxplot(cvaccs)
+  print(paste("mean accuracy = " , mean(cvaccs)))
+  print(paste("median accuracy = " , median(cvaccs)))
+  print("confusion table for mode of 100 predicitions")
+ print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
+  print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
+  rm(modeldata,preddata,CM,hist,fit)
+  
+}
+```
+
+
+Leben FEUCHT
+
+```{r,echo=F}
+i=2
+filelist=c("../temporlarge/geom_10m_fl10_L70_Leben_Fe.RData","../temporlarge/geom_10m_fl10_L70_et_CrossSectionalCurvature_hr_Leben_Fe.RData","../temporlarge/geom_10m_fl10_L70_et_CrossSectionalCurvature_hr_Leben_Fe.RData","../temporlarge/Longitudinal_Curvature_hr_et_geom_10m_fl10_L70_Leben_Fe.RData")
 f=filelist[1]
 for(f in filelist){
   dep=dependentlist[i]
@@ -45,52 +100,32 @@ for(f in filelist){
   print("what happens when CV is performed a 100 times")
   cvaccs=vector()
   newmodeldata = modeldata[!(names(modeldata) %in% c("preds"))]
+  newmodeldatawithpreds=newmodeldata
+  t=1
   for (t in 1:100){
     set.seed(t)
     f <- paste(dep,"~.")
     fit <- do.call("svm",list(as.formula(f),modeldata,cross=10))
     cvaccs[t] = fit$tot.accuracy
+    colname=paste("predseed_",t,sep="")
+    newmodeldatawithpreds[[colname]] <- predict(fit,newdata=modeldata)
+    newmodeldatawithpreds[[colname]] <- factor(newmodeldatawithpreds[[colname]],levels=1:5)
   }
+  ncols <- ncol(newmodeldatawithpreds)
+  startn = ncols-99
+  r=1
+  for (r in 1:nrow(newmodeldatawithpreds)){
+    vect <- newmodeldatawithpreds[r,c(startn:ncols)]
+    #vect <- as.character(vect)
+    newmodeldatawithpreds[r,"moderesult"] <- Modus(vect)
+  }
+newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5)
   boxplot(cvaccs)
   print(paste("mean accuracy = " , mean(cvaccs)))
-    print(paste("median accuracy = " , median(cvaccs)))
-  rm(modeldata,preddata,CM,hist,fit)
-  
-}
-```
-
-
-Leben FEUCHT
-
-```{r,echo=F}
-i=2
-filelist=c("../temporlarge/geom_10m_fl10_L70_Leben_Fe.RData","../temporlarge/geom_10m_fl10_L70_et_CrossSectionalCurvature_hr_Leben_Fe.RData","../temporlarge/geom_10m_fl10_L70_et_CrossSectionalCurvature_hr_Leben_Fe.RData","../temporlarge/Longitudinal_Curvature_hr_et_geom_10m_fl10_L70_Leben_Fe.RData")
-for(f in filelist){
-  dep=dependentlist[i]
-  print(dependentlist_eng[i])
-  load(paste("../data/modeldata/SVMorigmodeldatawithgeoandgeom_",dep,".RData",sep=""))  
-  load(file=f)
-  print(f)
-  print(paste("10fold cross-validated accuracy from main modelrunf: ",fit$tot.accuracy))
-  print(paste("original distribution: "))
-  print(table(modeldata[dependent]))
-  print(paste("predicted distribution of soil pit sites"))
-  print(table(modeldata["preds"]))
-  print(paste("confusion matrix"))
-  print(CM)
-  print(paste("predicted distribution of study area"))
-  print(hist)
-  print("what happens when CV is performed a 100 times")
-  cvaccs=vector()
-  newmodeldata = modeldata[!(names(modeldata) %in% c("preds"))]
-  for (t in 1:100){
-    set.seed(t)
-    f <- paste(dep,"~.")
-    fit <- do.call("svm",list(as.formula(f),modeldata,cross=10))
-    cvaccs[t] = fit$tot.accuracy
-  }
-  boxplot(cvaccs)
-  print(paste("mean accuracy = " , mean(cvaccs)))
+  print(paste("median accuracy = " , median(cvaccs)))
+  print("confusion table for mode of 100 predicitions")
+ print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
+  print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
   rm(modeldata,preddata,CM,hist,fit)
   
 }
@@ -119,14 +154,32 @@ for(f in filelist){
   print("what happens when CV is performed a 100 times")
   cvaccs=vector()
   newmodeldata = modeldata[!(names(modeldata) %in% c("preds"))]
+  newmodeldatawithpreds=newmodeldata
+  t=1
   for (t in 1:100){
     set.seed(t)
     f <- paste(dep,"~.")
     fit <- do.call("svm",list(as.formula(f),modeldata,cross=10))
     cvaccs[t] = fit$tot.accuracy
+    colname=paste("predseed_",t,sep="")
+    newmodeldatawithpreds[[colname]] <- predict(fit,newdata=modeldata)
+    newmodeldatawithpreds[[colname]] <- factor(newmodeldatawithpreds[[colname]],levels=1:5)
   }
+  ncols <- ncol(newmodeldatawithpreds)
+  startn = ncols-99
+  r=1
+  for (r in 1:nrow(newmodeldatawithpreds)){
+    vect <- newmodeldatawithpreds[r,c(startn:ncols)]
+    #vect <- as.character(vect)
+    newmodeldatawithpreds[r,"moderesult"] <- Modus(vect)
+  }
+newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5)
   boxplot(cvaccs)
   print(paste("mean accuracy = " , mean(cvaccs)))
+  print(paste("median accuracy = " , median(cvaccs)))
+  print("confusion table for mode of 100 predicitions")
+ print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
+  print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
   rm(modeldata,preddata,CM,hist,fit)
   
 }
@@ -155,14 +208,32 @@ for(f in filelist){
   print("what happens when CV is performed a 100 times")
   cvaccs=vector()
   newmodeldata = modeldata[!(names(modeldata) %in% c("preds"))]
+  newmodeldatawithpreds=newmodeldata
+  t=1
   for (t in 1:100){
     set.seed(t)
     f <- paste(dep,"~.")
     fit <- do.call("svm",list(as.formula(f),modeldata,cross=10))
     cvaccs[t] = fit$tot.accuracy
+    colname=paste("predseed_",t,sep="")
+    newmodeldatawithpreds[[colname]] <- predict(fit,newdata=modeldata)
+    newmodeldatawithpreds[[colname]] <- factor(newmodeldatawithpreds[[colname]],levels=1:5)
   }
+  ncols <- ncol(newmodeldatawithpreds)
+  startn = ncols-99
+  r=1
+  for (r in 1:nrow(newmodeldatawithpreds)){
+    vect <- newmodeldatawithpreds[r,c(startn:ncols)]
+    #vect <- as.character(vect)
+    newmodeldatawithpreds[r,"moderesult"] <- Modus(vect)
+  }
+newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5)
   boxplot(cvaccs)
   print(paste("mean accuracy = " , mean(cvaccs)))
+  print(paste("median accuracy = " , median(cvaccs)))
+  print("confusion table for mode of 100 predicitions")
+ print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
+  print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
   rm(modeldata,preddata,CM,hist,fit)
   
 }
@@ -191,14 +262,32 @@ for(f in filelist){
   print("what happens when CV is performed a 100 times")
   cvaccs=vector()
   newmodeldata = modeldata[!(names(modeldata) %in% c("preds"))]
+  newmodeldatawithpreds=newmodeldata
+  t=1
   for (t in 1:100){
     set.seed(t)
     f <- paste(dep,"~.")
     fit <- do.call("svm",list(as.formula(f),modeldata,cross=10))
     cvaccs[t] = fit$tot.accuracy
+    colname=paste("predseed_",t,sep="")
+    newmodeldatawithpreds[[colname]] <- predict(fit,newdata=modeldata)
+    newmodeldatawithpreds[[colname]] <- factor(newmodeldatawithpreds[[colname]],levels=1:5)
   }
+  ncols <- ncol(newmodeldatawithpreds)
+  startn = ncols-99
+  r=1
+  for (r in 1:nrow(newmodeldatawithpreds)){
+    vect <- newmodeldatawithpreds[r,c(startn:ncols)]
+    #vect <- as.character(vect)
+    newmodeldatawithpreds[r,"moderesult"] <- Modus(vect)
+  }
+newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5)
   boxplot(cvaccs)
   print(paste("mean accuracy = " , mean(cvaccs)))
+  print(paste("median accuracy = " , median(cvaccs)))
+  print("confusion table for mode of 100 predicitions")
+ print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
+  print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
   rm(modeldata,preddata,CM,hist,fit)
   
 }
@@ -227,14 +316,32 @@ for(f in filelist){
   print("what happens when CV is performed a 100 times")
   cvaccs=vector()
   newmodeldata = modeldata[!(names(modeldata) %in% c("preds"))]
+  newmodeldatawithpreds=newmodeldata
+  t=1
   for (t in 1:100){
     set.seed(t)
     f <- paste(dep,"~.")
     fit <- do.call("svm",list(as.formula(f),modeldata,cross=10))
     cvaccs[t] = fit$tot.accuracy
+    colname=paste("predseed_",t,sep="")
+    newmodeldatawithpreds[[colname]] <- predict(fit,newdata=modeldata)
+    newmodeldatawithpreds[[colname]] <- factor(newmodeldatawithpreds[[colname]],levels=1:5)
   }
+  ncols <- ncol(newmodeldatawithpreds)
+  startn = ncols-99
+  r=1
+  for (r in 1:nrow(newmodeldatawithpreds)){
+    vect <- newmodeldatawithpreds[r,c(startn:ncols)]
+    #vect <- as.character(vect)
+    newmodeldatawithpreds[r,"moderesult"] <- Modus(vect)
+  }
+newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5)
   boxplot(cvaccs)
   print(paste("mean accuracy = " , mean(cvaccs)))
+  print(paste("median accuracy = " , median(cvaccs)))
+  print("confusion table for mode of 100 predicitions")
+ print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
+  print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
   rm(modeldata,preddata,CM,hist,fit)
   
 }
@@ -263,14 +370,32 @@ for(f in filelist){
   print("what happens when CV is performed a 100 times")
   cvaccs=vector()
   newmodeldata = modeldata[!(names(modeldata) %in% c("preds"))]
+  newmodeldatawithpreds=newmodeldata
+  t=1
   for (t in 1:100){
     set.seed(t)
     f <- paste(dep,"~.")
     fit <- do.call("svm",list(as.formula(f),modeldata,cross=10))
     cvaccs[t] = fit$tot.accuracy
+    colname=paste("predseed_",t,sep="")
+    newmodeldatawithpreds[[colname]] <- predict(fit,newdata=modeldata)
+    newmodeldatawithpreds[[colname]] <- factor(newmodeldatawithpreds[[colname]],levels=1:5)
   }
+  ncols <- ncol(newmodeldatawithpreds)
+  startn = ncols-99
+  r=1
+  for (r in 1:nrow(newmodeldatawithpreds)){
+    vect <- newmodeldatawithpreds[r,c(startn:ncols)]
+    #vect <- as.character(vect)
+    newmodeldatawithpreds[r,"moderesult"] <- Modus(vect)
+  }
+newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5)
   boxplot(cvaccs)
   print(paste("mean accuracy = " , mean(cvaccs)))
+  print(paste("median accuracy = " , median(cvaccs)))
+  print("confusion table for mode of 100 predicitions")
+ print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
+  print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
   rm(modeldata,preddata,CM,hist,fit)
   
 }
@@ -299,14 +424,32 @@ for(f in filelist){
   print("what happens when CV is performed a 100 times")
   cvaccs=vector()
   newmodeldata = modeldata[!(names(modeldata) %in% c("preds"))]
+  newmodeldatawithpreds=newmodeldata
+  t=1
   for (t in 1:100){
     set.seed(t)
     f <- paste(dep,"~.")
     fit <- do.call("svm",list(as.formula(f),modeldata,cross=10))
     cvaccs[t] = fit$tot.accuracy
+    colname=paste("predseed_",t,sep="")
+    newmodeldatawithpreds[[colname]] <- predict(fit,newdata=modeldata)
+    newmodeldatawithpreds[[colname]] <- factor(newmodeldatawithpreds[[colname]],levels=1:5)
   }
+  ncols <- ncol(newmodeldatawithpreds)
+  startn = ncols-99
+  r=1
+  for (r in 1:nrow(newmodeldatawithpreds)){
+    vect <- newmodeldatawithpreds[r,c(startn:ncols)]
+    #vect <- as.character(vect)
+    newmodeldatawithpreds[r,"moderesult"] <- Modus(vect)
+  }
+newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5)
   boxplot(cvaccs)
   print(paste("mean accuracy = " , mean(cvaccs)))
+  print(paste("median accuracy = " , median(cvaccs)))
+  print("confusion table for mode of 100 predicitions")
+ print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
+  print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
   rm(modeldata,preddata,CM,hist,fit)
   
 }
@@ -335,14 +478,32 @@ for(f in filelist){
   print("what happens when CV is performed a 100 times")
   cvaccs=vector()
   newmodeldata = modeldata[!(names(modeldata) %in% c("preds"))]
+  newmodeldatawithpreds=newmodeldata
+  t=1
   for (t in 1:100){
     set.seed(t)
     f <- paste(dep,"~.")
     fit <- do.call("svm",list(as.formula(f),modeldata,cross=10))
     cvaccs[t] = fit$tot.accuracy
+    colname=paste("predseed_",t,sep="")
+    newmodeldatawithpreds[[colname]] <- predict(fit,newdata=modeldata)
+    newmodeldatawithpreds[[colname]] <- factor(newmodeldatawithpreds[[colname]],levels=1:5)
   }
+  ncols <- ncol(newmodeldatawithpreds)
+  startn = ncols-99
+  r=1
+  for (r in 1:nrow(newmodeldatawithpreds)){
+    vect <- newmodeldatawithpreds[r,c(startn:ncols)]
+    #vect <- as.character(vect)
+    newmodeldatawithpreds[r,"moderesult"] <- Modus(vect)
+  }
+newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5)
   boxplot(cvaccs)
   print(paste("mean accuracy = " , mean(cvaccs)))
+  print(paste("median accuracy = " , median(cvaccs)))
+  print("confusion table for mode of 100 predicitions")
+ print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
+  print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
   rm(modeldata,preddata,CM,hist,fit)
   
 }
@@ -371,14 +532,32 @@ for(f in filelist){
   print("what happens when CV is performed a 100 times")
   cvaccs=vector()
   newmodeldata = modeldata[!(names(modeldata) %in% c("preds"))]
+  newmodeldatawithpreds=newmodeldata
+  t=1
   for (t in 1:100){
     set.seed(t)
     f <- paste(dep,"~.")
     fit <- do.call("svm",list(as.formula(f),modeldata,cross=10))
     cvaccs[t] = fit$tot.accuracy
+    colname=paste("predseed_",t,sep="")
+    newmodeldatawithpreds[[colname]] <- predict(fit,newdata=modeldata)
+    newmodeldatawithpreds[[colname]] <- factor(newmodeldatawithpreds[[colname]],levels=1:5)
   }
+  ncols <- ncol(newmodeldatawithpreds)
+  startn = ncols-99
+  r=1
+  for (r in 1:nrow(newmodeldatawithpreds)){
+    vect <- newmodeldatawithpreds[r,c(startn:ncols)]
+    #vect <- as.character(vect)
+    newmodeldatawithpreds[r,"moderesult"] <- Modus(vect)
+  }
+newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5)
   boxplot(cvaccs)
   print(paste("mean accuracy = " , mean(cvaccs)))
+  print(paste("median accuracy = " , median(cvaccs)))
+  print("confusion table for mode of 100 predicitions")
+ print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
+  print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
   rm(modeldata,preddata,CM,hist,fit)
   
 }
@@ -407,14 +586,32 @@ for(f in filelist){
   print("what happens when CV is performed a 100 times")
   cvaccs=vector()
   newmodeldata = modeldata[!(names(modeldata) %in% c("preds"))]
+  newmodeldatawithpreds=newmodeldata
+  t=1
   for (t in 1:100){
     set.seed(t)
     f <- paste(dep,"~.")
     fit <- do.call("svm",list(as.formula(f),modeldata,cross=10))
     cvaccs[t] = fit$tot.accuracy
+    colname=paste("predseed_",t,sep="")
+    newmodeldatawithpreds[[colname]] <- predict(fit,newdata=modeldata)
+    newmodeldatawithpreds[[colname]] <- factor(newmodeldatawithpreds[[colname]],levels=1:5)
   }
+  ncols <- ncol(newmodeldatawithpreds)
+  startn = ncols-99
+  r=1
+  for (r in 1:nrow(newmodeldatawithpreds)){
+    vect <- newmodeldatawithpreds[r,c(startn:ncols)]
+    #vect <- as.character(vect)
+    newmodeldatawithpreds[r,"moderesult"] <- Modus(vect)
+  }
+newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5)
   boxplot(cvaccs)
   print(paste("mean accuracy = " , mean(cvaccs)))
+  print(paste("median accuracy = " , median(cvaccs)))
+  print("confusion table for mode of 100 predicitions")
+ print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
+  print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
   rm(modeldata,preddata,CM,hist,fit)
   
 }
@@ -443,14 +640,32 @@ for(f in filelist){
   print("what happens when CV is performed a 100 times")
   cvaccs=vector()
   newmodeldata = modeldata[!(names(modeldata) %in% c("preds"))]
+  newmodeldatawithpreds=newmodeldata
+  t=1
   for (t in 1:100){
     set.seed(t)
     f <- paste(dep,"~.")
     fit <- do.call("svm",list(as.formula(f),modeldata,cross=10))
     cvaccs[t] = fit$tot.accuracy
+    colname=paste("predseed_",t,sep="")
+    newmodeldatawithpreds[[colname]] <- predict(fit,newdata=modeldata)
+    newmodeldatawithpreds[[colname]] <- factor(newmodeldatawithpreds[[colname]],levels=1:5)
   }
+  ncols <- ncol(newmodeldatawithpreds)
+  startn = ncols-99
+  r=1
+  for (r in 1:nrow(newmodeldatawithpreds)){
+    vect <- newmodeldatawithpreds[r,c(startn:ncols)]
+    #vect <- as.character(vect)
+    newmodeldatawithpreds[r,"moderesult"] <- Modus(vect)
+  }
+newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5)
   boxplot(cvaccs)
   print(paste("mean accuracy = " , mean(cvaccs)))
+  print(paste("median accuracy = " , median(cvaccs)))
+  print("confusion table for mode of 100 predicitions")
+ print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
+  print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
   rm(modeldata,preddata,CM,hist,fit)
   
 }
@@ -479,14 +694,32 @@ for(f in filelist){
   print("what happens when CV is performed a 100 times")
   cvaccs=vector()
   newmodeldata = modeldata[!(names(modeldata) %in% c("preds"))]
+  newmodeldatawithpreds=newmodeldata
+  t=1
   for (t in 1:100){
     set.seed(t)
     f <- paste(dep,"~.")
     fit <- do.call("svm",list(as.formula(f),modeldata,cross=10))
     cvaccs[t] = fit$tot.accuracy
+    colname=paste("predseed_",t,sep="")
+    newmodeldatawithpreds[[colname]] <- predict(fit,newdata=modeldata)
+    newmodeldatawithpreds[[colname]] <- factor(newmodeldatawithpreds[[colname]],levels=1:5)
   }
+  ncols <- ncol(newmodeldatawithpreds)
+  startn = ncols-99
+  r=1
+  for (r in 1:nrow(newmodeldatawithpreds)){
+    vect <- newmodeldatawithpreds[r,c(startn:ncols)]
+    #vect <- as.character(vect)
+    newmodeldatawithpreds[r,"moderesult"] <- Modus(vect)
+  }
+newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5)
   boxplot(cvaccs)
   print(paste("mean accuracy = " , mean(cvaccs)))
+  print(paste("median accuracy = " , median(cvaccs)))
+  print("confusion table for mode of 100 predicitions")
+ print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
+  print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
   rm(modeldata,preddata,CM,hist,fit)
   
 }
@@ -515,14 +748,32 @@ for(f in filelist){
   print("what happens when CV is performed a 100 times")
   cvaccs=vector()
   newmodeldata = modeldata[!(names(modeldata) %in% c("preds"))]
+  newmodeldatawithpreds=newmodeldata
+  t=1
   for (t in 1:100){
     set.seed(t)
     f <- paste(dep,"~.")
     fit <- do.call("svm",list(as.formula(f),modeldata,cross=10))
     cvaccs[t] = fit$tot.accuracy
+    colname=paste("predseed_",t,sep="")
+    newmodeldatawithpreds[[colname]] <- predict(fit,newdata=modeldata)
+    newmodeldatawithpreds[[colname]] <- factor(newmodeldatawithpreds[[colname]],levels=1:5)
   }
+  ncols <- ncol(newmodeldatawithpreds)
+  startn = ncols-99
+  r=1
+  for (r in 1:nrow(newmodeldatawithpreds)){
+    vect <- newmodeldatawithpreds[r,c(startn:ncols)]
+    #vect <- as.character(vect)
+    newmodeldatawithpreds[r,"moderesult"] <- Modus(vect)
+  }
+newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5)
   boxplot(cvaccs)
   print(paste("mean accuracy = " , mean(cvaccs)))
+  print(paste("median accuracy = " , median(cvaccs)))
+  print("confusion table for mode of 100 predicitions")
+ print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
+  print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
   rm(modeldata,preddata,CM,hist,fit)
   
 }
@@ -551,14 +802,32 @@ for(f in filelist){
   print("what happens when CV is performed a 100 times")
   cvaccs=vector()
   newmodeldata = modeldata[!(names(modeldata) %in% c("preds"))]
+  newmodeldatawithpreds=newmodeldata
+  t=1
   for (t in 1:100){
     set.seed(t)
     f <- paste(dep,"~.")
     fit <- do.call("svm",list(as.formula(f),modeldata,cross=10))
     cvaccs[t] = fit$tot.accuracy
+    colname=paste("predseed_",t,sep="")
+    newmodeldatawithpreds[[colname]] <- predict(fit,newdata=modeldata)
+    newmodeldatawithpreds[[colname]] <- factor(newmodeldatawithpreds[[colname]],levels=1:5)
   }
+  ncols <- ncol(newmodeldatawithpreds)
+  startn = ncols-99
+  r=1
+  for (r in 1:nrow(newmodeldatawithpreds)){
+    vect <- newmodeldatawithpreds[r,c(startn:ncols)]
+    #vect <- as.character(vect)
+    newmodeldatawithpreds[r,"moderesult"] <- Modus(vect)
+  }
+newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5)
   boxplot(cvaccs)
   print(paste("mean accuracy = " , mean(cvaccs)))
+  print(paste("median accuracy = " , median(cvaccs)))
+  print("confusion table for mode of 100 predicitions")
+ print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
+  print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
   rm(modeldata,preddata,CM,hist,fit)
   
 }

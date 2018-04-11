@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.8.24)  10 APR 2018 17:17
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.2.14)  11 APR 2018 17:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **PAPIERLDREI.tex
 (./PAPIERLDREI.tex
 LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 78 languages loaded.
+Babel <3.9h> and hyphenation patterns for 11 languages loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/elsarticle/elsarticle.cls
 Document Class: elsarticle 2009/09/17, 1.2.0: Elsevier Ltd
 \@bls=\dimen102
@@ -232,24 +232,26 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip47
 )
-(./PAPIERLDREI.aux)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fixltx2e.sty
+Package: fixltx2e 2006/09/13 v1.1m fixes to LaTeX
+LaTeX Info: Redefining \em on input line 420.
+) (./PAPIERLDREI.aux)
 \openout1 = `PAPIERLDREI.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count112
@@ -279,7 +281,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box32
-Package hyperref Info: Link coloring OFF on input line 40.
+Package hyperref Info: Link coloring OFF on input line 41.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -289,31 +291,31 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count118
 )
-LaTeX Info: Redefining \ref on input line 40.
-LaTeX Info: Redefining \pageref on input line 40.
-LaTeX Info: Redefining \nameref on input line 40.
+LaTeX Info: Redefining \ref on input line 41.
+LaTeX Info: Redefining \pageref on input line 41.
+LaTeX Info: Redefining \nameref on input line 41.
 
 (./PAPIERLDREI.out) (./PAPIERLDREI.out)
 \@outlinefile=\write4
 \openout4 = `PAPIERLDREI.out'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 67.
+(Font)              <7> on input line 68.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 67.
+(Font)              <5> on input line 68.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 67.
+(Font)              <12> on input line 68.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 67.
+(Font)              <8> on input line 68.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 67.
+(Font)              <6> on input line 68.
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
+Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--76
+Underfull \hbox (badness 10000) in paragraph at lines 75--77
 
  []
 
@@ -325,7 +327,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 74--76
 File: soilfunctiondistro.pdf Graphic file (type pdf)
 
 <use soilfunctiondistro.pdf>
-Package pdftex.def Info: soilfunctiondistro.pdf used on input line 120.
+Package pdftex.def Info: soilfunctiondistro.pdf used on input line 121.
 (pdftex.def)             Requested size: 390.0pt x 222.98781pt.
  [4 <./soilfunctiondistro.pdf>] [5]
 (./PAPIERLDREI.bbl
@@ -343,41 +345,44 @@ Underfull \hbox (badness 1642) in paragraph at lines 37--50
  soil map-ping, clas-si-fi-ca-tion, and
  []
 
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 152.
- [6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 152.
+[6])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 184.
+ [7]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 184.
  (./PAPIERLDREI.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 152.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 152.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 184.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 184.
 Package rerunfilecheck Info: File `PAPIERLDREI.out' has not changed.
 (rerunfilecheck)             Checksum: 058D6E2888F43108C547CD30D0260E91;554.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 152.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 184.
  ) 
 Here is how much of TeX's memory you used:
- 5944 strings out of 493304
- 86208 string characters out of 6139871
- 175584 words of memory out of 5000000
- 9313 multiletter control sequences out of 15000+600000
- 9351 words of font info for 33 fonts, out of 8000000 for 9000
- 957 hyphenation exceptions out of 8191
- 34i,11n,34p,1548b,377s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 5975 strings out of 494912
+ 86607 string characters out of 6177074
+ 177370 words of memory out of 5000000
+ 9120 multiletter control sequences out of 15000+600000
+ 9703 words of font info for 34 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 34i,13n,34p,1548b,456s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
-7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on PAPIERLDREI.pdf (6 pages, 180674 bytes).
+-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on PAPIERLDREI.pdf (7 pages, 209851 bytes).
 PDF statistics:
- 200 PDF objects out of 1000 (max. 8388607)
- 172 compressed objects within 2 object streams
- 41 named destinations out of 1000 (max. 500000)
+ 218 PDF objects out of 1000 (max. 8388607)
+ 186 compressed objects within 2 object streams
+ 42 named destinations out of 1000 (max. 500000)
  70 words of extra memory for PDF output out of 10000 (max. 10000000)
 
