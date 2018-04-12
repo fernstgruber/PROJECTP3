@@ -14,8 +14,8 @@ require(randomForest)
 require(rgdal)
 myfunctions <- getURL("https://raw.githubusercontent.com/fernstgruber/Rstuff/master/fabiansandrossitersfunctions.R", ssl.verifypeer = FALSE)
 eval(parse(text = myfunctions))
-#proj3path="/home/fabs/PROJECTP3"
-proj3path="/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/"
+proj3path="/home/fabs/PROJECTP3"
+#proj3path="/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/"
 #setwd(proj3path)
 load('../data/dependentlists.RData')
 ```
@@ -44,12 +44,13 @@ for(f in filelist){
   print("what happens when CV is performed a 100 times")
   cvaccs=vector()
   newmodeldata = modeldata[!(names(modeldata) %in% c("preds"))]
+newname=paste(names(modeldata),collapse="_")
   newmodeldatawithpreds=newmodeldata
   t=1
   for (t in 1:100){
     set.seed(t)
-    f <- paste(dep,"~.")
-    fit <- do.call("svm",list(as.formula(f),modeldata,cross=10))
+    formel <- paste(dep,"~.")
+    fit <- do.call("svm",list(as.formula(formel),modeldata,cross=10))
     cvaccs[t] = fit$tot.accuracy
     colname=paste("predseed_",t,sep="")
     newmodeldatawithpreds[[colname]] <- predict(fit,newdata=modeldata)
@@ -70,6 +71,7 @@ newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5
   print("confusion table for mode of 100 predicitions")
  print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
   print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
+  save(newmodeldatawithpreds,cvaccs,file=paste("cv100_",newname,".RData",sep=""))
   rm(modeldata,preddata,CM,hist,fit)
   
 }
@@ -100,6 +102,7 @@ for(f in filelist){
   print("what happens when CV is performed a 100 times")
   cvaccs=vector()
   newmodeldata = modeldata[!(names(modeldata) %in% c("preds"))]
+  newname=paste(names(modeldata),collapse="_")
   newmodeldatawithpreds=newmodeldata
   t=1
   for (t in 1:100){
@@ -126,6 +129,7 @@ newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5
   print("confusion table for mode of 100 predicitions")
  print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
   print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
+  save(newmodeldatawithpreds,cvaccs,file=paste("cv100_",newname,".RData",sep=""))
   rm(modeldata,preddata,CM,hist,fit)
   
 }
@@ -154,6 +158,7 @@ for(f in filelist){
   print("what happens when CV is performed a 100 times")
   cvaccs=vector()
   newmodeldata = modeldata[!(names(modeldata) %in% c("preds"))]
+  newname=paste(names(modeldata),collapse="_")
   newmodeldatawithpreds=newmodeldata
   t=1
   for (t in 1:100){
@@ -180,6 +185,7 @@ newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5
   print("confusion table for mode of 100 predicitions")
  print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
   print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
+  save(newmodeldatawithpreds,cvaccs,file=paste("cv100_",newname,".RData",sep=""))
   rm(modeldata,preddata,CM,hist,fit)
   
 }
@@ -208,6 +214,7 @@ for(f in filelist){
   print("what happens when CV is performed a 100 times")
   cvaccs=vector()
   newmodeldata = modeldata[!(names(modeldata) %in% c("preds"))]
+  newname=paste(names(modeldata),collapse="_")
   newmodeldatawithpreds=newmodeldata
   t=1
   for (t in 1:100){
@@ -234,6 +241,7 @@ newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5
   print("confusion table for mode of 100 predicitions")
  print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
   print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
+  save(newmodeldatawithpreds,cvaccs,file=paste("cv100_",newname,".RData",sep=""))
   rm(modeldata,preddata,CM,hist,fit)
   
 }
@@ -262,6 +270,7 @@ for(f in filelist){
   print("what happens when CV is performed a 100 times")
   cvaccs=vector()
   newmodeldata = modeldata[!(names(modeldata) %in% c("preds"))]
+  newname=paste(names(modeldata),collapse="_")
   newmodeldatawithpreds=newmodeldata
   t=1
   for (t in 1:100){
@@ -288,6 +297,7 @@ newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5
   print("confusion table for mode of 100 predicitions")
  print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
   print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
+  save(newmodeldatawithpreds,cvaccs,file=paste("cv100_",newname,".RData",sep=""))
   rm(modeldata,preddata,CM,hist,fit)
   
 }
@@ -316,6 +326,7 @@ for(f in filelist){
   print("what happens when CV is performed a 100 times")
   cvaccs=vector()
   newmodeldata = modeldata[!(names(modeldata) %in% c("preds"))]
+  newname=paste(names(modeldata),collapse="_")
   newmodeldatawithpreds=newmodeldata
   t=1
   for (t in 1:100){
@@ -342,6 +353,7 @@ newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5
   print("confusion table for mode of 100 predicitions")
  print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
   print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
+  save(newmodeldatawithpreds,cvaccs,file=paste("cv100_",newname,".RData",sep=""))
   rm(modeldata,preddata,CM,hist,fit)
   
 }
@@ -378,6 +390,7 @@ for(f in filelist){
     fit <- do.call("svm",list(as.formula(f),modeldata,cross=10))
     cvaccs[t] = fit$tot.accuracy
     colname=paste("predseed_",t,sep="")
+    newname=paste(names(modeldata),collapse="_")
     newmodeldatawithpreds[[colname]] <- predict(fit,newdata=modeldata)
     newmodeldatawithpreds[[colname]] <- factor(newmodeldatawithpreds[[colname]],levels=1:5)
   }
@@ -396,6 +409,7 @@ newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5
   print("confusion table for mode of 100 predicitions")
  print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
   print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
+  save(newmodeldatawithpreds,cvaccs,file=paste("cv100_",newname,".RData",sep=""))
   rm(modeldata,preddata,CM,hist,fit)
   
 }
@@ -424,6 +438,7 @@ for(f in filelist){
   print("what happens when CV is performed a 100 times")
   cvaccs=vector()
   newmodeldata = modeldata[!(names(modeldata) %in% c("preds"))]
+  newname=paste(names(modeldata),collapse="_")
   newmodeldatawithpreds=newmodeldata
   t=1
   for (t in 1:100){
@@ -450,6 +465,7 @@ newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5
   print("confusion table for mode of 100 predicitions")
  print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
   print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
+  save(newmodeldatawithpreds,cvaccs,file=paste("cv100_",newname,".RData",sep=""))
   rm(modeldata,preddata,CM,hist,fit)
   
 }
@@ -478,6 +494,7 @@ for(f in filelist){
   print("what happens when CV is performed a 100 times")
   cvaccs=vector()
   newmodeldata = modeldata[!(names(modeldata) %in% c("preds"))]
+  newname=paste(names(modeldata),collapse="_")
   newmodeldatawithpreds=newmodeldata
   t=1
   for (t in 1:100){
@@ -504,6 +521,7 @@ newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5
   print("confusion table for mode of 100 predicitions")
  print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
   print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
+  save(newmodeldatawithpreds,cvaccs,file=paste("cv100_",newname,".RData",sep=""))
   rm(modeldata,preddata,CM,hist,fit)
   
 }
@@ -532,6 +550,7 @@ for(f in filelist){
   print("what happens when CV is performed a 100 times")
   cvaccs=vector()
   newmodeldata = modeldata[!(names(modeldata) %in% c("preds"))]
+  newname=paste(names(modeldata),collapse="_")
   newmodeldatawithpreds=newmodeldata
   t=1
   for (t in 1:100){
@@ -558,6 +577,7 @@ newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5
   print("confusion table for mode of 100 predicitions")
  print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
   print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
+  save(newmodeldatawithpreds,cvaccs,file=paste("cv100_",newname,".RData",sep=""))
   rm(modeldata,preddata,CM,hist,fit)
   
 }
@@ -586,6 +606,7 @@ for(f in filelist){
   print("what happens when CV is performed a 100 times")
   cvaccs=vector()
   newmodeldata = modeldata[!(names(modeldata) %in% c("preds"))]
+  newname=paste(names(modeldata),collapse="_")
   newmodeldatawithpreds=newmodeldata
   t=1
   for (t in 1:100){
@@ -612,6 +633,7 @@ newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5
   print("confusion table for mode of 100 predicitions")
  print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
   print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
+  save(newmodeldatawithpreds,cvaccs,file=paste("cv100_",newname,".RData",sep=""))
   rm(modeldata,preddata,CM,hist,fit)
   
 }
@@ -640,6 +662,7 @@ for(f in filelist){
   print("what happens when CV is performed a 100 times")
   cvaccs=vector()
   newmodeldata = modeldata[!(names(modeldata) %in% c("preds"))]
+  newname=paste(names(modeldata),collapse="_")
   newmodeldatawithpreds=newmodeldata
   t=1
   for (t in 1:100){
@@ -666,6 +689,7 @@ newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5
   print("confusion table for mode of 100 predicitions")
  print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
   print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
+  save(newmodeldatawithpreds,cvaccs,file=paste("cv100_",newname,".RData",sep=""))
   rm(modeldata,preddata,CM,hist,fit)
   
 }
@@ -694,6 +718,7 @@ for(f in filelist){
   print("what happens when CV is performed a 100 times")
   cvaccs=vector()
   newmodeldata = modeldata[!(names(modeldata) %in% c("preds"))]
+  newname=paste(names(modeldata),collapse="_")
   newmodeldatawithpreds=newmodeldata
   t=1
   for (t in 1:100){
@@ -720,6 +745,7 @@ newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5
   print("confusion table for mode of 100 predicitions")
  print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
   print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
+  save(newmodeldatawithpreds,cvaccs,file=paste("cv100_",newname,".RData",sep=""))
   rm(modeldata,preddata,CM,hist,fit)
   
 }
@@ -748,6 +774,7 @@ for(f in filelist){
   print("what happens when CV is performed a 100 times")
   cvaccs=vector()
   newmodeldata = modeldata[!(names(modeldata) %in% c("preds"))]
+  newname=paste(names(modeldata),collapse="_")
   newmodeldatawithpreds=newmodeldata
   t=1
   for (t in 1:100){
@@ -774,6 +801,7 @@ newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5
   print("confusion table for mode of 100 predicitions")
  print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
   print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
+  save(newmodeldatawithpreds,cvaccs,file=paste("cv100_",newname,".RData",sep=""))
   rm(modeldata,preddata,CM,hist,fit)
   
 }
@@ -802,6 +830,7 @@ for(f in filelist){
   print("what happens when CV is performed a 100 times")
   cvaccs=vector()
   newmodeldata = modeldata[!(names(modeldata) %in% c("preds"))]
+  newname=paste(names(modeldata),collapse="_")
   newmodeldatawithpreds=newmodeldata
   t=1
   for (t in 1:100){
@@ -828,6 +857,7 @@ newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5
   print("confusion table for mode of 100 predicitions")
  print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
   print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
+  save(newmodeldatawithpreds,cvaccs,file=paste("cv100_",newname,".RData",sep=""))
   rm(modeldata,preddata,CM,hist,fit)
   
 }

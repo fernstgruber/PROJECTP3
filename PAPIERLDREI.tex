@@ -132,24 +132,30 @@ A first evaluation of the feature selection procedure shows that mostly 2 parame
 \begin{tabular}{l|ccccc}
   \hline
   \hline
-potential & parameter & res & windowsize & acc & multiacc\\ 
+potential & parameter & res & windowsize & multiacc & testacc\\ 
   \hline
-habitat for drought-tolerant species & landforms & 10 & 100 & acc & multiacc\\ 
- & min. curvature & 2.5 & 22.5 & acc & multiacc\\ 
+habitat for drought-tolerant species & landforms & 10 & 100 &  &\\ 
+ & slope & 50 & 350 & 50.0 & 50.0\\ 
   \hline
-habitat for moisture-tolerant species & parameter & res & windowsize & acc & multiacc\\ 
+habitat for moisture-tolerant species & long. curvature & 2.5 & 7.5 & &\\ 
+ & landforms & 10 & 70 & 53.7 & 53.7\\ 
   \hline
-habitat for soil organisms & parameter & res & windowsize & acc & multiacc\\ 
+habitat for soil organisms & cross-sec. curvature & 50 & 350 & & \\ 
+ & slope & 50 & 350 &  &\\ 
+ & convexity & 50 & 150 & 59.3 & 62.0\\ 
   \hline
-agricultural production & parameter & res & windowsize & acc & multiacc\\ 
+agricultural production & slope & 2.5 & 7.5 & 86.1 & 86.1\\ 
   \hline
-average precipitation retention capacity & parameter & res & windowsize & acc & multiacc\\ 
+average precipitation retention capacity & cross-sec. curvature & 2.5 & 47.5 &  & \\
+ & profile curvature & 10 & 150 & 50.9 & 54.6\\  
   \hline
-minimum precipitation retention capacity & parameter & res & windowsize & acc & multiacc\\ 
+minimum precipitation retention capacity & plan curvature & 2.5 & 72.5 &  & \\ 
+ & minimal curvature & 50 & 150 & 41.6 &46.3\\ 
   \hline
-retention capacity for heavy precipitation events & parameter & res & windowsize & acc & multiacc\\ 
+retention capacity for heavy precipitation events & long. curvature & 10 & 150 & 73.1 & 73.1\\ 
   \hline
-groundwater reformation rate & parameter & res & windowsize & acc & multiacc\\ 
+groundwater reformation rate & cross-sec. curvature & res & windowsize &  & \\ 
+& profile curvature & res & windowsize & acc & multiacc\\
   \hline
 providing nutrients for plants & parameter & res & windowsize & acc & multiacc\\ 
   \hline
@@ -171,7 +177,7 @@ buffer for acidic contaminants & parameter & res & windowsize & acc & multiacc\\
 \end{table}
 \subsection{Potential as a habitat for drought-tolerant species}
 Figure~\ref{fig:SFdistro} shows that of the 108 soil profile sites in the study area, 38 fall into class 4 (35\%) and 32 into class 5 regarding the potential as a habitat for drought-tolerant species. The intermediate class 3 contains 21 soil profiles whereas the high potential classes 1 and 2 are attribute to only 4 and 13 sites, respectively. 
-As the predictor set does not contain landuse nor soil type, the SVM classification essentially attempts to model the different classes of available field capacity. In the majority of the feature selection runs a landform map based on a flatness threshold between 3 and 5$^{\circ}$,a spatial resolution of 10~m and a search radius of 100~m was chosen as the first predictive feature. The landform flat is dominant amongst the profile sites with a graded potential of 5, which is accordingly connected to minimal curvature values around 0. The landform slope is  most common for profiles with a potential  of 4, whereas spurs and hollow can present profile locations with a  potential score of 2 and, as expected, have increasingly negative minimum curvature values. A support vector classifier using these two predictor variables results in a cross-validated prediction accuracy of 47\%, where the most common error is that  a large number of sites are mistakenly classified as having grade 4. Nevertheless, the general implications of the feature selection are plausible, as flat areas  can  be expected to have higher field capacity values than sloping regions with negative curvature values.
+As the predictor set does not contain landuse nor soil type, the SVM classification essentially attempts to model the different classes of available field capacity. In the majority of the feature selection runs a landform map based on a flatness threshold between 3 and 5$^{\circ}$,a spatial resolution of 10~m and a search radius of 100~m was chosen as the first predictive feature. The landform flat is dominant amongst the profile sites with a graded potential of 5, which is accordingly connected to minimal curvature values around 0. The landform slope is  most common for profiles with a potential  of 4, whereas spurs and hollow can present profile locations with a  potential score of 2 and, as expected, have increasingly negative minimum curvature values. A support vector classifier using theselandforms and slope at a low DTM resolution as predictor variables, results in a median cross-validated prediction accuracy of 50\%, where the most common error is that  a large number of sites are mistakenly classified as having grade 4. Nevertheless, the general implications of the feature selection are plausible, as flat areas  can  be expected to have higher field capacity values than sloping regions with negative curvature values.
 \subsection{Potential as a habitat for moisture-tolerant species}
 \section{Conclusion}
  
