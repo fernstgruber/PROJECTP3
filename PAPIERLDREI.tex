@@ -122,7 +122,7 @@ The soil function grades for each of the 15 potentials was calculated for each o
 \caption{Barplots representing the distribution of the soil function grades for the various analysed potentials. }
 \label{fig:SFdistro}
 \end{figure}
-A first evaluation of the feature selection procedure shows that mostly 2 parameters are sufficient, that is that there is no increase in cross-validated prediction accuracy  by adding more predictors, and most of the time these a combination of a landform classification and a roughness or also local terrain parameter.
+A first evaluation of the feature selection procedure shows that mostly 2 parameters are sufficient, that is that there is no increase in cross-validated prediction accuracy  by adding more predictors, and most of the time these a combination of a landform classification and a local terrain parameter.
 \begin{table}[!htbp]
 
 \caption{Accuracy values (\%) and parameters for the different potentials}
@@ -154,22 +154,25 @@ minimum precipitation retention capacity & plan curvature & 2.5 & 72.5 &  & \\
   \hline
 retention capacity for heavy precipitation events & long. curvature & 10 & 150 & 73.1 & 73.1\\ 
   \hline
-groundwater reformation rate & cross-sec. curvature & res & windowsize &  & \\ 
-& profile curvature & res & windowsize & acc & multiacc\\
+groundwater reformation rate & cross-sec. curvature & 2.5 &57.5 &  & \\ 
+& profile curvature & 10 & 50 & 47.2 & 49.1\\
   \hline
 providing nutrients for plants & minimal curvature & 2.5 & 22.5 & 71.3 & 72.2\\ 
   \hline
 CO\textsubscript{2} sink & minimal curvature & 2.5 & 27.5 & 61.1 & 61.1\\ 
   \hline
-retention of heavy metals & parameter & res & windowsize & acc & multiacc\\ 
+retention of heavy metals & landforms & 10 & 70 & 63.9 & 63.9\\ 
   \hline
-transforming organic contaminants & parameter & res & windowsize & acc & multiacc\\ 
+transforming organic contaminants & landforms & 10 & 500 & & \\ 
+& maximal curvature & 10 & 70 & 46.3 & 50.0\\
   \hline
-filter and buffer for organic contaminants & parameter & res & windowsize & acc & multiacc\\ 
+filter and buffer for organic contaminants & - & - & - & - &- \\ 
   \hline
- retention of water-soluble contaminants & parameter & res & windowsize & acc & multiacc\\ 
+ retention of water-soluble contaminants & slope & 2.5 & 27.5 &  & \\ 
+ & minimal curvature & 2.5 & 7.5 &53.7 & 59.3\\ 
   \hline
-buffer for acidic contaminants & parameter & res & windowsize & acc & multiacc\\ 
+buffer for acidic contaminants & plan curvature & 2.5 & 12.5 & & \\ 
+ & slope &2.5 & 12.5  & 48.1 & 50.0\\ 
   \hline
 
 \end{tabular}}
