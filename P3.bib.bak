@@ -27,6 +27,22 @@
   Timestamp                = {2018.03.28}
 }
 
+@Article{Cortes1995,
+  Title                    = {Support-vector networks},
+  Author                   = {Corinna Cortes and Vladimir Vapnik},
+  Journal                  = {Machine Learning},
+  Year                     = {1995},
+
+  Month                    = {September},
+  Number                   = {3},
+  Pages                    = {273-297},
+  Volume                   = {20},
+
+  Doi                      = {10.1007/BF00994018},
+  Owner                    = {fabs},
+  Timestamp                = {2016.08.30}
+}
+
 @TechReport{Gerstenberg2005,
   Title                    = {{Erstellung von Karten zur Bewertung der Bodenfunktionen - Umsetzung der im Gutachten von Lahmeyer aufgef\"uhrten Verfahren in Fl\"achendaten}},
   Author                   = {Josef H. Gerstenberg and Ursula Smettan},
@@ -74,7 +90,7 @@
 
 @TechReport{LUBW1995,
   Title                    = {{Bewertung von B\"oden nach ihrer Leistungsf \"ahigkeit}},
-  Author                   = {Lehle, M. and Bley, J.and Mayer, E. and Veit-Meya, R. and  Vogl, W.},
+  Author                   = {Lehle, M. and Bley, J.and Mayer, E. and Veit-Meya, R. and Vogl, W.},
   Institution              = {{Landesamt f\"ur Umwelt, Messungen und Naturschutz Baden-W\"urtemberg}},
   Year                     = {1995},
   Number                   = {31},

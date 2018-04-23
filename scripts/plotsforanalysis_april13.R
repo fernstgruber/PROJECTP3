@@ -6,8 +6,8 @@ require(rgdal)
 myfunctions <- getURL("https://raw.githubusercontent.com/fernstgruber/Rstuff/master/fabiansandrossitersfunctions.R", ssl.verifypeer = FALSE)
 eval(parse(text = myfunctions))
 load('../data/dependentlists.RData')
-#proj3path="/home/fabs/PROJECTP3/"
-proj3path="/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/"
+proj3path="/home/fabs/PROJECTP3/"
+#proj3path="/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/"
 #setwd(proj3path)
 dependentnr=1
 #preddata[["preds"]] <- factor(preddata[["preds"]],levels=1:5)

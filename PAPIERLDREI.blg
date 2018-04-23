@@ -5,45 +5,45 @@ The style file: model2-names.bst.bst
 Database file #1: P3.bib.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Warning--can't use both author and editor fields in Lehmann2008
-You've used 9 entries,
+You've used 10 entries,
             2990 wiz_defined-function locations,
-            802 strings with 9333 characters,
-and the built_in function-call counts, 6520 in all, are:
-= -- 430
-> -- 362
-< -- 6
-+ -- 138
-- -- 129
-* -- 773
-:= -- 970
-add.period$ -- 29
-call.type$ -- 9
-change.case$ -- 86
-chr.to.int$ -- 9
-cite$ -- 10
-duplicate$ -- 480
-empty$ -- 407
-format.name$ -- 158
-if$ -- 1155
+            810 strings with 9453 characters,
+and the built_in function-call counts, 7163 in all, are:
+= -- 483
+> -- 380
+< -- 7
++ -- 145
+- -- 135
+* -- 843
+:= -- 1061
+add.period$ -- 33
+call.type$ -- 10
+change.case$ -- 93
+chr.to.int$ -- 10
+cite$ -- 11
+duplicate$ -- 529
+empty$ -- 457
+format.name$ -- 169
+if$ -- 1278
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 105
-newline$ -- 62
-num.names$ -- 36
-pop$ -- 196
+missing$ -- 114
+newline$ -- 68
+num.names$ -- 40
+pop$ -- 211
 preamble$ -- 1
-purify$ -- 79
+purify$ -- 85
 quote$ -- 0
-skip$ -- 121
+skip$ -- 135
 stack$ -- 0
-substring$ -- 128
-swap$ -- 382
+substring$ -- 160
+swap$ -- 417
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 78
+type$ -- 87
 warning$ -- 1
-while$ -- 28
+while$ -- 32
 width$ -- 0
-write$ -- 147
+write$ -- 163
 (There was 1 warning)
