@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.8.24)  19 APR 2018 12:45
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.2.14)  24 APR 2018 16:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **PAPIERLDREI.tex
 (./PAPIERLDREI.tex
 LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 78 languages loaded.
+Babel <3.9h> and hyphenation patterns for 11 languages loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/elsarticle/elsarticle.cls
 Document Class: elsarticle 2009/09/17, 1.2.0: Elsevier Ltd
 \@bls=\dimen102
@@ -328,7 +328,7 @@ Overfull \hbox (5.02945pt too wide) in paragraph at lines 102--103
 r/m/n/12 Ad-her-ing to ([]M^^?uller and Waldeck[],
  []
 
-[4] <soilfunctiondistro.pdf, id=128, 713.39221pt x 407.88672pt>
+[4] <soilfunctiondistro.pdf, id=135, 713.39221pt x 407.88672pt>
 File: soilfunctiondistro.pdf Graphic file (type pdf)
 
 <use soilfunctiondistro.pdf>
@@ -336,7 +336,7 @@ Package pdftex.def Info: soilfunctiondistro.pdf used on input line 122.
 (pdftex.def)             Requested size: 390.0pt x 222.98781pt.
  [5] [6 <./soilfunctiondistro.pdf>] [7]
 (./PAPIERLDREI.bbl
-Underfull \hbox (badness 4353) in paragraph at lines 16--26
+Underfull \hbox (badness 4353) in paragraph at lines 27--37
 \OT1/cmr/m/n/12 Augs-burg. Augs-burg.  URL: []$\OT1/cmtt/m/n/12 https : / / www
  . lfu . bayern . de / boden /
  []
@@ -345,7 +345,7 @@ Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ” in font cmr12!
 
-Underfull \hbox (badness 1642) in paragraph at lines 54--67
+Underfull \hbox (badness 1642) in paragraph at lines 65--78
 \OT1/cmtt/m/n/12 10 . 1016 / j . geoderma . 2015 . 09 . 023$[]\OT1/cmr/m/n/12 .
  soil map-ping, clas-si-fi-ca-tion, and
  []
@@ -365,13 +365,13 @@ Package rerunfilecheck Info: File `PAPIERLDREI.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 195.
  ) 
 Here is how much of TeX's memory you used:
- 5996 strings out of 493304
- 86957 string characters out of 6139871
- 188311 words of memory out of 5000000
- 9353 multiletter control sequences out of 15000+600000
+ 6000 strings out of 494912
+ 87030 string characters out of 6177074
+ 185577 words of memory out of 5000000
+ 9137 multiletter control sequences out of 15000+600000
  9703 words of font info for 34 fonts, out of 8000000 for 9000
- 957 hyphenation exceptions out of 8191
- 34i,13n,34p,1548b,461s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36 hyphenation exceptions out of 8191
+ 34i,13n,34p,1548b,453s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texliv
@@ -387,10 +387,10 @@ sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on PAPIERLDREI.pdf (9 pages, 219838 bytes).
+Output written on PAPIERLDREI.pdf (9 pages, 220878 bytes).
 PDF statistics:
- 256 PDF objects out of 1000 (max. 8388607)
- 221 compressed objects within 3 object streams
- 49 named destinations out of 1000 (max. 500000)
+ 266 PDF objects out of 1000 (max. 8388607)
+ 231 compressed objects within 3 object streams
+ 50 named destinations out of 1000 (max. 500000)
  78 words of extra memory for PDF output out of 10000 (max. 10000000)
 

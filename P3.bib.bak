@@ -2,6 +2,24 @@
 % Encoding: UTF-8
 
 
+@Book{AGBoden2000,
+  Title                    = {{Methodendokumentation Bodenkunde - Auswertungsmethoden zur Beurteilung der Empfindlichkeit und Belastbarkeit von B\"oden}},
+  Author                   = {{AG Boden}},
+  Editor                   = {Volker Hennings},
+  Publisher                = {{Bundesanstalt f{\"u}r Geowissenschaften und Rohstoffe und Staatliche Geologische Dienste in der Bundesrepublik Deutschland}},
+  Year                     = {2000},
+
+  Address                  = {Stuttgart, Germany},
+  Month                    = {12},
+  Series                   = {G},
+
+  __markedentry            = {[fabs:6]},
+  ISBN                     = {9783510958702},
+  Owner                    = {fabs},
+  Timestamp                = {2018.04.24},
+  Url                      = {http://www.schweizerbart.de//publications/detail/isbn/9783510958702/Sonderheft\_SG\_1\_Geol\_Jahrb\_Reihe\_G\_}
+}
+
 @TechReport{BAYGLA2003,
   Title                    = {{Das Schutzgut Boden in der Planung - Bewertung nat\"uhrlicher Bodenfunktionen und Umsetzung in Planungs- und Genehmigungsverfahren}},
   Author                   = {{BayGLA and BayLfU}},
@@ -78,7 +96,7 @@
   Pages                    = {4--10},
   Volume                   = {61},
 
-  __markedentry            = {[fabs:6]},
+  __markedentry            = {[fabs:]},
   Abstract                 = {Abstract This essay summarizes deliberation by the Soil Science Society of America (SSSA) Ad Hoc Committee on Soil Quality (S-581) and was written to spur discussion among SSSA members. Varying perceptions of soil quality have emerged since the concept was suggested in the early 1990s, and dialogue among members is important because, unlike air and water quality, legislative standards for soil quality have not been and perhaps should not be defined. In simplest terms, soil quality is "the capacity (of soil) to function". This definition, based on function, reflects the living and dynamic nature of soil. Soil quality can be conceptualized as a three-legged stool, the function and balance of which requires an integration of three major components — sustained biological productivity, environmental quality, and plant and animal health. The concept attempts to balance multiple soil uses (e.g., for agricultural production, remediation of wastes, urban development, forest, range, or recreation) with goals for environmental quality. Assessing soil quality will require collaboration among all disciplines of science to examine and interpret their results in the context of land management strategies, interactions, and trade-offs. Society is demanding solutions from science. Simply measuring and reporting the response of an individual soil parameter to a given perturbation or management practice is no longer sufficient. The soil resource must be recognized as a dynamic living system that emerges through a unique balance and interaction of its biological, chemical, and physical components. We encourage SSSA members to consider the concept of soil quality (perhaps as a marketing tool) and to debate how it might enable us to more effectively meet the diverse natural resource needs and concerns of our rural, urban, and suburban clientele of today and tomorrow.},
   Address                  = {Madison, WI},
   Doi                      = {10.2136/sssaj1997.03615995006100010001x},

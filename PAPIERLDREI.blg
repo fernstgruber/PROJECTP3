@@ -4,46 +4,47 @@ The top-level auxiliary file: PAPIERLDREI.aux
 The style file: model2-names.bst.bst
 Database file #1: P3.bib.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--can't use both author and editor fields in AGBoden2000
 Warning--can't use both author and editor fields in Lehmann2008
-You've used 10 entries,
+You've used 11 entries,
             2990 wiz_defined-function locations,
-            810 strings with 9453 characters,
-and the built_in function-call counts, 7163 in all, are:
-= -- 483
-> -- 380
-< -- 7
-+ -- 145
-- -- 135
-* -- 843
-:= -- 1061
-add.period$ -- 33
-call.type$ -- 10
-change.case$ -- 93
-chr.to.int$ -- 10
-cite$ -- 11
-duplicate$ -- 529
-empty$ -- 457
-format.name$ -- 169
-if$ -- 1278
+            820 strings with 9831 characters,
+and the built_in function-call counts, 7651 in all, are:
+= -- 520
+> -- 390
+< -- 8
++ -- 149
+- -- 138
+* -- 889
+:= -- 1134
+add.period$ -- 37
+call.type$ -- 11
+change.case$ -- 98
+chr.to.int$ -- 11
+cite$ -- 13
+duplicate$ -- 570
+empty$ -- 503
+format.name$ -- 173
+if$ -- 1374
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 114
-newline$ -- 68
-num.names$ -- 40
-pop$ -- 211
+missing$ -- 122
+newline$ -- 74
+num.names$ -- 44
+pop$ -- 225
 preamble$ -- 1
-purify$ -- 85
+purify$ -- 90
 quote$ -- 0
-skip$ -- 135
+skip$ -- 151
 stack$ -- 0
-substring$ -- 160
-swap$ -- 417
+substring$ -- 171
+swap$ -- 441
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 87
-warning$ -- 1
-while$ -- 32
+type$ -- 93
+warning$ -- 2
+while$ -- 35
 width$ -- 0
-write$ -- 163
-(There was 1 warning)
+write$ -- 179
+(There were 2 warnings)
