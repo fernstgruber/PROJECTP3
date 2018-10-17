@@ -1,4 +1,4 @@
-\begin{thebibliography}{11}
+\begin{thebibliography}{13}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\href}[2]{#2}
@@ -60,6 +60,18 @@
 \newblock \bibinfo{type}{Technical Report}. {Senatsverwaltung f\"ur
   Stadtentwicklung Berling}.
 %Type = Article
+\bibitem[{Gruber et~al.(2017)Gruber, Baruck and Geitner}]{Gruber2017}
+\bibinfo{author}{Gruber, F.E.}, \bibinfo{author}{Baruck, J.},
+  \bibinfo{author}{Geitner, C.}, \bibinfo{year}{2017}.
+\newblock \bibinfo{title}{Algorithms vs. surveyors: A comparison of automated
+  landform delineations and surveyed topographic positions from soil mapping in
+  an alpine environment}.
+\newblock \bibinfo{journal}{Geoderma} \bibinfo{volume}{308},
+  \bibinfo{pages}{9--25}.
+\newblock \URLprefix
+  \url{http://www.sciencedirect.com/science/article/pii/S001670611730664X},
+  \DOIprefix\doi{http://dx.doi.org/10.1016/j.geoderma.2017.08.017}.
+%Type = Article
 \bibitem[{Haslmayr et~al.(2016)Haslmayr, Geitner, Sutor, Knoll and
   Baumgarten}]{Haslmayr2016}
 \bibinfo{author}{Haslmayr, H.P.}, \bibinfo{author}{Geitner, C.},
@@ -74,6 +86,17 @@
   \DOIprefix\doi{https://doi.org/10.1016/j.geoderma.2015.09.023}.
   \bibinfo{note}{soil mapping, classification, and modelling: history and
   future directions}.
+%Type = Article
+\bibitem[{Jasiewicz and Stepinski(2013)}]{Jasiewicz2013}
+\bibinfo{author}{Jasiewicz, J.}, \bibinfo{author}{Stepinski, T.F.},
+  \bibinfo{year}{2013}.
+\newblock \bibinfo{title}{{Geomorphons -- a pattern recognition approach to
+  classification and mapping of landforms}}.
+\newblock \bibinfo{journal}{Geomorphology} \bibinfo{volume}{182},
+  \bibinfo{pages}{147--156}.
+\newblock \URLprefix
+  \url{http://www.sciencedirect.com/science/article/pii/S0169555X12005028},
+  \DOIprefix\doi{10.1016/j.geomorph.2012.11.005}.
 %Type = Techreport
 \bibitem[{Lehle et~al.(1995)Lehle, Bley, Veit-Meya and Vogl}]{LUBW1995}
 \bibinfo{author}{Lehle, M.}, \bibinfo{author}{Bley, J.and~Mayer, E.},

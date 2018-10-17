@@ -17,7 +17,7 @@
   ISBN                     = {9783510958702},
   Owner                    = {fabs},
   Timestamp                = {2018.04.24},
-  Url                      = {http://www.schweizerbart.de//publications/detail/isbn/9783510958702/Sonderheft\_SG\_1\_Geol\_Jahrb\_Reihe\_G\_}
+  Url                      = {https://www.schweizerbart.de/publications/detail/artno/188070001}
 }
 
 @TechReport{BAYGLA2003,
@@ -71,6 +71,23 @@
   Timestamp                = {2018.04.17}
 }
 
+@Article{Gruber2017,
+  Title                    = {Algorithms vs. surveyors: A comparison of automated landform delineations and surveyed topographic positions from soil mapping in an Alpine environment},
+  Author                   = {Fabian E. Gruber and Jasmin Baruck and Clemens Geitner},
+  Journal                  = {Geoderma},
+  Year                     = {2017},
+  Pages                    = {9--25},
+  Volume                   = {308},
+
+  Abstract                 = {Landform delineation has long been used in digital soil mapping to infer soil-relevant information. While its potential as an environmental variable in soil parameter modeling has been investigated for various automated landform delineations, little research has been invested into the relationship between the delineation of landforms by algorithms based on digital terrain models (DTM) and the perception of landforms by the soil surveyor during field work. Five Open Source automated landform classification algorithms and a support vector machine classifier based on single terrain parameters are investigated with regard to their ability to replicate topographic position, at two different scales, as described by surveyors for soil profile sites in the Alpine environment of South Tyrol. We also analyse how the variation of parameters and cell size affects the distribution of the computed landforms. While a clear trend regarding grid cell size and window size can be observed with regard to the difference between macro and meso scale topographic positions, the overall classification accuracy regarding the different topographic position classes was less promising. Although some automated classifications partly resemble the surveyor's classification, a considerable number of issues remain to be investigated in order to explain the lack of reproducibility of surveyor position, some of which are linked to the Alpine environment of the study area. These include the dominance of the backslope position, the objectivity of the surveyor in rugged terrain under forest cover, and the fuzzy nature of classifying topographic position, especially in steep terrain. By applying a forward stepwise feature selection procedure for a model based on single terrain parameters, we show that at macro scale a regional terrain parameter (topographic wetness index) and curvatures at a coarse DTM resolution of 50m are the most influential in distinguishing topographic position, whereas at meso scale it is the topographic position index (TPI) with a search radius of just 70m combined with slope gradient. This study is an important first step towards consolidating topographic perception during field survey and digital terrain analysis, which, at least in Alpine terrain, still requires more investigation.},
+  Doi                      = {http://dx.doi.org/10.1016/j.geoderma.2017.08.017},
+  ISSN                     = {0016-7061},
+  Keywords                 = {Topographic position},
+  Owner                    = {fabs},
+  Timestamp                = {2017.08.28},
+  Url                      = {http://www.sciencedirect.com/science/article/pii/S001670611730664X}
+}
+
 @Article{Haslmayr2016,
   Title                    = {Soil function evaluation in Austria — Development, concepts and examples},
   Author                   = {Hans-Peter Haslmayr and Clemens Geitner and Gertraud Sutor and Andreas Knoll and Andreas Baumgarten},
@@ -85,6 +102,26 @@
   ISSN                     = {0016-7061},
   Keywords                 = {Soil functions, Soil function evaluation, Soil protection, Soil data, Spatial planning},
   Url                      = {http://www.sciencedirect.com/science/article/pii/S0016706115300951}
+}
+
+@Article{Jasiewicz2013,
+  Title                    = {{Geomorphons -- a pattern recognition approach to classification and mapping of landforms}},
+  Author                   = {Jaros\l{}aw Jasiewicz and Tomasz F. Stepinski},
+  Journal                  = {Geomorphology },
+  Year                     = {2013},
+  Number                   = {0},
+  Pages                    = {147--156},
+  Volume                   = {182},
+
+  Abstract                 = {We introduce a novel method for classification and mapping of landform elements from a {DEM} based on the principle of pattern recognition rather than differential geometry. At the core of the method is the concept of geomorphon (geomorphologic phonotypes) — a simple ternary pattern that serves as an archetype of a particular terrain morphology. A finite number of 498 geomorphons constitute a comprehensive and exhaustive set of all possible morphological terrain types including standard elements of landscape, as well as unfamiliar forms rarely found in natural terrestrial surfaces. A single scan of a {DEM} assigns an appropriate geomorphon to every cell in the raster using a procedure that self-adapts to identify the most suitable spatial scale at each location. As a result, the method classifies landform elements at a range of different spatial scales with unprecedented computational efficiency. A general purpose geomorphometric map — an interpreted map of topography — is obtained by generalizing allgeomorphons to a small number of the most common landform elements. Due to the robustness and high computational efficiency of the method high resolution geomorphometric maps having continental and even global extents can be generated from giga-cell DEMs. Such maps are a valuable new resource for both manual and automated geomorphometric analyses. In order to demonstrate a practical application of this new method, a 30&#xa0;m cell−&#xa0;1 geomorphometric map of the entire country of Poland is generated and the features and potential usage of this map are briefly discussed. The computer implementation of the method is outlined. The code is available in the public domain.},
+  Doi                      = {10.1016/j.geomorph.2012.11.005},
+  File                     = {:/home/fabs/Data/literature/Diss/Jasiewicz and Stepinski 2013.pdf:PDF},
+  ISSN                     = {0169-555X},
+  Keywords                 = {Geomorphological mapping, GRASS},
+  Owner                    = {read},
+  Review                   = {IMPLEMENTED IN GRASS 7 Allgemein: most existing methods of automated landform classification have their roots in differential geometry. The differences between different existing approaches focus on how to best utilize the information contained in geomorphometric variables, and on the choice of target units of classification. Methods can be divided into those which are cell-based and those which are oject based. They can be also divided into those which use a classifier designed manually on the basis of expert knowledge and empirical evidence and those which use a classifier generated by a machine learning algorithm Finally, methods can be divided with respect to target units of classification (Minar and Evans, 2008); considered units include: landforms, landform elements, and physio graphic units (für zitate siehe paper). NOVEL APPORACH THAT DEPARTS FROM EXISTING METHODOLOGIES: we classify landform elements using tools of computer vision rather than tools of differential geometry. Thus, our algorithm attempts to mimic the classification process carried out by a human analyst. Image texture refers to the spatial arrangement of grayscale intensities in a selected region of an image. we utilize the concept of Local Ternary Patterns (LTP) (Liao, 2010) to identify local landform elements. The set of all possible LTPs is finite (498). Geomorphons are fundamental micro-structures of landscape. Instead of using a fixed-size neighborhood to collect elevation values for determination of LTP, we use a neighborhood with size and shape that self-adapts to the local topography. This self-adaptation technique utilizes the line-of-sight principle (Lee, 1991; Nagy, 1994; Yokoyama et al., 2002) and ensures that landforms are identified at their most appropriate spatial scale. We demonstrate how to generate a map of the 10 most common landform elements (peak, ridge, shoulder, spur, slope, hollow, footslope, valley, pit, and flat) using geomorphons. local ternary patterns: looks at 8 neighbours, gives them the values lower,same,equal. In practive however the quantity derived from line-of-sight-principle is used instead of simply the elevation values. By using different L-values (lookup-distance) landform elements can be identified on a wider range of scales than with the grid-based neighbourhood. CLASSIFICATION INTO 10 LANDFORMS: While traversing a LTP in order of principal directions a “transition” is a change in ternary element. Thus geomorphons flat, peak, and pit have 0 transitions, as all ternary elements in their patterns are the same. Shoulder, spur, hollow, and valley have 2 transitions, while ridge, valley, and slope have 4 transitions. We have chosen a reclassification formula based on a particular lookup table constructed on the basis of similarity between ternary patterns representing the geomorphons; patterns are similar if they have similar number of different ternary elements. GOOD DESCRIPTION OF HOW THEY COMPARED THEIR APPROACH TO THOSE OF WOOD and DIKAU with GRASS: other methods are incomplete.., it is possible to merge (Schmidt and Hewitt, 2004) Wood's and Dikau's classification schemes into a single scheme showing all 15 landform types, but needs fuzzy classification (computational cost!) SCALE FLEXIBILITY: The geomorphons method does not use a fixed-size neighborhood, instead the size and the shape of a neighborhood from which the land- form element is determined adjusts automatically to the geometry of the local terrain. The value of L determines the maximum scale at which we can find the landform element; it needs to be set to a relatively large value in order for the map to show landform elements at a broad range of scales. The inner, irregular octagons are determined by the LOS-principle in the 8 principle directions. Increasing L values converge to same result. CONCLUSION: Geomorphons represent a paradigm shift in DEM classification. First, the method is underpinned by principles of machine vision rather than differential geometry. Second, it classifies landforms at different spatial scales simultaneously.},
+  Timestamp                = {2013.08.22},
+  Url                      = {http://www.sciencedirect.com/science/article/pii/S0169555X12005028}
 }
 
 @Article{Karlen1997,
