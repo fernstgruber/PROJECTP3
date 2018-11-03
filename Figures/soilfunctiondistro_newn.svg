@@ -14,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="soilfunctiondistro_newn.pdf">
+   sodipodi:docname="soilfunctiondistro_newn.svg">
   <defs
      id="defs4">
     <g
@@ -4611,15 +4611,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.079878"
-     inkscape:cx="540.7865"
-     inkscape:cy="391.55847"
+     inkscape:zoom="6.1087124"
+     inkscape:cx="222.19415"
+     inkscape:cy="243.61806"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1053"
-     inkscape:window-x="1366"
+     inkscape:window-width="1366"
+     inkscape:window-height="716"
+     inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
      showguides="true"
@@ -4632,7 +4632,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -5660,7 +5660,7 @@
          sodipodi:role="line"
          id="tspan7538-5"
          x="613.40088"
-         y="578.46802">n=60</tspan></text>
+         y="578.46802">n=65</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -6289,7 +6289,7 @@
          sodipodi:role="line"
          id="tspan7538-6-56-59"
          x="134.31776"
-         y="824.12878">n=9</tspan></text>
+         y="824.12878">n=7</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:8px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"

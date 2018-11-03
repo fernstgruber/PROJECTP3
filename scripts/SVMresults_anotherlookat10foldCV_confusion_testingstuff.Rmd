@@ -1,0 +1,699 @@
+---
+title: "SVM Results"
+author: "fabian gruber"
+date: "February 6, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+require(e1071)
+require(RCurl)
+require(repmis)
+require(randomForest)
+require(rgdal)
+myfunctions <- getURL("https://raw.githubusercontent.com/fernstgruber/Rstuff/master/fabiansandrossitersfunctions.R", ssl.verifypeer = FALSE)
+eval(parse(text = myfunctions))
+proj3path="/home/fabs/PROJECTP3"
+#proj3path="/media/fabs/Volume/01_PAPERZEUG/PROJECTP3/"
+#setwd(proj3path)
+load('../data/dependentlists.RData')
+```
+
+Leben Trocken
+
+```{r,echo=F}
+i=1
+  dep=dependentlist[i]
+  load(paste("../data/modeldata/SVMorigmodeldatawithgeoandgeom_",dep,".RData",sep=""))
+  print(dependentlist_eng[i])
+  load(paste("../data/modeldata/toppreds_",dep,".RData",sep=""))
+  toppreds_unique <- uniquepredictors
+  toppreds_unique %in% names(origmodeldata)
+  print("what happens when CV is performed a 100 times with toppreds")
+  cvaccs=vector()
+  newmodeldata = origmodeldata[(names(origmodeldata) %in% c(dep,toppreds_unique))]
+newname="toppreds"
+  newmodeldatawithpreds=newmodeldata
+   preddata = newmodeldata[!(names(newmodeldata) %in% c("preds"))]
+  t=1
+  for (t in 1:100){
+    set.seed(t)
+    formel <- paste(dep,"~.")
+    fit <- do.call("svm",list(as.formula(formel),newmodeldata,cross=10))
+    cvaccs[t] = fit$tot.accuracy
+    colname=paste("predseed_",t,sep="")
+    newmodeldatawithpreds[[colname]] <- predict(fit,newdata=preddata)
+    newmodeldatawithpreds[[colname]] <- factor(newmodeldatawithpreds[[colname]],levels=1:5)
+  }
+  ncols <- ncol(newmodeldatawithpreds)
+  startn = ncols-99
+  r=1
+  for (r in 1:nrow(newmodeldatawithpreds)){
+    vect <- newmodeldatawithpreds[r,c(startn:ncols)]
+    #vect <- as.character(vect)
+    newmodeldatawithpreds[r,"moderesult"] <- Modus(vect)
+  }
+newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5)
+  boxplot(cvaccs)
+  print(paste("mean accuracy = " , mean(cvaccs)))
+  print(paste("median accuracy = " , median(cvaccs)))
+  print("confusion table for mode of 100 predicitions")
+ print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
+  print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
+  save(newmodeldatawithpreds,cvaccs,file=paste("cv100_",newname,"_",dep,".RData",sep=""))
+  rm(origmodeldata,newmodeldatawithpreds,newmodeldata,preddata,fit,toppreds_unique)
+```
+
+
+Leben FEUCHT
+
+```{r,echo=F}
+i=2
+  dep=dependentlist[i]
+  load(paste("../data/modeldata/SVMorigmodeldatawithgeoandgeom_",dep,".RData",sep=""))
+  print(dependentlist_eng[i])
+  load(paste("../data/modeldata/toppreds_",dep,".RData",sep=""))
+  toppreds_unique <- uniquepredictors
+  toppreds_unique %in% names(origmodeldata)
+  print("what happens when CV is performed a 100 times with toppreds")
+  cvaccs=vector()
+  newmodeldata = origmodeldata[(names(origmodeldata) %in% c(dep,toppreds_unique))]
+newname="toppreds"
+  newmodeldatawithpreds=newmodeldata
+   preddata = newmodeldata[!(names(newmodeldata) %in% c("preds"))]
+  t=1
+  for (t in 1:100){
+    set.seed(t)
+    formel <- paste(dep,"~.")
+    fit <- do.call("svm",list(as.formula(formel),newmodeldata,cross=10))
+    cvaccs[t] = fit$tot.accuracy
+    colname=paste("predseed_",t,sep="")
+    newmodeldatawithpreds[[colname]] <- predict(fit,newdata=preddata)
+    newmodeldatawithpreds[[colname]] <- factor(newmodeldatawithpreds[[colname]],levels=1:5)
+  }
+  ncols <- ncol(newmodeldatawithpreds)
+  startn = ncols-99
+  r=1
+  for (r in 1:nrow(newmodeldatawithpreds)){
+    vect <- newmodeldatawithpreds[r,c(startn:ncols)]
+    #vect <- as.character(vect)
+    newmodeldatawithpreds[r,"moderesult"] <- Modus(vect)
+  }
+newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5)
+  boxplot(cvaccs)
+  print(paste("mean accuracy = " , mean(cvaccs)))
+  print(paste("median accuracy = " , median(cvaccs)))
+  print("confusion table for mode of 100 predicitions")
+ print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
+  print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
+  save(newmodeldatawithpreds,cvaccs,file=paste("cv100_",newname,"_",dep,".RData",sep=""))
+  rm(origmodeldata,newmodeldatawithpreds,newmodeldata,preddata,fit,toppreds_unique)
+```
+
+Leben Org
+
+```{r,echo=F}
+i=3
+   dep=dependentlist[i]
+  load(paste("../data/modeldata/SVMorigmodeldatawithgeoandgeom_",dep,".RData",sep=""))
+  print(dependentlist_eng[i])
+  load(paste("../data/modeldata/toppreds_",dep,".RData",sep=""))
+  toppreds_unique <- uniquepredictors
+  toppreds_unique %in% names(origmodeldata)
+  print("what happens when CV is performed a 100 times with toppreds")
+  cvaccs=vector()
+  newmodeldata = origmodeldata[(names(origmodeldata) %in% c(dep,toppreds_unique))]
+newname="toppreds"
+  newmodeldatawithpreds=newmodeldata
+   preddata = newmodeldata[!(names(newmodeldata) %in% c("preds"))]
+  t=1
+  for (t in 1:100){
+    set.seed(t)
+    formel <- paste(dep,"~.")
+    fit <- do.call("svm",list(as.formula(formel),newmodeldata,cross=10))
+    cvaccs[t] = fit$tot.accuracy
+    colname=paste("predseed_",t,sep="")
+    newmodeldatawithpreds[[colname]] <- predict(fit,newdata=preddata)
+    newmodeldatawithpreds[[colname]] <- factor(newmodeldatawithpreds[[colname]],levels=1:5)
+  }
+  ncols <- ncol(newmodeldatawithpreds)
+  startn = ncols-99
+  r=1
+  for (r in 1:nrow(newmodeldatawithpreds)){
+    vect <- newmodeldatawithpreds[r,c(startn:ncols)]
+    #vect <- as.character(vect)
+    newmodeldatawithpreds[r,"moderesult"] <- Modus(vect)
+  }
+newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5)
+  boxplot(cvaccs)
+  print(paste("mean accuracy = " , mean(cvaccs)))
+  print(paste("median accuracy = " , median(cvaccs)))
+  print("confusion table for mode of 100 predicitions")
+ print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
+  print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
+  save(newmodeldatawithpreds,cvaccs,file=paste("cv100_",newname,"_",dep,".RData",sep=""))
+  rm(origmodeldata,newmodeldatawithpreds,newmodeldata,preddata,fit,toppreds_unique)
+```
+
+Leben Kult
+
+```{r,echo=F}
+i=4
+ dep=dependentlist[i]
+  load(paste("../data/modeldata/SVMorigmodeldatawithgeoandgeom_",dep,".RData",sep=""))
+  print(dependentlist_eng[i])
+  load(paste("../data/modeldata/toppreds_",dep,".RData",sep=""))
+  toppreds_unique <- uniquepredictors
+  toppreds_unique %in% names(origmodeldata)
+  print("what happens when CV is performed a 100 times with toppreds")
+  cvaccs=vector()
+  newmodeldata = origmodeldata[(names(origmodeldata) %in% c(dep,toppreds_unique))]
+newname="toppreds"
+  newmodeldatawithpreds=newmodeldata
+   preddata = newmodeldata[!(names(newmodeldata) %in% c("preds"))]
+  t=1
+  for (t in 1:100){
+    set.seed(t)
+    formel <- paste(dep,"~.")
+    fit <- do.call("svm",list(as.formula(formel),newmodeldata,cross=10))
+    cvaccs[t] = fit$tot.accuracy
+    colname=paste("predseed_",t,sep="")
+    newmodeldatawithpreds[[colname]] <- predict(fit,newdata=preddata)
+    newmodeldatawithpreds[[colname]] <- factor(newmodeldatawithpreds[[colname]],levels=1:5)
+  }
+  ncols <- ncol(newmodeldatawithpreds)
+  startn = ncols-99
+  r=1
+  for (r in 1:nrow(newmodeldatawithpreds)){
+    vect <- newmodeldatawithpreds[r,c(startn:ncols)]
+    #vect <- as.character(vect)
+    newmodeldatawithpreds[r,"moderesult"] <- Modus(vect)
+  }
+newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5)
+  boxplot(cvaccs)
+  print(paste("mean accuracy = " , mean(cvaccs)))
+  print(paste("median accuracy = " , median(cvaccs)))
+  print("confusion table for mode of 100 predicitions")
+ print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
+  print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
+  save(newmodeldatawithpreds,cvaccs,file=paste("cv100_",newname,"_",dep,".RData",sep=""))
+  rm(origmodeldata,newmodeldatawithpreds,newmodeldata,preddata,fit,toppreds_unique)
+```
+
+Retent ave
+
+```{r,echo=F}
+i=5
+ dep=dependentlist[i]
+  load(paste("../data/modeldata/SVMorigmodeldatawithgeoandgeom_",dep,".RData",sep=""))
+  print(dependentlist_eng[i])
+  load(paste("../data/modeldata/toppreds_",dep,".RData",sep=""))
+  toppreds_unique <- uniquepredictors
+  toppreds_unique %in% names(origmodeldata)
+  print("what happens when CV is performed a 100 times with toppreds")
+  cvaccs=vector()
+  newmodeldata = origmodeldata[(names(origmodeldata) %in% c(dep,toppreds_unique))]
+newname="toppreds"
+  newmodeldatawithpreds=newmodeldata
+   preddata = newmodeldata[!(names(newmodeldata) %in% c("preds"))]
+  t=1
+  for (t in 1:100){
+    set.seed(t)
+    formel <- paste(dep,"~.")
+    fit <- do.call("svm",list(as.formula(formel),newmodeldata,cross=10))
+    cvaccs[t] = fit$tot.accuracy
+    colname=paste("predseed_",t,sep="")
+    newmodeldatawithpreds[[colname]] <- predict(fit,newdata=preddata)
+    newmodeldatawithpreds[[colname]] <- factor(newmodeldatawithpreds[[colname]],levels=1:5)
+  }
+  ncols <- ncol(newmodeldatawithpreds)
+  startn = ncols-99
+  r=1
+  for (r in 1:nrow(newmodeldatawithpreds)){
+    vect <- newmodeldatawithpreds[r,c(startn:ncols)]
+    #vect <- as.character(vect)
+    newmodeldatawithpreds[r,"moderesult"] <- Modus(vect)
+  }
+newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5)
+  boxplot(cvaccs)
+  print(paste("mean accuracy = " , mean(cvaccs)))
+  print(paste("median accuracy = " , median(cvaccs)))
+  print("confusion table for mode of 100 predicitions")
+ print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
+  print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
+  save(newmodeldatawithpreds,cvaccs,file=paste("cv100_",newname,"_",dep,".RData",sep=""))
+  rm(origmodeldata,newmodeldatawithpreds,newmodeldata,preddata,fit,toppreds_unique)
+```
+
+Retent min
+
+```{r,echo=F}
+i=6
+  dep=dependentlist[i]
+  load(paste("../data/modeldata/SVMorigmodeldatawithgeoandgeom_",dep,".RData",sep=""))
+  print(dependentlist_eng[i])
+  load(paste("../data/modeldata/toppreds_",dep,".RData",sep=""))
+  toppreds_unique <- uniquepredictors
+  toppreds_unique %in% names(origmodeldata)
+  print("what happens when CV is performed a 100 times with toppreds")
+  cvaccs=vector()
+  newmodeldata = origmodeldata[(names(origmodeldata) %in% c(dep,toppreds_unique))]
+newname="toppreds"
+  newmodeldatawithpreds=newmodeldata
+   preddata = newmodeldata[!(names(newmodeldata) %in% c("preds"))]
+  t=1
+  for (t in 1:100){
+    set.seed(t)
+    formel <- paste(dep,"~.")
+    fit <- do.call("svm",list(as.formula(formel),newmodeldata,cross=10))
+    cvaccs[t] = fit$tot.accuracy
+    colname=paste("predseed_",t,sep="")
+    newmodeldatawithpreds[[colname]] <- predict(fit,newdata=preddata)
+    newmodeldatawithpreds[[colname]] <- factor(newmodeldatawithpreds[[colname]],levels=1:5)
+  }
+  ncols <- ncol(newmodeldatawithpreds)
+  startn = ncols-99
+  r=1
+  for (r in 1:nrow(newmodeldatawithpreds)){
+    vect <- newmodeldatawithpreds[r,c(startn:ncols)]
+    #vect <- as.character(vect)
+    newmodeldatawithpreds[r,"moderesult"] <- Modus(vect)
+  }
+newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5)
+  boxplot(cvaccs)
+  print(paste("mean accuracy = " , mean(cvaccs)))
+  print(paste("median accuracy = " , median(cvaccs)))
+  print("confusion table for mode of 100 predicitions")
+ print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
+  print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
+  save(newmodeldatawithpreds,cvaccs,file=paste("cv100_",newname,"_",dep,".RData",sep=""))
+  rm(origmodeldata,newmodeldatawithpreds,newmodeldata,preddata,fit,toppreds_unique)
+```
+
+Retent stark
+
+```{r,echo=F}
+i=7
+ dep=dependentlist[i]
+  load(paste("../data/modeldata/SVMorigmodeldatawithgeoandgeom_",dep,".RData",sep=""))
+  print(dependentlist_eng[i])
+  load(paste("../data/modeldata/toppreds_",dep,".RData",sep=""))
+  toppreds_unique <- uniquepredictors
+  toppreds_unique %in% names(origmodeldata)
+  print("what happens when CV is performed a 100 times with toppreds")
+  cvaccs=vector()
+  newmodeldata = origmodeldata[(names(origmodeldata) %in% c(dep,toppreds_unique))]
+newname="toppreds"
+  newmodeldatawithpreds=newmodeldata
+   preddata = newmodeldata[!(names(newmodeldata) %in% c("preds"))]
+  t=1
+  for (t in 1:100){
+    set.seed(t)
+    formel <- paste(dep,"~.")
+    fit <- do.call("svm",list(as.formula(formel),newmodeldata,cross=10))
+    cvaccs[t] = fit$tot.accuracy
+    colname=paste("predseed_",t,sep="")
+    newmodeldatawithpreds[[colname]] <- predict(fit,newdata=preddata)
+    newmodeldatawithpreds[[colname]] <- factor(newmodeldatawithpreds[[colname]],levels=1:5)
+  }
+  ncols <- ncol(newmodeldatawithpreds)
+  startn = ncols-99
+  r=1
+  for (r in 1:nrow(newmodeldatawithpreds)){
+    vect <- newmodeldatawithpreds[r,c(startn:ncols)]
+    #vect <- as.character(vect)
+    newmodeldatawithpreds[r,"moderesult"] <- Modus(vect)
+  }
+newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5)
+  boxplot(cvaccs)
+  print(paste("mean accuracy = " , mean(cvaccs)))
+  print(paste("median accuracy = " , median(cvaccs)))
+  print("confusion table for mode of 100 predicitions")
+ print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
+  print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
+  save(newmodeldatawithpreds,cvaccs,file=paste("cv100_",newname,"_",dep,".RData",sep=""))
+  rm(origmodeldata,newmodeldatawithpreds,newmodeldata,preddata,fit,toppreds_unique)
+```
+
+GW neu
+
+```{r,echo=F}
+i=8
+  dep=dependentlist[i]
+  load(paste("../data/modeldata/SVMorigmodeldatawithgeoandgeom_",dep,".RData",sep=""))
+  print(dependentlist_eng[i])
+  load(paste("../data/modeldata/toppreds_",dep,".RData",sep=""))
+  toppreds_unique <- uniquepredictors
+  toppreds_unique %in% names(origmodeldata)
+  print("what happens when CV is performed a 100 times with toppreds")
+  cvaccs=vector()
+  newmodeldata = origmodeldata[(names(origmodeldata) %in% c(dep,toppreds_unique))]
+newname="toppreds"
+  newmodeldatawithpreds=newmodeldata
+   preddata = newmodeldata[!(names(newmodeldata) %in% c("preds"))]
+  t=1
+  for (t in 1:100){
+    set.seed(t)
+    formel <- paste(dep,"~.")
+    fit <- do.call("svm",list(as.formula(formel),newmodeldata,cross=10))
+    cvaccs[t] = fit$tot.accuracy
+    colname=paste("predseed_",t,sep="")
+    newmodeldatawithpreds[[colname]] <- predict(fit,newdata=preddata)
+    newmodeldatawithpreds[[colname]] <- factor(newmodeldatawithpreds[[colname]],levels=1:5)
+  }
+  ncols <- ncol(newmodeldatawithpreds)
+  startn = ncols-99
+  r=1
+  for (r in 1:nrow(newmodeldatawithpreds)){
+    vect <- newmodeldatawithpreds[r,c(startn:ncols)]
+    #vect <- as.character(vect)
+    newmodeldatawithpreds[r,"moderesult"] <- Modus(vect)
+  }
+newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5)
+  boxplot(cvaccs)
+  print(paste("mean accuracy = " , mean(cvaccs)))
+  print(paste("median accuracy = " , median(cvaccs)))
+  print("confusion table for mode of 100 predicitions")
+ print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
+  print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
+  save(newmodeldatawithpreds,cvaccs,file=paste("cv100_",newname,"_",dep,".RData",sep=""))
+  rm(origmodeldata,newmodeldatawithpreds,newmodeldata,preddata,fit,toppreds_unique)
+```
+
+Naehrstoff
+
+```{r,echo=F}
+i=9
+  dep=dependentlist[i]
+  load(paste("../data/modeldata/SVMorigmodeldatawithgeoandgeom_",dep,".RData",sep=""))
+  print(dependentlist_eng[i])
+  load(paste("../data/modeldata/toppreds_",dep,".RData",sep=""))
+  toppreds_unique <- uniquepredictors
+  toppreds_unique %in% names(origmodeldata)
+  print("what happens when CV is performed a 100 times with toppreds")
+  cvaccs=vector()
+  newmodeldata = origmodeldata[(names(origmodeldata) %in% c(dep,toppreds_unique))]
+newname="toppreds"
+  newmodeldatawithpreds=newmodeldata
+   preddata = newmodeldata[!(names(newmodeldata) %in% c("preds"))]
+  t=1
+  for (t in 1:100){
+    set.seed(t)
+    formel <- paste(dep,"~.")
+    fit <- do.call("svm",list(as.formula(formel),newmodeldata,cross=10))
+    cvaccs[t] = fit$tot.accuracy
+    colname=paste("predseed_",t,sep="")
+    newmodeldatawithpreds[[colname]] <- predict(fit,newdata=preddata)
+    newmodeldatawithpreds[[colname]] <- factor(newmodeldatawithpreds[[colname]],levels=1:5)
+  }
+  ncols <- ncol(newmodeldatawithpreds)
+  startn = ncols-99
+  r=1
+  for (r in 1:nrow(newmodeldatawithpreds)){
+    vect <- newmodeldatawithpreds[r,c(startn:ncols)]
+    #vect <- as.character(vect)
+    newmodeldatawithpreds[r,"moderesult"] <- Modus(vect)
+  }
+newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5)
+  boxplot(cvaccs)
+  print(paste("mean accuracy = " , mean(cvaccs)))
+  print(paste("median accuracy = " , median(cvaccs)))
+  print("confusion table for mode of 100 predicitions")
+ print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
+  print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
+  save(newmodeldatawithpreds,cvaccs,file=paste("cv100_",newname,"_",dep,".RData",sep=""))
+  rm(origmodeldata,newmodeldatawithpreds,newmodeldata,preddata,fit,toppreds_unique)
+```
+
+CO2 Senke
+
+```{r,echo=F}
+i=10
+  dep=dependentlist[i]
+  load(paste("../data/modeldata/SVMorigmodeldatawithgeoandgeom_",dep,".RData",sep=""))
+  print(dependentlist_eng[i])
+  load(paste("../data/modeldata/toppreds_",dep,".RData",sep=""))
+  toppreds_unique <- uniquepredictors
+  toppreds_unique %in% names(origmodeldata)
+  print("what happens when CV is performed a 100 times with toppreds")
+  cvaccs=vector()
+  newmodeldata = origmodeldata[(names(origmodeldata) %in% c(dep,toppreds_unique))]
+newname="toppreds"
+  newmodeldatawithpreds=newmodeldata
+   preddata = newmodeldata[!(names(newmodeldata) %in% c("preds"))]
+  t=1
+  for (t in 1:100){
+    set.seed(t)
+    formel <- paste(dep,"~.")
+    fit <- do.call("svm",list(as.formula(formel),newmodeldata,cross=10))
+    cvaccs[t] = fit$tot.accuracy
+    colname=paste("predseed_",t,sep="")
+    newmodeldatawithpreds[[colname]] <- predict(fit,newdata=preddata)
+    newmodeldatawithpreds[[colname]] <- factor(newmodeldatawithpreds[[colname]],levels=1:5)
+  }
+  ncols <- ncol(newmodeldatawithpreds)
+  startn = ncols-99
+  r=1
+  for (r in 1:nrow(newmodeldatawithpreds)){
+    vect <- newmodeldatawithpreds[r,c(startn:ncols)]
+    #vect <- as.character(vect)
+    newmodeldatawithpreds[r,"moderesult"] <- Modus(vect)
+  }
+newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5)
+  boxplot(cvaccs)
+  print(paste("mean accuracy = " , mean(cvaccs)))
+  print(paste("median accuracy = " , median(cvaccs)))
+  print("confusion table for mode of 100 predicitions")
+ print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
+  print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
+  save(newmodeldatawithpreds,cvaccs,file=paste("cv100_",newname,"_",dep,".RData",sep=""))
+  rm(origmodeldata,newmodeldatawithpreds,newmodeldata,preddata,fit,toppreds_unique)
+```
+
+Filtpuff
+
+```{r,echo=F}
+i=11
+ dep=dependentlist[i]
+  load(paste("../data/modeldata/SVMorigmodeldatawithgeoandgeom_",dep,".RData",sep=""))
+  print(dependentlist_eng[i])
+  load(paste("../data/modeldata/toppreds_",dep,".RData",sep=""))
+  toppreds_unique <- uniquepredictors
+  toppreds_unique %in% names(origmodeldata)
+  print("what happens when CV is performed a 100 times with toppreds")
+  cvaccs=vector()
+  newmodeldata = origmodeldata[(names(origmodeldata) %in% c(dep,toppreds_unique))]
+newname="toppreds"
+  newmodeldatawithpreds=newmodeldata
+   preddata = newmodeldata[!(names(newmodeldata) %in% c("preds"))]
+  t=1
+  for (t in 1:100){
+    set.seed(t)
+    formel <- paste(dep,"~.")
+    fit <- do.call("svm",list(as.formula(formel),newmodeldata,cross=10))
+    cvaccs[t] = fit$tot.accuracy
+    colname=paste("predseed_",t,sep="")
+    newmodeldatawithpreds[[colname]] <- predict(fit,newdata=preddata)
+    newmodeldatawithpreds[[colname]] <- factor(newmodeldatawithpreds[[colname]],levels=1:5)
+  }
+  ncols <- ncol(newmodeldatawithpreds)
+  startn = ncols-99
+  r=1
+  for (r in 1:nrow(newmodeldatawithpreds)){
+    vect <- newmodeldatawithpreds[r,c(startn:ncols)]
+    #vect <- as.character(vect)
+    newmodeldatawithpreds[r,"moderesult"] <- Modus(vect)
+  }
+newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5)
+  boxplot(cvaccs)
+  print(paste("mean accuracy = " , mean(cvaccs)))
+  print(paste("median accuracy = " , median(cvaccs)))
+  print("confusion table for mode of 100 predicitions")
+ print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
+  print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
+  save(newmodeldatawithpreds,cvaccs,file=paste("cv100_",newname,"_",dep,".RData",sep=""))
+  rm(origmodeldata,newmodeldatawithpreds,newmodeldata,preddata,fit,toppreds_unique)
+```
+
+Transform
+
+```{r,echo=F}
+i=12
+ dep=dependentlist[i]
+  load(paste("../data/modeldata/SVMorigmodeldatawithgeoandgeom_",dep,".RData",sep=""))
+  print(dependentlist_eng[i])
+  load(paste("../data/modeldata/toppreds_",dep,".RData",sep=""))
+  toppreds_unique <- uniquepredictors
+  toppreds_unique %in% names(origmodeldata)
+  print("what happens when CV is performed a 100 times with toppreds")
+  cvaccs=vector()
+  newmodeldata = origmodeldata[(names(origmodeldata) %in% c(dep,toppreds_unique))]
+newname="toppreds"
+  newmodeldatawithpreds=newmodeldata
+   preddata = newmodeldata[!(names(newmodeldata) %in% c("preds"))]
+  t=1
+  for (t in 1:100){
+    set.seed(t)
+    formel <- paste(dep,"~.")
+    fit <- do.call("svm",list(as.formula(formel),newmodeldata,cross=10))
+    cvaccs[t] = fit$tot.accuracy
+    colname=paste("predseed_",t,sep="")
+    newmodeldatawithpreds[[colname]] <- predict(fit,newdata=preddata)
+    newmodeldatawithpreds[[colname]] <- factor(newmodeldatawithpreds[[colname]],levels=1:5)
+  }
+  ncols <- ncol(newmodeldatawithpreds)
+  startn = ncols-99
+  r=1
+  for (r in 1:nrow(newmodeldatawithpreds)){
+    vect <- newmodeldatawithpreds[r,c(startn:ncols)]
+    #vect <- as.character(vect)
+    newmodeldatawithpreds[r,"moderesult"] <- Modus(vect)
+  }
+newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5)
+  boxplot(cvaccs)
+  print(paste("mean accuracy = " , mean(cvaccs)))
+  print(paste("median accuracy = " , median(cvaccs)))
+  print("confusion table for mode of 100 predicitions")
+ print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
+  print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
+  save(newmodeldatawithpreds,cvaccs,file=paste("cv100_",newname,"_",dep,".RData",sep=""))
+  rm(origmodeldata,newmodeldatawithpreds,newmodeldata,preddata,fit,toppreds_unique)
+```
+
+Filtpuff
+
+```{r,echo=F}
+i=13
+ dep=dependentlist[i]
+  load(paste("../data/modeldata/SVMorigmodeldatawithgeoandgeom_",dep,".RData",sep=""))
+  print(dependentlist_eng[i])
+  load(paste("../data/modeldata/toppreds_",dep,".RData",sep=""))
+  toppreds_unique <- uniquepredictors
+  toppreds_unique %in% names(origmodeldata)
+  print("what happens when CV is performed a 100 times with toppreds")
+  cvaccs=vector()
+  newmodeldata = origmodeldata[(names(origmodeldata) %in% c(dep,toppreds_unique))]
+newname="toppreds"
+  newmodeldatawithpreds=newmodeldata
+   preddata = newmodeldata[!(names(newmodeldata) %in% c("preds"))]
+  t=1
+  for (t in 1:100){
+    set.seed(t)
+    formel <- paste(dep,"~.")
+    fit <- do.call("svm",list(as.formula(formel),newmodeldata,cross=10))
+    cvaccs[t] = fit$tot.accuracy
+    colname=paste("predseed_",t,sep="")
+    newmodeldatawithpreds[[colname]] <- predict(fit,newdata=preddata)
+    newmodeldatawithpreds[[colname]] <- factor(newmodeldatawithpreds[[colname]],levels=1:5)
+  }
+  ncols <- ncol(newmodeldatawithpreds)
+  startn = ncols-99
+  r=1
+  for (r in 1:nrow(newmodeldatawithpreds)){
+    vect <- newmodeldatawithpreds[r,c(startn:ncols)]
+    #vect <- as.character(vect)
+    newmodeldatawithpreds[r,"moderesult"] <- Modus(vect)
+  }
+newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5)
+  boxplot(cvaccs)
+  print(paste("mean accuracy = " , mean(cvaccs)))
+  print(paste("median accuracy = " , median(cvaccs)))
+  print("confusion table for mode of 100 predicitions")
+ print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
+  print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
+  save(newmodeldatawithpreds,cvaccs,file=paste("cv100_",newname,"_",dep,".RData",sep=""))
+  rm(origmodeldata,newmodeldatawithpreds,newmodeldata,preddata,fit,toppreds_unique)
+```
+
+Filtpuff Nit
+
+```{r,echo=F}
+i=14
+ dep=dependentlist[i]
+  load(paste("../data/modeldata/SVMorigmodeldatawithgeoandgeom_",dep,".RData",sep=""))
+  print(dependentlist_eng[i])
+  load(paste("../data/modeldata/toppreds_",dep,".RData",sep=""))
+  toppreds_unique <- uniquepredictors
+  toppreds_unique %in% names(origmodeldata)
+  print("what happens when CV is performed a 100 times with toppreds")
+  cvaccs=vector()
+  newmodeldata = origmodeldata[(names(origmodeldata) %in% c(dep,toppreds_unique))]
+newname="toppreds"
+  newmodeldatawithpreds=newmodeldata
+   preddata = newmodeldata[!(names(newmodeldata) %in% c("preds"))]
+  t=1
+  for (t in 1:100){
+    set.seed(t)
+    formel <- paste(dep,"~.")
+    fit <- do.call("svm",list(as.formula(formel),newmodeldata,cross=10))
+    cvaccs[t] = fit$tot.accuracy
+    colname=paste("predseed_",t,sep="")
+    newmodeldatawithpreds[[colname]] <- predict(fit,newdata=preddata)
+    newmodeldatawithpreds[[colname]] <- factor(newmodeldatawithpreds[[colname]],levels=1:5)
+  }
+  ncols <- ncol(newmodeldatawithpreds)
+  startn = ncols-99
+  r=1
+  for (r in 1:nrow(newmodeldatawithpreds)){
+    vect <- newmodeldatawithpreds[r,c(startn:ncols)]
+    #vect <- as.character(vect)
+    newmodeldatawithpreds[r,"moderesult"] <- Modus(vect)
+  }
+newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5)
+  boxplot(cvaccs)
+  print(paste("mean accuracy = " , mean(cvaccs)))
+  print(paste("median accuracy = " , median(cvaccs)))
+  print("confusion table for mode of 100 predicitions")
+ print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
+  print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
+  save(newmodeldatawithpreds,cvaccs,file=paste("cv100_",newname,"_",dep,".RData",sep=""))
+  rm(origmodeldata,newmodeldatawithpreds,newmodeldata,preddata,fit,toppreds_unique)
+```
+
+Puff Sauer
+
+```{r,echo=F}
+i=15
+ dep=dependentlist[i]
+  load(paste("../data/modeldata/SVMorigmodeldatawithgeoandgeom_",dep,".RData",sep=""))
+  print(dependentlist_eng[i])
+  load(paste("../data/modeldata/toppreds_",dep,".RData",sep=""))
+  toppreds_unique <- uniquepredictors
+  toppreds_unique %in% names(origmodeldata)
+  print("what happens when CV is performed a 100 times with toppreds")
+  cvaccs=vector()
+  newmodeldata = origmodeldata[(names(origmodeldata) %in% c(dep,toppreds_unique))]
+newname="toppreds"
+  newmodeldatawithpreds=newmodeldata
+   preddata = newmodeldata[!(names(newmodeldata) %in% c("preds"))]
+  t=1
+  for (t in 1:100){
+    set.seed(t)
+    formel <- paste(dep,"~.")
+    fit <- do.call("svm",list(as.formula(formel),newmodeldata,cross=10))
+    cvaccs[t] = fit$tot.accuracy
+    colname=paste("predseed_",t,sep="")
+    newmodeldatawithpreds[[colname]] <- predict(fit,newdata=preddata)
+    newmodeldatawithpreds[[colname]] <- factor(newmodeldatawithpreds[[colname]],levels=1:5)
+  }
+  ncols <- ncol(newmodeldatawithpreds)
+  startn = ncols-99
+  r=1
+  for (r in 1:nrow(newmodeldatawithpreds)){
+    vect <- newmodeldatawithpreds[r,c(startn:ncols)]
+    #vect <- as.character(vect)
+    newmodeldatawithpreds[r,"moderesult"] <- Modus(vect)
+  }
+newmodeldatawithpreds[[dep]] <- factor(newmodeldatawithpreds[[dep]],levels = 1:5)
+  boxplot(cvaccs)
+  print(paste("mean accuracy = " , mean(cvaccs)))
+  print(paste("median accuracy = " , median(cvaccs)))
+  print("confusion table for mode of 100 predicitions")
+ print(table(newmodeldatawithpreds[[dep]],newmodeldatawithpreds[["moderesult"]]) )
+  print(mean(newmodeldatawithpreds[[dep]] == newmodeldatawithpreds[["moderesult"]]))  
+  save(newmodeldatawithpreds,cvaccs,file=paste("cv100_",newname,"_",dep,".RData",sep=""))
+  rm(origmodeldata,newmodeldatawithpreds,newmodeldata,preddata,fit,toppreds_unique)
+```
+
+

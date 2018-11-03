@@ -61,6 +61,20 @@
   Timestamp                = {2016.08.30}
 }
 
+@InBook{Gallant2000,
+  Title                    = {{Terrain Analysis - Principles and Applications}},
+  Author                   = {John C. Gallant and John P. Wilson},
+  Chapter                  = {Primary Topographic Attributes},
+  Editor                   = {John P. Wilson and John C. Gallant},
+  Pages                    = {51-85},
+  Publisher                = {John Wiley \& Sons, Inc.},
+  Year                     = {2000},
+
+  File                     = {:/home/fabs/Data/literature/Diss/Wilson and Galant/62_WilsonAndGallant_wilsongalant.pdf:PDF},
+  Owner                    = {csae6574},
+  Timestamp                = {2009.10.28}
+}
+
 @TechReport{Gerstenberg2005,
   Title                    = {{Erstellung von Karten zur Bewertung der Bodenfunktionen - Umsetzung der im Gutachten von Lahmeyer aufgef\"uhrten Verfahren in Fl\"achendaten}},
   Author                   = {Josef H. Gerstenberg and Ursula Smettan},
@@ -69,6 +83,17 @@
 
   Owner                    = {fabs},
   Timestamp                = {2018.04.17}
+}
+
+@Manual{GRASS,
+  Title                    = {Geographic Resources Analysis Support System (GRASS GIS) Software, Version 7.0},
+  Author                   = {{GRASS Development Team}},
+  Organization             = {Open Source Geospatial Foundation},
+  Year                     = {2016},
+
+  Owner                    = {fabs},
+  Timestamp                = {2018.11.02},
+  Url                      = {http://grass.osgeo.org}
 }
 
 @Article{Gruber2017,
@@ -102,6 +127,18 @@
   ISSN                     = {0016-7061},
   Keywords                 = {Soil functions, Soil function evaluation, Soil protection, Soil data, Spatial planning},
   Url                      = {http://www.sciencedirect.com/science/article/pii/S0016706115300951}
+}
+
+@Book{James2013,
+  Title                    = {An Introduction to Statistical Learning},
+  Author                   = {Gareth James and Daniela Witten and Trevor Hastie and Robert Tibshirani},
+  Publisher                = {Springer-Verlag New York},
+  Year                     = {2013},
+
+  Doi                      = {10.1007/978-1-4614-7138-7},
+  Owner                    = {fabs},
+  Timestamp                = {2016.08.30},
+  Url                      = {http://www-bcf.usc.edu/~gareth/ISL/index.html}
 }
 
 @Article{Jasiewicz2013,
@@ -180,6 +217,17 @@
   Timestamp                = {2018.03.28}
 }
 
+@Manual{Meyer2014,
+  Title                    = {e1071: Misc Functions of the Department of Statistics (e1071), TU Wien},
+  Author                   = {David Meyer and Evgenia Dimitriadou and Kurt Hornik and Andreas Weingessel and Friedrich Leisch},
+  Note                     = {R package version 1.6-4},
+  Year                     = {2014},
+
+  Owner                    = {fabs},
+  Timestamp                = {2018.11.02},
+  Url                      = {http://CRAN.R-project.org/package=e1071}
+}
+
 @Article{Nestroy2011,
   Title                    = {{Systematische Gliederung der B\"oden \"Osterreichs. \"Osterreichische Bodensystematik 2000 in der revidierten Fassung von 2011}},
   Author                   = {O. Nestroy and G. Aust and W.E.H. Blum and M. Englisch and H. Hager and E. Herzberger and W. Kilian and P. Nelhiebel and G. Ortner and, E. Pecina and A. Pehamberger W. Schneider und J. Wagner},
@@ -200,5 +248,58 @@
 
   Owner                    = {fabs},
   Timestamp                = {2016.08.24}
+}
+
+@InCollection{Olaya2009,
+  Title                    = {Chapter 6: Basic Land-Surface Parameters},
+  Author                   = {V. Olaya},
+  Booktitle                = {Geomorphometry Concepts, Software, Applications},
+  Publisher                = {Elsevier},
+  Year                     = {2009},
+  Editor                   = {Tomislav Hengl and Hannes I. Reuter},
+  Pages                    = {141--169},
+  Series                   = {Developments in Soil Science },
+  Volume                   = {33},
+
+  Abstract                 = {Publisher Summary This chapter presents different formulations, each one of them with a different degree of mathematical complexity, to extract basic morphometric parameters from the digital elevation model (DEM) itself and then discuss importance and interpretation of each parameter. The study of morphometric land-surface parameters start with those related to the local morphometry of each point. They are divided into two main groups: (1) Geometric and (2) statistical measures. For each type of land-surface parameter, a detailed description has been given including further information on the physical phenomena described by each one. The chapter introduces some well-known parameters, such as slope or aspect, and then extends that to some less common ones, such as the Shape Complexity Index, the Anisotropic Coefficient of Variation, geostatistical land-surface parameters, or fractal-based ones that represent the most actual trend in this field.},
+  Doi                      = {http://dx.doi.org/10.1016/S0166-2481(08)00006-8},
+  File                     = {:/media/fabs/Volume/Data/literature/Diss/geomorphometry/chapter6.pdf:PDF},
+  ISSN                     = {0166-2481},
+  Keywords                 = {morphometric parameters that can be extracted from the {DEM} without further adjustment},
+  Owner                    = {read},
+  Review                   = {basic parameters: derived directly from DEM, represent the raw shape of the land surface regardless of relationship to formational processes. LOCAL: geometric parameters: methods based on formal mathematical approach have proven give better results. #functions of first derivative# slope: description of evans method. area of a cell: also different methods (eg considering the surrounding cell heights) aspect: is a circular land-surface parameter, therefore some others use cos(a) as slope northness and sin(a) as slope easterness, especially in statistical comparisons. shaded relief: the simplest approach neglects surrounding relief and considers insolation as a local parameter hydrology is an important field applying geomorphometry, which hast resulted in specific formulations for calculating slope and aspect,starting with D8(using the maximum-slope, which usually overestimates slope, and aspect values can only be a multiple of 45°, restricting their range and discretizing the slope measurement).D-infinity also consider the two adjacent directions to account for discretization. #functions of second derivatives#: an important concept for understanding curvature is the 'normal section of a smoothed surface'.A normal section is a plane curve, the curvature of which is defined as 1/R, where R is the radius of the best-fitting circle. An effective way to introduce simple curvatures onto a slope is to consider some chosen (4) directions on it. cells with concave plan curvature(of contour line) have converging flow lines. in the same way, material flow experiences relative develeration in cells which have a concave profile curvature. Mean curvature(profc+tangc)/2, describes mean-concave and mean-convex terrains.Positive values are associated iwth areas of relative accumulation. Shary:12 curvatures, of which 3 are used to derive the rest: mean, unsphericity (how does surface differ from sphere) and difference curvature(is vertical or horizontal c stronger?). PROFC has a significant relation with soil moisture, indicating whether a cell is prone to accumulating water or not. CURVATURES ARE HOWEVER A FIRST APPROXIMATION AT A LOCAL LEVEL. visibility and line of sight, viewshed: if angle between two points A and B is smaller than that of a point closer to A, then B is not visible. viewshed is not a continuous polygon! This leads to calculation of solar irradiation. visibility index: nr of cells that can be seen from a cell. LOCAL (neighborhood): statistical parameters_ the first four moments in the distribution of a value: average, standard deviation, skewness coefficient, and the kurtosis coefficient. other examples: ruggedness=range/sqrt(area), terrain roughness=how undulating the terrain is (different concepts), for instance the stddev of heights in analysis window. to avoid incorrect results, one solution is to fit a plane to cells in the window and then calculate the stddev of the fitting instead. for densely measured elevations (LiDAR), the surface roughness index can be derived as the ratio between the fitted nugget variation and the local variance..... Anisotropy index= by variogram modelling in various directions. the Anistropy Coefficient of Variation (ACV) is the difference of the first derivative in 4 directsions, and can be used to distinguish elongated from oval landforms. Fractal dimension is an indicator of terrain complexity and closely related to terrain roughness. DISCRETE ANALYSIS: a new trend is the application of existing indices and parameters originally introduced for other types of data. Since landscape metrics mostly deal with descrete data, sliceing the DEM into elevation classes serves as discretization. Then the shape and structure of each class can be analysed to derive new indices. EXAMPLE: Shape Complexity Index SCI indicateds how compact (or oval) a feature is. REGIONAL LAND-SURFACE PARAMETERS: watershed: using flow-algorithms, go upwards and add cells connected with the outlet cell. For a given watershed, LandSurfaceParameter = sum(Ai), i=index for each cell. ; Instead of adding the mean might also be calculated. AND, to derive new meaningfull parameters, we can connect this equation with of the local land-surface parameters like slope (relates to speed and power of flow) or height (constituting the potential energy).A hypsometric curve gives information about the internal configuration of the catchment. the elevation-relief ratio can also be calacuated. (z_avg-z_min)/(z_max-z_min). Parameters based on linear measure can also be calculated for a watershed, such as flow-path lengths, or slope length (.e.g in USLE), with different methods. Teh definition of interruption cells at which the calculations stop can be done usting a fixed-slope thrshold, or a ration between slope of a cell and the one sitatued upslope, or the average or maximum uphill slope angel. With this information more parameters,like the horizontal or vertical distances to the closest channel cell can be used, for instance to relate to the wetness of the cell. BEWARE OF EDGE CONTAMINATION!},
+  Timestamp                = {2017.06.16},
+  Url                      = {http://www.sciencedirect.com/science/article/pii/S0166248108000068}
+}
+
+@Manual{cran2014,
+  Title                    = {R: A Language and Environment for Statistical Computing},
+
+  Address                  = {Vienna, Austria},
+  Author                   = {{R Core Team}},
+  Organization             = {R Foundation for Statistical Computing},
+  Year                     = {2014},
+
+  Owner                    = {fabs},
+  Timestamp                = {2018.11.02},
+  Url                      = {http://www.R-project.org/}
+}
+
+@Article{Steger2016,
+  Title                    = {Exploring discrepancies between quantitative validation results and the geomorphic plausibility of statistical landslide susceptibility maps },
+  Author                   = {Stefan Steger and Alexander Brenning and Rainer Bell and Helene Petschko and Thomas Glade},
+  Journal                  = {Geomorphology },
+  Year                     = {2016},
+  Pages                    = {8 - 23},
+  Volume                   = {262},
+
+  __markedentry            = {[fabs:6]},
+  Abstract                 = {Abstract Empirical models are frequently applied to produce landslide susceptibility maps for large areas. Subsequent quantitative validation results are routinely used as the primary criteria to infer the validity and applicability of the final maps or to select one of several models. This study hypothesizes that such direct deductions can be misleading. The main objective was to explore discrepancies between the predictive performance of a landslide susceptibility model and the geomorphic plausibility of subsequent landslide susceptibility maps while a particular emphasis was placed on the influence of incomplete landslide inventories on modelling and validation results. The study was conducted within the Flysch Zone of Lower Austria (1,354 km2) which is known to be highly susceptible to landslides of the slide-type movement. Sixteen susceptibility models were generated by applying two statistical classifiers (logistic regression and generalized additive model) and two machine learning techniques (random forest and support vector machine) separately for two landslide inventories of differing completeness and two predictor sets. The results were validated quantitatively by estimating the area under the receiver operating characteristic curve (AUROC) with single holdout and spatial cross-validation technique. The heuristic evaluation of the geomorphic plausibility of the final results was supported by findings of an exploratory data analysis, an estimation of odds ratios and an evaluation of the spatial structure of the final maps. The results showed that maps generated by different inventories, classifiers and predictors appeared differently while holdout validation revealed similar high predictive performances. Spatial cross-validation proved useful to expose spatially varying inconsistencies of the modelling results while additionally providing evidence for slightly overfitted machine learning-based models. However, the highest predictive performances were obtained for maps that explicitly expressed geomorphically implausible relationships indicating that the predictive performance of a model might be misleading in the case a predictor systematically relates to a spatially consistent bias of the inventory. Furthermore, we observed that random forest-based maps displayed spatial artifacts. The most plausible susceptibility map of the study area showed smooth prediction surfaces while the underlying model revealed a high predictive capability and was generated with an accurate landslide inventory and predictors that did not directly describe a bias. However, none of the presented models was found to be completely unbiased. This study showed that high predictive performances cannot be equated with a high plausibility and applicability of subsequent landslide susceptibility maps. We suggest that greater emphasis should be placed on identifying confounding factors and biases in landslide inventories. A joint discussion between modelers and decision makers of the spatial pattern of the final susceptibility maps in the field might increase their acceptance and applicability. },
+  Doi                      = {http://dx.doi.org/10.1016/j.geomorph.2016.03.015},
+  ISSN                     = {0169-555X},
+  Keywords                 = {Landslide susceptibility},
+  Owner                    = {fabs},
+  Timestamp                = {2017.03.15},
+  Url                      = {http://www.sciencedirect.com/science/article/pii/S0169555X16301052}
 }
 

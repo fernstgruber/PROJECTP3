@@ -140,6 +140,7 @@ Leben Org
 ```{r,echo=F}
 i=3
 filelist=c("../temporlarge/Slope_hr_Leben_Org.RData","../temporlarge/crosc_DTM_50m_avg_ws7_Leben_Org.RData","../temporlarge/crosc_DTM_50m_avg_ws7_et_slope_DTM_50m_avg_ws7_Leben_Org.RData","../temporlarge/crosc_DTM_50m_avg_ws7_et_slope_DTM_50m_avg_ws7_et_Convexity_Leben_Org.RData")
+f=filelist[4]
 for(f in filelist){
   dep=dependentlist[i]
   print(dependentlist_eng[i])

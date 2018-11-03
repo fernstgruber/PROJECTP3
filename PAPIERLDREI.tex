@@ -4,7 +4,7 @@
 \usepackage{fixltx2e}
 \modulolinenumbers[5]
 
-\journal{Soil}
+\journal{Soil Systems}
 
 %%%%%%%%%%%%%%%%%%%%%%%
 %% Elsevier bibliography styles
@@ -193,9 +193,20 @@ As the predictor set does not contain landuse nor soil type, the SVM classificat
 None of the soil profile sites in the study area is awarded the best grade (1) for its potential as a habitat for moisture-tolerant species. As seen in Figure~\ref{fig:SFdistro}, the intermediate classes (two to four) are quite evenly distributed with 33, 23 and 35 members, respectively. The class with the poorest potential consists of 17 soil profile sites.  Given the similarity in soil parameters and profile site characteristics used for the evaluation of this potential and the potential as a habitat for drought-tolerant species, a very similar landform classification is chosen in the feature selection procedure (Table~\ref{table:cvacc}), the only difference being a slightly tighter search window of 70~m. This feature is complemented by the local terrain parameter longitudinal curvature to achieve the best median cross-validated accuracy  of 53.7\% with a SVM-model of this potential. The model predictions show that while the SVM-classifer associates good grades with curvature values around zero, soil pits with the worst potential for moisture tolerant species can be found at locations with negative longitudinal curvature. This trend is also visible in the landform distribution, were the landform flat, and, to a lesser degree, foot slopes are characteristic for soil pits with higher potentials. This combinations seems reasonable, given the potential hydrological situation on these landforms.
 
 \subsection{Habitat for soil organisms}
-With the exception of the class with grade 5 (low potential as a habitat for soil organisms), which does not occur, the four other grades are distributed relatively evenly amongst the soil pits in the study area. The class with the good grade of 2 is the most common with 34 members. The feature selection procedure distinguished three local terrain parameters as being most useful in seperating the soil profile sites with different grades with regard to their potention as a habitat for  soil organisms, representing the parameters slope, convexity, and cross-sectional curvature. Lower convexity values characterize those soil profile sites best suited for soil organisms. Similarily, high slope values are helpful in seperating members the intermediate class with grade 3 from the remaining 3 classes, based on the general trend that the two best grades are more closely associated with lower slope angles than the grades 3 and 4. An analysis of the cross-sectional curvature values shows that the  the class with grade 4 tends to have more members related to slightly positive curvature values, compared to the other classes. A SVM-classifier trained with the three aforementioned terrain parameters leads to a median accuracy rate of 59.3~\% which is comparably high, even more so when considering that the soil pits are well distribute amongst the four classes. 
+With the exception of the class with grade 5 (low potential as a habitat for soil organisms), which does not occur, the four other grades are distributed relatively evenly amongst the soil pits in the study area. The class with the good grade of 2 is the most common with 34 members. The feature selection procedure distinguished three local terrain parameters as being most useful in seperating the soil profile sites with different grades with regard to their potention as a habitat for  soil organisms, representing the parameters slope, convexity, and cross-sectional curvature. Lower convexity values characterize those soil profile sites best suited for soil organisms. Similarily, high slope values are helpful in seperating members the intermediate class with grade 3 from the remaining 3 classes, based on the general trend that the two best grades are more closely associated with lower slope angles than the grades 3 and 4. An analysis of the cross-sectional curvature values shows that the  the class with grade 4 tends to have more members related to slightly positive curvature values, compared to the other classes. A SVM-classifier trained with the three aforementioned terrain parameters leads to a median accuracy rate of 59.3~\% which is comparably high, even more so when considering that the soil pits are well distributed amongst the four classes. 
 
 WAS BEDEUTEN DIE BEIDEN ACCURACIES?
+\subsection{Potential for agricultural production}
+\subsection{Average and minimum precipitation retention capacity}
+\subsection{Retention capacity for heavy precipitation events}
+\subsection{Quality of groundwater reformation}
+\subsection{Potential for providing nutrients for plants}
+\subsection{Potential as a CO\textsubscript{2} sink}
+\subsection{Potential for retention of heavy metals}
+\subsection{Potential for transforming organic contaminants}
+\subsection{Potential as  filter and buffer for organic contaminants}
+\subsection{Potential for retention of water-soluble contaminants}
+\subsection{Potential as buffer for acidic contaminants}
 
 \section{Conclusion}
  

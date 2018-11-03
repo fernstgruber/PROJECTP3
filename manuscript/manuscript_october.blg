@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: manuscript_october.aux
+The style file: Definitions/mdpi.bst
+Database file #1: P3.bib
+Warning--can't use both author and editor fields in Lehmann2008
+Warning--can't use both author and editor fields in AGBoden2000
+Warning--can't use both author and editor fields in Gallant2000
+Warning--empty booktitle in Gallant2000
+You've used 20 entries,
+            2865 wiz_defined-function locations,
+            721 strings with 9830 characters,
+and the built_in function-call counts, 7330 in all, are:
+= -- 587
+> -- 478
+< -- 17
++ -- 182
+- -- 142
+* -- 657
+:= -- 1244
+add.period$ -- 62
+call.type$ -- 20
+change.case$ -- 22
+chr.to.int$ -- 20
+cite$ -- 24
+duplicate$ -- 341
+empty$ -- 579
+format.name$ -- 172
+if$ -- 1513
+int.to.chr$ -- 1
+int.to.str$ -- 20
+missing$ -- 17
+newline$ -- 105
+num.names$ -- 62
+pop$ -- 131
+preamble$ -- 0
+purify$ -- 20
+quote$ -- 0
+skip$ -- 179
+stack$ -- 0
+substring$ -- 199
+swap$ -- 80
+text.length$ -- 7
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 128
+warning$ -- 4
+while$ -- 53
+width$ -- 0
+write$ -- 264
+(There were 4 warnings)
